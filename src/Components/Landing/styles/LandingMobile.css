@@ -1,0 +1,13 @@
+@media only screen  and  (max-width: 568px) {
+    .jk {
+        margin-top: 80%;
+        border: 1px solid red;
+    }
+    .headingContainer {
+        text-align: center;     
+        border: 1px solid red;
+        height: 100vh;
+    }
+
+
+}

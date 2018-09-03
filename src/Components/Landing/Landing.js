@@ -1,43 +1,37 @@
 import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
-//import Ionicon from 'react-ionicons'
-//import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-//import scrollToComponent from 'react-scroll-to-component';
-    
+import { Dots } from 'react-activity';
+import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  //Button
-} from 'react-bootstrap';
+import './styles/Landing.css'
+import './styles/LandingMobile.css'
 
-
+    
 
 export default class Landing extends Component {
     
-       
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,            
+        };
 
-
-    componentDidMount() {
-      window.scrollTo(0, 0)
+        //this.handleInputChange = this.handleInputChange.bind(this);
     }
-
+       
+    componentDidMount() {
+        //this.setState({loading: false})
+        window.scrollTo(0, 0)
+    }
 
 	render() {		
 		return(
-            <div>              
-                <h1 style={{textAlign: "center"}}> MY HUSTLE </h1>              
+            <div className="headingContainer">              
+                <h1 className="jk"> J.K </h1>   
+                <Dots animating={this.state.loading}/>           
             </div>
 		)
 	}

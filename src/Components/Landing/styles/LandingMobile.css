@@ -1,12 +1,21 @@
 @media only screen  and  (max-width: 568px) {
+	.landingContainer {
+		overflow-x: hidden;
+		text-align: center;
+		margin-top: 30%;
+	}
     .jk {
         margin-top: 80%;
-        border: 1px solid red;
+		height: 200px;
+		margin-bottom: -30px
     }
     .headingContainer {
         text-align: center;     
-        border: 1px solid red;
-        height: 100vh;
+        
+    }
+    .activity{
+    	margin-top: 0px;
+
     }
 
 

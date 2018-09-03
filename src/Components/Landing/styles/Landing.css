@@ -1,9 +1,36 @@
-.jk {
-	margin-top: 20%;
+
+.landingContainer {
+	overflow-x: hidden;
+	text-align: center;
+	margin-top: 5%;
 }
+
 .headingContainer {
-	text-align: center;		
+	margin-top: 10%;
+	text-align: left;		
+}
+.j {		
+	display: inline-block;	
+	font-family: Times;
+	font-size: 120px;
+}
+.k {		
+	display: inline-block;
+	font-family: Times;
+	margin-top: 20px;
+	font-size: 70px;
+	vertical-align: top
+}
+.flamingoContainer {
+	margin-top: 5%;	
+}
+.flamingo {	
+	height: 500px;
+}
+.activity{
+	margin-left: 0px;
+}
+.borderr {
 	border: 1px solid red;
-	height: 100vh;
 }
 

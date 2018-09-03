@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
-import { Dots } from 'react-activity';
+import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
 
 import './styles/Landing.css'
 import './styles/LandingMobile.css'
 
-    
+import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+
+
 
 export default class Landing extends Component {
     
@@ -29,9 +31,20 @@ export default class Landing extends Component {
 
 	render() {		
 		return(
-            <div className="headingContainer">              
-                <h1 className="jk"> J.K </h1>   
-                <Dots animating={this.state.loading}/>           
+            <div className="landingContainer">  
+              
+                <img className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
+                <div className="activity">
+                    <Dots size={15} animating={this.state.loading}/>
+                </div>
+
+                    {/*<Col md={6} className="headingContainer">                        
+                        <h1 className="j">J</h1><h1 className="k">K</h1>
+                        <div className="activity">
+                            <Dots size={20} animating={this.state.loading}/>
+                        </div>
+                    </Col>*/}
+                
             </div>
 		)
 	}

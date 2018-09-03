@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 
 import './styles/Landing.css'
 import './styles/LandingMobile.css'
+import './animation.js'
 
 import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 
@@ -25,16 +26,26 @@ export default class Landing extends Component {
     }
        
     componentDidMount() {
-        //this.setState({loading: false})
-        window.scrollTo(0, 0)
+        
+        this.down = TweenMax.to(this.flamingo, 3, {
+            y:300,opacity: 0, delay: 1
+        });
+        this.downDelay = TweenMax.to(this.activity, 3, {
+            opacity: 0,rotation:90, delay: 1
+        });
+        
     }
 
 	render() {		
+        const Landing = landingContainer => this.landingContainer = landingContainer
+        const flamingo = flamingo => this.flamingo = flamingo
+        const activity = activity => this.activity = activity
+
 		return(
-            <div className="landingContainer">  
+            <div ref={Landing} className="landingContainer">  
               
-                <img className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
-                <div className="activity">
+                <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
+                <div ref={activity} className="activity">
                     <Dots size={15} animating={this.state.loading}/>
                 </div>
 

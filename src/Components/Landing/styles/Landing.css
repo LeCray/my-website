@@ -1,5 +1,6 @@
 
 .landingContainer {
+	height: 100vh;
 	overflow-x: hidden;
 	text-align: center;
 	margin-top: 5%;
@@ -28,7 +29,7 @@
 	height: 500px;
 }
 .activity{
-	margin-left: 0px;
+	opacity: 0.8;
 }
 .borderr {
 	border: 1px solid red;

@@ -11,6 +11,9 @@ import './styles/LandingMobile.css'
 import './animation.js'
 
 import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import {Loadable} from "react-loading-overlay";
+import LoadingScreen from 'react-loading-screen'
+
 
 
 
@@ -19,7 +22,8 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true,            
+            loading: true,   
+            landingHome: false         
         };
 
         //this.handleInputChange = this.handleInputChange.bind(this);
@@ -27,12 +31,25 @@ export default class Landing extends Component {
        
     componentDidMount() {
         
-        this.down = TweenMax.to(this.flamingo, 3, {
-            y:300,opacity: 0, delay: 1
+        this.fade = TweenMax.to(this.flamingo, 1, {
+            scale: .7, opacity: 0, delay: 2
+        });        
+        this.twistActivity = TweenMax.to(this.activity, 4, {
+            opacity: 0,rotation:90, delay: 2
         });
-        this.downDelay = TweenMax.to(this.activity, 3, {
-            opacity: 0,rotation:90, delay: 1
-        });
+
+        setTimeout(() => {
+            this.setState({loading: false, landingHome: true})            
+        }, 3000)
+
+        setTimeout(() => {            
+            console.log("Bang")
+            this.leftCol = TweenMax.from(this.leftCol, 3, {
+                scale: .7, opacity: 0
+            }); 
+        }, 3000)
+
+        
         
     }
 
@@ -40,21 +57,32 @@ export default class Landing extends Component {
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
         const activity = activity => this.activity = activity
+        const leftCol = leftCol => this.leftCol = leftCol
+        const rightCol = rightCol => this.rightCol = rightCol
 
 		return(
-            <div ref={Landing} className="landingContainer">  
-              
-                <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
-                <div ref={activity} className="activity">
-                    <Dots size={15} animating={this.state.loading}/>
-                </div>
+            <div className="landingContainer">
+                                        
 
-                    {/*<Col md={6} className="headingContainer">                        
-                        <h1 className="j">J</h1><h1 className="k">K</h1>
-                        <div className="activity">
-                            <Dots size={20} animating={this.state.loading}/>
+                    {this.state.loading?
+                        <div ref={Landing} className="landingFlamingo">                
+                            <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
+                            <div ref={activity} className="activity">
+                                <Dots size={15} animating={this.state.loading}/>
+                            </div>                                                                   
                         </div>
-                    </Col>*/}
+                    :
+
+                        <div ref={leftCol} className="landingHome">
+                            <Row>
+                                <Col  md={6} className="leftCol">
+                                </Col>
+                                <Col ref={rightCol} md={6} className="rightCol">
+                                </Col>
+
+                            </Row>
+                        </div>
+                    }
                 
             </div>
 		)

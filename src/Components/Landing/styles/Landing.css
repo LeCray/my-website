@@ -1,26 +1,38 @@
 
 .landingContainer {
-	height: 100vh;
+
 	overflow-x: hidden;
+	
+	
+}
+.landingFlamingo {
+	
+	overflow-y: hidden;
 	text-align: center;
 	margin-top: 5%;
+}
+.landingHome {
+	overflow-x: hidden;
+	height: 2000px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
 }
 
 .headingContainer {
 	margin-top: 10%;
 	text-align: left;		
 }
-.j {		
-	display: inline-block;	
-	font-family: Times;
-	font-size: 120px;
+.leftCol {	
+	background: url('../../../Assets/Images/jk.svg') no-repeat ;
+    background-position: 100% 43%;
+    background-size: cover;	
+	border: 1px solid red;
+	height: 100vh;
 }
-.k {		
-	display: inline-block;
-	font-family: Times;
-	margin-top: 20px;
-	font-size: 70px;
-	vertical-align: top
+.rightCol {		
+	border: 1px solid red;
+	height: 100vh;
 }
 .flamingoContainer {
 	margin-top: 5%;	

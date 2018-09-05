@@ -23,22 +23,28 @@
 	margin-top: 10%;
 	text-align: left;		
 }
-.leftCol {	
-	background: url('../../../Assets/Images/jk.svg') no-repeat ;
-    background-position: 100% 43%;
-    background-size: cover;	
-	border: 1px solid red;
+
+.topSection {
 	height: 100vh;
+	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	text-align: center;	
 }
-.rightCol {		
-	border: 1px solid red;
-	height: 100vh;
+.name {
+	margin-top: 20px;
+	font-size: 30px;
+	color: #fff;
+
 }
+
 .flamingoContainer {
 	margin-top: 5%;	
 }
 .flamingo {	
 	height: 500px;
+}
+.rocket {	
+	height: 100px;
+	margin-top: 10%;
 }
 .activity{
 	opacity: 0.8;

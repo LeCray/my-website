@@ -42,11 +42,18 @@ export default class Landing extends Component {
             this.setState({loading: false, landingHome: true})            
         }, 3000)
 
-        setTimeout(() => {            
-            console.log("Bang")
-            this.leftCol = TweenMax.from(this.leftCol, 3, {
-                scale: .7, opacity: 0
+        setTimeout(() => {                        
+            this.landingHome = TweenMax.from(this.landingHome, 2, {
+                opacity: 0
             }); 
+            
+            this.rocket = TweenMax.from(this.rocket, 1, {
+                opacity: 0,rotation:90, x:-200, y:200, delay: .5
+            });
+            this.name = TweenMax.from(this.name, 1, {
+                opacity: 0, y:50, delay: .5
+            });
+
         }, 3000)
 
         
@@ -57,32 +64,36 @@ export default class Landing extends Component {
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
         const activity = activity => this.activity = activity
-        const leftCol = leftCol => this.leftCol = leftCol
-        const rightCol = rightCol => this.rightCol = rightCol
+        const landingHome = landingHome => this.landingHome = landingHome
+        const rocket = rocket => this.rocket = rocket
+        const name = name => this.name = name
 
 		return(
             <div className="landingContainer">
+                <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
                                         
+                {this.state.loading?
+                    <div ref={Landing} className="landingFlamingo">                
+                        <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
+                        <div ref={activity} className="activity">
+                            <Dots size={15} animating={this.state.loading}/>
+                        </div>                                                                   
+                    </div>
+                :
 
-                    {this.state.loading?
-                        <div ref={Landing} className="landingFlamingo">                
-                            <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
-                            <div ref={activity} className="activity">
-                                <Dots size={15} animating={this.state.loading}/>
-                            </div>                                                                   
-                        </div>
-                    :
+                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Quicksand"}}>
+                        <Row>
+                            <Col lg={12} className="topSection">
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/rocket.svg")}/>
+                                <h1 ref={name} className="name">JABULANI KUNENE</h1>
+                            </Col>                            
+                        </Row>
 
-                        <div ref={leftCol} className="landingHome">
-                            <Row>
-                                <Col  md={6} className="leftCol">
-                                </Col>
-                                <Col ref={rightCol} md={6} className="rightCol">
-                                </Col>
 
-                            </Row>
-                        </div>
-                    }
+
+
+                    </div>
+                }
                 
             </div>
 		)

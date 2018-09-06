@@ -16,7 +16,7 @@
 	height: 2000px;
 	top: 0px;
 	left: 0px;
-	width: 100%;
+	width: 100%;	
 }
 
 .headingContainer {
@@ -28,13 +28,23 @@
 	height: 100vh;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
 	text-align: center;		
+	z-index: 1;
 }
 .name {
 	margin-top: 20px;
-	font-size: 30px;
+	font-size: 40px;
 	color: #fff;
 	display: inline-block
+}
 
+.whiteBox {
+	position: absolute;
+	top: 7%;
+	width: 50%;
+	height: 400px;
+	background-color: #fff;
+	border: 1px solid red;
+	z-index: 99
 }
 
 .flamingoContainer {

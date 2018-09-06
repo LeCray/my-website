@@ -5,12 +5,13 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Co
 import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
+import {loading, topSection} from './Animation'
 
 import './styles/Landing.css'
 import './styles/LandingMobile.css'
-import './animation.js'
 
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4} from "gsap/TweenMax";
+
+import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import {Loadable} from "react-loading-overlay";
 import LoadingScreen from 'react-loading-screen'
 
@@ -32,45 +33,15 @@ export default class Landing extends Component {
        
     componentDidMount() {
         
-        this.fade = TweenMax.to(this.flamingo, 1, {
-            scale: .7, opacity: 0, delay: 2
-        });        
-        this.twistActivity = TweenMax.to(this.activity, 4, {
-            opacity: 0,rotation:90, delay: 2
-        });
-
+        loading(this.flamingo, this.activity)                           
+        
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
         }, 3000)
 
-        setTimeout(() => {                        
-            this.landingHome = TweenMax.from(this.landingHome, 3, {
-                opacity: 1,
-                ease: Power4.easeInOut,
-                x:"100%"
-            }); 
+        setTimeout(() => {                
+            topSection(this.landingHome, this.rocket, this.Fname, this.Lname)
             
-            this.rocket = TweenMax.from(this.rocket, 5, {
-                opacity: 0,
-                rotation:30, 
-                x:-200, 
-                y:200,
-                ease: Circ.easeOut, 
-                delay: .5
-            });
-            this.Fname = TweenMax.from(this.Fname, 4, {
-                opacity: 0, 
-                x:100, 
-                ease: Back.easeInOut.config(2),
-                delay: -.5
-            });
-            this.Lname = TweenMax.from(this.Lname, 5, {
-                opacity: 0, 
-                x:200, 
-                ease: Back.easeInOut.config(2),
-                delay: -.5
-            });
-
         }, 3000)
 
        
@@ -87,10 +58,11 @@ export default class Landing extends Component {
         const rocket = rocket => this.rocket = rocket
         const Fname = Fname => this.Fname = Fname
         const Lname = Lname => this.Lname = Lname
+        const whiteBox = whiteBox => this.whiteBox = whiteBox
 
 		return(
             <div className="landingContainer">
-                <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet"/>
                                         
                 {this.state.loading?
                     <div ref={Landing} className="landingFlamingo">                
@@ -101,15 +73,18 @@ export default class Landing extends Component {
                     </div>
                 :
 
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Quicksand"}}>
+                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
                         <Row>
                             <Col lg={12} className="topSection">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/rocket.svg")}/><br/>
                                 
-                                <h1 ref={Fname} className="name">JABULANI</h1>
-                                <h1 ref={Lname} className="name" style={{marginLeft: 5}}> KUNENE</h1>
+                                <h1 ref={Fname} className="name">Jabulani</h1>
+                                <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
                                 
                             </Col>                            
+                            {/*<div ref={whiteBox} className="whiteBox" >
+                                <h1>Hello</h1>
+                            </div>*/}
                         </Row>
 
 

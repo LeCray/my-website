@@ -1,22 +1,23 @@
 @media only screen  and  (max-width: 568px) {
 	.landingContainer {
 		overflow-x: hidden;
-		text-align: center;
-		margin-top: 30%;
+		text-align: center;		
 	}
-    .jk {
-        margin-top: 80%;
-		height: 200px;
-		margin-bottom: -30px
-    }
+	.landingFlamingo {
+		height: 100vh;
+		overflow-y: hidden;
+	}
     .headingContainer {
         text-align: center;     
         
     }
     .activity{
     	opacity: 0.8;
-
     }
+   	.rocket {	
+		height: 100px;
+		margin-top: 60%;
+	}
 
 
 }

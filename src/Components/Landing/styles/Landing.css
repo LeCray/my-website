@@ -27,12 +27,13 @@
 .topSection {
 	height: 100vh;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
-	text-align: center;	
+	text-align: center;		
 }
 .name {
 	margin-top: 20px;
 	font-size: 30px;
 	color: #fff;
+	display: inline-block
 
 }
 

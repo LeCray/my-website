@@ -10,7 +10,7 @@ import './styles/Landing.css'
 import './styles/LandingMobile.css'
 import './animation.js'
 
-import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4} from "gsap/TweenMax";
 import {Loadable} from "react-loading-overlay";
 import LoadingScreen from 'react-loading-screen'
 
@@ -23,7 +23,8 @@ export default class Landing extends Component {
         super(props);
         this.state = {
             loading: true,   
-            landingHome: false         
+            landingHome: false,
+            
         };
 
         //this.handleInputChange = this.handleInputChange.bind(this);
@@ -43,18 +44,36 @@ export default class Landing extends Component {
         }, 3000)
 
         setTimeout(() => {                        
-            this.landingHome = TweenMax.from(this.landingHome, 2, {
-                opacity: 0
+            this.landingHome = TweenMax.from(this.landingHome, 3, {
+                opacity: 1,
+                ease: Power4.easeInOut,
+                x:"100%"
             }); 
             
-            this.rocket = TweenMax.from(this.rocket, 1, {
-                opacity: 0,rotation:90, x:-200, y:200, delay: .5
+            this.rocket = TweenMax.from(this.rocket, 5, {
+                opacity: 0,
+                rotation:30, 
+                x:-200, 
+                y:200,
+                ease: Circ.easeOut, 
+                delay: .5
             });
-            this.name = TweenMax.from(this.name, 1, {
-                opacity: 0, y:50, delay: .5
+            this.Fname = TweenMax.from(this.Fname, 4, {
+                opacity: 0, 
+                x:100, 
+                ease: Back.easeInOut.config(2),
+                delay: -.5
+            });
+            this.Lname = TweenMax.from(this.Lname, 5, {
+                opacity: 0, 
+                x:200, 
+                ease: Back.easeInOut.config(2),
+                delay: -.5
             });
 
         }, 3000)
+
+       
 
         
         
@@ -66,7 +85,8 @@ export default class Landing extends Component {
         const activity = activity => this.activity = activity
         const landingHome = landingHome => this.landingHome = landingHome
         const rocket = rocket => this.rocket = rocket
-        const name = name => this.name = name
+        const Fname = Fname => this.Fname = Fname
+        const Lname = Lname => this.Lname = Lname
 
 		return(
             <div className="landingContainer">
@@ -84,8 +104,11 @@ export default class Landing extends Component {
                     <div ref={landingHome} className="landingHome" style={{fontFamily: "Quicksand"}}>
                         <Row>
                             <Col lg={12} className="topSection">
-                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/rocket.svg")}/>
-                                <h1 ref={name} className="name">JABULANI KUNENE</h1>
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/rocket.svg")}/><br/>
+                                
+                                <h1 ref={Fname} className="name">JABULANI</h1>
+                                <h1 ref={Lname} className="name" style={{marginLeft: 5}}> KUNENE</h1>
+                                
                             </Col>                            
                         </Row>
 

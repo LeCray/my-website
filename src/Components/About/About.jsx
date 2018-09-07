@@ -34,7 +34,7 @@ export default class About extends Component {
 	render() {		
     
 		return(
-            <div className="aboutHome">
+            <div >
                 <h1>About</h1>
             </div>
 		)

@@ -49,8 +49,9 @@ export default class Landing extends Component {
         }, 3000)                
     }
 
-    aboutTransition() {
-        this.setState({about: true})
+    async aboutTransition() {
+        await this.setState({about: !this.state.about})
+        aboutEnter(this.aboutHome)
     }
 
 	render() {		
@@ -111,8 +112,10 @@ export default class Landing extends Component {
                     </div>                    
                 }
 
-                {this.state.about?                    
-                    <About />
+                {this.state.about?   
+                    <div ref={aboutHome} className="aboutHome">                 
+                        <About />
+                    </div>
                 :null}
 
                 

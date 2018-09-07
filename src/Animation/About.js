@@ -11,7 +11,7 @@ export const aboutEnter = (aboutHome) => {
     .from(aboutHome, 3, {
         opacity: 1,
         ease: Power4.easeInOut,
-        x:"100%"
+        x:"-100%"
     }, "start") 
 
    

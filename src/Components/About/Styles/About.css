@@ -1,11 +1,1 @@
-.aboutHome {
-	position: absolute;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	height: 100vh;
-	top: 0px;
-	left: 0px;
-	width: 100%;	
-	z-index: 50;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
-}
+

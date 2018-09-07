@@ -1,4 +1,4 @@
-.leftCol {
+.aboutLeftCol {
 	position: absolute;
 	z-index: 60;
 	top: 0px;
@@ -13,18 +13,25 @@
 	color: #fff;
 	margin-top: 30%;
 }
-.hr {
+.aboutHr {
 	border-color: #fff;	
 	width: 50%;
 }
 
-.links {
+.aboutLinks {
 	margin-left: -20px;
 	padding: 10px;
 	margin-top: 250px;	
 }
-.link {
+.aboutLink {
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
+}
+
+.aboutRightCol {
+	margin-left: 50%;
+	height: 100vh;
+	width: 50%;
+	border: 1px solid red;
 }

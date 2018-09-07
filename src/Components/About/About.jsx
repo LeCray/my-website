@@ -35,15 +35,20 @@ export default class About extends Component {
     
 		return(
             <div>
-                <div className="leftCol">
+                <div className="aboutLeftCol">
                     <div className="leftColContent">
                         <h2>About</h2>
-                        <hr className="hr"/>
-                        <div className="links">
-                            <p className="link" onClick={this.aboutTransition}>About /</p>
-                            <p className="link">Work /</p>
-                            <p className="link">Contact /</p>
+                        <hr className="aboutHr"/>
+                        <div className="aboutLinks">
+                            <p className="aboutLink" onClick={this.aboutTransition}>About /</p>
+                            <p className="aboutLink">Work /</p>
+                            <p className="aboutLink">Contact /</p>
                         </div>
+                    </div>
+                </div>
+
+                <div className="aboutRightCol">
+                    <div className="leftColContent">
                     </div>
                 </div>
                 

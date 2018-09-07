@@ -13,7 +13,8 @@
     "react-loading-overlay": "^0.3.0",
     "react-loading-screen": "0.0.17",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.4",
+    "react-scroll-to-component": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

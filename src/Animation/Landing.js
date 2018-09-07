@@ -48,10 +48,10 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary
     .addLabel("firstPartIsDone") //FIRST PART DONE
     .from(whiteBox, 3, {
     	opacity: 1,
-    	rotation:-30, 
+    	//rotation:30, 
         ease: Power4.easeInOut,
         x:"-100%"
-    }, "firstPartIsDone-=2.5")  
+    }, "firstPartIsDone-=2.8")  
     .from(me, 2, {
     	opacity: 0,
     	rotation:-30, 
@@ -63,15 +63,15 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary
         x:"200%",         
         ease: Back.easeInOut.config(2),
         delay: 0
-    }, "firstPartIsDone-=1.7")
+    }, "firstPartIsDone-=1.9")
     .addLabel("rocketInPlace")
     .to(Fname, 2, {      	
-        x:"200%", 
+        x:"175%", 
         ease: Power2.easeInOut,
         delay: 0
-    }, "firstPartIsDone-=1.9")
+    }, "firstPartIsDone-=2")
     .to(Lname, 2.5, {            	
-        x:"225%", 
+        x:"200%", 
         ease: Power2.easeOut,
         delay: 0
     }, "firstPartIsDone-=2") 

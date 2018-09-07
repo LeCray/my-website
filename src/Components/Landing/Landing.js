@@ -28,6 +28,7 @@ export default class Landing extends Component {
         this.state = {
             loading: true,   
             landingHome: false,
+            about: false
             
         };
 
@@ -49,7 +50,7 @@ export default class Landing extends Component {
     }
 
     aboutTransition() {
-        aboutEnter(this.aboutHome)
+        this.setState({about: true})
     }
 
 	render() {		
@@ -79,18 +80,41 @@ export default class Landing extends Component {
                         </div>                                                                   
                     </div>
                 :
-
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
-                        
-                        
-
-                        <div ref={aboutHome} >
-                            <About />
-                        </div>
-                    </div>
-
                     
+                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
+                        <Row>
+                            <Col lg={12} className="topSection">
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
+                                
+                                <h1 ref={Fname} className="name">Jabulani</h1>
+                                <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
+                                <div ref={summary} className="summary">
+                                    <hr className="hr"/>
+                                    <div className="summaryDetails">
+                                        <h6>Full Stack Developer</h6>
+                                        <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
+                                        <h6>Web | Android | iOS</h6>
+                                    </div>
+                                    <div ref={links} className="links">
+                                        <p className="link" onClick={this.aboutTransition}>About /</p>
+                                        <p className="link">Work /</p>
+                                        <p className="link">Contact /</p>
+                                    </div>
+                                </div>
+
+                                
+                            </Col>                            
+                            <div ref={whiteBox} className="whiteBox">                                
+                                <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
+                            </div>
+                        </Row>                                                        
+                    </div>                    
                 }
+
+                {this.state.about?                    
+                    <About />
+                :null}
+
                 
             </div>
 		)

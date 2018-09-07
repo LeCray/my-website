@@ -13,10 +13,12 @@
 }
 .landingHome {
 	overflow-x: hidden;
-	height: 2000px;
+	overflow-y: hidden;
+	height: 100vh;
 	top: 0px;
 	left: 0px;
 	width: 100%;	
+	z-index: 10;
 }
 
 .headingContainer {
@@ -39,7 +41,7 @@
 }
 .whiteBox {
 	position: absolute;
-	top: 7%;
+	top: 23%;
 	left: -10%;
 	width: 60%;
 	height: 200px;
@@ -92,3 +94,13 @@
 	border: 1px solid red;
 }
 
+.aboutHome {
+	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	width: 100%;	
+	z-index: 99;
+}

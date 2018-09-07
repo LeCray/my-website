@@ -36,17 +36,21 @@
 	color: #fff;
 	display: inline-block
 }
-
 .whiteBox {
 	position: absolute;
 	top: 7%;
-	width: 50%;
+	left: -10%;
+	width: 60%;
 	height: 400px;
-	background-color: #fff;
-	border: 1px solid red;
-	z-index: 99
+	background-color: #fff;	
+	z-index: 99;
+	text-align: right;
 }
-
+.me {
+	
+	height: 110%;
+	
+}
 .flamingoContainer {
 	margin-top: 5%;	
 }

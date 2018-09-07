@@ -1,4 +1,4 @@
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
+import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, Power3, TimelineMax} from "gsap/TweenMax";
 
 
 
@@ -15,11 +15,11 @@ export const loading = (flamingo, activity) => {
 
 }
 
-export const topSection = (landingHome,rocket,Fname,Lname) => {
+export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me) => {
 
-  	var tl = new TimelineMax();
+  	var intro = new TimelineMax();
 
-    tl.addLabel("start")
+    intro.addLabel("start")
     .from(landingHome, 3, {
         opacity: 1,
         ease: Power4.easeInOut,
@@ -44,7 +44,37 @@ export const topSection = (landingHome,rocket,Fname,Lname) => {
         x:-200, 
         ease: Back.easeInOut.config(2),
         delay: -.5
-    }, "start");
+    }, "start")
+    .addLabel("firstPartIsDone") //FIRST PART DONE
+    .from(whiteBox, 3, {
+    	opacity: 1,
+    	rotation:-30, 
+        ease: Power4.easeInOut,
+        x:"-100%"
+    }, "firstPartIsDone-=2.5")  
+    .from(me, 2, {
+    	opacity: 0,
+    	rotation:-30, 
+    	ease: Power4.easeInOut,
+    	x:"-100%"
+    }, "firstPartIsDone-=2")
+    .to(rocket, 4, {               
+        x:"200%",         
+        ease: Back.easeOut.config(2),
+        delay: 0
+    }, "firstPartIsDone-=1")
+    .to(Fname, 2, {        
+        x:"200%", 
+        ease: Power2.easeInOut,
+        delay: 0
+    }, "firstPartIsDone-=1.7")
+    .to(Lname, 2.5, {        
+        x:"225%", 
+        ease: Power2.easeInOut,
+        delay: 0
+    }, "firstPartIsDone-=2")
+       
+    
     
 }
 

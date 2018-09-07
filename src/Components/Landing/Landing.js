@@ -40,7 +40,7 @@ export default class Landing extends Component {
         }, 3000)
 
         setTimeout(() => {                
-            topSection(this.landingHome, this.rocket, this.Fname, this.Lname)
+            topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me)
             
         }, 3000)
 
@@ -59,6 +59,7 @@ export default class Landing extends Component {
         const Fname = Fname => this.Fname = Fname
         const Lname = Lname => this.Lname = Lname
         const whiteBox = whiteBox => this.whiteBox = whiteBox
+        const me = me => this.me = me
 
 		return(
             <div className="landingContainer">
@@ -82,9 +83,9 @@ export default class Landing extends Component {
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
                                 
                             </Col>                            
-                            {/*<div ref={whiteBox} className="whiteBox" >
-                                <h1>Hello</h1>
-                            </div>*/}
+                            <div ref={whiteBox} className="whiteBox">                                
+                                <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
+                            </div>
                         </Row>
 
 

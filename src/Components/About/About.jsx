@@ -34,8 +34,19 @@ export default class About extends Component {
 	render() {		
     
 		return(
-            <div >
-                <h1>About</h1>
+            <div>
+                <div className="leftCol">
+                    <div className="leftColContent">
+                        <h2>About</h2>
+                        <hr className="hr"/>
+                        <div className="links">
+                            <p className="link" onClick={this.aboutTransition}>About /</p>
+                            <p className="link">Work /</p>
+                            <p className="link">Contact /</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 		)
 	}

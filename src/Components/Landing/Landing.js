@@ -40,7 +40,7 @@ export default class Landing extends Component {
         }, 3000)
 
         setTimeout(() => {                
-            topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me)
+            topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.summary, this.links)
             
         }, 3000)
 
@@ -60,6 +60,8 @@ export default class Landing extends Component {
         const Lname = Lname => this.Lname = Lname
         const whiteBox = whiteBox => this.whiteBox = whiteBox
         const me = me => this.me = me
+        const summary = summary => this.summary = summary
+        const links = links => this.links = links
 
 		return(
             <div className="landingContainer">
@@ -77,10 +79,24 @@ export default class Landing extends Component {
                     <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
                         <Row>
                             <Col lg={12} className="topSection">
-                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/rocket.svg")}/><br/>
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
+                                <div ref={summary} className="summary">
+                                    <hr/>
+                                    <div className="summaryDetails">
+                                        <h6>Full Stack Developer</h6>
+                                        <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
+                                        <h6>Web | Android | iOS</h6>
+                                    </div>
+                                    <div ref={links} className="links">
+                                        <p className="link">About /</p>
+                                        <p className="link">Work /</p>
+                                        <p className="link">Contact /</p>
+                                    </div>
+                                </div>
+
                                 
                             </Col>                            
                             <div ref={whiteBox} className="whiteBox">                                

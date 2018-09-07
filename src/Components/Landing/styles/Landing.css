@@ -27,6 +27,7 @@
 .topSection {
 	height: 100vh;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+
 	text-align: center;		
 	z-index: 1;
 }
@@ -46,10 +47,29 @@
 	z-index: 99;
 	text-align: right;
 }
-.me {
+.me {	
+	height: 110%;	
+}
+.summary {
+	position: absolute;
+	top: 32%;
+	left: 61%;
+	width: 400px;
+	text-align: left;
+	color: #fff;
 	
-	height: 110%;
-	
+}
+.summaryDetails {
+	padding: 10px;	
+}
+.links {
+	margin-left: -20px;
+	padding: 10px;
+	margin-top: 210px;
+}
+.link {
+	margin-left: 20px;
+	display: inline-block;
 }
 .flamingoContainer {
 	margin-top: 5%;	

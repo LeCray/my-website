@@ -15,7 +15,7 @@ export const loading = (flamingo, activity) => {
 
 }
 
-export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me) => {
+export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary, links) => {
 
   	var intro = new TimelineMax();
 
@@ -26,7 +26,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me) => {
         x:"-100%"
     }, "start")         
     .from(rocket, 5, {
-        opacity: 1,
+        opacity: 0,
         rotation:30, 
         x:300, 
         y:-200,
@@ -57,24 +57,44 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me) => {
     	rotation:-30, 
     	ease: Power4.easeInOut,
     	x:"-100%"
-    }, "firstPartIsDone-=2")
-    .to(rocket, 4, {               
+    }, "firstPartIsDone-=1.7")
+    .to(rocket, 2, {  
+    	opacity: 0,             
         x:"200%",         
-        ease: Back.easeOut.config(2),
+        ease: Back.easeInOut.config(2),
         delay: 0
-    }, "firstPartIsDone-=1")
-    .to(Fname, 2, {        
+    }, "firstPartIsDone-=1.7")
+    .addLabel("rocketInPlace")
+    .to(Fname, 2, {      	
         x:"200%", 
         ease: Power2.easeInOut,
         delay: 0
-    }, "firstPartIsDone-=1.7")
-    .to(Lname, 2.5, {        
+    }, "firstPartIsDone-=1.9")
+    .to(Lname, 2.5, {            	
         x:"225%", 
-        ease: Power2.easeInOut,
+        ease: Power2.easeOut,
         delay: 0
-    }, "firstPartIsDone-=2")
-       
-    
+    }, "firstPartIsDone-=2") 
+    .to(Fname, 2, {      	
+        y:"-200%", 
+        ease: Power2.easeOut,
+        delay: 0
+    }, "firstPartIsDone-=.5")
+    .to(Lname, 2, {            	
+        y:"-200%", 
+        ease: Power2.easeOut,
+        delay: .5
+    }, "firstPartIsDone-=1")    
+    .from(summary,2, {
+    	opacity: 0,
+    	ease: Back.easeInOut.config(2),
+    	y:-40
+    }, "firstPartIsDone-=1")      
+    .from(links,2, {
+    	opacity: 0,
+    	ease: Back.easeInOut.config(2),
+    	x:100
+    }, "firstPartIsDone-=.8")
     
 }
 

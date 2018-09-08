@@ -48,9 +48,23 @@
 
 }
 
-.mad-mobile {
+.mad-mobile-img {
 	width: 100%;
 }
 .mad-content {
-	margin-top: 50px;
+	margin-top: 30px;
+}
+.parkupp-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.parkupp-content {
+	margin-top: 30px;
+}
+.money-calls-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.money-calls-content {
+	margin-top: 30px;
 }

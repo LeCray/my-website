@@ -24,14 +24,17 @@ export const Parkupp = () => {
     return (
         <div>
             <h2>ParkUpp</h2>
+            <h5>A decentralised parking application</h5>
 
-            <p className="mad-content">
-                I am also currently developing the web application of ParkUpp – a tech startup.  
-                ParkUpp is a company that solves todays limited parking problem.  It is a decentralised parking application.  
+            <p className="parkupp-content">
+                I am currently the lead developer in a team of developers developing ParkUpp's web and mobile application.
+                <br/><br/>                
                 Owners that own parking can list their parking on the app and users that 
-                need parking can simply get access to that parking and pay the owners directly.  
+                need parking can simply get access to that parking and pay the owners directly through the app. 
+                <br/><br/>                 
                 Very similar to Airbnb except instead of apartments – its parking space.
-            </p>            
+            </p>  
+            <img className="parkupp-img" src={require("../../../Assets/Images/parkupp.png")}/>          
         </div>
     )
 }

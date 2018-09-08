@@ -24,13 +24,21 @@ export const MoneyCalls = () => {
     return (
         <div>
             <h2>Money Calls</h2>
+            <h5>A foreign exchange web application</h5>
 
-            <p className="mad-content">
-                I am also currently developing the web application of ParkUpp – a tech startup.  
-                ParkUpp is a company that solves todays limited parking problem.  It is a decentralised parking application.  
-                Owners that own parking can list their parking on the app and users that 
-                need parking can simply get access to that parking and pay the owners directly.  
-                Very similar to Airbnb except instead of apartments – its parking space.
+            <p className="money-calls-content">
+                This application was built for Gift Mashapha, founder and CEO of Market Trading Network SA.  
+                New aspiring traders can create sign up and trade foreign currencies using AVA Trade as the affiliated broker. 
+                <br/><br/>
+                Features of the app included:
+                <ul>
+                  <li>Real time group chat sessions</li>
+                  <li>Tracking of who referred who to the system</li>
+                  <li>User account statistics management</li>
+                  <li>Performance tracking</li>
+                  <li>Embedded cryptocurrency payment system for top trader rewards</li>
+                </ul>
+                <img className="money-calls-img" src={require("../../../Assets/Images/money-calls.png")}/>                
             </p>            
         </div>
     )

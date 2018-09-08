@@ -24,9 +24,10 @@ export const MadMobile = () => {
     return (
         <div>
             <h2>Mahele Auto Doctor</h2>
+            <h5>A real time vehicle diagnostics application</h5>
 
             <p className="mad-content">
-                In 2017 I developed software for Mahele Auto Doctor (M.A.D) in Vereeneging, Gauteng.                              
+                I single-handedly developed software for Mahele Auto Doctor (M.A.D) in Vereeneging, Gauteng.                              
                 M.A.D does vehicle repairs and maintenance, fleet management, construction, courier, towing and much more. 
                 <br/><br/>
                 The App I built for the company allows their clients to manage their accounts in a new way.
@@ -44,7 +45,7 @@ export const MadMobile = () => {
             <p> 
                 The app was published to the Play Store in January 2018. MAD Mobile
             </p>
-            <img className="mad-mobile" src={require("../../../Assets/Images/mad-mobile.png")}/>
+            <img className="mad-mobile-img" src={require("../../../Assets/Images/mad-mobile.png")}/>
         </div>
     )
 }

@@ -11,7 +11,7 @@
 .leftColContent {
 	text-align: center;
 	color: #fff;
-	margin-top: 30%;
+	padding-top: 25%;
 }
 .aboutHr {
 	border-color: #fff;	
@@ -27,11 +27,30 @@
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
+
+}
+.about-intra-links {	
+	display: inline-block;	
+	
 }
 
 .aboutRightCol {
 	margin-left: 50%;
 	height: 100vh;
 	width: 50%;
-	border: 1px solid red;
+	
+}
+.rightColContent {
+	height: 100%;
+	padding: 50px 100px 100px 100px;
+	color: black;
+	overflow-y: scroll;	
+
+}
+
+.mad-mobile {
+	width: 100%;
+}
+.mad-content {
+	margin-top: 50px;
 }

@@ -24,14 +24,15 @@ export const GalxyBit = () => {
     return (
         <div>
             <h2>GalxyBit</h2>
+            <h5>A cryptocurrency exchange</h5>
+            <p><i>- Still in progress</i></p>
 
-            <p className="mad-content">
-                I am also currently developing the web application of ParkUpp – a tech startup.  
-                ParkUpp is a company that solves todays limited parking problem.  It is a decentralised parking application.  
-                Owners that own parking can list their parking on the app and users that 
-                need parking can simply get access to that parking and pay the owners directly.  
-                Very similar to Airbnb except instead of apartments – its parking space.
-            </p>            
+            <p className="galxybit-content">
+                People with South African Rands will be able to exchange their ZARS 
+                for one of three major cryptocurrencies namely Bitcoin, Litecoin and Ethereum. 
+                The web application and mobile application are still in beta testing mode.
+            </p>        
+            <img className="galxybit-img" src={require("../../../Assets/Images/galxybit.png")}/>    
         </div>
     )
 }

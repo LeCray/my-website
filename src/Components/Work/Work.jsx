@@ -7,8 +7,8 @@ import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 
-import './Styles/About.css'
-import './Styles/AboutMobile.css'
+import './Styles/Work.css'
+import './Styles/WorkMobile.css'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
@@ -21,7 +21,7 @@ import {GalxyBit} from './Content/GalxyBit'
 
 
 
-export default class About extends Component {
+export default class Work extends Component {
     
     constructor(props) {
         super(props);
@@ -79,7 +79,7 @@ export default class About extends Component {
             <div>
                 <div className="aboutLeftCol">
                     <div className="leftColContent">
-                        <h2>ABOUT</h2>
+                        <h2>WORK</h2>
                         {/*<hr className="aboutHr"/>*/}
                         <div className="about-intra-links">
                             <p className="aboutLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>

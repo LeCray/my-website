@@ -82,7 +82,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
         ease: Power2.easeOut,
         delay: .5
     }, "firstPartIsDone-=1")  
-    .from(hr,1, {
+    .from(hr, 2, {
         opacity: 0,
         ease: Back.easeInOut.config(2),
         x:-40

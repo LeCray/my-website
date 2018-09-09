@@ -157,8 +157,6 @@ export default class Work extends Component {
                                 <GalxyBit />
                             </div>
                           
-       
-
                         </div>
                     </div>
                 </div>:null}

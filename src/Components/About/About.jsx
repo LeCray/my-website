@@ -77,7 +77,7 @@ export default class About extends Component {
                         <div className="aboutLeftCol">
                             <div className="aboutWhite">
                                 <h2>ABOUT</h2>
-                                {/*<hr className="aboutHr"/>*/}
+                                <p className="learn"><b> - I LIVE TO LEARN - </b></p>
                                 
                                 <div className="aboutLinks">
                                     <p className="aboutLink" onClick={this.homeTransition}>Home /</p>
@@ -91,7 +91,85 @@ export default class About extends Component {
                         <div className="aboutRightCol">
                             <div className="aboutRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2>I am a self taught fullstack developer</h2>
+                                <h2><b>Jabulani Kunene</b></h2>
+                                <h4>I am a self taught fullstack developer</h4>
+
+                                <br/><br/>
+                                
+                                <h5><b>University of the Witwatersrand</b></h5>
+                                <p>
+                                    I am currently taking a break from my 3rd year of Mechanical Engineering studies
+                                    <br/><br/>
+                                    My subjects include:                                    
+                                    <ul>                                        
+                                        <li>Design</li> 
+                                        <li>Mechatronics</li>  
+                                        <li>Applied Mechanics</li>  
+                                        <li>Maths</li>  
+                                        <li>Mechanics of Vibrations</li>  
+                                        <li>Mechanics of Solids</li>  
+                                        <li>Numerical Analysis</li>  
+                                        <li>Statistics</li>
+                                    </ul>
+
+                                    <br/>
+                                    Right now I am studying Computer Science part-time.
+                                    <br/><br/>
+                                    My subjects include:
+                                    <ul>                                        
+                                        <li>Computational & Applied Mathematics</li>                                         
+                                    </ul>
+                                    
+                                    I plan on getting my <b>Honours degree</b> in <b>Mechanical Engineering</b> by 2020.
+                                </p>
+
+                                <hr className="hrLine"/>
+
+                                <h5><b>My Passions</b></h5>
+                                <p>
+                                    I first taught myself how to trade the financial markets and am 
+                                    currently developing a cryptocurrency market algorithm with a Computer Science Phd student 
+                                    (my lecturer) to model the crypto market, predict intraday moves and place trades automatically.
+                                    <br/><br/>
+                                    My early interest in cryptocurrency evolved into an interest in 
+                                    <b>Web Development</b> because I then made the decision
+                                    to build <b>GalxyBit</b> - a cryptocurrency exchange (BTC/ZAR, ETH/ZAR, LTC/ZAR)
+                                    <br/><br/>
+                                    I taught myself various coding languages including:
+                                    <ul>                                        
+                                        <li>HTML</li> 
+                                        <li>CSS</li>  
+                                        <li>JavaScript</li>  
+                                        <li>Ruby</li>  
+                                        <li>Java</li>
+                                    </ul>
+                                    And frameworks:
+                                    <ul>
+                                        <li>Android Studio</li>
+                                        <li>React JS</li>  
+                                        <li>Express JS</li>  
+                                        <li>Ruby on Rails</li>  
+                                    </ul>
+                                    I am also very familar with:
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>MATLAB</li>
+                                        <li>Scilab</li>
+                                    </ul>
+                                </p>
+                                
+                                <hr className="hrLine"/>
+                                In the beginning of January 2018 I successfully published my first Android App
+                                to the Play Store - MAD Mobile.<br/>
+                                It is a real time vehicle diagnostics application. More on this in my Work section
+                                <hr className="hrLine"/>
+                                <p><b>A BELIEF I HAVE IS THAT IT'S POSSIBLE TO LEARN ANYTHING</b></p>
+
+
+                                         
+
+                                    
+
 
                             </div>
                         </div>

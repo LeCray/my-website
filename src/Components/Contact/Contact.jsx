@@ -25,16 +25,45 @@ export default class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true,   
-            landingHome: false,
-            madMobile: true,
-            parkupp: false
+            home: false,
+            about: false,
+            work: false,
+            contact: true
+        }
             
-        };
-
-        //this.madMobile = this.madMobile.bind(this);
-       
+        this.homeTransition = this.homeTransition.bind(this);
+        this.workTransition = this.workTransition.bind(this);
+        this.aboutTransition = this.aboutTransition.bind(this);       
     }
+
+    async homeTransition() {
+        await this.setState({
+            home: true, 
+            about: false,           
+            work: false,
+            contact: false
+        })
+        //homeEnter(this.home)
+    }
+    async aboutTransition() {
+        await this.setState({
+            home: false, 
+            about: true,           
+            work: false,
+            contact: false
+        })
+        //homeEnter(this.home)
+    }
+    async workTransition() {
+        await this.setState({
+            home: false, 
+            about: false,           
+            work: true,
+            contact: false
+        })
+        //workEnter(this.workHome)
+    }
+       
 
 
 	render() {	
@@ -44,30 +73,52 @@ export default class Contact extends Component {
     
 		return(
             <div>
-                <div className="contactLeftCol">
-                    <div className="contactWhite">
-                        <h2>CONTACT</h2>
-                        {/*<hr className="contactHr"/>*/}
-                        
-                        <div className="contactLinks">
-                            <p className="contactLink">Home /</p>
-                            <p className="contactLink" onClick={this.contactTransition}>About /</p>
-                            <p className="contactLink">Work /</p>
-                            <p className="contactLink">Contact /</p>
+                {this.state.contact?
+                    <div>
+                        <div className="contactLeftCol">
+                            <div className="contactWhite">
+                                <h2>CONTACT</h2>
+                                {/*<hr className="contactHr"/>*/}
+                                
+                                <div className="contactLinks">
+                                    <p className="contactLink" onClick={this.homeTransition}>Home /</p>
+                                    <p className="contactLink" onClick={this.aboutTransition}>About /</p>
+                                    <p className="contactLink" onClick={this.workTransition}>Work /</p>
+                                    <p className="contactLink">Contact /</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="contactRightCol">
+                            <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+
+                                <h2>I am a self taught fullstack developer</h2>
+                              
+           
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                :null}
 
-                <div className="contactRightCol">
-                    <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
-
-                        <h2>I am a self taught fullstack developer</h2>
-                      
-   
-
+                {this.state.home?   
+                    <div ref={home} className="home">                 
+                        <Landing />
                     </div>
-                </div>
+                :null}
+
+
+                {this.state.about?   
+                    <div ref={aboutHome} className="aboutHome">                 
+                        <About />
+                    </div>
+                :null}
                 
+                {this.state.work?   
+                    <div ref={workHome} className="workHome">                 
+                        <Work />
+                    </div>
+                :null}
             </div>
 		)
 	}

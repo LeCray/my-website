@@ -59,6 +59,7 @@
 }
 .me {	
 	height: 220%;	
+	rotation: 20deg;
 }
 .hr {
 	position: absolute;

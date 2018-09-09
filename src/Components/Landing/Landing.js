@@ -44,9 +44,7 @@ export default class Landing extends Component {
     }
        
     componentDidMount() {
-        
-                              
-        
+                
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
         }, 1000)
@@ -103,7 +101,8 @@ export default class Landing extends Component {
 		return(
             <div className="landingContainer">
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet"/>
-                                        
+                                
+
                 {this.state.loading?    
                     <div ref={activity} className="activity">
                         <Dots size={25} animating={this.state.loading} color="#0066ff"/>

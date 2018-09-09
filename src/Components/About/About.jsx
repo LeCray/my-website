@@ -111,8 +111,7 @@ export default class About extends Component {
                                         <li>Numerical Analysis</li>  
                                         <li>Statistics</li>
                                     </ul>
-
-                                    <br/>
+                                    
                                     Right now I am studying Computer Science part-time.
                                     <br/><br/>
                                     My subjects include:

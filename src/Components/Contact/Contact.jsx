@@ -94,7 +94,7 @@ export default class Contact extends Component {
                             <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
                                 <h2 className="heading">Get in touch</h2>
-                                <h4>I am available for Full-Time and Freelance work </h4>
+                                <h5>I am available for Full-Time and Freelance work </h5>
                                 <hr/>
                                 <br/><br/>
                                 <Row>

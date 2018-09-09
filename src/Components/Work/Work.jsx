@@ -77,26 +77,26 @@ export default class Work extends Component {
     
 		return(
             <div>
-                <div className="aboutLeftCol">
-                    <div className="leftColContent">
+                <div className="workLeftCol">
+                    <div className="workleftColContent">
                         <h2>WORK</h2>
-                        {/*<hr className="aboutHr"/>*/}
-                        <div className="about-intra-links">
-                            <p className="aboutLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
-                            <p className="aboutLink" onClick={this.parkupp}>ParkUpp</p>
-                            <p className="aboutLink" onClick={this.moneyCalls}>Money Calls</p>
-                            <p className="aboutLink" onClick={this.galxyBit}>GalxyBit</p>
+                        {/*<hr className="workHr"/>*/}
+                        <div className="work-intra-links">
+                            <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
+                            <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
+                            <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
+                            <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
                         </div>
-                        <div className="aboutLinks">
-                            <p className="aboutLink" onClick={this.aboutTransition}>About /</p>
-                            <p className="aboutLink">Work /</p>
-                            <p className="aboutLink">Contact /</p>
+                        <div className="workLinks">
+                            <p className="workLink" onClick={this.workTransition}>work /</p>
+                            <p className="workLink">Work /</p>
+                            <p className="workLink">Contact /</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="aboutRightCol">
-                    <div className="rightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                <div className="workRightCol">
+                    <div className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
                         <div style={{display: this.state.madMobile?null:"none"}}>
                             <MadMobile />

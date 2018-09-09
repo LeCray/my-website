@@ -7,12 +7,16 @@ import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 import {loading, topSection} from '../../Animation/Landing'
+import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
+import {contactEnter} from '../../Animation/Contact'
 
 import './Styles/Landing.css'
 import './Styles/LandingMobile.css'
 
 import Work from '../Work/Work'
+import About from '../About/About'
+import Contact from '../Contact/Contact'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
@@ -28,11 +32,15 @@ export default class Landing extends Component {
         this.state = {
             loading: true,   
             landingHome: false,
-            work: false
+            about: false,
+            work: false,
+            contact: false
             
         };
 
         this.workTransition = this.workTransition.bind(this);
+        this.aboutTransition = this.aboutTransition.bind(this);
+        this.contactTransition = this.contactTransition.bind(this);
     }
        
     componentDidMount() {
@@ -49,9 +57,17 @@ export default class Landing extends Component {
         }, 3000)                
     }
 
+    async aboutTransition() {
+        await this.setState({about: !this.state.about})
+        aboutEnter(this.aboutHome)
+    }
     async workTransition() {
         await this.setState({work: !this.state.work})
         workEnter(this.workHome)
+    }
+    async contactTransition() {
+        await this.setState({contact: !this.state.contact})
+        contactEnter(this.contactHome)
     }
 
 	render() {		
@@ -67,7 +83,9 @@ export default class Landing extends Component {
         const summary = summary => this.summary = summary
         const links = links => this.links = links
 
+        const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
+        const contactHome = contactHome => this.contactHome = contactHome
 
 		return(
             <div className="landingContainer">
@@ -112,9 +130,21 @@ export default class Landing extends Component {
                     </div>                    
                 }
 
+                {this.state.about?   
+                    <div ref={aboutHome} className="aboutHome">                 
+                        <About />
+                    </div>
+                :null}
+
                 {this.state.work?   
                     <div ref={workHome} className="workHome">                 
                         <Work />
+                    </div>
+                :null}
+
+                {this.state.contact?   
+                    <div ref={contactHome} className="contactHome">                 
+                        <Contact />
                     </div>
                 :null}
 

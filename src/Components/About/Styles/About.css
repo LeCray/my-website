@@ -1,4 +1,4 @@
-.workLeftCol {
+.aboutLeftCol {
 	position: absolute;
 	z-index: 60;
 	top: 0px;
@@ -8,39 +8,39 @@
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
 }
 
-.workLeftColContent {
+.aboutLeftColContent {
 	text-align: center;
 	color: #fff;
 	padding-top: 25%;
 }
-.workHr {
+.aboutHr {
 	border-color: #fff;	
 	width: 50%;
 }
 
-.workLinks {
+.aboutLinks {
 	margin-left: -20px;
 	padding: 10px;
 	margin-top: 250px;	
 }
-.workLink {
+.aboutLink {
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
 
 }
-.work-intra-links {	
+.about-intra-links {	
 	display: inline-block;	
 	
 }
 
-.workRightCol {
+.aboutRightCol {
 	margin-left: 50%;
 	height: 100vh;
 	width: 50%;
 	
 }
-.workRightColContent {
+.aboutRightColContent {
 	height: 100%;
 	padding: 50px 100px 100px 100px;
 	color: black;
@@ -48,30 +48,3 @@
 
 }
 
-.mad-mobile-img {
-	width: 100%;
-}
-.mad-content {
-	margin-top: 30px;
-}
-.parkupp-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.parkupp-content {
-	margin-top: 30px;
-}
-.money-calls-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.money-calls-content {
-	margin-top: 30px;
-}
-.galxybit-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.galxybit-content {
-	margin-top: 30px;
-}

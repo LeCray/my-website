@@ -7,17 +7,14 @@ import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 
-import './Styles/about.css'
-import './Styles/aboutMobile.css'
+import './Styles/About.css'
+import './Styles/AboutMobile.css'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
-import {MadMobile} from './Content/MadMobile'
-import {Parkupp} from './Content/Parkupp'
-import {MoneyCalls} from './Content/MoneyCalls'
-import {GalxyBit} from './Content/GalxyBit'
+
 
 
 

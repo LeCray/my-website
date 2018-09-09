@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
-import { Dots, Digital } from 'react-activity';
+import { Dots, Digital, Bounce } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
 
@@ -45,16 +45,16 @@ export default class Landing extends Component {
        
     componentDidMount() {
         
-        loading(this.flamingo, this.activity)                           
+                              
         
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
-        }, 3000)
+        }, 1000)
 
         setTimeout(() => {                
-            topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.summary, this.links)
+            topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.hr, this.summary, this.links)
             
-        }, 3000)                
+        }, 1000)                
     }
 
     async aboutTransition() {
@@ -93,6 +93,7 @@ export default class Landing extends Component {
         const whiteBox = whiteBox => this.whiteBox = whiteBox
         const me = me => this.me = me
         const summary = summary => this.summary = summary
+        const hr = hr => this.hr = hr
         const links = links => this.links = links
 
         const aboutHome = aboutHome => this.aboutHome = aboutHome
@@ -103,13 +104,10 @@ export default class Landing extends Component {
             <div className="landingContainer">
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet"/>
                                         
-                {this.state.loading?
-                    <div ref={Landing} className="landingFlamingo">                
-                        <img ref={flamingo} className="flamingo" src={require("../../Assets/Images/flamingo.jpg")}/>
-                        <div ref={activity} className="activity">
-                            <Dots size={15} animating={this.state.loading}/>
-                        </div>                                                                   
-                    </div>
+                {this.state.loading?    
+                    <div ref={activity} className="activity">
+                        <Dots size={25} animating={this.state.loading} color="#0066ff"/>
+                    </div>                                                                                       
                 :
                     
                     <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
@@ -119,18 +117,18 @@ export default class Landing extends Component {
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
+                                <hr ref={hr} className="hr"/>
                                 <div ref={summary} className="summary">
-                                    <hr className="hr"/>
                                     <div className="summaryDetails">
                                         <h6>Full Stack Developer</h6>
                                         <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
                                         <h6>Web | Android | iOS</h6>
                                     </div>
-                                    <div ref={links} className="links">
-                                        <p className="link" onClick={this.aboutTransition}>About /</p>
-                                        <p className="link" onClick={this.workTransition}>Work /</p>
-                                        <p className="link" onClick={this.contactTransition}>Contact /</p>
-                                    </div>
+                                </div>
+                                <div ref={links} className="links summary">
+                                    <p className="link" onClick={this.aboutTransition}>About /</p>
+                                    <p className="link" onClick={this.workTransition}>Work /</p>
+                                    <p className="link" onClick={this.contactTransition}>Contact /</p>
                                 </div>
 
                                 

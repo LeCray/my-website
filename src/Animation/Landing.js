@@ -2,20 +2,17 @@ import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, Power3, Tim
 
 
 
-export const loading = (flamingo, activity) => {
+export const loading = (activity) => {
 	var tl = new TimelineMax();
 		
-	tl.addLabel("start")
-	.to(flamingo, 1, {
-        scale: .7, opacity: 0, delay: 1
-    }, "start")     
+	tl.addLabel("start")	
     .to(activity, 4, {
-        opacity: 0,rotation:90, delay: 1
+        opacity: 0
     }, "start");
 
 }
 
-export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary, links) => {
+export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, summary, links) => {
 
   	var intro = new TimelineMax();
 
@@ -54,7 +51,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary
     }, "firstPartIsDone-=2.8")  
     .from(me, 2, {
     	opacity: 0,
-    	rotation:-30, 
+    	rotation:0, 
     	ease: Power4.easeInOut,
     	x:"-100%"
     }, "firstPartIsDone-=1.7")
@@ -84,17 +81,22 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, summary
         y:"-200%", 
         ease: Power2.easeOut,
         delay: .5
-    }, "firstPartIsDone-=1")    
-    .from(summary,2, {
+    }, "firstPartIsDone-=1")  
+    .from(hr,1, {
+        opacity: 0,
+        ease: Back.easeInOut.config(2),
+        x:-40
+    }, "firstPartIsDone-=0")    
+    .from(summary,3, {
     	opacity: 0,
-    	ease: Back.easeInOut.config(2),
+    	ease: Power2.easeOut,
     	y:-40
-    }, "firstPartIsDone-=1")      
+    }, "firstPartIsDone-=0")      
     .from(links,2, {
     	opacity: 0,
-    	ease: Back.easeInOut.config(2),
+    	ease: Power2.easeOut,
     	x:100
-    }, "firstPartIsDone-=.8")
+    }, "firstPartIsDone+=1")
     
 }
 

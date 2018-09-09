@@ -11,8 +11,8 @@ import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
-import './Styles/Landing.css'
-import './Styles/LandingMobile.css'
+import './styles/Landing.css'
+import './styles/LandingMobile.css'
 
 import Work from '../Work/Work'
 import About from '../About/About'

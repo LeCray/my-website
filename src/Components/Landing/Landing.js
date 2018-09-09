@@ -58,15 +58,27 @@ export default class Landing extends Component {
     }
 
     async aboutTransition() {
-        await this.setState({about: !this.state.about})
+        await this.setState({
+            about: true,
+            work: false,
+            contact: false
+        })
         aboutEnter(this.aboutHome)
     }
     async workTransition() {
-        await this.setState({work: !this.state.work})
+        await this.setState({
+            about: false,
+            work: true,
+            contact: false
+        })
         workEnter(this.workHome)
     }
     async contactTransition() {
-        await this.setState({contact: !this.state.contact})
+        await this.setState({
+            about: false,
+            work: false,
+            contact: true
+        })
         contactEnter(this.contactHome)
     }
 
@@ -115,9 +127,9 @@ export default class Landing extends Component {
                                         <h6>Web | Android | iOS</h6>
                                     </div>
                                     <div ref={links} className="links">
-                                        <p className="link">About /</p>
+                                        <p className="link" onClick={this.aboutTransition}>About /</p>
                                         <p className="link" onClick={this.workTransition}>Work /</p>
-                                        <p className="link">Contact /</p>
+                                        <p className="link" onClick={this.contactTransition}>Contact /</p>
                                     </div>
                                 </div>
 

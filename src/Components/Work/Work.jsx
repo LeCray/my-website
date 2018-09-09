@@ -14,6 +14,10 @@ import './Styles/WorkMobile.css'
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
+import Landing from '../Landing/Landing'
+import About from '../About/About'
+import Contact from '../Contact/Contact'
+
 import {MadMobile} from './Content/MadMobile'
 import {Parkupp} from './Content/Parkupp'
 import {MoneyCalls} from './Content/MoneyCalls'
@@ -78,7 +82,7 @@ export default class Work extends Component {
 		return(
             <div>
                 <div className="workLeftCol">
-                    <div className="workleftColContent">
+                    <div className="workLeftColContent">
                         <h2>WORK</h2>
                         {/*<hr className="workHr"/>*/}
                         <div className="work-intra-links">

@@ -12,6 +12,7 @@
 	text-align: center;
 	color: #fff;
 	padding-top: 25%;
+
 }
 .workHr {
 	border-color: #fff;	
@@ -26,12 +27,10 @@
 .workLink {
 	margin-left: 20px;
 	display: inline-block;
-	cursor: pointer;
-
+	cursor: pointer;	
 }
 .work-intra-links {	
-	display: inline-block;	
-	
+	display: inline-block;		
 }
 
 .workRightCol {

@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom'
 import './Styles/Contact.css'
 import './Styles/ContactMobile.css'
 
+import Landing from '../Landing/Landing'
+import About from '../About/About'
+import Work from '../Work/Work'
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
@@ -34,16 +37,20 @@ export default class Contact extends Component {
     }
 
 
-	render() {		
+	render() {	
+        const home = home => this.home = home
+        const aboutHome = aboutHome => this.aboutHome = aboutHome
+        const workHome = workHome => this.workHome = workHome	
     
 		return(
             <div>
                 <div className="contactLeftCol">
-                    <div className="contactleftColContent">
+                    <div className="contactWhite">
                         <h2>CONTACT</h2>
                         {/*<hr className="contactHr"/>*/}
                         
                         <div className="contactLinks">
+                            <p className="contactLink">Home /</p>
                             <p className="contactLink" onClick={this.contactTransition}>About /</p>
                             <p className="contactLink">Work /</p>
                             <p className="contactLink">Contact /</p>

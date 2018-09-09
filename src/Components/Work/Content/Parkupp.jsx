@@ -23,8 +23,8 @@ import {
 export const Parkupp = () => {
     return (
         <div>
-            <h2>ParkUpp</h2>
-            <h5>A decentralised parking application</h5>
+            <h2 className="heading">ParkUpp</h2>
+            <h4>A decentralised parking application</h4>
 
             <p className="parkupp-content">
                 I am currently the lead developer in a team of developers developing ParkUpp's web and mobile application.

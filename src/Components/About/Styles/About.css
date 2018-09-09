@@ -43,6 +43,7 @@
 .aboutRightColContent {
 	height: 100%;
 	padding: 50px 100px 100px 100px;
+
 	color: black;
 	overflow-y: scroll;	
 
@@ -54,5 +55,8 @@
 .learn {
 	letter-spacing: 3px;
 	font-size: 15px;
+}
+.heading {
+	font-weight: bold
 }
 

@@ -23,8 +23,8 @@ import {
 export const GalxyBit = () => {
     return (
         <div>
-            <h2>GalxyBit</h2>
-            <h5>A cryptocurrency exchange</h5>
+            <h2 className="heading">GalxyBit</h2>
+            <h4>A cryptocurrency exchange</h4>
             <p><i>- Still in progress</i></p>
 
             <p className="galxybit-content">

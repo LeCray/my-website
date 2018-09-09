@@ -44,7 +44,8 @@
 	margin-top: 20px;
 	font-size: 40px;
 	color: #fff;
-	display: inline-block
+	display: inline-block;
+	font-weight: bold
 }
 .whiteBox {
 	position: absolute;

@@ -47,4 +47,16 @@
 	overflow-y: scroll;	
 
 }
-
+.contact-details-container {
+	width: 100%;
+	border: 1px solid red
+}
+.contact-details {
+	font-weight: bold;
+	
+}
+.contact-details-2 {
+	font-weight: bold;
+	
+	
+}

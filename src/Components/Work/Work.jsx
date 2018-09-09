@@ -120,8 +120,9 @@ export default class Work extends Component {
     
 		return(
             <div>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.work?
-                    <div>
+                    <div style={{fontFamily: "Josefin Sans"}}>
                     <div className="workLeftCol">
                         <div className="workLeftColContent">
                             <h2>WORK</h2>

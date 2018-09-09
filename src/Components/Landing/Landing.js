@@ -100,7 +100,7 @@ export default class Landing extends Component {
 
 		return(
             <div className="landingContainer">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                                 
 
                 {this.state.loading?    

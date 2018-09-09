@@ -23,8 +23,8 @@ import {
 export const MoneyCalls = () => {
     return (
         <div>
-            <h2>Money Calls</h2>
-            <h5>A foreign exchange web application</h5>
+            <h2 className="heading">Money Calls</h2>
+            <h4>A foreign exchange web application</h4>
 
             <p className="money-calls-content">
                 This application was built for Gift Mashapha, founder and CEO of Market Trading Network SA.  

@@ -23,8 +23,8 @@ import {
 export const MadMobile = () => {
     return (
         <div>
-            <h2>Mahele Auto Doctor</h2>
-            <h5>A real time vehicle diagnostics application</h5>
+            <h2 className="heading">Mahele Auto Doctor</h2>
+            <h4>A real time vehicle diagnostics application</h4>
 
             <p className="mad-content">
                 I single-handedly developed software for Mahele Auto Doctor (M.A.D) in Vereeneging, Gauteng.                              

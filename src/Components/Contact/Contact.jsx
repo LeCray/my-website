@@ -73,8 +73,9 @@ export default class Contact extends Component {
     
 		return(
             <div>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.contact?
-                    <div>
+                    <div style={{fontFamily: "Josefin Sans"}}>
                         <div className="contactLeftCol">
                             <div className="contactWhite">
                                 <h2>CONTACT</h2>
@@ -92,9 +93,20 @@ export default class Contact extends Component {
                         <div className="contactRightCol">
                             <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2>I am a self taught fullstack developer</h2>
-                              
-           
+                                <h2 className="heading">Get in touch</h2>
+                                <h4>I am available for Full-Time and Freelance work </h4>
+                                <hr/>
+                                <br/><br/>
+                                <Row>
+                                    <Col className="contact-container" lg={6}>
+                                        <h5 className="contact-details">Email:</h5>
+                                        <h5 className="contact-details">Contact: </h5>
+                                    </Col>
+                                    <Col className="contact-container-2" lg={6}>
+                                        <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
+                                        <h5 className="contact-details-2">081 741 2792<br/>073 890 4805</h5>
+                                    </Col>
+                                </Row>
 
                             </div>
                         </div>

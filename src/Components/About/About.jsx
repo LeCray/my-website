@@ -72,8 +72,9 @@ export default class About extends Component {
     
 		return(
             <div>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.about?
-                    <div>
+                    <div style={{fontFamily: "Josefin Sans"}}>
                         <div className="aboutLeftCol">
                             <div className="aboutWhite">
                                 <h2>ABOUT</h2>
@@ -91,12 +92,12 @@ export default class About extends Component {
                         <div className="aboutRightCol">
                             <div className="aboutRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2><b>Jabulani Kunene</b></h2>
+                                <h2 className="heading">Jabulani Kunene</h2>
                                 <h4>I am a self taught fullstack developer</h4>
 
                                 <br/><br/>
                                 
-                                <h5><b>University of the Witwatersrand</b></h5>
+                                <h5 className="heading">University of the Witwatersrand</h5>
                                 <p>
                                     I am currently taking a break from my 3rd year of Mechanical Engineering studies
                                     <br/><br/>
@@ -124,7 +125,7 @@ export default class About extends Component {
 
                                 <hr className="hrLine"/>
 
-                                <h5><b>My Passions</b></h5>
+                                <h5 className="heading">My Passions</h5>
                                 <p>
                                     I first taught myself how to trade the financial markets and am 
                                     currently developing a cryptocurrency market algorithm with a Computer Science Phd student 
@@ -162,7 +163,7 @@ export default class About extends Component {
                                 to the Play Store - MAD Mobile.<br/>
                                 It is a real time vehicle diagnostics application. More on this in my Work section
                                 <hr className="hrLine"/>
-                                <p><b>A BELIEF I HAVE IS THAT IT'S POSSIBLE TO LEARN ANYTHING</b></p>
+                                <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
 
 
                                          

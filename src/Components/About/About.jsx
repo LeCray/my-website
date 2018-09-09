@@ -131,8 +131,7 @@ export default class About extends Component {
                                     currently developing a cryptocurrency market algorithm with a Computer Science Phd student 
                                     (my lecturer) to model the crypto market, predict intraday moves and place trades automatically.
                                     <br/><br/>
-                                    My early interest in cryptocurrency evolved into an interest in 
-                                    <b>Web Development</b> because I then made the decision
+                                    My early interest in cryptocurrency evolved into an interest in <b>Web Development</b> because I then made the decision
                                     to build <b>GalxyBit</b> - a cryptocurrency exchange (BTC/ZAR, ETH/ZAR, LTC/ZAR)
                                     <br/><br/>
                                     I taught myself various coding languages including:

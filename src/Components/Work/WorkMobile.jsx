@@ -121,23 +121,23 @@ export default class WorkMobile extends Component {
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
-                {this.state.work?
+                
                     <div style={{fontFamily: "Josefin Sans"}}>
-                    <div className="workLeftCol">
-                        <div className="workLeftColContent">
+                    <div className="work-left-col">
+                        <div className="work-left-col-content">
                             <h2>WORK</h2>
                             {/*<hr className="workHr"/>*/}
                             <div className="work-intra-links">
-                                <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
-                                <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
-                                <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
-                                <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
+                                <p className="work-link" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
+                                <p className="work-link" onClick={this.parkupp}>ParkUpp</p>
+                                <p className="work-link" onClick={this.moneyCalls}>Money Calls</p>
+                                <p className="work-link" onClick={this.galxyBit}>GalxyBit</p>
                             </div>
-                            <div className="workLinks">
-                                <p className="workLink" onClick={this.homeTransition}>Home /</p>
-                                <p className="workLink" onClick={this.aboutTransition}>About /</p>
-                                <p className="workLink">Work /</p>
-                                <p className="workLink" onClick={this.contactTransition}>Contact /</p>
+                            <div className="work-links">
+                                <p className="work-link" onClick={this.homeTransition}>Home /</p>
+                                <p className="work-link" onClick={this.aboutTransition}>About /</p>
+                                <p className="work-link">Work /</p>
+                                <p className="work-link" onClick={this.contactTransition}>Contact /</p>
                             </div>
                         </div>
                     </div>
@@ -145,41 +145,22 @@ export default class WorkMobile extends Component {
                     <div className="workRightCol">
                         <div className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                            <div style={{display: this.state.madMobile?null:"none"}}>
+                            <div>
                                 <MadMobile />
                             </div>
-                            <div style={{display: this.state.parkupp?null:"none"}}>
+                            <div>
                                 <Parkupp />
                             </div>
-                            <div style={{display: this.state.moneyCalls?null:"none"}}>
+                            <div>
                                 <MoneyCalls />
                             </div>
-                            <div style={{display: this.state.galxyBit?null:"none"}}>
+                            <div>
                                 <GalxyBit />
                             </div>
                           
                         </div>
                     </div>
-                </div>:null}
-
-                {this.state.home?   
-                    <div ref={home} className="home">                 
-                        <Landing />
-                    </div>
-                :null}
-
-
-                {this.state.about?   
-                    <div ref={aboutHome} className="aboutHome">                 
-                        <About />
-                    </div>
-                :null}
-                
-                {this.state.contact?   
-                    <div ref={contactHome} className="contactHome">                 
-                        <Contact />
-                    </div>
-                :null}
+                </div>
                 
             </div>
 		)

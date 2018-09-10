@@ -1,8 +1,4 @@
-.contact-left-col {
-	position: absolute;
-	z-index: 60;
-	top: 0px;
-	left: 0px;
+.contact-left-col {	
 	height: 100vh;
 	width: 50%;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	

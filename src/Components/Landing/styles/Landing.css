@@ -36,7 +36,7 @@
 .topSection {
 	height: 100vh;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
-
+	border: 1px solid red;
 	text-align: center;		
 	z-index: 1;
 }
@@ -46,6 +46,7 @@
 	color: #fff;
 	display: inline-block;
 	font-weight: bold
+
 }
 .whiteBox {
 	position: absolute;
@@ -54,7 +55,7 @@
 	width: 60%;
 	height: 200px;
 	background-color: #fff;	
-	z-index: 99;
+	z-index: 60;
 	text-align: right;
 }
 .me {	
@@ -62,29 +63,25 @@
 	rotation: 20deg;
 }
 .hr {
-	position: absolute;
-	top: 32%;
-	left: 58%;
+	opacity: 0;
+	margin-left: 39%;
 	border-color: #fff;
 	width: 400px;
+	margin-top: -90px;
+	margin-bottom: 20px;
 }
-.summary {
-	position: absolute;
-	top: 37%;
-	left: 58%;
-	width: 400px;
+.summary{
+	color: #fff;	
+	width: 300px;
 	text-align: left;
-	color: #fff;
-	
+	margin-left: 54.5%;	
+	padding-left: 5px;
 }
-.summaryDetails {
-	padding: 10px;	
-}
+
 .links {
 	letter-spacing: 2px;
-	margin-left: -20px;
-	padding: 10px;
-	margin-top: 310px;	
+	margin-left: 53%;		
+	margin-top: 230px;	
 }
 .link {
 	margin-left: 20px;

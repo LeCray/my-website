@@ -63,34 +63,33 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     }, "firstPartIsDone-=1.9")
     .addLabel("rocketInPlace")
     .to(Fname, 2, {      	
-        x:"175%", 
+        x:200, 
         ease: Power2.easeInOut,
         delay: 0
     }, "firstPartIsDone-=2")
     .to(Lname, 2.5, {            	
-        x:"200%", 
+        x:210, 
         ease: Power2.easeOut,
         delay: 0
     }, "firstPartIsDone-=2") 
     .to(Fname, 2, {      	
-        y:"-200%", 
+        y:-100, 
         ease: Power2.easeOut,
         delay: 0
     }, "firstPartIsDone-=.5")
     .to(Lname, 2, {            	
-        y:"-200%", 
+        y:-100, 
         ease: Power2.easeOut,
         delay: .5
     }, "firstPartIsDone-=1")  
-    .from(hr, 2, {
-        opacity: 0,
+    .to(hr, 2, {
+        opacity: 1,
         ease: Back.easeInOut.config(2),
-        x:-40
+        x:200
     }, "firstPartIsDone-=0")    
-    .from(summary,3, {
-    	opacity: 0,
-    	ease: Power2.easeOut,
-    	y:-40
+    .from(summary,2, {
+    	opacity: 0,    	
+    	y:-20
     }, "firstPartIsDone-=0")      
     .from(links,2, {
     	opacity: 0,

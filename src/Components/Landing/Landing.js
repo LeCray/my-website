@@ -117,13 +117,15 @@ export default class Landing extends Component {
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
                                 <hr ref={hr} className="hr"/>
+
                                 <div ref={summary} className="summary">
-                                    <div className="summaryDetails">
+                                    <div className="summary-details">
                                         <h6>Full Stack Developer</h6>
                                         <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
                                         <h6>Web | Android | iOS</h6>
                                     </div>
                                 </div>
+
                                 <div ref={links} className="links summary">
                                     <p className="link" onClick={this.aboutTransition}>About /</p>
                                     <p className="link" onClick={this.workTransition}>Work /</p>

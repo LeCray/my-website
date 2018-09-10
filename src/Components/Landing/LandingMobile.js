@@ -7,14 +7,14 @@ import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 import {loading, topSection} from '../../Animation/Landing'
+import {topSectionMobile} from '../../Animation/LandingMobile'
 import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
-import './Styles/Landing.css'
+
 import './Styles/LandingMobile.css'
 
-import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
@@ -26,32 +26,33 @@ import scrollToComponent from 'react-scroll-to-component';
 
 
 
-export default class Landing extends Component {
+export default class LandingMobile extends Component {
     
     constructor(props) {
         super(props);
         this.state = {
+            mobile: false,
+            width: window.innerWidth,
             loading: true,   
             landingHome: false,
             about: false,
             work: false,
-            contact: false,
-            mobile: false,
-            width: window.innerWidth
+            contact: false
+            
         };
 
         this.workTransition = this.workTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);
         this.contactTransition = this.contactTransition.bind(this);
     }
-    
+
     componentWillMount(){
         this.setState({height: window.innerHeight + 'px'});
         if (this.state.width < 576) {
             this.setState({mobile: true});
         }       
     }
-
+       
     componentDidMount() {
                 
         setTimeout(() => {
@@ -59,11 +60,9 @@ export default class Landing extends Component {
         }, 1000)
 
         setTimeout(() => {   
-            if (this.state.mobile){
-                null
-            } else {
-                topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.hr, this.summary, this.links)
-            }
+           
+            topSectionMobile(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.hr, this.summary, this.links)
+           
             
         }, 1000)                
     }
@@ -121,17 +120,19 @@ export default class Landing extends Component {
                         <Dots size={25} animating={this.state.loading} color="#0066ff"/>
                     </div>                                                                                       
                 :
-                    this.state.mobile? <LandingMobile />:
+                    
                     <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
                         <Row>
+                            
                             <Col lg={12} className="topSection">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
-                                <hr ref={hr} className="hr"/>
+                                <hr ref={hr} className={this.state.mobile?"hr-mobile":"hr"}/>
 
-                                <div ref={summary} className="summary">
+
+                                <div ref={summary} className={this.state.mobile?"summary-mobile":"summary"}>
                                     <div className="summary-details">
                                         <h6>Full Stack Developer</h6>
                                         <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
@@ -139,20 +140,28 @@ export default class Landing extends Component {
                                     </div>
                                 </div>
 
-                                <div ref={links} className="links summary">
+                                {this.state.mobile?
+                                    <div ref={whiteBox} className="white-box">
+                                        <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
+                                    </div>
+                                :null}
+
+                                <div ref={links} className={this.state.mobile?"links-mobile":"links"}>
                                     <p className="link" onClick={this.aboutTransition}>About /</p>
                                     <p className="link" onClick={this.workTransition}>Work /</p>
                                     <p className="link" onClick={this.contactTransition}>Contact /</p>
                                 </div>
 
                                 
-                            </Col>                            
-                            <div ref={whiteBox} className="whiteBox">                                
-                                <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
-                            </div>
+                            </Col>                                                  
+                            {this.state.mobile?null:                          
+                                <div ref={whiteBox} className={this.state.mobile?"white-box":"whiteBox"}>
+                                    <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
+                                </div>
+                            }
                         </Row>                                                        
-                    </div>
-                                      
+                    </div>  
+                    
                 }
 
                 {this.state.about?   

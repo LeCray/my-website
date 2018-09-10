@@ -79,13 +79,7 @@ export default class AboutMobile extends Component {
                             <div className="about-white">
                                 <h2>ABOUT</h2>
                                 <p className="learn"><b> - I LIVE TO LEARN - </b></p>
-                                
-                                <div className="about-links">
-                                    <p className="about-link" onClick={this.homeTransition}>Home /</p>
-                                    <p className="about-link" >About /</p>
-                                    <p className="about-link" onClick={this.workTransition}>Work /</p>
-                                    <p className="about-link" onClick={this.contactTransition}>Contact /</p>
-                                </div>
+                                                               
                             </div>
                         </div>
 
@@ -163,12 +157,6 @@ export default class AboutMobile extends Component {
                                 It is a real time vehicle diagnostics application. More on this in my Work section
                                 <hr className="hr-line"/>
                                 <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
-
-
-                                         
-
-                                    
-
 
                             </div>
                         </div>

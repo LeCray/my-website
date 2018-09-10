@@ -1,6 +1,5 @@
 .contact-left-col {	
-	height: 100vh;
-	width: 50%;
+	height: 100vh;	
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
 }
 
@@ -8,7 +7,7 @@
 	letter-spacing: 2px;
 	text-align: center;
 	color: #fff;
-	padding-top: 25%;
+	padding-top: 70%;
 }
 .contact-hr {
 	border-color: #fff;	
@@ -31,21 +30,19 @@
 	
 }
 .contact-right-col {
-	margin-left: 50%;
-	height: 100vh;
-	width: 50%;
-	
+		
+		
 }
 .contact-right-col-content {
 	height: 100%;
-	padding: 50px 100px 100px 100px;
+	padding: 50px 50px 100px 50px;
 	color: black;
 	overflow-y: scroll;	
 
 }
 .contact-details-container {
 	width: 100%;
-	border: 1px solid red
+	
 }
 .contact-details {
 	font-weight: bold;

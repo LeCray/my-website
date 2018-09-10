@@ -132,29 +132,26 @@ export default class WorkMobile extends Component {
                                 <p className="work-link" onClick={this.parkupp}>ParkUpp</p>
                                 <p className="work-link" onClick={this.moneyCalls}>Money Calls</p>
                                 <p className="work-link" onClick={this.galxyBit}>GalxyBit</p>
-                            </div>
-                            <div className="work-links">
-                                <p className="work-link" onClick={this.homeTransition}>Home /</p>
-                                <p className="work-link" onClick={this.aboutTransition}>About /</p>
-                                <p className="work-link">Work /</p>
-                                <p className="work-link" onClick={this.contactTransition}>Contact /</p>
-                            </div>
+                            </div>                           
                         </div>
                     </div>
 
-                    <div className="workRightCol">
-                        <div className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                    <div className="work-right-col">
+                        <div className="work-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                            <div>
+                            <div className="work-content-mobile">
                                 <MadMobile />
                             </div>
-                            <div>
+                            <hr className="work-hr"/>
+                            <div className="work-content-mobile">
                                 <Parkupp />
                             </div>
-                            <div>
+                            <hr className="work-hr"/>
+                            <div className="work-content-mobile">
                                 <MoneyCalls />
                             </div>
-                            <div>
+                            <hr className="work-hr"/>
+                            <div className="work-content-mobile">
                                 <GalxyBit />
                             </div>
                           

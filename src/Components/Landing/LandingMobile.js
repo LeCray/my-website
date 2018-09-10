@@ -111,7 +111,7 @@ export default class LandingMobile extends Component {
         const contactHome = contactHome => this.contactHome = contactHome
 
 		return(
-            <div className="landingContainer">
+            <div className="landing-container">
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                                 
 
@@ -121,10 +121,10 @@ export default class LandingMobile extends Component {
                     </div>                                                                                       
                 :
                     
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>
+                    <div ref={landingHome} className="landing-home" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>
                         <Row>
                             
-                            <Col lg={12} className="topSection">
+                            <Col lg={12} className="top-section">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>

@@ -1,5 +1,5 @@
 @media only screen  and  (max-width: 568px) {
-	.landingContainer {
+	.landing-container {
 		overflow-y: scroll;	
 	}
 
@@ -8,7 +8,7 @@
 		text-align: center;
 		margin-top: 20%;
 	}
-	.landingHome {
+	.landing-home {
 		overflow-x: hidden;
 		overflow-y: scroll;	
 		top: 0px;
@@ -22,16 +22,16 @@
 		text-align: left;		
 	}
 
-	.topSection {
+	.top-section {
 		height: 100vh;
-		background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
+		
 		text-align: center;		
 		z-index: 1;		
 	}
 	.name {
 		margin-top: 20px;
 		font-size: 40px;
-		color: #fff;
+		color: #737373;
 		display: inline-block;
 		font-weight: bold
 
@@ -40,7 +40,7 @@
 		margin-top: 30px;
 		width: 100%;
 		height: 100px;
-		background-color: #fff;	
+		background-color: #737373;	
 		z-index: 60;		
 	}
 	.me-mobile {	
@@ -51,13 +51,13 @@
 		margin-top: 20px;
 	}
 	.hr-mobile {		
-		border-color: #fff;
+		border-color: #737373;
 		width: 70%;
 		margin-top: -90px;
 		margin-bottom: 20px;
 	}
 	.summary-mobile{
-		color: #fff;	
+		color: #737373;	
 		width: 100%;		
 		text-align: center;
 		padding-left: 5px;
@@ -68,7 +68,7 @@
 		margin-top: 250px;
 		margin-left: -20px;
 		letter-spacing: 2px;
-		color: #fff;	
+		color: #737373;	
 		
 		
 		

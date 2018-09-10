@@ -121,7 +121,7 @@ export default class LandingMobile extends Component {
                     </div>                                                                                       
                 :
                     
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
+                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>
                         <Row>
                             
                             <Col lg={12} className="topSection">

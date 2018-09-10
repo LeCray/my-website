@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
+
 import { Dots, Digital, Bounce } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
@@ -117,7 +118,7 @@ export default class LandingMobile extends Component {
 
                 {this.state.loading?    
                     <div ref={activity} className="activity">
-                        <Dots size={25} animating={this.state.loading} color="#0066ff"/>
+                        <Dots size={25} animating={this.state.loading} color="#808080"/>
                     </div>                                                                                       
                 :
                     
@@ -149,25 +150,31 @@ export default class LandingMobile extends Component {
                                 
 
                                 <div ref={links} className="links-mobile">
-                                    <p className="link-mobile" onClick={this.aboutTransition}>About /</p>
-                                    <p className="link-mobile" onClick={this.workTransition}>Work /</p>
-                                    <p className="link-mobile" onClick={this.contactTransition}>Contact /</p>
+                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',duration:1500})}>                                    
+                                        About /
+                                    </p>
+                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',duration:1500})}>
+                                        Work /
+                                    </p>
+                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',duration:1500})}>
+                                        Contact /
+                                    </p>
                                 </div>
 
                                 
                             </Col>                                                                             
                         </Row>     
-                        <div className="about-home">                 
+                        <div ref={(section) => { this.about = section; }} className="about-home">                 
                             <AboutMobile />
                         </div>                
 
                     
-                        <div className="work-home">                 
+                        <div ref={(section) => { this.work = section; }} className="work-home">                 
                             <WorkMobile />
                         </div>                
 
                     
-                        <div className="contact-home">                 
+                        <div ref={(section) => { this.contact = section; }} className="contact-home">                 
                             <ContactMobile />
                         </div>                
                         

@@ -128,10 +128,10 @@ export default class WorkMobile extends Component {
                             <h2>WORK</h2>
                             {/*<hr className="workHr"/>*/}
                             <div className="work-intra-links">
-                                <p className="work-link" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
-                                <p className="work-link" onClick={this.parkupp}>ParkUpp</p>
-                                <p className="work-link" onClick={this.moneyCalls}>Money Calls</p>
-                                <p className="work-link" onClick={this.galxyBit}>GalxyBit</p>
+                                <p className="work-link" style={{marginLeft: 0}} onClick={()=>scrollToComponent(this.mad,{offset:-52,align:'top',duration:1500})}>MAD Mobile</p>
+                                <p className="work-link" onClick={()=>scrollToComponent(this.parkupp,{offset:-52,align:'top',duration:1500})}>ParkUpp</p>
+                                <p className="work-link" onClick={()=>scrollToComponent(this.moneycalls,{offset:-52,align:'top',duration:1500})}>Money Calls</p>
+                                <p className="work-link" onClick={()=>scrollToComponent(this.galxybit,{offset:-52,align:'top',duration:1500})}>GalxyBit</p>
                             </div>                           
                         </div>
                     </div>
@@ -139,19 +139,19 @@ export default class WorkMobile extends Component {
                     <div className="work-right-col">
                         <div className="work-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                            <div className="work-content-mobile">
+                            <div ref={(section) => { this.mad = section; }} className="work-content-mobile">
                                 <MadMobile />
                             </div>
                             <hr className="work-hr"/>
-                            <div className="work-content-mobile">
+                            <div ref={(section) => { this.parkupp = section; }} className="work-content-mobile">
                                 <Parkupp />
                             </div>
                             <hr className="work-hr"/>
-                            <div className="work-content-mobile">
+                            <div ref={(section) => { this.moneycalls = section; }} className="work-content-mobile">
                                 <MoneyCalls />
                             </div>
                             <hr className="work-hr"/>
-                            <div className="work-content-mobile">
+                            <div ref={(section) => { this.galxybit = section; }} className="work-content-mobile">
                                 <GalxyBit />
                             </div>
                           

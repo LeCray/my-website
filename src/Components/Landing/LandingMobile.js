@@ -13,7 +13,7 @@ import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
 
-import './Styles/LandingMobile.css'
+
 
 import Work from '../Work/Work'
 import About from '../About/About'
@@ -140,26 +140,25 @@ export default class LandingMobile extends Component {
                                     </div>
                                 </div>
 
-                                {this.state.mobile?
-                                    <div ref={whiteBox} className="white-box">
-                                        <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
-                                    </div>
-                                :null}
+                                
+                                <div ref={whiteBox} className="white-box">
+                                    <img ref={me} className="me-mobile" src={require("../../Assets/Images/me.jpg.png")}/>
+                                </div>
+                                
+                                
+                                
 
-                                <div ref={links} className={this.state.mobile?"links-mobile":"links"}>
-                                    <p className="link" onClick={this.aboutTransition}>About /</p>
-                                    <p className="link" onClick={this.workTransition}>Work /</p>
-                                    <p className="link" onClick={this.contactTransition}>Contact /</p>
+                                <div ref={links} className="links-mobile">
+                                    <p className="link-mobile" onClick={this.aboutTransition}>About /</p>
+                                    <p className="link-mobile" onClick={this.workTransition}>Work /</p>
+                                    <p className="link-mobile" onClick={this.contactTransition}>Contact /</p>
                                 </div>
 
                                 
-                            </Col>                                                  
-                            {this.state.mobile?null:                          
-                                <div ref={whiteBox} className={this.state.mobile?"white-box":"whiteBox"}>
-                                    <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
-                                </div>
-                            }
-                        </Row>                                                        
+                            </Col>                                                                             
+                        </Row>     
+                        <div className="the-rest">
+                        </div>
                     </div>  
                     
                 }

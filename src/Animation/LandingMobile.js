@@ -48,7 +48,12 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         ease: Power4.easeInOut,
         x:"-100%"
     }, "firstPartIsDone")
-    
+    .from(me, 2, {
+        opacity: 0,
+        rotation:0, 
+        ease: Power4.easeInOut,
+        x:"-100%"
+    }, "firstPartIsDone+=1")
     .to(rocket, 2, {  
     	opacity: 0,             
         x:"200%",         

@@ -86,37 +86,19 @@
 		border: 1px solid red;
 	}
 
-	.aboutHome {
-		position: absolute;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		height: 100vh;
-		top: 0px;
-		left: 0px;
+	.about-home {		
 		width: 100%;	
 		z-index: 50;
 		background: #fff
 	}
-	.workHome {
-		position: absolute;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		height: 100vh;
-		top: 0px;
-		left: 0px;
+	.work-home {		
 		width: 100%;	
 		z-index: 50;
 		background: #fff
 	}
-	.contactHome {
-		position: absolute;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		height: 100vh;
-		top: 0px;
-		left: 0px;
+	.contact-home {		
 		width: 100%;	
-		z-index: 50;
+		
 		background: #fff
 	}
 

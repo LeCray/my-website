@@ -15,9 +15,9 @@ import {contactEnter} from '../../Animation/Contact'
 
 
 
-import Work from '../Work/Work'
-import About from '../About/About'
-import Contact from '../Contact/Contact'
+import WorkMobile from '../Work/WorkMobile'
+import AboutMobile from '../About/AboutMobile'
+import ContactMobile from '../Contact/ContactMobile'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
@@ -157,29 +157,25 @@ export default class LandingMobile extends Component {
                                 
                             </Col>                                                                             
                         </Row>     
-                        <div className="the-rest">
-                        </div>
+                        <div className="about-home">                 
+                            <AboutMobile />
+                        </div>                
+
+                    
+                        <div className="work-home">                 
+                            <WorkMobile />
+                        </div>                
+
+                    
+                        <div className="contact-home">                 
+                            <ContactMobile />
+                        </div>                
+                        
                     </div>  
                     
                 }
 
-                {this.state.about?   
-                    <div ref={aboutHome} className="aboutHome">                 
-                        <About />
-                    </div>
-                :null}
-
-                {this.state.work?   
-                    <div ref={workHome} className="workHome">                 
-                        <Work />
-                    </div>
-                :null}
-
-                {this.state.contact?   
-                    <div ref={contactHome} className="contactHome">                 
-                        <Contact />
-                    </div>
-                :null}
+                
 
                 
             </div>

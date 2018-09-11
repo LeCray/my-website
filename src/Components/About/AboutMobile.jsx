@@ -99,12 +99,12 @@ export default class AboutMobile extends Component {
                                     <ul>                                        
                                         <li>Design 3</li> 
                                         <li>Mechatronics 3</li>  
-                                        <li>Applied Mechanics 3</li>  
-                                        <li>Maths 3</li>  
+                                        <li>Fluid Mechanics 3</li>  
                                         <li>Mechanics of Vibrations 3</li>  
                                         <li>Mechanics of Solids 3</li>  
                                         <li>Numerical Analysis 3</li>  
                                         <li>Statistics 3</li>
+                                        <li>Maths 3</li>  
                                     </ul>
                                     
                                     2) Right now I am studying Computer Science part-time.
@@ -155,7 +155,7 @@ export default class AboutMobile extends Component {
                                 to the Play Store - MAD Mobile.<br/>
                                 It is a real time vehicle diagnostics application. More on this in my Work section*/}
                                 <hr className="hr-line"/>
-                                <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
+                                <p className="learn-anything">IT'S POSSIBLE TO LEARN ANYTHING</p>
 
                             </div>
                         </div>

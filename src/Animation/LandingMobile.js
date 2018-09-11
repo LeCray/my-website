@@ -71,7 +71,7 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         ease: Power2.easeOut,
         delay: .5
     }, "firstPartIsDone-=1")  
-    .from(hr, 2, {
+    .from(hr, 4, {
         opacity: 0,
         ease: Back.easeInOut.config(2),        
     }, "firstPartIsDone-=0")    

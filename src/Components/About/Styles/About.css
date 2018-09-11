@@ -13,6 +13,7 @@
 	text-align: center;
 	color: #fff;
 	padding-top: 25%;
+	font-weight: bold;
 }
 .aboutHr {
 	border-color: #fff;	
@@ -38,12 +39,13 @@
 	margin-left: 50%;
 	height: 100vh;
 	width: 50%;
+	font-size: 20px;
 	
 }
 .aboutRightColContent {
 	height: 100%;
 	padding: 50px 100px 100px 100px;
-
+	
 	color: black;
 	overflow-y: scroll;	
 

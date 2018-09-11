@@ -12,7 +12,7 @@ export const loading = (activity) => {
 
 }
 
-export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, summary, links) => {
+export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, summary, aboutLink, workLink, contactLink) => {
 
   	var intro = new TimelineMax();
 
@@ -63,12 +63,12 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     }, "firstPartIsDone-=1.9")
     .addLabel("rocketInPlace")
     .to(Fname, 2, {      	
-        x:200, 
+        x:215, 
         ease: Power2.easeInOut,
         delay: 0
     }, "firstPartIsDone-=2")
     .to(Lname, 2.5, {            	
-        x:210, 
+        x:225, 
         ease: Power2.easeOut,
         delay: 0
     }, "firstPartIsDone-=2") 
@@ -84,18 +84,32 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     }, "firstPartIsDone-=1")  
     .to(hr, 2, {
         opacity: 1,
-        ease: Back.easeInOut.config(2),
-        x:200
-    }, "firstPartIsDone-=0")    
+        ease: Power2.easeOut,
+        x:190
+    }, "firstPartIsDone-=0")
+    .to(summary,1, {
+        opacity: 0,     
+        x:5
+    }, "firstPartIsDone-=2")     
     .from(summary,2, {
     	opacity: 0,    	
     	y:-20
     }, "firstPartIsDone-=0")      
-    .from(links,2, {
-    	opacity: 0,
-    	ease: Power2.easeOut,
-    	x:100
+    .from(aboutLink,2, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
     }, "firstPartIsDone+=1")
+    .from(workLink,2, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "firstPartIsDone+=1.4")
+    .from(contactLink,2.5, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "firstPartIsDone+=1.8")
     
 }
 

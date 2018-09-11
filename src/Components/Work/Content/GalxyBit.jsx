@@ -32,7 +32,7 @@ export const GalxyBit = () => {
 
             <p className="galxybit-content">
                 Being the first Web App I attempted to build I again built it from the ground up. 
-                I conceptulized it, designed the User Interface and built both the frontend and backend of this exchange.
+                I conceptulized it, designed the user interface and built both the frontend and backend of this exchange.
                 <br/><br/>
                 People with South African Rands will be able to exchange their ZARS 
                 for one of three major cryptocurrencies namely Bitcoin, Litecoin and Ethereum. 

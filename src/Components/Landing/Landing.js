@@ -62,7 +62,9 @@ export default class Landing extends Component {
             if (this.state.mobile){
                 null
             } else {
-                topSection(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.hr, this.summary, this.links)
+                topSection(this.landingHome, this.rocket, this.Fname, this.Lname, 
+                    this.whiteBox, this.me, this.hr, this.summary, 
+                    this.aboutLink, this.workLink, this.contactLink)
             }
             
         }, 1000)                
@@ -105,7 +107,9 @@ export default class Landing extends Component {
         const me = me => this.me = me
         const summary = summary => this.summary = summary
         const hr = hr => this.hr = hr
-        const links = links => this.links = links
+        const aboutLink = aboutLink => this.aboutLink = aboutLink
+        const workLink = workLink => this.workLink = workLink
+        const contactLink = contactLink => this.contactLink = contactLink
 
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
@@ -113,7 +117,7 @@ export default class Landing extends Component {
 
 		return(
             <div className="landingContainer">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
                                 
 
                 {this.state.loading?    
@@ -132,17 +136,17 @@ export default class Landing extends Component {
                                 <hr ref={hr} className="hr"/>
 
                                 <div ref={summary} className="summary">
-                                    <div className="summary-details">
+                                    <div className="summary-details" style={{fontWeight: "bold"}}>
                                         <h6>Full Stack Developer</h6>
-                                        <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
+                                        {/*<h6>ReactJS, ExpressJS, Ruby on Rails</h6>*/}
                                         <h6>Web | Android | iOS</h6>
                                     </div>
                                 </div>
 
-                                <div ref={links} className="links summary">
-                                    <p className="link" onClick={this.aboutTransition}>About /</p>
-                                    <p className="link" onClick={this.workTransition}>Work /</p>
-                                    <p className="link" onClick={this.contactTransition}>Contact /</p>
+                                <div  className="links summary">
+                                    <p ref={aboutLink} className="link" onClick={this.aboutTransition}>About /</p>
+                                    <p ref={workLink} className="link" onClick={this.workTransition}>Work /</p>
+                                    <p ref={contactLink} className="link" onClick={this.contactTransition}>Contact /</p>
                                 </div>
 
                                 

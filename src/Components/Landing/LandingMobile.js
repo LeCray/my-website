@@ -118,7 +118,7 @@ export default class LandingMobile extends Component {
 
 		return(
             <div className="landing-container">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700i" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
                                 
 
                 {this.state.loading?    

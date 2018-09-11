@@ -49,6 +49,14 @@
 .mad-mobile-img {
 	width: 100%;
 }
+.mad-mobile-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;	
+}
+.mad-mobile-logo{
+	width: 50%;	
+}
 .mad-content {
 	margin-top: 30px;
 }

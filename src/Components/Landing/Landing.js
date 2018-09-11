@@ -125,7 +125,7 @@ export default class Landing extends Component {
                     <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
                         <Row>
                             <Col lg={12} className="topSection">
-                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>

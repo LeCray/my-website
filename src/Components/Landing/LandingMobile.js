@@ -113,7 +113,7 @@ export default class LandingMobile extends Component {
 
 		return(
             <div className="landing-container">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
                                 
 
                 {this.state.loading?    
@@ -126,7 +126,7 @@ export default class LandingMobile extends Component {
                         <Row>
                             
                             <Col lg={12} className="top-section">
-                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/happy.svg")}/><br/>
+                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
                                 
                                 <h1 ref={Fname} className="name">Jabulani</h1>
                                 <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>

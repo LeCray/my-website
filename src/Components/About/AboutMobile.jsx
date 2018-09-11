@@ -87,39 +87,38 @@ export default class AboutMobile extends Component {
                             <div className="about-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
                                 <h2 className="heading" style={{color: "#737373"}}>Jabulani Kunene</h2>
-                                <h4>I am a self taught fullstack developer</h4>
+                                <h4>I am a self-taught fullstack developer</h4>
 
                                 <br/><br/>
                                 
                                 <h5 className="heading">University of the Witwatersrand</h5>
                                 <p>
-                                    I am currently taking a break from my 3rd year of Mechanical Engineering studies
+                                    1) I am currently taking a break from my 3rd year of Mechanical Engineering studies
                                     <br/><br/>
                                     My subjects include:                                    
                                     <ul>                                        
-                                        <li>Design</li> 
-                                        <li>Mechatronics</li>  
-                                        <li>Applied Mechanics</li>  
-                                        <li>Maths</li>  
-                                        <li>Mechanics of Vibrations</li>  
-                                        <li>Mechanics of Solids</li>  
-                                        <li>Numerical Analysis</li>  
-                                        <li>Statistics</li>
+                                        <li>Design 3</li> 
+                                        <li>Mechatronics 3</li>  
+                                        <li>Applied Mechanics 3</li>  
+                                        <li>Maths 3</li>  
+                                        <li>Mechanics of Vibrations 3</li>  
+                                        <li>Mechanics of Solids 3</li>  
+                                        <li>Numerical Analysis 3</li>  
+                                        <li>Statistics 3</li>
                                     </ul>
                                     
-                                    Right now I am studying Computer Science part-time.
+                                    2) Right now I am studying Computer Science part-time.
                                     <br/><br/>
                                     My subjects include:
                                     <ul>                                        
                                         <li>Computational & Applied Mathematics</li>                                         
                                     </ul>
-                                    
-                                    I plan on getting my <b>Honours degree</b> in <b>Mechanical Engineering</b> by 2020.
+                                                                        
                                 </p>
 
                                 <hr className="hr-line"/>
 
-                                <h5 className="heading">My Passions</h5>
+                                <h5 className="heading">My Passions & Skills</h5>
                                 <p>
                                     I first taught myself how to trade the financial markets and am 
                                     currently developing a cryptocurrency market algorithm with a Computer Science Phd student 
@@ -151,10 +150,10 @@ export default class AboutMobile extends Component {
                                     </ul>
                                 </p>
                                 
-                                <hr className="hr-line"/>
+                                {/*<hr className="hr-line"/>
                                 In the beginning of January 2018 I successfully published my first Android App
                                 to the Play Store - MAD Mobile.<br/>
-                                It is a real time vehicle diagnostics application. More on this in my Work section
+                                It is a real time vehicle diagnostics application. More on this in my Work section*/}
                                 <hr className="hr-line"/>
                                 <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
 

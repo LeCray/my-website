@@ -6,8 +6,8 @@ import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
 
-import './styles/About.css'
-import './styles/AboutMobile.css'
+import './Styles/About.css'
+import './Styles/AboutMobile.css'
 
 import Landing from '../Landing/Landing'
 import Work from '../Work/Work'

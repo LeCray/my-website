@@ -87,7 +87,7 @@ export default class ContactMobile extends Component {
                         <div className="contact-right-col">
                             <div className="contact-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2 className="heading">Get in touch</h2>
+                                <h2 className="heading" style={{color: "#737373"}}>Get in touch</h2>
                                 <h5>I am available for Full-Time and Freelance work </h5>
                                 <hr/>
                                 <br/><br/>

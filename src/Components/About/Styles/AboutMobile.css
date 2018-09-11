@@ -8,6 +8,7 @@
 	text-align: center;
 	color: #fff;
 	padding-top: 70%;
+	font-weight: bold;	
 }
 .about-hr {
 	border-color: #fff;	
@@ -38,7 +39,7 @@
 .about-right-col-content {
 	height: 100%;
 	padding: 50px 50px 50px 50px;
-
+	
 	color: black;
 	overflow-y: scroll;	
 

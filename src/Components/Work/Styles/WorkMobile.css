@@ -9,6 +9,7 @@
 	text-align: center;
 	color: #fff;
 	padding-top: 70%;
+	font-weight: bold;
 
 }
 .work-hr {
@@ -37,6 +38,7 @@
 .work-right-col-content {
 	height: 100%;
 	padding: 50px 50px 50px 50px;
+	font-weight: bold;
 	color: black;
 	overflow-y: scroll;	
 }

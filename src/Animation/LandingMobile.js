@@ -12,7 +12,7 @@ export const loading = (activity) => {
 
 }
 
-export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, summary, links) => {
+export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, summary, aboutLink, workLink, contactLink) => {
 
   	var intro = new TimelineMax();
 
@@ -79,11 +79,21 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
     	opacity: 0,    	
     	y:-20
     }, "firstPartIsDone-=0")      
-    .from(links,2, {
+    .from(aboutLink,2, {
     	opacity: 0,
     	ease: Power2.easeOut,
     	x:100
-    }, "firstPartIsDone+=1")
+    }, "firstPartIsDone+=2")
+    .from(workLink,2, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "firstPartIsDone+=2.4")
+    .from(contactLink,2, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "firstPartIsDone+=2.8")
     
 }
 

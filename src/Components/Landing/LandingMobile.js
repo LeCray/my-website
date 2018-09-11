@@ -62,7 +62,9 @@ export default class LandingMobile extends Component {
 
         setTimeout(() => {   
            
-            topSectionMobile(this.landingHome, this.rocket, this.Fname, this.Lname, this.whiteBox, this.me, this.hr, this.summary, this.links)
+            topSectionMobile(this.landingHome, this.rocket, this.Fname, 
+                this.Lname, this.whiteBox, this.me, this.hr, this.summary, 
+                this.aboutLink, this.workLink, this.contactLink)
            
             
         }, 1000)                
@@ -105,7 +107,10 @@ export default class LandingMobile extends Component {
         const me = me => this.me = me
         const summary = summary => this.summary = summary
         const hr = hr => this.hr = hr
-        const links = links => this.links = links
+
+        const aboutLink = aboutLink => this.aboutLink = aboutLink
+        const workLink = workLink => this.workLink = workLink
+        const contactLink = contactLink => this.contactLink = contactLink
 
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
@@ -113,7 +118,7 @@ export default class LandingMobile extends Component {
 
 		return(
             <div className="landing-container">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700i" rel="stylesheet"/>
                                 
 
                 {this.state.loading?    
@@ -133,30 +138,28 @@ export default class LandingMobile extends Component {
                                 <hr ref={hr} className={this.state.mobile?"hr-mobile":"hr"}/>
 
 
-                                <div ref={summary} className={this.state.mobile?"summary-mobile":"summary"}>
-                                    <div className="summary-details">
-                                        <h6>Full Stack Developer</h6>
-                                        <h6>ReactJS, ExpressJS, Ruby on Rails</h6>
-                                        <h6>Web | Android | iOS</h6>
-                                    </div>
+                                <div ref={summary} >                                    
+                                    <h6 className="summary-mobile">Full Stack Developer</h6>
+                                    {/*<h6 className="summary-mobile">ReactJS, ExpressJS, Ruby on Rails</h6>*/}
+                                    <h6 className="summary-mobile">Web | Android | iOS</h6>                                    
                                 </div>
 
                                 
                                 <div ref={whiteBox} className="white-box">
-                                    <img ref={me} className="me-mobile" src={require("../../Assets/Images/me.jpg.png")}/>
+                                    <img ref={me} className="me-mobile" src={require("../../Assets/Images/me3.jpg")}/>
                                 </div>
                                 
                                 
                                 
 
-                                <div ref={links} className="links-mobile">
-                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',duration:1500})}>                                    
+                                <div className="links-mobile">
+                                    <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',duration:1500})}>                                    
                                         About /
                                     </p>
-                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',duration:1500})}>
+                                    <p ref={workLink} className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',duration:1500})}>
                                         Work /
                                     </p>
-                                    <p className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',duration:1500})}>
+                                    <p ref={contactLink} className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',duration:1500})}>
                                         Contact /
                                     </p>
                                 </div>

@@ -24,8 +24,7 @@ export const GalxyBit = () => {
     return (
         <div>
             <h2 className="heading" style={{color: "#737373"}}>GalxyBit</h2>
-            <h4>A cryptocurrency exchange</h4>
-            <p><i>- Still in progress</i></p>
+            <h4>A cryptocurrency exchange</h4>            
 
             <p className="galxybit-content">
                 People with South African Rands will be able to exchange their ZARS 

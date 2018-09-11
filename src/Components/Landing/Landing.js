@@ -11,8 +11,8 @@ import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
-import './styles/Landing.css'
-import './styles/LandingMobile.css'
+import './Styles/Landing.css'
+import './Styles/LandingMobile.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'
@@ -148,7 +148,7 @@ export default class Landing extends Component {
                                 
                             </Col>                            
                             <div ref={whiteBox} className="whiteBox">                                
-                                <img ref={me} className="me" src={require("../../Assets/Images/me.jpg.png")}/>
+                                <img ref={me} className="me" src={require("../../Assets/Images/me3.jpg")}/>
                             </div>
                         </Row>                                                        
                     </div>

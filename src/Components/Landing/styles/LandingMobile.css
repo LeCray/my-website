@@ -33,7 +33,7 @@
 		font-size: 40px;
 		color: #fff;
 		display: inline-block;
-		font-weight: bold
+
 
 	}
 	.white-box {			
@@ -58,9 +58,12 @@
 	}
 	.summary-mobile{
 		color: #fff;	
-		width: 100%;		
-		text-align: center;
-		padding-left: 5px;
+		width: 100%;						
+		font-size: 20px;
+		font-weight: bold
+	}
+	.summary-details {		
+		
 	}
 
 	.links-mobile {
@@ -69,7 +72,7 @@
 		margin-left: -20px;
 		letter-spacing: 2px;
 		color: #fff;	
-		
+		font-weight: bold;
 		
 		
 	}
@@ -79,8 +82,8 @@
 		cursor: pointer;
 	}
 	.rocket {	
-		height: 100px;
-		margin-top: 10%;
+		height: 50px;
+		margin-top: 30%;
 	}
 	.borderr {
 		border: 1px solid red;

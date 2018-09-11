@@ -36,8 +36,11 @@ export class GalxyBit extends Component {
             </div>
 
             <p  className="galxybit-content">
-                Being the first Web App I attempted to build I again built it from the ground up. 
-                I conceptulized it, designed the user interface and built both the frontend and backend of this exchange.
+                Being the first Web App I attempted to build I am currently rebuilding it
+                using a much more faster framework - ExpressJS. 
+                Having already conceptulized it, I am redesigning the user interface and, with the help of 3 other developers,
+                we will be building both the frontend and backend of this exchange from the ground up.
+                It's going to be awesome.
                 <br/><br/>
                 People with South African Rands will be able to exchange their ZARS 
                 for one of three major cryptocurrencies namely Bitcoin, Litecoin and Ethereum. 

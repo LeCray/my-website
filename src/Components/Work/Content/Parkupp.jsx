@@ -23,7 +23,7 @@ import {
 export const Parkupp = () => {
     return (
         <div>
-            <h2 className="heading">ParkUpp</h2>
+            <h2 className="heading" style={{color: "#737373"}}>ParkUpp</h2>
             <h4>A decentralised parking application</h4>
 
             <p className="parkupp-content">

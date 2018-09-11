@@ -23,7 +23,7 @@ import {
 export const MadMobile = () => {
     return (
         <div>
-            <h2 className="heading">Mahele Auto Doctor</h2>
+            <h2 className="heading" style={{color: "#737373"}}>Mahele Auto Doctor</h2>
             <h4>A real time vehicle diagnostics application</h4>
 
             <p className="mad-content">

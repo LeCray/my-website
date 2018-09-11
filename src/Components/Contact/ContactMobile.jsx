@@ -101,6 +101,9 @@ export default class ContactMobile extends Component {
                                     
                             </div>
                         </div>
+                        <div style={{textAlign: "center"}}>
+                            <p>© Jabulani Kunene. All rights reserved</p>
+                        </div>
                     </div>                
             </div>
 		)

@@ -23,7 +23,7 @@ import {
 export const MoneyCalls = () => {
     return (
         <div>
-            <h2 className="heading">Money Calls</h2>
+            <h2 className="heading" style={{color: "#737373"}}>Money Calls</h2>
             <h4>A foreign exchange web application</h4>
 
             <p className="money-calls-content">

@@ -67,14 +67,11 @@
 	}
 
 	.links-mobile {
-
 		margin-top: 250px;
 		margin-left: -20px;
 		letter-spacing: 2px;
 		color: #fff;	
-		font-weight: bold;
-		
-		
+		font-weight: bold;				
 	}
 	.link-mobile {
 		margin-left: 20px;
@@ -83,7 +80,7 @@
 	}
 	.rocket {	
 		height: 50px;
-		margin-top: 30%;
+		margin-top: 25%;
 	}
 	.borderr {
 		border: 1px solid red;

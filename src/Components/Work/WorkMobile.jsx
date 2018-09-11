@@ -139,19 +139,19 @@ export default class WorkMobile extends Component {
                     <div className="work-right-col">
                         <div className="work-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                            <div ref={(section) => { this.mad = section; }} className="work-content-mobile">
+                            <div ref={(section)=>{this.mad = section;}} className="work-content-mobile">
                                 <MadMobile />
                             </div>
                             <hr className="work-hr"/>
-                            <div ref={(section) => { this.parkupp = section; }} className="work-content-mobile">
+                            <div ref={(section)=>{this.parkupp = section;}} className="work-content-mobile">
                                 <Parkupp />
                             </div>
                             <hr className="work-hr"/>
-                            <div ref={(section) => { this.moneycalls = section; }} className="work-content-mobile">
+                            <div ref={(section)=>{this.moneycalls = section;}} className="work-content-mobile">
                                 <MoneyCalls />
                             </div>
                             <hr className="work-hr"/>
-                            <div ref={(section) => { this.galxybit = section; }} className="work-content-mobile">
+                            <div ref={(section)=>{this.galxybit = section;}} className="work-content-mobile">
                                 <GalxyBit />
                             </div>
                           

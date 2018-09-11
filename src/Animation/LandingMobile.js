@@ -89,7 +89,7 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         ease: Power2.easeOut,
         x:100
     }, "firstPartIsDone+=2.4")
-    .from(contactLink,2, {
+    .from(contactLink,2.5, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100

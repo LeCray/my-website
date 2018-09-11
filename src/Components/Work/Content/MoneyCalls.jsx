@@ -26,9 +26,14 @@ export const MoneyCalls = () => {
             <h2 className="heading" style={{color: "#737373"}}>Money Calls</h2>
             <h4>A foreign exchange web application</h4>
 
+            <div className="market-logo-container">
+              <img className="market-logo" src={require("../../../Assets/Images/market.png")}/>
+            </div>
+
             <p className="money-calls-content">
-                This application was built for Gift Mashapha, founder and CEO of Market Trading Network SA.  
-                New aspiring traders can create sign up and trade foreign currencies using AVA Trade as the affiliated broker. 
+                I built this application from the ground up for Market Trading Network SA.
+                It is a large online community platform for South African retail traders.
+                New aspiring traders can sign up and trade foreign currencies using an affiliated broker. 
                 <br/><br/>
                 Features of the app included:
                 <ul>

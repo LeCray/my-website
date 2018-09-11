@@ -93,10 +93,14 @@ export default class Contact extends Component {
                         <div className="contactRightCol">
                             <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2 className="heading">Get in touch</h2>
+                                <h4 className="contact-heading">Looking forward to hearing from you!</h4>
                                 <h5>I am available for Full-Time and Freelance work </h5>
                                 <hr/>
-                                <br/><br/>
+                                <br/>
+                                
+                                <h4 className="name-contact">Jabulani Kunene</h4>
+                                
+
                                 <Row>
                                     <Col className="contact-container" lg={6}>
                                         <h5 className="contact-details">Email:</h5>
@@ -107,6 +111,7 @@ export default class Contact extends Component {
                                         <h5 className="contact-details-2">081 741 2792<br/>073 890 4805</h5>
                                     </Col>
                                 </Row>
+                                <img className="me-contact" src={require("../../Assets/Images/me3.jpg")}/>
 
                             </div>
                         </div>

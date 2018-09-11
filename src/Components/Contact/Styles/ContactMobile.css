@@ -46,11 +46,23 @@
 	
 }
 .contact-details {
-	font-weight: bold;
+	
 	
 }
 .contact-details-2 {
+	
+	
+	
+}
+.name-contact-mobile {
 	font-weight: bold;
-	
-	
+	margin-bottom: 20px;
+}
+.me-contact-mobile {	
+	height: 220px;
+	margin-top: 50px;
+}
+.me-contact-mobile-container {
+	width: 100%;
+	text-align: center;
 }

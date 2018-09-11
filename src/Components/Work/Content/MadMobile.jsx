@@ -20,9 +20,14 @@ import {
 
 
 
-export const MadMobile = () => {
+export class MadMobile extends Component {
+  componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
+    render() {
     return (
-        <div>
+        <div ref={(section)=>{this.mad = section;}}>
             <h2 className="heading" style={{color: "#737373"}}>Mahele Auto Doctor</h2>
             <h4>A real time vehicle diagnostics application</h4>
             
@@ -55,5 +60,5 @@ export const MadMobile = () => {
               <img className="mad-mobile-img" src={require("../../../Assets/Images/mad-mobile.png")}/>
             </a>
         </div>
-    )
+    )}
 }

@@ -58,6 +58,7 @@ export default class Work extends Component {
             moneyCalls: false,
             galxyBit: false,
         })
+        
     }
     parkupp() {
         this.setState({

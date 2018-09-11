@@ -20,7 +20,12 @@ import {
 
 
 
-export const Parkupp = () => {
+export class Parkupp extends Component {
+  componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
+  render() {
     return (
         <div>
             <h2 className="heading" style={{color: "#737373"}}>ParkUpp</h2>
@@ -46,5 +51,5 @@ export const Parkupp = () => {
               <img className="parkupp-img" src={require("../../../Assets/Images/parkupp.png")}/>          
             </a>
         </div>
-    )
+    )}
 }

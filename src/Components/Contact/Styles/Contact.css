@@ -53,11 +53,20 @@
 	border: 1px solid red
 }
 .contact-details {
-	font-weight: bold;
+	
 	
 }
 .contact-details-2 {
+	
+}
+
+.me-contact {
+	height: 220px;
+	margin-top: 50px;
+}
+.name-contact {			
+	font-weight: bold;	
+}
+.contact-heading {
 	font-weight: bold;
-	
-	
 }

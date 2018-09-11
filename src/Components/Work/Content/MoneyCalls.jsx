@@ -20,7 +20,12 @@ import {
 
 
 
-export const MoneyCalls = () => {
+export class MoneyCalls extends Component {
+  componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
+  render() {
     return (
         <div>
             <h2 className="heading" style={{color: "#737373"}}>Money Calls</h2>
@@ -46,5 +51,5 @@ export const MoneyCalls = () => {
                 <img className="money-calls-img" src={require("../../../Assets/Images/money-calls.png")}/>                
             </p>            
         </div>
-    )
+    )}
 }

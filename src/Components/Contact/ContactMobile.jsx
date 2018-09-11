@@ -87,18 +87,22 @@ export default class ContactMobile extends Component {
                         <div className="contact-right-col">
                             <div className="contact-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2 className="heading" style={{color: "#737373"}}>Get in touch</h2>
+                                <h4 className="heading" style={{color: "#737373"}}>Looking forward to hearing from you!</h4>
                                 <h5>I am available for Full-Time and Freelance work </h5>
                                 <hr/>
-                                <br/><br/>
+                                <br/>
+
+                                <h4 className="name-contact-mobile">Jabulani Kunene</h4>
+                                                                    
+                                <h5 className="contact-details">Email:</h5>
+                                <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
+                                <br/>
+                                <h5 className="contact-details">Contact: </h5>                                                                    
+                                <h5 className="contact-details-2">081 741 2792<br/>073 890 4805</h5>
                                 
-                                    
-                                    <h5 className="contact-details">Email:</h5>
-                                    <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
-                                    <br/>
-                                    <h5 className="contact-details">Contact: </h5>                                                                    
-                                    <h5 className="contact-details-2">081 741 2792<br/>073 890 4805</h5>
-                                    
+                                <div className="me-contact-mobile-container">
+                                    <img className="me-contact-mobile" src={require("../../Assets/Images/me3.jpg")}/>
+                                </div>
                             </div>
                         </div>
                         <div style={{textAlign: "center"}}>

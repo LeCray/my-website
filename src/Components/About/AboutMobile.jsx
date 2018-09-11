@@ -6,8 +6,8 @@ import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';    
 import { Link } from 'react-router-dom'
 
-import './Styles/About.css'
-import './Styles/AboutMobile.css'
+import './styles/About.css'
+import './styles/AboutMobile.css'
 
 import Landing from '../Landing/Landing'
 import Work from '../Work/Work'
@@ -86,7 +86,7 @@ export default class AboutMobile extends Component {
                         <div className="about-right-col">
                             <div className="about-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
 
-                                <h2 className="heading">Jabulani Kunene</h2>
+                                <h2 className="heading" style={{color: "#737373"}}>Jabulani Kunene</h2>
                                 <h4>I am a self taught fullstack developer</h4>
 
                                 <br/><br/>

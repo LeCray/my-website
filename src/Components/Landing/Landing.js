@@ -46,6 +46,7 @@ export default class Landing extends Component {
     }
     
     componentWillMount(){
+
         this.setState({height: window.innerHeight + 'px'});
         if (this.state.width < 576) {
             this.setState({mobile: true});
@@ -53,7 +54,9 @@ export default class Landing extends Component {
     }
 
     componentDidMount() {
-                
+        
+        
+
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
         }, 1000)

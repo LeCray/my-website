@@ -11,8 +11,8 @@ import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
-import './styles/Landing.css'
-import './styles/LandingMobile.css'
+import './Styles/Landing.css'
+import './Styles/LandingMobile.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'
@@ -139,10 +139,9 @@ export default class Landing extends Component {
                                 <hr ref={hr} className="hr"/>
 
                                 <div ref={summary} className="summary">
-                                    <div className="summary-details" style={{fontWeight: "bold"}}>
-                                        <h6>Full Stack Developer</h6>
-                                        {/*<h6>ReactJS, ExpressJS, Ruby on Rails</h6>*/}
-                                        <h6>Web | Android | iOS</h6>
+                                    <div className="summary-details">
+                                        <h6 style={{fontWeight: "bold"}}>Full Stack Developer</h6>                                        
+                                        <h6 style={{fontWeight: "bold"}}>Web | Android | iOS</h6>
                                     </div>
                                 </div>
 

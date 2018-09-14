@@ -41,11 +41,13 @@
 	font-size: 20px;
 }
 .workRightColContent {
+	height: 100%;	
+	color: black;
+}
+.scroller {
 	height: 100%;
 	padding: 50px 100px 100px 100px;
-	color: black;
-	overflow-y: scroll;	
-
+	overflow-y: scroll;
 }
 
 .mad-mobile-img {

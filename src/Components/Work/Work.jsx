@@ -58,7 +58,7 @@ export default class Work extends Component {
             moneyCalls: false,
             galxyBit: false,
         })
-        
+
     }
     parkupp() {
         this.setState({
@@ -145,20 +145,26 @@ export default class Work extends Component {
 
                     <div className="workRightCol">
                         <div className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
-
-                            <div style={{display: this.state.madMobile?null:"none"}}>
-                                <MadMobile />
+                            <div className="scroller" style={{display: this.state.madMobile?null:"none"}}>
+                                <div>
+                                    <MadMobile />
+                                </div>
                             </div>
-                            <div style={{display: this.state.parkupp?null:"none"}}>
-                                <Parkupp />
+                            <div className="scroller" style={{display: this.state.parkupp?null:"none"}}>
+                                <div>
+                                    <Parkupp />
+                                </div>
                             </div>
-                            <div style={{display: this.state.moneyCalls?null:"none"}}>
-                                <MoneyCalls />
+                            <div className="scroller" style={{display: this.state.moneyCalls?null:"none"}}>
+                                <div>
+                                    <MoneyCalls />
+                                </div>
                             </div>
-                            <div style={{display: this.state.galxyBit?null:"none"}}>
-                                <GalxyBit />
-                            </div>
-                          
+                            <div className="scroller" style={{display: this.state.galxyBit?null:"none"}}>
+                                <div>
+                                    <GalxyBit />
+                                </div>
+                            </div>                          
                         </div>
                     </div>
                 </div>:null}

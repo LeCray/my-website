@@ -133,7 +133,8 @@
 		background-color: #fff;
 		padding-top: 50%;
 		z-index: 1;
-		text-align: center;		
+		text-align: center;
+		opacity: 0.9
 	}
 	.link-mobile-menu {
 		margin: 30px;

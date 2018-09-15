@@ -162,26 +162,26 @@ export const menuClose = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLin
     .to(aboutLinkMenu,1, {
         opacity: 0,
         ease: Power2.easeOut,
-        x:100
+        x:200
     }, "start+=.2")
     .to(workLinkMenu,1, {
         opacity: 0,
         ease: Power2.easeOut,
-        x:100
+        x:200
     }, "start+=.4")
     .to(contactLinkMenu,1, {
         opacity: 0,
         ease: Power2.easeOut,
-        x:100
+        x:200
     }, "start+=.6")
     .to(menuScreen, 1, { 
-        opacity: 1,      
+        opacity: 0.9,      
         clearProps: "x",        
     }, "start+=1.7")
     .to([aboutLinkMenu,workLinkMenu,contactLinkMenu], 1, { 
         opacity: 1,      
         clearProps: "x",        
-    }, "start+=1.7")
+    }, "start+=.7")
 
     
 

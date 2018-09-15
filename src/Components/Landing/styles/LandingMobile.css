@@ -107,7 +107,7 @@
 	}
 	.hamburger-container {
 		position: fixed;
-		top: 0px;
+		top: 10px;
 		width: 100%;
 		text-align: right;
 		z-index: 50;			
@@ -115,13 +115,11 @@
 	.hamburger {
 		position: relative;
 		right: -25px;
-		top: 10px;
 		z-index: 70;
 		height: 25px;		
 	}
 	.hamburger-hexagon {
-		position: relative;
-		top: 10px;
+		position: relative;		
 		right: 10px;		
 		z-index: 69;
 		height: 45px;			
@@ -142,5 +140,18 @@
 		color: #3265ff;
 		font-family: Josefin Sans;
 		font-weight: bold;		
+	}
+	.menu-footer {		
+		position: absolute;
+		left: 50%;
+		bottom:  0px;
+		width: 100%;
+		font-family: Josefin Sans;
+		text-align: center;
+	}
+	.menu-footer-content {
+		position: relative;
+		left: -50%;
+		
 	}
 }

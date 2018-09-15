@@ -109,7 +109,7 @@ export default class LandingMobile extends Component {
 
         setTimeout(() => {
             this.setState({menuOpen: false})
-        }, 2000)
+        }, 1000)
 
         setTimeout(() => {
             scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
@@ -120,7 +120,7 @@ export default class LandingMobile extends Component {
 
         setTimeout(() => {
             this.setState({menuOpen: false})
-        }, 2000)
+        }, 1000)
 
         setTimeout(() => {
             scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
@@ -131,7 +131,7 @@ export default class LandingMobile extends Component {
 
         setTimeout(() => {
             this.setState({menuOpen: false})
-        }, 2000)
+        }, 1000)
 
         setTimeout(() => {
             scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
@@ -145,7 +145,7 @@ export default class LandingMobile extends Component {
 
             setTimeout(() => {
                 this.setState({menuOpen: false})
-            }, 3000)
+            }, 1000)
 
         } else {
             this.setState({menuOpen: true})
@@ -197,10 +197,17 @@ export default class LandingMobile extends Component {
                         {/*MENU SECTION*/}
                         <div className="hamburger-container" >
                             <div ref={hamburger} onClick={this.openCloseMenu} style={{"z-index": 99}}> 
-                                <img 
-                                    className="hamburger" 
-                                    src={require("../../Assets/Images/hamburger.svg")}                                
-                                />
+                                {this.state.menuOpen?
+                                    <img 
+                                        className="hamburger" 
+                                        src={require("../../Assets/Images/cross.svg")}                                
+                                    />
+                                : 
+                                    <img 
+                                        className="hamburger" 
+                                        src={require("../../Assets/Images/hamburger.svg")}
+                                    />
+                                }
                                 <img ref={hexagon} className="hamburger-hexagon" src={require("../../Assets/Images/hamburger-hexagon.svg")}/>
                             </div>
                         </div>
@@ -215,6 +222,12 @@ export default class LandingMobile extends Component {
                             <p ref={contactLinkMenu} className="link-mobile-menu" onClick={this.contactMenuLink}>
                                 Contact 
                             </p>
+
+                            <div className="menu-footer">
+                                <div className="menu-footer-content">
+                                    <p>© Jabulani Kunene. All rights reserved</p>
+                                </div>
+                            </div>
                         </div>
                         {/*MENU SECTION*/}
 

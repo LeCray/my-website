@@ -17,11 +17,11 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
   	var intro = new TimelineMax();
 
     intro.addLabel("start")
-    .from(landingHome, 3, {
+    .from(landingHome, 2, {
         opacity: 1,
         ease: Power4.easeInOut,
         x:"-100%",        
-    }, "start")         
+    }, "start+=.5")         
     .from(rocket, 5, {
         opacity: 0,
         rotation:30, 
@@ -43,7 +43,7 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         delay: -.5
     }, "start")
     .addLabel("firstPartIsDone") //FIRST PART DONE     
-    .from(whiteBox, 3, {
+    .from(whiteBox, 2, {
         opacity: 1,        
         ease: Power4.easeInOut,
         x:"-100%"
@@ -53,7 +53,7 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         rotation:0, 
         ease: Power4.easeInOut,
         x:"-100%"
-    }, "firstPartIsDone+=1")
+    }, "firstPartIsDone+=.3")
     .to(rocket, 2, {  
     	opacity: 0,             
         x:"200%",         
@@ -83,17 +83,17 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
     	opacity: 0,
     	ease: Power2.easeOut,
     	x:100
-    }, "firstPartIsDone+=2")
+    }, "firstPartIsDone+=1.5")
     .from(workLink,2, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=2.4")
+    }, "firstPartIsDone+=1.9")
     .from(contactLink,2.5, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=2.8")
+    }, "firstPartIsDone+=2.2")
     
 }
 
@@ -102,9 +102,8 @@ export const menu = (hamburger) => {
         
     tl.addLabel("start")    
     .from(hamburger, 3, {        
-        opacity:0,    
-        //clearProps: 'all'
-    }, "start")
+        opacity:0,            
+    }, "start+=5.5")
 
 }
 
@@ -114,7 +113,7 @@ export const menuOpen = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLink
     tl.addLabel("start")      
     .to(hamburger, 1.3, {        
         x: "-83%",
-        ease: Power2.easeOut,        
+        ease: Power4.easeOut,        
     }, "start")
     .to(hexagon, 1.5, {
         rotation: -180,
@@ -123,8 +122,8 @@ export const menuOpen = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLink
     .from(menuScreen, 1, {
         x: "85%",
         opacity: 0,
-        ease: Power2.easeOut
-    }, "start+=.3")
+        ease: Power4.easeOut
+    }, "start+=.2")
     .from(aboutLinkMenu,1, {
         opacity: 0,
         ease: Power2.easeOut,
@@ -159,8 +158,8 @@ export const menuClose = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLin
     .to(menuScreen, 1, {
         opacity: 0,
         x:"100%",
-        ease: Power2.easeInOut,                
-    }, "start-=.3")
+        ease: Power4.easeInOut,                
+    }, "start+=.1")
     .to(aboutLinkMenu,1, {
         opacity: 0,
         ease: Power2.easeOut,

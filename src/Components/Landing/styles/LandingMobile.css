@@ -105,21 +105,28 @@
 	.the-rest {
 		height: 500px;
 	}
-	.menu {
+	.hamburger-container {
 		position: fixed;
-		top: 25px;
-		right: 25px;
-		z-index: 99;
+		top: 0px;
+		width: 100%;
+		text-align: right;
+		z-index: 50;
+		border: 1px solid red;		
+	}
+	.hamburger {
+		position: relative;
+		right: -25px;
+		z-index: 70;
 		height: 25px;		
 	}
-	.menu-hexagon {
-		position: fixed;
-		top: 15px;
-		right: 15px;
-		z-index: 98;
+	.hamburger-hexagon {
+		position: relative;
+		right: 10px;
+		
+		z-index: 69;
 		height: 45px;			
 	}
-	.menu-mobile {
+	.menu-screen {
 		position: fixed;
 		top: 0px;
 		left: 0px;
@@ -127,7 +134,7 @@
 		width: 100%;
 		background-color: #fff;
 		padding-top: 50%;
-		z-index: 90;
+		z-index: 1;
 		text-align: center;		
 	}
 	.link-mobile-menu {

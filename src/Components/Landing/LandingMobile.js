@@ -8,7 +8,9 @@ import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 import {loading, topSection} from '../../Animation/Landing'
-import {topSectionMobile} from '../../Animation/LandingMobile'
+
+import {topSectionMobile, menu, menuOpen, menuClose} from '../../Animation/LandingMobile'
+
 import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
@@ -49,6 +51,7 @@ export default class LandingMobile extends Component {
         this.aboutMenuLink = this.aboutMenuLink.bind(this);
         this.workMenuLink = this.workMenuLink.bind(this);
         this.contactMenuLink = this.contactMenuLink.bind(this);
+        this.openMenu = this.openMenu.bind(this);
     }
 
     componentWillMount(){
@@ -69,6 +72,8 @@ export default class LandingMobile extends Component {
             topSectionMobile(this.landingHome, this.rocket, this.Fname, 
                 this.Lname, this.whiteBox, this.me, this.hr, this.summary, 
                 this.aboutLink, this.workLink, this.contactLink)
+
+            menu(this.hamburger)
            
             
         }, 1000)                
@@ -101,21 +106,29 @@ export default class LandingMobile extends Component {
 
     aboutMenuLink() {        
         this.setState({menuOpen: !this.state.menuOpen})
+        menuClose(this.hamburger, this.hexagon)
         setTimeout(() => {
             scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
         }, 200)
     }
     workMenuLink() {        
         this.setState({menuOpen: !this.state.menuOpen})
+        menuClose(this.hamburger, this.hexagon)
         setTimeout(() => {
             scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
         }, 200)
     }
     contactMenuLink() {        
         this.setState({menuOpen: !this.state.menuOpen})
+        menuClose(this.hamburger, this.hexagon)
         setTimeout(() => {
             scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
         }, 200)
+    }
+
+    openMenu() {
+        this.setState({menuOpen: !this.state.menuOpen})
+        menuOpen(this.hamburger, this.hexagon)
     }
 
 	render() {		
@@ -139,6 +152,10 @@ export default class LandingMobile extends Component {
         const workLinkMenu = workLinkMenu => this.workLinkMenu = workLinkMenu
         const contactLinkMenu = contactLinkMenu => this.contactLinkMenu = contactLinkMenu
 
+        const hamburger = hamburger => this.hamburger = hamburger
+        const hexagon = hexagon => this.hexagon = hexagon
+        
+
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
@@ -155,14 +172,17 @@ export default class LandingMobile extends Component {
                 :
                     <div>
                         {/*MENU SECTION*/}
-                        <img 
-                            className="menu" 
-                            src={require("../../Assets/Images/menu-white.svg")}
-                            onClick={() => this.setState({menuOpen: !this.state.menuOpen})}
-                        />
-                        <img className="menu-hexagon" src={require("../../Assets/Images/menu-hexagon.svg")}/>
+                        <div className="hamburger-container" >
+                            <div ref={hamburger} onClick={this.openMenu} style={{"z-index": 99}}> 
+                                <img 
+                                    className="hamburger" 
+                                    src={require("../../Assets/Images/hamburger.svg")}                                
+                                />
+                                <img ref={hexagon} className="hamburger-hexagon" src={require("../../Assets/Images/hamburger-hexagon.svg")}/>
+                            </div>
+                        </div>
 
-                        <div className="menu-mobile" style={{display: this.state.menuOpen?null:"none"}}>
+                        <div className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
                             <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>                                    
                                 About 
                             </p>

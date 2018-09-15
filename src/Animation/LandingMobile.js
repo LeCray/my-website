@@ -20,7 +20,7 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
     .from(landingHome, 3, {
         opacity: 1,
         ease: Power4.easeInOut,
-        x:"-100%"
+        x:"-100%",        
     }, "start")         
     .from(rocket, 5, {
         opacity: 0,
@@ -95,6 +95,47 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         x:100
     }, "firstPartIsDone+=2.8")
     
+}
+
+export const menu = (hamburger) => {
+    var tl = new TimelineMax();
+        
+    tl.addLabel("start")    
+    .from(hamburger, 3, {        
+        opacity:0,    
+        //clearProps: 'all'
+    }, "start")
+
+}
+
+export const menuOpen = (hamburger, hexagon) => {
+    var tl = new TimelineMax();
+        
+    tl.addLabel("start")    
+    .to(hamburger, 1.5, {        
+        x: "-85%",
+        ease: Back.easeOut.config(1),        
+    }, "start")
+    .to(hexagon, 1.5, {
+        rotation: -360,
+        ease: Back.easeInOut.config(2),
+    }, "start")
+
+}
+
+export const menuClose = (hamburger, hexagon) => {
+    var tl = new TimelineMax();
+        
+    tl.addLabel("start")    
+    .to(hamburger, 1.5, {        
+        x: "0%",
+        ease: Back.easeOut.config(1),        
+    }, "start")
+    .to(hexagon, 1.5, {
+        rotation: 360,
+        ease: Back.easeInOut.config(2),
+    }, "start")
+
 }
 
 

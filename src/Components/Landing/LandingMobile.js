@@ -200,13 +200,13 @@ export default class LandingMobile extends Component {
                                     
 
                                     <div className="links-mobile">
-                                        <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',duration:1500})}>                                    
+                                        <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>                                    
                                             About /
                                         </p>
-                                        <p ref={workLink} className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',duration:1500})}>
+                                        <p ref={workLink} className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
                                             Work /
                                         </p>
-                                        <p ref={contactLink} className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',duration:1500})}>
+                                        <p ref={contactLink} className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
                                             Contact /
                                         </p>
                                     </div>

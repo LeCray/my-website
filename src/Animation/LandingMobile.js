@@ -108,7 +108,7 @@ export const menu = (hamburger) => {
 
 }
 
-export const menuOpen = (hamburger, hexagon, menuScreen) => {
+export const menuOpen = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLinkMenu, contactLinkMenu) => {
     var tl = new TimelineMax();
         
     tl.addLabel("start")      
@@ -125,11 +125,26 @@ export const menuOpen = (hamburger, hexagon, menuScreen) => {
         opacity: 0,
         ease: Power2.easeOut
     }, "start+=.3")
+    .from(aboutLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.2")
+    .from(workLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.4")
+    .from(contactLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.6")
 
 
 }
 
-export const menuClose = (hamburger, hexagon, menuScreen) => {
+export const menuClose = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLinkMenu, contactLinkMenu) => {
     var tl = new TimelineMax();
         
     tl.addLabel("start")    
@@ -146,10 +161,30 @@ export const menuClose = (hamburger, hexagon, menuScreen) => {
         x:"100%",
         ease: Power2.easeInOut,                
     }, "start-=.3")
+    .to(aboutLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.2")
+    .to(workLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.4")
+    .to(contactLinkMenu,1, {
+        opacity: 0,
+        ease: Power2.easeOut,
+        x:100
+    }, "start+=.6")
     .to(menuScreen, 1, { 
         opacity: 1,      
         clearProps: "x",        
     }, "start+=1.7")
+    .to([aboutLinkMenu,workLinkMenu,contactLinkMenu], 1, { 
+        opacity: 1,      
+        clearProps: "x",        
+    }, "start+=1.7")
+
     
 
 }

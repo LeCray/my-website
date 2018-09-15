@@ -105,7 +105,7 @@ export default class LandingMobile extends Component {
     }
 
     aboutMenuLink() {        
-        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
             this.setState({menuOpen: false})
@@ -116,7 +116,7 @@ export default class LandingMobile extends Component {
         }, 300)
     }
     workMenuLink() {                
-        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
             this.setState({menuOpen: false})
@@ -127,7 +127,7 @@ export default class LandingMobile extends Component {
         }, 300)
     }
     contactMenuLink() {                
-        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
             this.setState({menuOpen: false})
@@ -141,16 +141,15 @@ export default class LandingMobile extends Component {
     openCloseMenu() {        
         if (this.state.menuOpen) {
 
-            menuClose(this.hamburger,this.hexagon,this.menuScreen)
+            menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
             setTimeout(() => {
                 this.setState({menuOpen: false})
-            }, 2000)
+            }, 3000)
 
         } else {
             this.setState({menuOpen: true})
-            menuOpen(this.hamburger,this.hexagon,this.menuScreen)           
-            
+            menuOpen(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)            
         }        
     }
 

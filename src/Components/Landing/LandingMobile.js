@@ -214,13 +214,13 @@ export default class LandingMobile extends Component {
 
                         <div ref={menuScreen} className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
                             <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>                                    
-                                About 
+                                ABOUT 
                             </p>
                             <p ref={workLinkMenu} className="link-mobile-menu" onClick={this.workMenuLink}>
-                                Work 
+                                WORK 
                             </p>
                             <p ref={contactLinkMenu} className="link-mobile-menu" onClick={this.contactMenuLink}>
-                                Contact 
+                                CONTACT 
                             </p>
 
                             <div className="menu-footer">

@@ -45,7 +45,10 @@ export default class LandingMobile extends Component {
 
         this.workTransition = this.workTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);
-        this.contactTransition = this.contactTransition.bind(this);
+        this.contactTransition = this.contactTransition.bind(this);        
+        this.aboutMenuLink = this.aboutMenuLink.bind(this);
+        this.workMenuLink = this.workMenuLink.bind(this);
+        this.contactMenuLink = this.contactMenuLink.bind(this);
     }
 
     componentWillMount(){
@@ -96,6 +99,25 @@ export default class LandingMobile extends Component {
         contactEnter(this.contactHome)
     }
 
+    aboutMenuLink() {        
+        this.setState({menuOpen: !this.state.menuOpen})
+        setTimeout(() => {
+            scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+        }, 200)
+    }
+    workMenuLink() {        
+        this.setState({menuOpen: !this.state.menuOpen})
+        setTimeout(() => {
+            scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+        }, 200)
+    }
+    contactMenuLink() {        
+        this.setState({menuOpen: !this.state.menuOpen})
+        setTimeout(() => {
+            scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+        }, 200)
+    }
+
 	render() {		
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
@@ -140,13 +162,13 @@ export default class LandingMobile extends Component {
                         <img className="menu-hexagon" src={require("../../Assets/Images/menu-hexagon.svg")}/>
 
                         <div className="menu-mobile" style={{display: this.state.menuOpen?null:"none"}}>
-                            <p ref={aboutLinkMenu} className="link-mobile-menu">                                    
+                            <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>                                    
                                 About 
                             </p>
-                            <p ref={workLinkMenu} className="link-mobile-menu">
+                            <p ref={workLinkMenu} className="link-mobile-menu" onClick={this.workMenuLink}>
                                 Work 
                             </p>
-                            <p ref={contactLinkMenu} className="link-mobile-menu">
+                            <p ref={contactLinkMenu} className="link-mobile-menu" onClick={this.contactMenuLink}>
                                 Contact 
                             </p>
                         </div>

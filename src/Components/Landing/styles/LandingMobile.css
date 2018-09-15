@@ -22,7 +22,7 @@
 		text-align: left;		
 	}
 
-	.top-section {
+	.top-section {		
 		height: 100vh;
 		background: linear-gradient(to bottom right, #0000ff -5%, #66ccff 101%);
 		text-align: center;		
@@ -104,5 +104,36 @@
 
 	.the-rest {
 		height: 500px;
+	}
+	.menu {
+		position: fixed;
+		top: 25px;
+		right: 25px;
+		z-index: 99;
+		height: 25px;		
+	}
+	.menu-hexagon {
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		z-index: 98;
+		height: 45px;			
+	}
+	.menu-mobile {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		height: 100vh;
+		width: 100%;
+		background-color: #fff;
+		padding-top: 50%;
+		z-index: 90;
+		text-align: center;		
+	}
+	.link-mobile-menu {
+		margin: 30px;
+		color: #3265ff;
+		font-family: Josefin Sans;
+		font-weight: bold;		
 	}
 }

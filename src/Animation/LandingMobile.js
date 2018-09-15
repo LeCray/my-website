@@ -156,8 +156,7 @@ export const menuClose = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLin
         ease: Back.easeInOut.config(2),
     }, "start")
     .to(menuScreen, 1, {
-        opacity: 0,
-        x:"100%",
+        opacity: 0,        
         ease: Power4.easeInOut,                
     }, "start+=.1")
     .to(aboutLinkMenu,1, {

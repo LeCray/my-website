@@ -108,22 +108,28 @@ export const menu = (hamburger) => {
 
 }
 
-export const menuOpen = (hamburger, hexagon) => {
+export const menuOpen = (hamburger, hexagon, menuScreen) => {
     var tl = new TimelineMax();
         
-    tl.addLabel("start")    
-    .to(hamburger, 1.5, {        
-        x: "-85%",
-        ease: Back.easeOut.config(1),        
+    tl.addLabel("start")      
+    .to(hamburger, 1.3, {        
+        x: "-83%",
+        ease: Power2.easeOut,        
     }, "start")
     .to(hexagon, 1.5, {
-        rotation: -360,
-        ease: Back.easeInOut.config(2),
+        rotation: -180,
+        ease: Back.easeOut.config(2),
     }, "start")
+    .from(menuScreen, 1, {
+        x: "85%",
+        opacity: 0,
+        ease: Power2.easeOut
+    }, "start+=.3")
+
 
 }
 
-export const menuClose = (hamburger, hexagon) => {
+export const menuClose = (hamburger, hexagon, menuScreen) => {
     var tl = new TimelineMax();
         
     tl.addLabel("start")    
@@ -131,10 +137,20 @@ export const menuClose = (hamburger, hexagon) => {
         x: "0%",
         ease: Back.easeOut.config(1),        
     }, "start")
-    .to(hexagon, 1.5, {
-        rotation: 360,
+    .to(hexagon, 1.8, {
+        rotation: 180,
         ease: Back.easeInOut.config(2),
     }, "start")
+    .to(menuScreen, 2, {
+        opacity: 0,
+        x:"100%",
+        ease: Power2.easeInOut,                
+    }, "start-=.3")
+    .to(menuScreen, 1, { 
+        opacity: 1,      
+        clearProps: "x",        
+    }, "start+=1.7")
+    
 
 }
 

@@ -51,7 +51,7 @@ export default class LandingMobile extends Component {
         this.aboutMenuLink = this.aboutMenuLink.bind(this);
         this.workMenuLink = this.workMenuLink.bind(this);
         this.contactMenuLink = this.contactMenuLink.bind(this);
-        this.openMenu = this.openMenu.bind(this);
+        this.openCloseMenu = this.openCloseMenu.bind(this);
     }
 
     componentWillMount(){
@@ -105,30 +105,53 @@ export default class LandingMobile extends Component {
     }
 
     aboutMenuLink() {        
-        this.setState({menuOpen: !this.state.menuOpen})
-        menuClose(this.hamburger, this.hexagon)
+        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+
+        setTimeout(() => {
+            this.setState({menuOpen: false})
+        }, 2000)
+
         setTimeout(() => {
             scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
-        }, 200)
+        }, 300)
     }
-    workMenuLink() {        
-        this.setState({menuOpen: !this.state.menuOpen})
-        menuClose(this.hamburger, this.hexagon)
+    workMenuLink() {                
+        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+
+        setTimeout(() => {
+            this.setState({menuOpen: false})
+        }, 2000)
+
         setTimeout(() => {
             scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
-        }, 200)
+        }, 300)
     }
-    contactMenuLink() {        
-        this.setState({menuOpen: !this.state.menuOpen})
-        menuClose(this.hamburger, this.hexagon)
+    contactMenuLink() {                
+        menuClose(this.hamburger, this.hexagon, this.menuScreen)
+
+        setTimeout(() => {
+            this.setState({menuOpen: false})
+        }, 2000)
+
         setTimeout(() => {
             scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
-        }, 200)
+        }, 300)
     }
 
-    openMenu() {
-        this.setState({menuOpen: !this.state.menuOpen})
-        menuOpen(this.hamburger, this.hexagon)
+    openCloseMenu() {        
+        if (this.state.menuOpen) {
+
+            menuClose(this.hamburger,this.hexagon,this.menuScreen)
+
+            setTimeout(() => {
+                this.setState({menuOpen: false})
+            }, 2000)
+
+        } else {
+            this.setState({menuOpen: true})
+            menuOpen(this.hamburger,this.hexagon,this.menuScreen)           
+            
+        }        
     }
 
 	render() {		
@@ -154,6 +177,7 @@ export default class LandingMobile extends Component {
 
         const hamburger = hamburger => this.hamburger = hamburger
         const hexagon = hexagon => this.hexagon = hexagon
+        const menuScreen = menuScreen => this.menuScreen = menuScreen
         
 
         const aboutHome = aboutHome => this.aboutHome = aboutHome
@@ -173,7 +197,7 @@ export default class LandingMobile extends Component {
                     <div>
                         {/*MENU SECTION*/}
                         <div className="hamburger-container" >
-                            <div ref={hamburger} onClick={this.openMenu} style={{"z-index": 99}}> 
+                            <div ref={hamburger} onClick={this.openCloseMenu} style={{"z-index": 99}}> 
                                 <img 
                                     className="hamburger" 
                                     src={require("../../Assets/Images/hamburger.svg")}                                
@@ -182,7 +206,7 @@ export default class LandingMobile extends Component {
                             </div>
                         </div>
 
-                        <div className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
+                        <div ref={menuScreen} className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
                             <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>                                    
                                 About 
                             </p>

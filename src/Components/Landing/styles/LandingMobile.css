@@ -110,19 +110,19 @@
 		top: 0px;
 		width: 100%;
 		text-align: right;
-		z-index: 50;
-		border: 1px solid red;		
+		z-index: 50;			
 	}
 	.hamburger {
 		position: relative;
 		right: -25px;
+		top: 10px;
 		z-index: 70;
 		height: 25px;		
 	}
 	.hamburger-hexagon {
 		position: relative;
-		right: 10px;
-		
+		top: 10px;
+		right: 10px;		
 		z-index: 69;
 		height: 45px;			
 	}

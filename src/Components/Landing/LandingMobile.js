@@ -154,6 +154,7 @@ export default class LandingMobile extends Component {
                     </div>                                                                                       
                 :
                     <div>
+                        {/*MENU SECTION*/}
                         <img 
                             className="menu" 
                             src={require("../../Assets/Images/menu-white.svg")}
@@ -172,6 +173,7 @@ export default class LandingMobile extends Component {
                                 Contact 
                             </p>
                         </div>
+                        {/*MENU SECTION*/}
 
                         <div ref={landingHome} className="landing-home" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>                                      
 

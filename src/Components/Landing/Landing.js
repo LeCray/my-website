@@ -57,7 +57,11 @@ export default class Landing extends Component {
         }       
     }
 
-    componentDidMount() {                
+    async componentDidMount() {                
+        setTimeout(() => {        
+            this.setState({transition: true})
+            Transition(this.transitionFirst, this.transitionMain, this.transitionSecond, this.state.width)
+        }, 500)
 
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
@@ -72,7 +76,7 @@ export default class Landing extends Component {
                     this.aboutLink, this.workLink, this.contactLink)
             }
             
-        }, 1000)                
+        }, 1000)
     }
 
     async aboutTransition() {
@@ -83,7 +87,10 @@ export default class Landing extends Component {
             contact: false,
             transition: true
         })
-        //aboutEnter(this.aboutHome)
+        Transition(this.transitionFirst, this.transitionMain, this.transitionSecond, this.state.width)
+        setTimeout(() => {
+            //aboutEnter(this.aboutHome)
+        }, 2000)
     }
     async workTransition() {
         await this.setState({
@@ -168,19 +175,21 @@ export default class Landing extends Component {
                     </div>
                                       
                 }
-
-                <div 
-                    ref={transitionFirst} 
-                    className="transition-first" 
-                    style={{display: this.state.transition?null:"none"}}>
-                </div>
-                <div ref={transitionMain} className="transition-main" style={{display: this.state.transition?null:"none"}}>
-                    <h1 className="transition-content">JK</h1>
-                </div>
-                <div 
-                    ref={transitionSecond}
-                    className="transition-second" 
-                    style={{display: this.state.transition?null:"none"}}>
+                
+                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
+                    <div 
+                        ref={transitionFirst} 
+                        className="transition-first" 
+                        >
+                    </div>
+                    <div ref={transitionMain} className="transition-main">
+                        <h1 className="transition-content"></h1>
+                    </div>
+                    <div 
+                        ref={transitionSecond}
+                        className="transition-second" 
+                        >
+                    </div>
                 </div>
 
                 {this.state.about?   

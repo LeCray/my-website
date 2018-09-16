@@ -1,19 +1,30 @@
+.transition-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100%;
+	border: 1px solid red;
+	overflow: hidden;
+	z-index: 11;
+}
+
 .transition-first {
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	left: -10px;
 	height: 100vh;
-	width: 100px;
-	background-color: white;
+	width: 10px;
+	background-color: #ffe8e1;
 	z-index: 52;
 }
 .transition-second {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	left: -10px;
 	height: 100vh;
-	width: 100px;
-	background-color: white;
+	width: 10px;
+	background-color: #ffe8e1;
 	z-index: 52;
 }
 .transition-main {
@@ -22,10 +33,13 @@
 	left: 0px;
 	height: 100vh;
 	width: 100%;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	background: #0000ff;
 	z-index: 51;
 }
 .transition-content {
 	text-align: center;
 	margin-top: 30%;
+	color: #fff;
+	font-family: Josefin Sans;
+	font-weight: bold;
 }

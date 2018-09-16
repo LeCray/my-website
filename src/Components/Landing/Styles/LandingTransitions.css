@@ -1,0 +1,31 @@
+.transition-first {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100vh;
+	width: 100px;
+	background-color: white;
+	z-index: 52;
+}
+.transition-second {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100px;
+	background-color: white;
+	z-index: 52;
+}
+.transition-main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	z-index: 51;
+}
+.transition-content {
+	text-align: center;
+	margin-top: 30%;
+}

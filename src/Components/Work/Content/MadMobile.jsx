@@ -40,8 +40,11 @@ export class MadMobile extends Component {
                 M.A.D does vehicle repairs and maintenance, fleet management, construction, courier, towing and much more. 
                 <br/><br/>
                 The App I built for the company allows their clients to manage their accounts in a new way.
-                The main feature involves streaming live vehicle data analytics from any client's vehicle, 
-                anywhere in real time via an On Board Diagnostics dongle (OBD2)
+                <br/><br/>
+                The systems biggest feature allows for streaming live vehicle data analytics from any vehicle, 
+                anywhere in real time via an On Board Diagnostics dongle (OBD2).   
+                Clients vehicles can be anywhere and their vehicle parameters such as engine speed, fuel consumption, 
+                air-fuel ratio, temperatures etc. can be directly accessed via an online dashboard.                  
                 <br/><br/>
                 Other features for their clients include: 
                 <ul>

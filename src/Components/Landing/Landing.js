@@ -11,8 +11,11 @@ import {aboutEnter} from '../../Animation/About'
 import {workEnter} from '../../Animation/Work'
 import {contactEnter} from '../../Animation/Contact'
 
-import './styles/Landing.css'
-import './styles/LandingMobile.css'
+import {Transition} from '../../Animation/Transition'
+
+import './Styles/Landing.css'
+import './Styles/LandingMobile.css'
+import './Styles/LandingTransitions.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'
@@ -37,6 +40,7 @@ export default class Landing extends Component {
             work: false,
             contact: false,
             mobile: false,
+            transition: false,
             width: window.innerWidth
         };
 
@@ -53,9 +57,7 @@ export default class Landing extends Component {
         }       
     }
 
-    componentDidMount() {
-        
-        
+    componentDidMount() {                
 
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
@@ -74,12 +76,14 @@ export default class Landing extends Component {
     }
 
     async aboutTransition() {
+
         await this.setState({
-            about: true,
+            //about: true,
             work: false,
-            contact: false
+            contact: false,
+            transition: true
         })
-        aboutEnter(this.aboutHome)
+        //aboutEnter(this.aboutHome)
     }
     async workTransition() {
         await this.setState({
@@ -117,6 +121,10 @@ export default class Landing extends Component {
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
+
+       const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
+       const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
+       const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond 
 
 		return(
             <div className="landingContainer">
@@ -160,6 +168,20 @@ export default class Landing extends Component {
                     </div>
                                       
                 }
+
+                <div 
+                    ref={transitionFirst} 
+                    className="transition-first" 
+                    style={{display: this.state.transition?null:"none"}}>
+                </div>
+                <div ref={transitionMain} className="transition-main" style={{display: this.state.transition?null:"none"}}>
+                    <h1 className="transition-content">JK</h1>
+                </div>
+                <div 
+                    ref={transitionSecond}
+                    className="transition-second" 
+                    style={{display: this.state.transition?null:"none"}}>
+                </div>
 
                 {this.state.about?   
                     <div ref={aboutHome} className="aboutHome">                 

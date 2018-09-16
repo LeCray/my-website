@@ -13,6 +13,8 @@ import Landing from '../Landing/Landing'
 import Work from '../Work/Work'
 import Contact from '../Contact/Contact'
 
+import {aboutLeftCol} from '../../Animation/About'
+
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
@@ -27,13 +29,23 @@ export default class About extends Component {
             home: false,
             about: true,
             work: false,
-            contact: false
+            contact: false,
+            columns: false
             
         };
 
         this.homeTransition = this.homeTransition.bind(this);
         this.workTransition = this.workTransition.bind(this);
         this.contactTransition = this.contactTransition.bind(this);       
+    }
+
+    componentDidMount() {
+        console.log("ABout has mounted")
+
+        
+            this.setState({columns: true})            
+            aboutLeftCol(this.aboutLeftCol, this.aboutRightColContent)            
+        
     }
 
     async homeTransition() {
@@ -68,14 +80,18 @@ export default class About extends Component {
 	render() {	
         const home = home => this.home = home
         const workHome = workHome => this.workHome = workHome
-        const contactHome = contactHome => this.contactHome = contactHome	
+        const contactHome = contactHome => this.contactHome = contactHome
+
+        const aboutLeftCol = aboutLeftCol => this.aboutLeftCol = aboutLeftCol
+        const aboutRightColContent = aboutRightColContent => this.aboutRightColContent = aboutRightColContent        	
     
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.about?
                     <div style={{fontFamily: "Josefin Sans"}}>
-                        <div className="aboutLeftCol">
+
+                        <div ref={aboutLeftCol} className="aboutLeftCol" style={{display: this.state.columns?null:"none"}}>
                             <div className="aboutWhite">
                                 <h2>ABOUT</h2>
                                 <p className="learn"><b> - I LIVE TO LEARN - </b></p>
@@ -90,7 +106,10 @@ export default class About extends Component {
                         </div>
 
                         <div className="aboutRightCol">
-                            <div className="aboutRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                            <div 
+                                ref={aboutRightColContent} 
+                                className="aboutRightColContent" 
+                                style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h2 className="heading">Jabulani Kunene</h2>
                                 <h4>I am a self taught fullstack developer</h4>

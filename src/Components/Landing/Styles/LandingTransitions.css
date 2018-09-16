@@ -3,8 +3,7 @@
 	top: 0px;
 	left: 0px;
 	height: 100vh;
-	width: 100%;
-	border: 1px solid red;
+	width: 100%;	
 	overflow: hidden;
 	z-index: 11;
 }
@@ -25,7 +24,7 @@
 	height: 100vh;
 	width: 10px;
 	background-color: #ffe8e1;
-	z-index: 52;
+	z-index: 52;	
 }
 .transition-main {
 	position: absolute;

@@ -58,10 +58,7 @@ export default class Landing extends Component {
     }
 
     async componentDidMount() {                
-        setTimeout(() => {        
-            this.setState({transition: true})
-            Transition(this.transitionFirst, this.transitionMain, this.transitionSecond, this.state.width)
-        }, 500)
+       
 
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
@@ -81,16 +78,16 @@ export default class Landing extends Component {
 
     async aboutTransition() {
 
-        await this.setState({
-            //about: true,
-            work: false,
-            contact: false,
-            transition: true
-        })
+        this.setState({transition: true})
         Transition(this.transitionFirst, this.transitionMain, this.transitionSecond, this.state.width)
-        setTimeout(() => {
-            //aboutEnter(this.aboutHome)
-        }, 2000)
+        
+        await this.setState({
+            about: true,
+            work: false,
+            contact: false,            
+        })        
+        aboutEnter(this.aboutHome)    
+
     }
     async workTransition() {
         await this.setState({

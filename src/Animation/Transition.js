@@ -7,7 +7,7 @@ export const Transition = (transitionFirst, transitionMain, transitionSecond, wi
 
   	var transition = new TimelineMax();
 
-    transition.addLabel("start", 1)
+    transition.addLabel("start")
     .from(transitionMain, 1.3, {        
         ease: Power3.easeInOut,
         x:"-100%"
@@ -19,13 +19,13 @@ export const Transition = (transitionFirst, transitionMain, transitionSecond, wi
     .to(transitionFirst, 1, {      	
     	ease: Power2.easeInOut,
     	scaleX: 60,    	    	
-    }, "start-=.0") 
+    }, "start") 
     .to(transitionFirst, 1, {  
     	ease: Power3.easeOut,
     	scaleX: 0,    	    	
     }, "start+=.7") 
 
-    .addLabel("second", 2.5)
+    .addLabel("second", 2)
 	
 	.to(transitionMain, 1.3, {        
         ease: Power3.easeInOut,

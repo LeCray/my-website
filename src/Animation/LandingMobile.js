@@ -149,7 +149,7 @@ export const menuClose = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLin
     tl.addLabel("start")    
     .to(hamburger, 1.5, {        
         x: "0%",
-        ease: Back.easeOut.config(1),        
+        ease: Power4.easeOut,        
     }, "start")
     .to(hexagon, 1.8, {
         rotation: 180,

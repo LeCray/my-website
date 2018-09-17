@@ -36,9 +36,14 @@
 	z-index: 51;
 }
 .transition-content {
+	width: 100%;
 	text-align: center;
-	margin-top: 30%;
+	margin-top: 20%;	
+}
+.name-tx {	
+	display: inline-block;
 	color: #fff;
 	font-family: Josefin Sans;
-	font-weight: bold;
+	font-weight: 300;	
+	font-size: 25px;
 }

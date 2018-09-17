@@ -3,7 +3,7 @@ import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back,Power1, Power4, Powe
 
 
 
-export const Transition = (transitionFirst, transitionMain, transitionSecond, width) => {	
+export const Transition = (transitionFirst, transitionMain, transitionSecond, FnameTx, LnameTx, width) => {	
 
   	var transition = new TimelineMax();
 
@@ -25,8 +25,33 @@ export const Transition = (transitionFirst, transitionMain, transitionSecond, wi
     	scaleX: 0,    	    	
     }, "start+=.7") 
 
-    .addLabel("second", 2)
-	
+    .addLabel("hanger", .2)	
+    .from([FnameTx,LnameTx], 2, {    	
+    	opacity: 0,    	
+    }, "hanger+=.5")
+    .to([FnameTx,LnameTx], 2, {    	
+    	opacity: 0,
+    }, "hanger+=2")
+
+    .from(FnameTx, 1.3, {     	
+        x:width,        
+        ease: Power3.easeInOut,
+    }, "hanger-=.2")
+    .from(LnameTx, 1.3, {            	    	
+        x:width,        
+        ease: Power3.easeInOut,        
+    }, "hanger-=.2")
+
+    .to(FnameTx, 1.3, { 
+    	x:-width,        	
+        ease: Power3.easeInOut,        
+    }, "hanger+=1.8")
+    .to(LnameTx, 1.3, {        
+    	x:-width,    	
+        ease: Power3.easeInOut,        
+    }, "hanger+=1.8")
+
+    .addLabel("second", 2)	
 	.to(transitionMain, 1.3, {        
         ease: Power3.easeInOut,
         x:"100%"

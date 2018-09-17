@@ -58,11 +58,14 @@ export default class Landing extends Component {
     }
 
     async componentDidMount() {                
-       
+        setTimeout(() => {
+            this.setState({transition: true})
+            Transition(this.transitionFirst, this.transitionMain, this.transitionSecond,this.FnameTx,this.LnameTx, this.state.width)
+        },500)
 
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
-        }, 1000)
+        }, 10000)
 
         setTimeout(() => {   
             if (this.state.mobile){
@@ -73,13 +76,13 @@ export default class Landing extends Component {
                     this.aboutLink, this.workLink, this.contactLink)
             }
             
-        }, 1000)
+        }, 10000)
     }
 
     async aboutTransition() {
 
         this.setState({transition: true})
-        Transition(this.transitionFirst, this.transitionMain, this.transitionSecond, this.state.width)
+        Transition(this.transitionFirst, this.transitionMain, this.transitionSecond,this.FnameTx,this.LnameTx, this.state.width)
         
         await this.setState({
             about: true,
@@ -112,8 +115,12 @@ export default class Landing extends Component {
         const activity = activity => this.activity = activity
         const landingHome = landingHome => this.landingHome = landingHome
         const rocket = rocket => this.rocket = rocket
+
         const Fname = Fname => this.Fname = Fname
         const Lname = Lname => this.Lname = Lname
+        const FnameTx = FnameTx => this.FnameTx = FnameTx
+        const LnameTx = LnameTx => this.LnameTx = LnameTx
+
         const whiteBox = whiteBox => this.whiteBox = whiteBox
         const me = me => this.me = me
         const summary = summary => this.summary = summary
@@ -180,7 +187,10 @@ export default class Landing extends Component {
                         >
                     </div>
                     <div ref={transitionMain} className="transition-main">
-                        <h1 className="transition-content"></h1>
+                        <div className="transition-content">
+                            <p ref={FnameTx} className="name-tx">Jabulani</p>
+                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>Kunene</p>
+                        </div>
                     </div>
                     <div 
                         ref={transitionSecond}

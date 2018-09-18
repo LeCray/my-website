@@ -40,7 +40,7 @@ export default class Landing extends Component {
             work: false,
             contact: false,
             mobile: false,
-            transition: false,
+            transition: true,
             width: window.innerWidth
         };
 
@@ -60,9 +60,22 @@ export default class Landing extends Component {
     async componentDidMount() {                
         setTimeout(() => {
             this.setState({transition: true})
-            Transition(this.transitionFirst, this.transitionMain, this.transitionSecond,this.FnameTx,this.LnameTx, this.state.width)
+            Transition(
+                this.transitionFirst, this.transitionMain, 
+                this.transitionSecond,this.FnameTx,this.LnameTx, 
+                this.state.width, this.learnTx
+            )
+
+            this.setState({
+                about: true,
+                work: false,
+                contact: false,            
+            })        
+            aboutEnter(this.aboutHome)
         },500)
 
+
+/*
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
         }, 10000)
@@ -76,7 +89,7 @@ export default class Landing extends Component {
                     this.aboutLink, this.workLink, this.contactLink)
             }
             
-        }, 10000)
+        }, 10000)*/
     }
 
     async aboutTransition() {
@@ -120,6 +133,7 @@ export default class Landing extends Component {
         const Lname = Lname => this.Lname = Lname
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
+        const learnTx = learnTx => this.learnTx = learnTx
 
         const whiteBox = whiteBox => this.whiteBox = whiteBox
         const me = me => this.me = me
@@ -188,8 +202,9 @@ export default class Landing extends Component {
                     </div>
                     <div ref={transitionMain} className="transition-main">
                         <div className="transition-content">
-                            <p ref={FnameTx} className="name-tx">Jabulani</p>
-                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>Kunene</p>
+                            <p ref={FnameTx} className="name-tx">J</p>
+                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
                         </div>
                     </div>
                     <div 

@@ -14,7 +14,7 @@
 	left: -10px;
 	height: 100vh;
 	width: 10px;
-	background-color: #ffe8e1;
+	background-color: #ffc4b3;
 	z-index: 52;
 }
 .transition-second {
@@ -23,7 +23,7 @@
 	left: -10px;
 	height: 100vh;
 	width: 10px;
-	background-color: #ffe8e1;
+	background-color: #ffc4b3;
 	z-index: 52;	
 }
 .transition-main {
@@ -46,4 +46,12 @@
 	font-family: Josefin Sans;
 	font-weight: 300;	
 	font-size: 25px;
+}
+.learn-tx {		
+	color: #fff;
+	font-family: Josefin Sans;
+	font-weight: 300;	
+	font-size: 10px;
+	letter-spacing: 2px;
+	margin-top: -10px;
 }

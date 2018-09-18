@@ -119,6 +119,9 @@ export const menuOpen = (hamburger, hexagon, menuScreen, aboutLinkMenu, workLink
         rotation: -180,
         ease: Back.easeOut.config(2),
     }, "start")
+
+
+    
     .from(menuScreen, 1, {
         x: "85%",
         opacity: 0,

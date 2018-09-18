@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom'
 import './Styles/Work.css'
 import './Styles/WorkMobile.css'
 
+import {workColumns} from '../../Animation/Work'
+
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
@@ -49,6 +51,15 @@ export default class Work extends Component {
         this.homeTransition = this.homeTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);  
         this.contactTransition = this.contactTransition.bind(this);
+    }
+
+    componentDidMount() {                
+        this.setState({columns: true})            
+        workColumns(
+            this.workLeftCol, this.workRightColContent, 
+            this.state.width, this.workStill, this.workLinkHome,
+            this.workLink, this.workLinkWork, this.workLinkContact
+        )
     }
 
     madMobile() {
@@ -117,34 +128,48 @@ export default class Work extends Component {
 	render() {		
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
-        const contactHome = contactHome => this.contactHome = contactHome   
+        const contactHome = contactHome => this.contactHome = contactHome  
+        const workStill = workStill => this.workStill = workStill
+        
+        const workLeftCol = workLeftCol => this.workLeftCol = workLeftCol
+
+        const workLinkHome = workLinkHome => this.workLinkHome = workLinkHome
+        const workLink = workLink => this.workLink = workLink
+        const workLinkAbout = workLinkAbout => this.workLinkAbout = workLinkAbout
+        const workLinkContact = workLinkContact => this.workLinkContact = workLinkContact
+
+        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent 
     
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.work?
+
                     <div style={{fontFamily: "Josefin Sans"}}>
-                    <div className="workLeftCol">
-                        <div className="workLeftColContent">
+
+                    <div ref={workLeftCol} className="workLeftCol">
+                        <div ref={workStill} className="workLeftColContent">
                             <h2>WORK</h2>
-                            {/*<hr className="workHr"/>*/}
+                            
                             <div className="work-intra-links">
                                 <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
                                 <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
                                 <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
                                 <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
                             </div>
-                            <div className="workLinks">
-                                <p className="workLink" onClick={this.homeTransition}>Home /</p>
-                                <p className="workLink" onClick={this.aboutTransition}>About /</p>
-                                <p className="workLink">Work /</p>
-                                <p className="workLink" onClick={this.contactTransition}>Contact /</p>
-                            </div>
                         </div>
+
+                        <div className="workLinks">
+                            <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home /</p>
+                            <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About /</p>
+                            <p className="workLink" ref={workLink}>Work /</p>
+                            <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact /</p>
+                        </div>
+                        
                     </div>
 
                     <div className="workRightCol">
-                        <div className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                        <div ref={workRightColContent} className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
                             <div className="scroller" style={{display: this.state.madMobile?null:"none"}}>
                                 <div>
                                     <MadMobile />

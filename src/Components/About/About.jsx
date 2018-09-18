@@ -13,7 +13,10 @@ import Landing from '../Landing/Landing'
 import Work from '../Work/Work'
 import Contact from '../Contact/Contact'
 
-import {aboutLeftCol} from '../../Animation/About'
+import {aboutColumns} from '../../Animation/About'
+import {workEnter} from '../../Animation/Work'
+import {contactEnter} from '../../Animation/Contact'
+import {Transition} from '../../Animation/Transition'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
@@ -31,6 +34,7 @@ export default class About extends Component {
             work: false,
             contact: false,
             columns: false,
+            transition: false,
             width: window.innerWidth
             
         };
@@ -43,7 +47,7 @@ export default class About extends Component {
 
     componentDidMount() {                
         this.setState({columns: true})            
-        aboutLeftCol(
+        aboutColumns(
             this.aboutLeftCol, this.aboutRightColContent, 
             this.state.width, this.aboutStill, this.aboutLinkHome,
             this.aboutLink, this.aboutLinkWork, this.aboutLinkContact
@@ -61,12 +65,18 @@ export default class About extends Component {
     }
     async workTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: false,           
             work: true,
             contact: false
         })
-        //workEnter(this.workHome)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )        
+        workEnter(this.workHome)
     }
     async contactTransition() {
         await this.setState({
@@ -92,6 +102,13 @@ export default class About extends Component {
         const aboutLink = aboutLink => this.aboutLink = aboutLink
         const aboutLinkWork = aboutLinkWork => this.aboutLinkWork = aboutLinkWork
         const aboutLinkContact = aboutLinkContact => this.aboutLinkContact = aboutLinkContact
+
+        const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
+        const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
+        const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const FnameTx = FnameTx => this.FnameTx = FnameTx
+        const LnameTx = LnameTx => this.LnameTx = LnameTx
+        const learnTx = learnTx => this.learnTx = learnTx
     
 		return(
             <div>
@@ -192,6 +209,26 @@ export default class About extends Component {
                         </div>
                     </div>
                 :null}
+
+                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
+                    <div 
+                        ref={transitionFirst} 
+                        className="transition-first" 
+                        >
+                    </div>
+                    <div ref={transitionMain} className="transition-main">
+                        <div className="transition-content">
+                            <p ref={FnameTx} className="name-tx">J</p>
+                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                        </div>
+                    </div>
+                    <div 
+                        ref={transitionSecond}
+                        className="transition-second" 
+                        >
+                    </div>
+                </div>
 
                 {this.state.home?   
                     <div ref={home} className="home">                 

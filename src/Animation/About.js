@@ -7,7 +7,7 @@ export const aboutEnter = (aboutHome) => {
 
   	var about = new TimelineMax();
 
-    about.addLabel("start", 2.2)
+    about.addLabel("start", 2.185)
     .from(aboutHome, 1, {
         opacity: 1,
         ease: Power1.easeInOut,
@@ -17,9 +17,7 @@ export const aboutEnter = (aboutHome) => {
 
 }
 
-export const aboutLeftCol = (aboutLeftCol,aboutRightColContent,width,aboutStill,aboutLinkhome,aboutLink,aboutLinkWork,aboutLinkContact) => {
-	
-	console.log(aboutLeftCol)
+export const aboutColumns = (aboutLeftCol,aboutRightColContent,width,aboutStill,aboutLinkhome,aboutLink,aboutLinkWork,aboutLinkContact) => {	
 
   	var tl = new TimelineMax();
 
@@ -35,14 +33,14 @@ export const aboutLeftCol = (aboutLeftCol,aboutRightColContent,width,aboutStill,
         y:"30%"
     }, "start+=.58") 
 
-    .from(aboutStill, 2, {
+    .from(aboutStill, 2.3, {
     	x: width/2, 
     	opacity: 0,   	
     	ease: Power3.easeOut
     }, "start+=.5")
 
     .staggerFrom([aboutLinkhome,aboutLink,aboutLinkWork,aboutLinkContact], 2.5, {
-    	y:50, opacity:0, ease:  Elastic.easeOut.config(1.2, 1)
+    	y:50, opacity:0, ease: Elastic.easeOut.config(1.2, 1)
     }, 0.3, "start+=.7")
 }
 

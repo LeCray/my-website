@@ -34,13 +34,13 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true,   
+            loading: false,   
             landingHome: false,
-            about: false,
+            about: true,
             work: false,
             contact: false,
             mobile: false,
-            transition: true,
+            transition: false,
             width: window.innerWidth
         };
 
@@ -59,26 +59,14 @@ export default class Landing extends Component {
 
     async componentDidMount() {                
         setTimeout(() => {
-            this.setState({transition: true})
-            Transition(
-                this.transitionFirst, this.transitionMain, 
-                this.transitionSecond,this.FnameTx,this.LnameTx, 
-                this.state.width, this.learnTx
-            )
-
-            this.setState({
-                about: true,
-                work: false,
-                contact: false,            
-            })        
-            aboutEnter(this.aboutHome)
+            
         },0)
 
 
-/*
+
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
-        }, 10000)
+        }, 1000)
 
         setTimeout(() => {   
             if (this.state.mobile){
@@ -89,15 +77,19 @@ export default class Landing extends Component {
                     this.aboutLink, this.workLink, this.contactLink)
             }
             
-        }, 10000)*/
+        }, 1000)
     }
 
     async aboutTransition() {
 
-        this.setState({transition: true})
-        Transition(this.transitionFirst, this.transitionMain, this.transitionSecond,this.FnameTx,this.LnameTx, this.state.width)
-        
-        await this.setState({
+        await this.setState({transition: true})
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+
+        this.setState({
             about: true,
             work: false,
             contact: false,            

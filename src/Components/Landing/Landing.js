@@ -72,7 +72,7 @@ export default class Landing extends Component {
                 contact: false,            
             })        
             aboutEnter(this.aboutHome)
-        },500)
+        },0)
 
 
 /*

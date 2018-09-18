@@ -30,7 +30,8 @@ export default class About extends Component {
             about: true,
             work: false,
             contact: false,
-            columns: false
+            columns: false,
+            width: window.innerWidth
             
         };
 
@@ -39,13 +40,14 @@ export default class About extends Component {
         this.contactTransition = this.contactTransition.bind(this);       
     }
 
-    componentDidMount() {
-        console.log("ABout has mounted")
 
-        
-            this.setState({columns: true})            
-            aboutLeftCol(this.aboutLeftCol, this.aboutRightColContent)            
-        
+    componentDidMount() {                
+        this.setState({columns: true})            
+        aboutLeftCol(
+            this.aboutLeftCol, this.aboutRightColContent, 
+            this.state.width, this.aboutStill, this.aboutLinkHome,
+            this.aboutLink, this.aboutLinkWork, this.aboutLinkContact
+        )
     }
 
     async homeTransition() {
@@ -83,7 +85,13 @@ export default class About extends Component {
         const contactHome = contactHome => this.contactHome = contactHome
 
         const aboutLeftCol = aboutLeftCol => this.aboutLeftCol = aboutLeftCol
-        const aboutRightColContent = aboutRightColContent => this.aboutRightColContent = aboutRightColContent        	
+        const aboutRightColContent = aboutRightColContent => this.aboutRightColContent = aboutRightColContent
+        const aboutStill = aboutStill => this.aboutStill = aboutStill
+
+        const aboutLinkHome = aboutLinkHome => this.aboutLinkHome = aboutLinkHome
+        const aboutLink = aboutLink => this.aboutLink = aboutLink
+        const aboutLinkWork = aboutLinkWork => this.aboutLinkWork = aboutLinkWork
+        const aboutLinkContact = aboutLinkContact => this.aboutLinkContact = aboutLinkContact
     
 		return(
             <div>
@@ -93,14 +101,17 @@ export default class About extends Component {
 
                         <div ref={aboutLeftCol} className="aboutLeftCol" style={{display: this.state.columns?null:"none"}}>
                             <div className="aboutWhite">
-                                <h2>ABOUT</h2>
-                                <p className="learn"><b> - I LIVE TO LEARN - </b></p>
+
+                                <div ref={aboutStill} className="about-still">
+                                    <h2>ABOUT</h2>
+                                    <p className="learn"><b> - I LIVE TO LEARN - </b></p>
+                                </div>
                                 
                                 <div className="aboutLinks">
-                                    <p className="aboutLink" onClick={this.homeTransition}>Home /</p>
-                                    <p className="aboutLink" >About /</p>
-                                    <p className="aboutLink" onClick={this.workTransition}>Work /</p>
-                                    <p className="aboutLink" onClick={this.contactTransition}>Contact /</p>
+                                    <p className="aboutLink" ref={aboutLinkHome} onClick={this.homeTransition}>Home</p>
+                                    <p className="aboutLink" ref={aboutLink}>About</p>
+                                    <p className="aboutLink" ref={aboutLinkWork} onClick={this.workTransition}>Work</p>
+                                    <p className="aboutLink" ref={aboutLinkContact} onClick={this.contactTransition}>Contact</p>
                                 </div>
                             </div>
                         </div>

@@ -62,7 +62,7 @@ export const Transition = (transitionFirst, transitionMain, transitionSecond, Fn
     .to(transitionSecond, 1, {      	
     	ease: Power2.easeInOut,
     	scaleX: 60,    	    	
-    }, "second-=.0") 
+    }, "second") 
     .to(transitionSecond, 1, {  
     	ease: Power3.easeOut,
     	scaleX: 0,    	    	

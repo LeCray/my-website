@@ -11,6 +11,9 @@ import './Styles/Work.css'
 import './Styles/WorkMobile.css'
 
 import {workColumns} from '../../Animation/Work'
+import {aboutEnter} from '../../Animation/About'
+import {contactEnter} from '../../Animation/Contact'
+import {Transition} from '../../Animation/Transition'
 
 
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
@@ -108,12 +111,18 @@ export default class Work extends Component {
     }
     async aboutTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: true,           
             work: false,
             contact: false
         })
-        //homeEnter(this.home)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+        aboutEnter(this.aboutHome)
     }
     async contactTransition() {
         await this.setState({
@@ -123,7 +132,12 @@ export default class Work extends Component {
             work: false,
             contact: true
         })
-        //workEnter(this.workHome)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+        contactEnter(this.contactHome)
     }
        
 

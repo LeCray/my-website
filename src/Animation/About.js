@@ -8,7 +8,7 @@ export const aboutEnter = (aboutHome) => {
   	var about = new TimelineMax();
 
     about.addLabel("start", 2.185)
-    .from(aboutHome, 1, {
+    .from(aboutHome, 1.4, {
         opacity: 1,
         ease: Power1.easeInOut,
         x:"-100%"
@@ -31,9 +31,9 @@ export const aboutColumns = (aboutLeftCol,aboutRightColContent,width,aboutStill,
         opacity: 0,
         ease: Power4.easeOut,		
         y:"30%"
-    }, "start+=.58") 
+    }, "start+=1") 
 
-    .from(aboutStill, 2.3, {
+    .from(aboutStill, 2.1, {
     	x: width/2, 
     	opacity: 0,   	
     	ease: Power3.easeOut

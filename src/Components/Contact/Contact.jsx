@@ -11,6 +11,9 @@ import './Styles/Contact.css'
 import './Styles/ContactMobile.css'
 
 import {contactColumns} from '../../Animation/Contact'
+import {aboutEnter} from '../../Animation/About'
+import {workEnter} from '../../Animation/Work'
+import {Transition} from '../../Animation/Transition'
 
 import Landing from '../Landing/Landing'
 import About from '../About/About'
@@ -61,21 +64,33 @@ export default class Contact extends Component {
     }
     async aboutTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: true,           
             work: false,
             contact: false
         })
-        //homeEnter(this.home)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+        aboutEnter(this.aboutHome)
     }
     async workTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: false,           
             work: true,
             contact: false
         })
-        //workEnter(this.workHome)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+        workEnter(this.workHome)
     }
        
 

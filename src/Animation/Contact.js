@@ -8,7 +8,7 @@ export const contactEnter = (contactHome) => {
   	var contact = new TimelineMax();
 
     contact.addLabel("start", 2.185)
-    .from(contactHome, 1, {
+    .from(contactHome, 1.4, {
         opacity: 1,
         ease: Power1.easeInOut,
         x:"-100%"
@@ -32,7 +32,7 @@ export const contactColumns = (contactLeftCol,contactRightColContent,width,conta
         opacity: 0,
         ease: Power4.easeOut,		
         y:"30%"
-    }, "start+=.6") 
+    }, "start+=1") 
 
     .from(contactStill, 2, {
     	x: width/2, 

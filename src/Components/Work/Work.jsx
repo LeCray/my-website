@@ -117,6 +117,7 @@ export default class Work extends Component {
     }
     async contactTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: false,           
             work: false,
@@ -169,10 +170,10 @@ export default class Work extends Component {
                             </div>
 
                             <div className="workLinks">
-                                <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home /</p>
-                                <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About /</p>
-                                <p className="workLink" ref={workLink}>Work /</p>
-                                <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact /</p>
+                                <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home</p>
+                                <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About</p>
+                                <p className="workLink" ref={workLink}>Work</p>
+                                <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact</p>
                             </div>
                         </div>
                     </div>

@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom'
 import './Styles/Contact.css'
 import './Styles/ContactMobile.css'
 
+import {contactColumns} from '../../Animation/Contact'
+
 import Landing from '../Landing/Landing'
 import About from '../About/About'
 import Work from '../Work/Work'
@@ -28,12 +30,24 @@ export default class Contact extends Component {
             home: false,
             about: false,
             work: false,
-            contact: true
+            contact: true,
+            columns: false,
+            transition: false,
+            width: window.innerWidth
         }
             
         this.homeTransition = this.homeTransition.bind(this);
         this.workTransition = this.workTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);       
+    }
+
+    componentDidMount() {                
+        this.setState({columns: true})            
+        contactColumns(
+            this.contactLeftCol, this.contactRightColContent, 
+            this.state.width, this.contactStill, this.contactLinkHome,
+            this.contactLinkAbout, this.contactLinkWork, this.contactLink
+        )
     }
 
     async homeTransition() {
@@ -70,28 +84,48 @@ export default class Contact extends Component {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome	
+
+        const contactLeftCol = contactLeftCol => this.contactLeftCol = contactLeftCol
+        const contactRightColContent = contactRightColContent => this.contactRightColContent = contactRightColContent 
+        const contactStill = contactStill => this.contactStill = contactStill
+
+        const contactLinkHome = contactLinkHome => this.contactLinkHome = contactLinkHome
+        const contactLinkAbout = contactLinkAbout => this.contactLinkAbout = contactLinkAbout
+        const contactLinkWork = contactLinkWork => this.contactLinkWork = contactLinkWork
+        const contactLink = contactLink => this.contactLink = contactLink
+
+        const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
+        const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
+        const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const FnameTx = FnameTx => this.FnameTx = FnameTx
+        const LnameTx = LnameTx => this.LnameTx = LnameTx
+        const learnTx = learnTx => this.learnTx = learnTx
     
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
                 {this.state.contact?
+
                     <div style={{fontFamily: "Josefin Sans"}}>
-                        <div className="contactLeftCol">
+
+                        <div ref={contactLeftCol} className="contactLeftCol">
                             <div className="contactWhite">
-                                <h2>CONTACT</h2>
-                                {/*<hr className="contactHr"/>*/}
+                                <h2 ref={contactStill}>CONTACT</h2>                                
                                 
                                 <div className="contactLinks">
-                                    <p className="contactLink" onClick={this.homeTransition}>Home /</p>
-                                    <p className="contactLink" onClick={this.aboutTransition}>About /</p>
-                                    <p className="contactLink" onClick={this.workTransition}>Work /</p>
-                                    <p className="contactLink">Contact /</p>
+                                    <p className="contactLink" ref={contactLinkHome} onClick={this.homeTransition}>Home /</p>
+                                    <p className="contactLink" ref={contactLinkAbout} onClick={this.aboutTransition}>About /</p>
+                                    <p className="contactLink" ref={contactLinkWork} onClick={this.workTransition}>Work /</p>
+                                    <p className="contactLink" ref={contactLink}>Contact /</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="contactRightCol">
-                            <div className="contactRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                            <div
+                                ref={contactRightColContent} 
+                                className="contactRightColContent" 
+                                style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h4 className="contact-heading">Looking forward to hearing from you!</h4>
                                 <h5>I am available for Full-Time and Freelance work </h5>
@@ -117,6 +151,26 @@ export default class Contact extends Component {
                         </div>
                     </div>
                 :null}
+
+                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
+                    <div 
+                        ref={transitionFirst} 
+                        className="transition-first" 
+                        >
+                    </div>
+                    <div ref={transitionMain} className="transition-main">
+                        <div className="transition-content">
+                            <p ref={FnameTx} className="name-tx">J</p>
+                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                        </div>
+                    </div>
+                    <div 
+                        ref={transitionSecond}
+                        className="transition-second" 
+                        >
+                    </div>
+                </div>
 
                 {this.state.home?   
                     <div ref={home} className="home">                 

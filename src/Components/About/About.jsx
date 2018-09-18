@@ -80,12 +80,18 @@ export default class About extends Component {
     }
     async contactTransition() {
         await this.setState({
+            transition: true,
             home: false, 
             about: false,           
             work: false,
             contact: true
         })
-        //contactEnter(this.contactHome)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+        contactEnter(this.contactHome)
     }
 
 

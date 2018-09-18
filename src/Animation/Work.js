@@ -17,9 +17,8 @@ export const workEnter = (workHome) => {
 
 }
 
-export const workColumns = (workLeftCol,workRightColContent,width,workStill,workLinkhome,workLink,workLinkWork,workLinkContact) => {
+export const workColumns = (workLeftCol,workRightColContent,width,workStill,workLinkhome,workLinkAbout,workLink,workLinkContact) => {
 	
-	console.log(workLeftCol)
 
   	var tl = new TimelineMax();
 
@@ -41,7 +40,7 @@ export const workColumns = (workLeftCol,workRightColContent,width,workStill,work
     	ease: Power3.easeOut
     }, "start+=.5")
 
-    .staggerFrom([workLinkhome,workLink,workLinkWork,workLinkContact], 2.5, {
+    .staggerFrom([workLinkhome,workLinkAbout,workLink,workLinkContact], 2.5, {
     	y:50, opacity:0, ease:  Elastic.easeOut.config(1.2, 1)
     }, 0.3, "start+=.7")
 }

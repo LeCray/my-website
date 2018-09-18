@@ -36,11 +36,13 @@ export default class Work extends Component {
             about: false,
             work: true,
             contact: false,
-            
+            columns: false,
             madMobile:true,
             parkupp: false,
             moneyCalls: false,
-            galxyBit: false,            
+            galxyBit: false,
+            transition: false,  
+            width: window.innerWidth          
         };
 
         this.madMobile = this.madMobile.bind(this);
@@ -58,7 +60,7 @@ export default class Work extends Component {
         workColumns(
             this.workLeftCol, this.workRightColContent, 
             this.state.width, this.workStill, this.workLinkHome,
-            this.workLink, this.workLinkWork, this.workLinkContact
+            this.workLinkAbout, this.workLink, this.workLinkContact
         )
     }
 
@@ -69,7 +71,6 @@ export default class Work extends Component {
             moneyCalls: false,
             galxyBit: false,
         })
-
     }
     parkupp() {
         this.setState({
@@ -129,16 +130,23 @@ export default class Work extends Component {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const contactHome = contactHome => this.contactHome = contactHome  
-        const workStill = workStill => this.workStill = workStill
         
         const workLeftCol = workLeftCol => this.workLeftCol = workLeftCol
+        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent 
+        const workStill = workStill => this.workStill = workStill
 
         const workLinkHome = workLinkHome => this.workLinkHome = workLinkHome
         const workLink = workLink => this.workLink = workLink
         const workLinkAbout = workLinkAbout => this.workLinkAbout = workLinkAbout
         const workLinkContact = workLinkContact => this.workLinkContact = workLinkContact
 
-        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent 
+        const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
+        const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
+        const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const FnameTx = FnameTx => this.FnameTx = FnameTx
+        const LnameTx = LnameTx => this.LnameTx = LnameTx
+        const learnTx = learnTx => this.learnTx = learnTx
+
     
 		return(
             <div>
@@ -147,29 +155,34 @@ export default class Work extends Component {
 
                     <div style={{fontFamily: "Josefin Sans"}}>
 
-                    <div ref={workLeftCol} className="workLeftCol">
-                        <div ref={workStill} className="workLeftColContent">
-                            <h2>WORK</h2>
-                            
-                            <div className="work-intra-links">
-                                <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
-                                <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
-                                <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
-                                <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
+                    <div ref={workLeftCol} className="workLeftCol" style={{display: this.state.columns?null:"none"}}>
+                        <div className="workLeftColContent">
+                            <div ref={workStill}> 
+                                <h2>WORK</h2>
+                                
+                                <div className="work-intra-links">
+                                    <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
+                                    <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
+                                    <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
+                                    <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
+                                </div>
+                            </div>
+
+                            <div className="workLinks">
+                                <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home /</p>
+                                <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About /</p>
+                                <p className="workLink" ref={workLink}>Work /</p>
+                                <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact /</p>
                             </div>
                         </div>
-
-                        <div className="workLinks">
-                            <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home /</p>
-                            <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About /</p>
-                            <p className="workLink" ref={workLink}>Work /</p>
-                            <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact /</p>
-                        </div>
-                        
                     </div>
 
                     <div className="workRightCol">
-                        <div ref={workRightColContent} className="workRightColContent" style={{"-webkit-overflow-scrolling": "touch"}}>
+                        <div 
+                            ref={workRightColContent} 
+                            className="workRightColContent" 
+                            style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
+                            
                             <div className="scroller" style={{display: this.state.madMobile?null:"none"}}>
                                 <div>
                                     <MadMobile />
@@ -193,6 +206,26 @@ export default class Work extends Component {
                         </div>
                     </div>
                 </div>:null}
+
+                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
+                    <div 
+                        ref={transitionFirst} 
+                        className="transition-first" 
+                        >
+                    </div>
+                    <div ref={transitionMain} className="transition-main">
+                        <div className="transition-content">
+                            <p ref={FnameTx} className="name-tx">J</p>
+                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                        </div>
+                    </div>
+                    <div 
+                        ref={transitionSecond}
+                        className="transition-second" 
+                        >
+                    </div>
+                </div>
 
                 {this.state.home?   
                     <div ref={home} className="home">                 

@@ -57,18 +57,24 @@ export default class Contact extends Component {
         await this.setState({
             home: true, 
             about: false,           
-            work: false,
-            contact: false
+            work: false,            
         })
         //homeEnter(this.home)
+
+        setTimeout(() => {
+            this.setState({contact: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async aboutTransition() {
         await this.setState({
             transition: true,
             home: false, 
             about: true,           
-            work: false,
-            contact: false
+            work: false,            
         })
         Transition(
             this.transitionFirst, this.transitionMain, 
@@ -76,14 +82,21 @@ export default class Contact extends Component {
             this.state.width, this.learnTx
         )
         aboutEnter(this.aboutHome)
+
+        setTimeout(() => {
+            this.setState({contact: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async workTransition() {
         await this.setState({
             transition: true,
             home: false, 
             about: false,           
-            work: true,
-            contact: false
+            work: true,            
         })
         Transition(
             this.transitionFirst, this.transitionMain, 
@@ -91,6 +104,14 @@ export default class Contact extends Component {
             this.state.width, this.learnTx
         )
         workEnter(this.workHome)
+
+        setTimeout(() => {
+            this.setState({contact: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
        
 
@@ -128,10 +149,10 @@ export default class Contact extends Component {
                                 <h2 ref={contactStill}>CONTACT</h2>                                
                                 
                                 <div className="contactLinks">
-                                    <p className="contactLink" ref={contactLinkHome} onClick={this.homeTransition}>Home /</p>
-                                    <p className="contactLink" ref={contactLinkAbout} onClick={this.aboutTransition}>About /</p>
-                                    <p className="contactLink" ref={contactLinkWork} onClick={this.workTransition}>Work /</p>
-                                    <p className="contactLink" ref={contactLink}>Contact /</p>
+                                    <p className="contactLink" ref={contactLinkHome} onClick={this.homeTransition}>Home</p>
+                                    <p className="contactLink" ref={contactLinkAbout} onClick={this.aboutTransition}>About</p>
+                                    <p className="contactLink" ref={contactLinkWork} onClick={this.workTransition}>Work</p>
+                                    <p className="contactLink" ref={contactLink}>Contact</p>
                                 </div>
                             </div>
                         </div>

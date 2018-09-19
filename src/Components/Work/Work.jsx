@@ -108,13 +108,20 @@ export default class Work extends Component {
             contact: false
         })
         //homeEnter(this.home)
+
+        setTimeout(() => {
+            this.setState({work: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async aboutTransition() {
         await this.setState({
             transition: true,
             home: false, 
-            about: true,           
-            work: false,
+            about: true,                       
             contact: false
         })
         Transition(
@@ -123,13 +130,20 @@ export default class Work extends Component {
             this.state.width, this.learnTx
         )
         aboutEnter(this.aboutHome)
+
+        setTimeout(() => {
+            this.setState({work: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async contactTransition() {
         await this.setState({
             transition: true,
             home: false, 
-            about: false,           
-            work: false,
+            about: false,                       
             contact: true
         })
         Transition(
@@ -138,6 +152,14 @@ export default class Work extends Component {
             this.state.width, this.learnTx
         )
         contactEnter(this.contactHome)
+
+        setTimeout(() => {
+            this.setState({work: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
        
 

@@ -7,15 +7,24 @@
 	width: 50%;
 	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
 }
-
-
-
 .aboutWhite {
 	letter-spacing: 2px;
 	text-align: center;
 	color: #fff;
 	padding-top: 25%;
 	font-weight: bold;
+}
+.aboutRightCol {
+	margin-left: 50%;
+	height: 100vh;
+	width: 50%;
+	font-size: 20px;	
+}
+.aboutRightColContent {
+	height: 100%;
+	padding: 50px 100px 100px 100px;	
+	color: black;
+	overflow-y: scroll;	
 }
 .aboutHr {
 	border-color: #fff;	
@@ -37,21 +46,6 @@
 	display: inline-block;	
 	
 }
-.aboutRightCol {
-	margin-left: 50%;
-	height: 100vh;
-	width: 50%;
-	font-size: 20px;
-	
-}
-.aboutRightColContent {
-	height: 100%;
-	padding: 50px 100px 100px 100px;
-	
-	color: black;
-	overflow-y: scroll;	
-}
-.
 .hrLine {
 	margin-top: 20px;
 	margin-bottom: 20px;

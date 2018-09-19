@@ -34,9 +34,9 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,   
+            loading: true,   
             landingHome: false,
-            about: true,
+            about: false,
             work: false,
             contact: false,
             mobile: false,
@@ -57,12 +57,7 @@ export default class Landing extends Component {
         }       
     }
 
-    async componentDidMount() {                
-        setTimeout(() => {
-            
-        },0)
-
-
+    async componentDidMount() {                     
 
         setTimeout(() => {
             this.setState({loading: false, landingHome: true})            
@@ -72,11 +67,12 @@ export default class Landing extends Component {
             if (this.state.mobile){
                 null
             } else {
-                topSection(this.landingHome, this.rocket, this.Fname, this.Lname, 
+                topSection(
+                    this.landingHome, this.rocket, this.Fname, this.Lname, 
                     this.whiteBox, this.me, this.hr, this.summary, 
-                    this.aboutLink, this.workLink, this.contactLink)
-            }
-            
+                    this.aboutLink, this.workLink, this.contactLink
+                )
+            }            
         }, 1000)
     }
 
@@ -94,16 +90,40 @@ export default class Landing extends Component {
             work: false,
             contact: false,            
         })        
-        aboutEnter(this.aboutHome)    
+        aboutEnter(this.aboutHome)  
+
+        setTimeout(() => {
+            this.setState({landingHome: false})
+        }, 2000)
+
+         setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)  
+
 
     }
     async workTransition() {
-        await this.setState({
+        await this.setState({transition: true})
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+
+        this.setState({
             about: false,
             work: true,
             contact: false
         })
         workEnter(this.workHome)
+
+        setTimeout(() => {
+            this.setState({landingHome: false})
+        }, 2000)
+
+         setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300) 
     }
     async contactTransition() {
         await this.setState({
@@ -112,6 +132,14 @@ export default class Landing extends Component {
             contact: true
         })
         contactEnter(this.contactHome)
+
+        setTimeout(() => {
+            this.setState({landingHome: false})
+        }, 2000)
+
+         setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300) 
     }
 
 	render() {		
@@ -154,7 +182,7 @@ export default class Landing extends Component {
                     </div>                                                                                       
                 :
                     this.state.mobile? <LandingMobile />:
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans"}}>
+                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans", display: this.state.landingHome?null:"none"}}>
                         <Row>
                             <Col lg={12} className="topSection">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
@@ -171,9 +199,9 @@ export default class Landing extends Component {
                                 </div>
 
                                 <div  className="links summary">
-                                    <p ref={aboutLink} className="link" onClick={this.aboutTransition}>About /</p>
-                                    <p ref={workLink} className="link" onClick={this.workTransition}>Work /</p>
-                                    <p ref={contactLink} className="link" onClick={this.contactTransition}>Contact /</p>
+                                    <p ref={aboutLink} className="link" onClick={this.aboutTransition}>About</p>
+                                    <p ref={workLink} className="link" onClick={this.workTransition}>Work</p>
+                                    <p ref={contactLink} className="link" onClick={this.contactTransition}>Contact</p>
                                 </div>
 
                                 
@@ -186,25 +214,27 @@ export default class Landing extends Component {
                                       
                 }
                 
-                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
-                    <div 
-                        ref={transitionFirst} 
-                        className="transition-first" 
-                        >
-                    </div>
-                    <div ref={transitionMain} className="transition-main">
-                        <div className="transition-content">
-                            <p ref={FnameTx} className="name-tx">J</p>
-                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
-                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                {this.state.transition?
+                    <div className="transition-container">
+                        <div 
+                            ref={transitionFirst} 
+                            className="transition-first" 
+                            >
+                        </div>
+                        <div ref={transitionMain} className="transition-main">
+                            <div className="transition-content">
+                                <p ref={FnameTx} className="name-tx">J</p>
+                                <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                                <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                            </div>
+                        </div>
+                        <div 
+                            ref={transitionSecond}
+                            className="transition-second" 
+                            >
                         </div>
                     </div>
-                    <div 
-                        ref={transitionSecond}
-                        className="transition-second" 
-                        >
-                    </div>
-                </div>
+                :null}
 
                 {this.state.about?   
                     <div ref={aboutHome} className="aboutHome">                 

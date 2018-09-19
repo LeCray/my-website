@@ -46,7 +46,7 @@ export default class About extends Component {
 
 
     componentDidMount() {                
-        this.setState({columns: true})            
+        this.setState({columns: true, transition: false})            
         aboutColumns(
             this.aboutLeftCol, this.aboutRightColContent, 
             this.state.width, this.aboutStill, this.aboutLinkHome,
@@ -62,12 +62,19 @@ export default class About extends Component {
             contact: false
         })
         //homeEnter(this.home)
+
+        setTimeout(() => {
+            this.setState({about: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async workTransition() {
         await this.setState({
             transition: true,
-            home: false, 
-            about: false,           
+            home: false,                     
             work: true,
             contact: false
         })
@@ -77,6 +84,14 @@ export default class About extends Component {
             this.state.width, this.learnTx
         )        
         workEnter(this.workHome)
+        
+        setTimeout(() => {
+            this.setState({about: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
     async contactTransition() {
         await this.setState({
@@ -92,6 +107,14 @@ export default class About extends Component {
             this.state.width, this.learnTx
         )
         contactEnter(this.contactHome)
+
+        setTimeout(() => {
+            this.setState({about: false})
+        }, 2000)
+
+        setTimeout(() => {
+            this.setState({transition: false})
+        }, 3300)
     }
 
 
@@ -215,26 +238,28 @@ export default class About extends Component {
                         </div>
                     </div>
                 :null}
-
-                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
-                    <div 
-                        ref={transitionFirst} 
-                        className="transition-first" 
-                        >
-                    </div>
-                    <div ref={transitionMain} className="transition-main">
-                        <div className="transition-content">
-                            <p ref={FnameTx} className="name-tx">J</p>
-                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
-                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                
+                {this.state.transition?
+                    <div className="transition-container">
+                        <div 
+                            ref={transitionFirst} 
+                            className="transition-first" 
+                            >
+                        </div>
+                        <div ref={transitionMain} className="transition-main">
+                            <div className="transition-content">
+                                <p ref={FnameTx} className="name-tx">J</p>
+                                <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                                <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                            </div>
+                        </div>
+                        <div 
+                            ref={transitionSecond}
+                            className="transition-second" 
+                            >
                         </div>
                     </div>
-                    <div 
-                        ref={transitionSecond}
-                        className="transition-second" 
-                        >
-                    </div>
-                </div>
+                :null}
 
                 {this.state.home?   
                     <div ref={home} className="home">                 

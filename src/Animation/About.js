@@ -34,9 +34,9 @@ export const aboutColumns = (aboutLeftCol,aboutRightColContent,width,aboutStill,
     }, "start+=1") 
 
     .from(aboutStill, 2.1, {
-    	x: width/2, 
+    	x: -width/2, 
     	opacity: 0,   	
-    	ease: Power3.easeOut
+    	ease: Power2.easeOut
     }, "start+=.5")
 
     .staggerFrom([aboutLinkhome,aboutLink,aboutLinkWork,aboutLinkContact], 2.5, {

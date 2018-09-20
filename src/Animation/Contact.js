@@ -35,9 +35,9 @@ export const contactColumns = (contactLeftCol,contactRightColContent,width,conta
     }, "start+=1") 
 
     .from(contactStill, 2, {
-    	x: width/2, 
+    	x: -width/2, 
     	opacity: 0,   	
-    	ease: Power3.easeOut
+    	ease: Power2.easeOut
     }, "start+=.5")
 
     .staggerFrom([contactLinkhome,contactLinkAbout,contactLinkWork,contactLink], 2.5, {

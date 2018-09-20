@@ -66,7 +66,8 @@ export default class Work extends Component {
         workColumns(
             this.workLeftCol, this.workRightColContent, 
             this.state.width, this.workStill, this.workLinkHome,
-            this.workLinkAbout, this.workLink, this.workLinkContact
+            this.workLinkAbout, this.workLink, this.workLinkContact,
+            this.madMobileSlide, this.parkuppSlide, this.moneyCallsSlide, this.galxyBitSlide
         )
     }
 
@@ -210,7 +211,11 @@ export default class Work extends Component {
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
-
+        
+        const madMobileSlide  = madMobileSlide  => this.madMobileSlide  = madMobileSlide
+        const parkuppSlide = parkuppSlide => this.parkuppSlide = parkuppSlide
+        const moneyCallsSlide = moneyCallsSlide => this.moneyCallsSlide = moneyCallsSlide
+        const galxyBitSlide = galxyBitSlide => this.galxyBitSlide = galxyBitSlide
     
 		return(
             <div>
@@ -227,7 +232,7 @@ export default class Work extends Component {
                                 <div className="work-intra-links">
                                     <p 
                                         className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
-                                        name="madMobileHover" 
+                                        ref={madMobileSlide} 
                                         style={{marginLeft: 0}} 
                                         onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
                                         onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})} 
@@ -236,7 +241,7 @@ export default class Work extends Component {
                                     </p>
                                     <p 
                                         className={this.state.parkuppHover||this.state.parkupp?"workLinkHover":"workLink"}
-                                        name="parkuppHover"
+                                        ref={parkuppSlide}
                                         onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                         onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})} 
                                         onClick={this.parkupp}>
@@ -244,7 +249,7 @@ export default class Work extends Component {
                                     </p>
                                     <p 
                                         className={this.state.moneyCallsHover||this.state.moneyCalls?"workLinkHover":"workLink"}
-                                        name="moneyCallsHover"
+                                        ref={moneyCallsSlide}
                                         onMouseEnter={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
                                         onMouseLeave={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})} 
                                         onClick={this.moneyCalls}>
@@ -252,7 +257,7 @@ export default class Work extends Component {
                                     </p>
                                     <p 
                                         className={this.state.galxyBitHover||this.state.galxyBit?"workLinkHover":"workLink"}
-                                        name="galxyBitHover"
+                                        ref={galxyBitSlide}
                                         onMouseEnter={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
                                         onMouseLeave={() => this.setState({galxyBitHover: !this.state.galxyBitHover})} 
                                         onClick={this.galxyBit}>

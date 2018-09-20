@@ -29,7 +29,12 @@
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
-
+}
+.contactLinkHover {
+	margin-left: 20px;
+	display: inline-block;
+	cursor: pointer;		
+	border-bottom: 3px solid white;
 }
 .contact-intra-links {	
 	display: inline-block;	

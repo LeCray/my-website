@@ -45,7 +45,7 @@ export default class Work extends Component {
             moneyCalls: false,
             galxyBit: false,
             transition: false, 
-            txContent: false,                      
+            txContent: false,                                 
             width: window.innerWidth          
         };
 
@@ -261,12 +261,40 @@ export default class Work extends Component {
                                 </div>
                             </div>
 
-                            <div className="workLinks">
+                            <div 
+                                className={this.state.homeHover||this.state.aboutHover||this.state.workHover||this.state.contactHover?"workLinksCorrection":"workLinks"}>
                                 <div className="work-link-content">
-                                    <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home</p>
-                                    <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About</p>
-                                    <p className="workLink" ref={workLink}>Work</p>
-                                    <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact</p>
+                                    <p 
+                                        className={this.state.homeHover?"workLinkHover":"workLink"}
+                                        ref={workLinkHome} 
+                                        onClick={this.homeTransition}
+                                        onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
+                                        onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
+                                        Home
+                                    </p>
+                                    <p 
+                                        className={this.state.aboutHover?"workLinkHover":"workLink"}
+                                        ref={workLinkAbout}
+                                        onClick={this.aboutTransition}
+                                        onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
+                                        onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                        About
+                                    </p>
+                                    <p 
+                                        className={this.state.workHover?"workLinkHover":"workLink"}
+                                        ref={workLink}                                         
+                                        onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
+                                        onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                        Work
+                                    </p>
+                                    <p 
+                                        className={this.state.contactHover?"workLinkHover":"workLink"} 
+                                        ref={workLinkContact} 
+                                        onClick={this.contactTransition}
+                                        onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
+                                        onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                        Contact
+                                    </p>
                                 </div>
                             </div>
                         </div>

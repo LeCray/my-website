@@ -160,10 +160,37 @@ export default class Contact extends Component {
                                 <h2 ref={contactStill}>CONTACT</h2>                                
                                 
                                 <div className="contactLinks">
-                                    <p className="contactLink" ref={contactLinkHome} onClick={this.homeTransition}>Home</p>
-                                    <p className="contactLink" ref={contactLinkAbout} onClick={this.aboutTransition}>About</p>
-                                    <p className="contactLink" ref={contactLinkWork} onClick={this.workTransition}>Work</p>
-                                    <p className="contactLink" ref={contactLink}>Contact</p>
+                                   <p 
+                                        className={this.state.homeHover?"contactLinkHover":"contactLink"}
+                                        ref={contactLinkHome} 
+                                        onClick={this.homeTransition}
+                                        onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
+                                        onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
+                                        Home
+                                    </p>
+                                    <p 
+                                        className={this.state.aboutHover?"contactLinkHover":"contactLink"}
+                                        ref={contactLinkAbout}
+                                        onClick={this.aboutTransition}
+                                        onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
+                                        onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                        About
+                                    </p>
+                                    <p 
+                                        className={this.state.workHover?"contactLinkHover":"contactLink"}
+                                        ref={contactLinkWork}             
+                                        onClick={this.workTransition}                            
+                                        onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
+                                        onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                        Work
+                                    </p>
+                                    <p 
+                                        className={this.state.contactHover?"contactLinkHover":"contactLink"} 
+                                        ref={contactLink}                                     
+                                        onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
+                                        onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                        Contact
+                                    </p>
                                 </div>
                             </div>
                         </div>

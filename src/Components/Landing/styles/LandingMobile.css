@@ -1,7 +1,7 @@
 
 
 
-@media only screen  and  (max-width: 568px) {
+@media only screen  and  (max-width: 1025px) {
 	.landing-container {
 		overflow-y: scroll;	
 	}

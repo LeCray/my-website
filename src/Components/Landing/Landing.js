@@ -34,8 +34,8 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,   
-            landingHome: true,
+            loading: true,   
+            landingHome: false,
             about: false,
             work: false,
             contact: false,
@@ -52,7 +52,7 @@ export default class Landing extends Component {
     componentWillMount(){
 
         this.setState({height: window.innerHeight + 'px'});
-        if (this.state.width < 576) {
+        if (this.state.width < 1025) {
             this.setState({mobile: true});
         }       
     }

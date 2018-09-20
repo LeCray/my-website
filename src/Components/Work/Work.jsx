@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 import './Styles/Work.css'
 import './Styles/WorkMobile.css'
 
-import {workColumns} from '../../Animation/Work'
+import {workColumns,drop,switchTo} from '../../Animation/Work'
 import {aboutEnter} from '../../Animation/About'
 import {contactEnter} from '../../Animation/Contact'
 import {Transition} from '../../Animation/Transition'
@@ -70,37 +70,52 @@ export default class Work extends Component {
         )
     }
 
-    madMobile() {
-        this.setState({
-            madMobile:true,
-            parkupp: false,
-            moneyCalls: false,
-            galxyBit: false,
-        })
+    madMobile() {                    
+        switchTo(this.workRightColContent)
+
+        setTimeout(() => {
+            this.setState({
+                madMobile:true,
+                parkupp: false,
+                moneyCalls: false,
+                galxyBit: false,
+            })
+        }, 500)        
+        
+        
     }
     parkupp() {
-        this.setState({
-            parkupp: true,
-            madMobile:false,
-            moneyCalls: false,
-            galxyBit: false,
-        })
+        switchTo(this.workRightColContent)    
+        setTimeout(() => {
+            this.setState({
+                parkupp: true,
+                madMobile:false,
+                moneyCalls: false,
+                galxyBit: false,
+            })                
+        }, 500)        
     }
     moneyCalls() {
-        this.setState({
-            moneyCalls: true,
-            parkupp: false,
-            madMobile:false,
-            galxyBit: false,
-        })
+        switchTo(this.workRightColContent)
+        setTimeout(() => {
+            this.setState({
+                moneyCalls: true,
+                parkupp: false,
+                madMobile:false,
+                galxyBit: false,
+            })
+        }, 500)        
     }
     galxyBit() {
-        this.setState({
-            galxyBit: true,
-            moneyCalls: false,
-            parkupp: false,
-            madMobile:false,
-        })
+        switchTo(this.workRightColContent)
+        setTimeout(() => {
+            this.setState({
+                galxyBit: true,
+                moneyCalls: false,
+                parkupp: false,
+                madMobile:false,
+            })
+        }, 500)        
     }
 
     async homeTransition() {
@@ -211,7 +226,7 @@ export default class Work extends Component {
                                 
                                 <div className="work-intra-links">
                                     <p 
-                                        className={this.state.madMobileHover?"workLinkHover":"workLink"}
+                                        className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
                                         name="madMobileHover" 
                                         style={{marginLeft: 0}} 
                                         onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
@@ -220,7 +235,7 @@ export default class Work extends Component {
                                         MAD Mobile
                                     </p>
                                     <p 
-                                        className={this.state.parkuppHover?"workLinkHover":"workLink"}
+                                        className={this.state.parkuppHover||this.state.parkupp?"workLinkHover":"workLink"}
                                         name="parkuppHover"
                                         onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                         onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})} 
@@ -228,7 +243,7 @@ export default class Work extends Component {
                                         ParkUpp
                                     </p>
                                     <p 
-                                        className={this.state.moneyCallsHover?"workLinkHover":"workLink"}
+                                        className={this.state.moneyCallsHover||this.state.moneyCalls?"workLinkHover":"workLink"}
                                         name="moneyCallsHover"
                                         onMouseEnter={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
                                         onMouseLeave={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})} 
@@ -236,7 +251,7 @@ export default class Work extends Component {
                                         Money Calls
                                     </p>
                                     <p 
-                                        className={this.state.galxyBitHover?"workLinkHover":"workLink"}
+                                        className={this.state.galxyBitHover||this.state.galxyBit?"workLinkHover":"workLink"}
                                         name="galxyBitHover"
                                         onMouseEnter={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
                                         onMouseLeave={() => this.setState({galxyBitHover: !this.state.galxyBitHover})} 

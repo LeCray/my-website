@@ -13,13 +13,10 @@ export const workEnter = (workHome) => {
         ease: Power1.easeInOut,
         x:"-100%"
     }, "start")    
-
-
 }
 
 export const workColumns = (workLeftCol,workRightColContent,width,workStill,workLinkhome,workLinkAbout,workLink,workLinkContact) => {
 	
-
   	var tl = new TimelineMax();
 
     tl.addLabel("start", 2)
@@ -44,5 +41,30 @@ export const workColumns = (workLeftCol,workRightColContent,width,workStill,work
     .staggerFrom([workLinkhome,workLinkAbout,workLink,workLinkContact], 2.5, {
     	y:50, opacity:0, ease:  Elastic.easeOut.config(1.2, 1)
     }, 0.3, "start+=.7")
+}
+
+
+export const switchTo = (workRightColContent) => {
+
+    var col = new TimelineMax();
+
+    col.addLabel("start")      
+    
+    .to(workRightColContent, .5, {
+        opacity: 0,
+        y:"10%",
+        ease: Power1.easeOut,
+    }, "start")
+    /*.to(workRightColContent, .05, {         
+        y:"-10%",        
+    })*/
+    .to(workRightColContent, .1, {         
+        y:"0%",        
+    })
+    .to(workRightColContent, .25, {
+        opacity: 1,        
+    }, "start+=.6")
+    
+   
 }
 

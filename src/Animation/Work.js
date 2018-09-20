@@ -7,7 +7,7 @@ export const workEnter = (workHome) => {
 
   	var work = new TimelineMax();
 
-    work.addLabel("start", 2.185)
+    work.addLabel("start", 1.5)
     .from(workHome, 1.4, {
         opacity: 1,
         ease: Power1.easeInOut,
@@ -22,16 +22,17 @@ export const workColumns = (workLeftCol,workRightColContent,width,workStill,work
 
   	var tl = new TimelineMax();
 
-    tl.addLabel("start", 2.5)
+    tl.addLabel("start", 2)
     .from(workLeftCol, 2, {
         opacity: 0,
-        ease: Power3.easeInOut,
+        ease: Power4.easeInOut,
         x:"-100%"
     }, "start")    
     .from(workRightColContent, 2.5, {
         opacity: 0,
         ease: Power4.easeOut,		
-        y:"30%"
+        y:"30%",
+        
     }, "start+=1") 
 
     .from(workStill, 2, {

@@ -7,7 +7,7 @@ export const aboutEnter = (aboutHome) => {
 
   	var about = new TimelineMax();
 
-    about.addLabel("start", 2.185)
+    about.addLabel("start", 1.5)
     .from(aboutHome, 1.4, {
         opacity: 1,
         ease: Power1.easeInOut,
@@ -21,16 +21,16 @@ export const aboutColumns = (aboutLeftCol,aboutRightColContent,width,aboutStill,
 
   	var tl = new TimelineMax();
 
-    tl.addLabel("start", 2.5)
+    tl.addLabel("start", 2)
     .from(aboutLeftCol, 2, {
         opacity: 0,
-        ease: Power3.easeInOut,
+        ease: Power4.easeInOut,
         x:"-100%"
     }, "start")    
     .from(aboutRightColContent, 2.5, {
         opacity: 0,
         ease: Power4.easeOut,		
-        y:"30%"
+        y:"30%",        
     }, "start+=1") 
 
     .from(aboutStill, 2.1, {

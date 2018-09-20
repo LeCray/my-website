@@ -35,6 +35,7 @@ export default class About extends Component {
             contact: false,
             columns: false,
             transition: false,
+            txContent: false,
             width: window.innerWidth
             
         };
@@ -56,17 +57,25 @@ export default class About extends Component {
 
     async homeTransition() {
         await this.setState({
+            transition: true,
+            txContent: true,                    
             home: true, 
-            about: false,           
             work: false,
             contact: false
         })
         //homeEnter(this.home)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
 
         setTimeout(() => {
             this.setState({about: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 2700)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -74,6 +83,7 @@ export default class About extends Component {
     async workTransition() {
         await this.setState({
             transition: true,
+            txContent: true,
             home: false,                     
             work: true,
             contact: false
@@ -96,8 +106,8 @@ export default class About extends Component {
     async contactTransition() {
         await this.setState({
             transition: true,
-            home: false, 
-            about: false,           
+            txContent: true,
+            home: false,                     
             work: false,
             contact: true
         })
@@ -247,10 +257,10 @@ export default class About extends Component {
                             >
                         </div>
                         <div ref={transitionMain} className="transition-main">
-                            <div className="transition-content">
+                            <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
                                 <p ref={FnameTx} className="name-tx">J</p>
                                 <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
-                                <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                                <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                             </div>
                         </div>
                         <div 

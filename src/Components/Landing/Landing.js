@@ -126,7 +126,15 @@ export default class Landing extends Component {
         }, 3300) 
     }
     async contactTransition() {
-        await this.setState({
+
+        await this.setState({transition: true})
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
+
+        this.setState({
             about: false,
             work: false,
             contact: true
@@ -225,7 +233,7 @@ export default class Landing extends Component {
                             <div className="transition-content">
                                 <p ref={FnameTx} className="name-tx">J</p>
                                 <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
-                                <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                                <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                             </div>
                         </div>
                         <div 

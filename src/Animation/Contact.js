@@ -7,7 +7,7 @@ export const contactEnter = (contactHome) => {
 
   	var contact = new TimelineMax();
 
-    contact.addLabel("start", 2.185)
+    contact.addLabel("start", 1.5)
     .from(contactHome, 1.4, {
         opacity: 1,
         ease: Power1.easeInOut,
@@ -22,16 +22,16 @@ export const contactColumns = (contactLeftCol,contactRightColContent,width,conta
 
   	var tl = new TimelineMax();
 
-    tl.addLabel("start", 2.5)
+    tl.addLabel("start", 2)
     .from(contactLeftCol, 2, {
         opacity: 0,
-        ease: Power3.easeInOut,
+        ease: Power4.easeInOut,
         x:"-100%"
     }, "start")    
     .from(contactRightColContent, 2.5, {
         opacity: 0,
         ease: Power4.easeOut,		
-        y:"30%"
+        y:"30%",        
     }, "start+=1") 
 
     .from(contactStill, 2, {

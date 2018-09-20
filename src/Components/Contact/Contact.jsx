@@ -55,16 +55,25 @@ export default class Contact extends Component {
 
     async homeTransition() {
         await this.setState({
+            transition: true,
+            txContent: true,
             home: true, 
             about: false,           
             work: false,            
         })
         //homeEnter(this.home)
+        Transition(
+            this.transitionFirst, this.transitionMain, 
+            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.state.width, this.learnTx
+        )
 
         setTimeout(() => {
             this.setState({contact: false})
-        }, 2000)
-
+        }, 1000)
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 2700)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -72,6 +81,7 @@ export default class Contact extends Component {
     async aboutTransition() {
         await this.setState({
             transition: true,
+            txContent: true,
             home: false, 
             about: true,           
             work: false,            
@@ -94,6 +104,7 @@ export default class Contact extends Component {
     async workTransition() {
         await this.setState({
             transition: true,
+            txContent: true,
             home: false, 
             about: false,           
             work: true,            
@@ -195,10 +206,10 @@ export default class Contact extends Component {
                         >
                     </div>
                     <div ref={transitionMain} className="transition-main">
-                        <div className="transition-content">
+                        <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
                             <p ref={FnameTx} className="name-tx">J</p>
                             <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
-                            <p ref={learnTx} className="learn-tx">- I LIVE TO LEARN -</p>
+                            <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                         </div>
                     </div>
                     <div 

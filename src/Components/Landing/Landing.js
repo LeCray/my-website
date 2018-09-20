@@ -37,7 +37,7 @@ export default class Landing extends Component {
             loading: true,   
             landingHome: false,
             about: false,
-            work: false,
+            work: true,
             contact: false,
             mobile: false,
             transition: false,

@@ -45,7 +45,7 @@ export default class Work extends Component {
             moneyCalls: false,
             galxyBit: false,
             transition: false, 
-            txContent: false,
+            txContent: false,                      
             width: window.innerWidth          
         };
 
@@ -57,6 +57,8 @@ export default class Work extends Component {
         this.homeTransition = this.homeTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);  
         this.contactTransition = this.contactTransition.bind(this);
+
+        
     }
 
     componentDidMount() {                
@@ -172,7 +174,6 @@ export default class Work extends Component {
             this.setState({transition: false})
         }, 3300)
     }
-       
 
 	render() {		
         const home = home => this.home = home
@@ -209,18 +210,49 @@ export default class Work extends Component {
                                 <h2>WORK</h2>
                                 
                                 <div className="work-intra-links">
-                                    <p className="workLink" style={{marginLeft: 0}} onClick={this.madMobile}>MAD Mobile</p>
-                                    <p className="workLink" onClick={this.parkupp}>ParkUpp</p>
-                                    <p className="workLink" onClick={this.moneyCalls}>Money Calls</p>
-                                    <p className="workLink" onClick={this.galxyBit}>GalxyBit</p>
+                                    <p 
+                                        className={this.state.madMobileHover?"workLinkHover":"workLink"}
+                                        name="madMobileHover" 
+                                        style={{marginLeft: 0}} 
+                                        onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
+                                        onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})} 
+                                        onClick={this.madMobile}>
+                                        MAD Mobile
+                                    </p>
+                                    <p 
+                                        className={this.state.parkuppHover?"workLinkHover":"workLink"}
+                                        name="parkuppHover"
+                                        onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
+                                        onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})} 
+                                        onClick={this.parkupp}>
+                                        ParkUpp
+                                    </p>
+                                    <p 
+                                        className={this.state.moneyCallsHover?"workLinkHover":"workLink"}
+                                        name="moneyCallsHover"
+                                        onMouseEnter={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
+                                        onMouseLeave={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})} 
+                                        onClick={this.moneyCalls}>
+                                        Money Calls
+                                    </p>
+                                    <p 
+                                        className={this.state.galxyBitHover?"workLinkHover":"workLink"}
+                                        name="galxyBitHover"
+                                        onMouseEnter={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
+                                        onMouseLeave={() => this.setState({galxyBitHover: !this.state.galxyBitHover})} 
+                                        onClick={this.galxyBit}>
+                                        GalxyBit
+                                    </p>
                                 </div>
                             </div>
 
                             <div className="workLinks">
-                                <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home</p>
-                                <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About</p>
-                                <p className="workLink" ref={workLink}>Work</p>
-                                <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact</p>
+                                <div className="work-link-content">
+                                    <p className="workLink" ref={workLinkHome} onClick={this.homeTransition}>Home</p>
+                                    <p className="workLink" ref={workLinkAbout} onClick={this.aboutTransition}>About</p>
+                                    <p className="workLink" ref={workLink}>Work</p>
+                                    <p className="workLink" ref={workLinkContact} onClick={this.contactTransition}>Contact</p>
+                                </div>
                             </div>
                         </div>
                     </div>

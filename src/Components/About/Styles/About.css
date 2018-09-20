@@ -40,7 +40,12 @@
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
-
+}
+.about-link-hover{
+	margin-left: 20px;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 3px solid white;	
 }
 .about-intra-links {	
 	display: inline-block;	

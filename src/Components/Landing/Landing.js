@@ -34,10 +34,10 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true,   
-            landingHome: false,
+            loading: false,   
+            landingHome: true,
             about: false,
-            work: true,
+            work: false,
             contact: false,
             mobile: false,
             transition: false,
@@ -207,9 +207,27 @@ export default class Landing extends Component {
                                 </div>
 
                                 <div  className="links summary">
-                                    <p ref={aboutLink} className="link" onClick={this.aboutTransition}>About</p>
-                                    <p ref={workLink} className="link" onClick={this.workTransition}>Work</p>
-                                    <p ref={contactLink} className="link" onClick={this.contactTransition}>Contact</p>
+                                    <p 
+                                        ref={aboutLink} 
+                                        className={this.state.aboutHover?"link-hover":"link"}
+                                        onClick={this.aboutTransition}
+                                        onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
+                                        onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                        About</p>
+                                    <p 
+                                        ref={workLink} 
+                                        className={this.state.workHover?"link-hover":"link"} 
+                                        onClick={this.workTransition}
+                                        onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
+                                        onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                        Work</p>
+                                    <p 
+                                        ref={contactLink} 
+                                        className={this.state.contactHover?"link-hover":"link"}
+                                        onClick={this.contactTransition}
+                                        onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
+                                        onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                        Contact</p>
                                 </div>
 
                                 

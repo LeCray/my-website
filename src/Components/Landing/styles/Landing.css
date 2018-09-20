@@ -80,8 +80,16 @@
 	letter-spacing: 2px;
 	margin-left: 53%;		
 	margin-top: 230px;
-	font-weight: bold;		
+	font-weight: bold
 }
+
+.link-hover {
+	margin-left: 20px;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 3px solid white;
+}
+
 .link {
 	margin-left: 20px;
 	display: inline-block;
@@ -135,6 +143,22 @@
 	z-index: 50;
 	background: #fff
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 1000px)  and  (max-width: 1349px) {
 	.summary{
 		color: #fff;	

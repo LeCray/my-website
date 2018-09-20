@@ -53,7 +53,7 @@ export const switchTo = (workRightColContent) => {
     .to(workRightColContent, .5, {
         opacity: 0,
         y:"10%",
-        ease: Power1.easeOut,
+        ease: Power3.easeIn,
     }, "start")
     /*.to(workRightColContent, .05, {         
         y:"-10%",        
@@ -64,7 +64,5 @@ export const switchTo = (workRightColContent) => {
     .to(workRightColContent, .25, {
         opacity: 1,        
     }, "start+=.6")
-    
-   
 }
 

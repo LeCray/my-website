@@ -13,9 +13,9 @@ import {contactEnter} from '../../Animation/Contact'
 
 import {Transition} from '../../Animation/Transition'
 
-import './Styles/Landing.css'
-import './Styles/LandingMobile.css'
-import './Styles/LandingTransitions.css'
+import './styles/Landing.css'
+import './styles/LandingMobile.css'
+import './styles/LandingTransitions.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'

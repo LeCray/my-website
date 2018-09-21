@@ -15,7 +15,7 @@ import {Transition} from '../../Animation/Transition'
 
 import './styles/Landing.css'
 import './styles/LandingMobile.css'
-import './styles/LandingTransitions.css'
+import './Styles/LandingTransitions.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'

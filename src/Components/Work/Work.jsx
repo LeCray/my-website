@@ -139,7 +139,7 @@ export default class Work extends Component {
         }, 1000)
         setTimeout(() => {
             this.setState({txContent: false})
-        }, 2700)
+        }, 2000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -162,7 +162,9 @@ export default class Work extends Component {
         setTimeout(() => {
             this.setState({work: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -185,7 +187,9 @@ export default class Work extends Component {
         setTimeout(() => {
             this.setState({work: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)

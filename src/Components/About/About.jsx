@@ -98,7 +98,9 @@ export default class About extends Component {
         setTimeout(() => {
             this.setState({about: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -121,7 +123,9 @@ export default class About extends Component {
         setTimeout(() => {
             this.setState({about: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)

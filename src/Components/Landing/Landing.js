@@ -34,10 +34,10 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,   
+            loading: true,   
             landingHome: false,
             about: false,
-            work: true,
+            work: false,
             contact: false,
             mobile: false,
             transition: false,
@@ -78,7 +78,7 @@ export default class Landing extends Component {
 
     async aboutTransition() {
 
-        await this.setState({transition: true})
+        await this.setState({transition: true, txContent: true,})
         Transition(
             this.transitionFirst, this.transitionMain, 
             this.transitionSecond,this.FnameTx,this.LnameTx, 
@@ -95,15 +95,17 @@ export default class Landing extends Component {
         setTimeout(() => {
             this.setState({landingHome: false})
         }, 2000)
-
-         setTimeout(() => {
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
+        setTimeout(() => {
             this.setState({transition: false})
-        }, 3300)  
+        }, 3200)  
 
 
     }
     async workTransition() {
-        await this.setState({transition: true})
+        await this.setState({transition: true, txContent: true,})
         Transition(
             this.transitionFirst, this.transitionMain, 
             this.transitionSecond,this.FnameTx,this.LnameTx, 
@@ -120,14 +122,16 @@ export default class Landing extends Component {
         setTimeout(() => {
             this.setState({landingHome: false})
         }, 2000)
-
-         setTimeout(() => {
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
+        setTimeout(() => {
             this.setState({transition: false})
         }, 3300) 
     }
     async contactTransition() {
 
-        await this.setState({transition: true})
+        await this.setState({transition: true, txContent: true,})
         Transition(
             this.transitionFirst, this.transitionMain, 
             this.transitionSecond,this.FnameTx,this.LnameTx, 
@@ -144,8 +148,10 @@ export default class Landing extends Component {
         setTimeout(() => {
             this.setState({landingHome: false})
         }, 2000)
-
-         setTimeout(() => {
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
+        setTimeout(() => {
             this.setState({transition: false})
         }, 3300) 
     }
@@ -248,7 +254,7 @@ export default class Landing extends Component {
                             >
                         </div>
                         <div ref={transitionMain} className="transition-main">
-                            <div className="transition-content">
+                            <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
                                 <p ref={FnameTx} className="name-tx">J</p>
                                 <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
                                 <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>

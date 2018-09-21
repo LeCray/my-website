@@ -96,7 +96,9 @@ export default class Contact extends Component {
         setTimeout(() => {
             this.setState({contact: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)
@@ -119,7 +121,9 @@ export default class Contact extends Component {
         setTimeout(() => {
             this.setState({contact: false})
         }, 2000)
-
+        setTimeout(() => {
+            this.setState({txContent: false})
+        }, 3000)
         setTimeout(() => {
             this.setState({transition: false})
         }, 3300)

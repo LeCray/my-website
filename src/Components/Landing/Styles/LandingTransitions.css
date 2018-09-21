@@ -44,14 +44,14 @@
 	display: inline-block;
 	color: #fff;
 	font-family: Josefin Sans;
-		
-	font-size: 25px;
+	font-weight: bold;
+	font-size: 27px;
 }
 .learn-tx {		
 	color: #fff;
 	font-family: Josefin Sans;
-	
-	font-size: 10px;
+	font-weight: bold;
+	font-size: 12px;
 	letter-spacing: 2px;
 	margin-top: -10px;
 }

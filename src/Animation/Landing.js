@@ -97,7 +97,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     }, "firstPartIsDone-=0")
 
     
-    .from(summary,3, {
+    .from(summary,2, {
     	opacity: 0,    	    	
     }, "firstPartIsDone-=0") 
 

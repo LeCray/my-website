@@ -26,16 +26,16 @@
 	width: 100%;		
 	text-align: center;
 }
+.work-link-content {
+	position: relative;
+	left: -50%;	
+}
 .workLinksCorrection {		
 	position: absolute;
 	left: 50%;
 	bottom: 67px;
 	width: 100%;		
 	text-align: center;
-}
-.work-link-content {
-	position: relative;
-	left: -50%;	
 }
 .workLink {
 	margin-left: 20px;

@@ -167,38 +167,40 @@ export default class About extends Component {
                                     <p className="learn"><b> - I LIVE TO LEARN - </b></p>
                                 </div>
                                 
-                                <div className="aboutLinks">
-                                    <p 
-                                        className={this.state.homeHover?"about-link-hover":"aboutLink"}
-                                        ref={aboutLinkHome} 
-                                        onClick={this.homeTransition}
-                                        onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
-                                        onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
-                                        Home
-                                    </p>
-                                    <p 
-                                        className={this.state.aboutHover?"about-link-hover":"aboutLink"}
-                                        ref={aboutLink}
-                                        onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
-                                        onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
-                                        About
-                                    </p>
-                                    <p 
-                                        className={this.state.workHover?"about-link-hover":"aboutLink"}
-                                        ref={aboutLinkWork} 
-                                        onClick={this.workTransition}
-                                        onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
-                                        onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
-                                        Work
-                                    </p>
-                                    <p 
-                                        className={this.state.contactHover?"about-link-hover":"aboutLink"} 
-                                        ref={aboutLinkContact} 
-                                        onClick={this.contactTransition}
-                                        onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
-                                        onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
-                                        Contact
-                                    </p>
+                                <div className={this.state.homeHover||this.state.aboutHover||this.state.workHover||this.state.contactHover?"aboutLinksCorrection":"aboutLinks"}>
+                                    <div className="about-link-content">
+                                        <p 
+                                            className={this.state.homeHover?"about-link-hover":"aboutLink"}
+                                            ref={aboutLinkHome} 
+                                            onClick={this.homeTransition}
+                                            onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
+                                            onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
+                                            Home
+                                        </p>
+                                        <p 
+                                            className={this.state.aboutHover?"about-link-hover":"aboutLink"}
+                                            ref={aboutLink}
+                                            onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
+                                            onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                            About
+                                        </p>
+                                        <p 
+                                            className={this.state.workHover?"about-link-hover":"aboutLink"}
+                                            ref={aboutLinkWork} 
+                                            onClick={this.workTransition}
+                                            onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
+                                            onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                            Work
+                                        </p>
+                                        <p 
+                                            className={this.state.contactHover?"about-link-hover":"aboutLink"} 
+                                            ref={aboutLinkContact} 
+                                            onClick={this.contactTransition}
+                                            onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
+                                            onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                            Contact
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -31,15 +31,29 @@
 	width: 50%;
 }
 
-.aboutLinks {
-	margin-left: -20px;
-	padding: 10px;
-	margin-top: 268px;	
-}
 .aboutLink {
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
+}
+
+.aboutLinks {		
+	position: absolute;
+	left: 50%;
+	bottom: 70px;
+	width: 100%;		
+	text-align: center;
+}
+.about-link-content {
+	position: relative;
+	left: -50%;	
+}
+.aboutLinksCorrection {		
+	position: absolute;
+	left: 50%;
+	bottom: 67px;
+	width: 100%;		
+	text-align: center;
 }
 .about-link-hover{
 	margin-left: 20px;

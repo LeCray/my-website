@@ -36,7 +36,7 @@ export const Transition = (transitionFirst, transitionMain, transitionSecond, Fn
     .from(learnTx, 1.8, { 
     	y: -20,   	
     	opacity: 0, 
-    	ease: Back.easeOut.config(3)   	
+    	ease: Back.easeOut.config(5)   	
     }, "hanger+=1")
 
 	//Horizontal Displacement

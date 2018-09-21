@@ -50,7 +50,7 @@ export default class About extends Component {
         this.setState({columns: true, transition: false})            
         aboutColumns(
             this.aboutLeftCol, this.aboutRightColContent, 
-            this.state.width, this.aboutStill, this.aboutLinkHome,
+            this.state.width, this.aboutStill, this.aboutStill2, this.aboutLinkHome,
             this.aboutLink, this.aboutLinkWork, this.aboutLinkContact
         )
     }
@@ -140,6 +140,7 @@ export default class About extends Component {
         const aboutLeftCol = aboutLeftCol => this.aboutLeftCol = aboutLeftCol
         const aboutRightColContent = aboutRightColContent => this.aboutRightColContent = aboutRightColContent
         const aboutStill = aboutStill => this.aboutStill = aboutStill
+        const aboutStill2 = aboutStill2 => this.aboutStill2 = aboutStill2
 
         const aboutLinkHome = aboutLinkHome => this.aboutLinkHome = aboutLinkHome
         const aboutLink = aboutLink => this.aboutLink = aboutLink
@@ -162,9 +163,9 @@ export default class About extends Component {
                         <div ref={aboutLeftCol} className="aboutLeftCol" style={{display: this.state.columns?null:"none"}}>
                             <div className="aboutWhite">
 
-                                <div ref={aboutStill} className="about-still">
-                                    <h2>ABOUT</h2>
-                                    <p className="learn"><b> - I LIVE TO LEARN - </b></p>
+                                <div className="about-still">
+                                    <h2 ref={aboutStill}>ABOUT</h2>
+                                    <p ref={aboutStill2} className="learn"><b> - I LIVE TO LEARN - </b></p>
                                 </div>
                                 
                                 <div className="aboutLinks">

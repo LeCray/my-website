@@ -163,7 +163,7 @@ export default class Contact extends Component {
                             <div className="contactWhite">
                                 <h2 ref={contactStill}>CONTACT</h2>                                
                                 
-                                <div className={this.state.homeHover||this.state.aboutHover||this.state.workHover||this.state.contactHover?"contactLinksCorrection":"contactLinks"}>
+                                <div className="contactLinks">
                                     <div className="contact-link-content">
                                         <p 
                                             className={this.state.homeHover?"contactLinkHover":"contactLink"}
@@ -174,7 +174,7 @@ export default class Contact extends Component {
                                             Home
                                         </p>
                                         <p 
-                                            className={this.state.aboutHover?"contactLinkHover":"contactLink"}
+                                            className={this.state.aboutHover||this.state.about?"contactLinkHover":"contactLink"}
                                             ref={contactLinkAbout}
                                             onClick={this.aboutTransition}
                                             onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
@@ -182,7 +182,7 @@ export default class Contact extends Component {
                                             About
                                         </p>
                                         <p 
-                                            className={this.state.workHover?"contactLinkHover":"contactLink"}
+                                            className={this.state.workHover||this.state.work?"contactLinkHover":"contactLink"}
                                             ref={contactLinkWork}             
                                             onClick={this.workTransition}                            
                                             onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
@@ -190,7 +190,7 @@ export default class Contact extends Component {
                                             Work
                                         </p>
                                         <p 
-                                            className={this.state.contactHover?"contactLinkHover":"contactLink"} 
+                                            className={this.state.contactHover||this.state.contact?"contactLinkHover":"contactLink"} 
                                             ref={contactLink}                                     
                                             onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
                                             onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>

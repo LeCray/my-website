@@ -271,7 +271,7 @@ export default class Work extends Component {
                             </div>
 
                             <div 
-                                className={this.state.homeHover||this.state.aboutHover||this.state.workHover||this.state.contactHover?"workLinksCorrection":"workLinks"}>
+                                className="workLinks">
                                 <div className="work-link-content">
                                     <p 
                                         className={this.state.homeHover?"workLinkHover":"workLink"}
@@ -282,7 +282,7 @@ export default class Work extends Component {
                                         Home
                                     </p>
                                     <p 
-                                        className={this.state.aboutHover?"workLinkHover":"workLink"}
+                                        className={this.state.aboutHover||this.state.about?"workLinkHover":"workLink"}
                                         ref={workLinkAbout}
                                         onClick={this.aboutTransition}
                                         onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
@@ -290,14 +290,14 @@ export default class Work extends Component {
                                         About
                                     </p>
                                     <p 
-                                        className={this.state.workHover?"workLinkHover":"workLink"}
+                                        className={this.state.workHover||this.state.work?"workLinkHover":"workLink"}
                                         ref={workLink}                                         
                                         onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
                                         onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
                                         Work
                                     </p>
                                     <p 
-                                        className={this.state.contactHover?"workLinkHover":"workLink"} 
+                                        className={this.state.contactHover||this.state.contact?"workLinkHover":"workLink"} 
                                         ref={workLinkContact} 
                                         onClick={this.contactTransition}
                                         onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}

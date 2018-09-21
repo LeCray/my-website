@@ -69,11 +69,11 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     .to(Fname, 1, {      	
         x:150, 
         ease: Power4.easeInOut,        
-    }, "firstPartIsDone-=1")
+    }, "firstPartIsDone-=1.02")
     .to(Lname, 1, {            	
         x:155, 
         ease: Power4.easeInOut,        
-    }, "firstPartIsDone-=1.08") 
+    }, "firstPartIsDone-=1.1") 
     .to(Fname, 2, {      	
         y:-100, 
         ease: Power2.easeOut,
@@ -97,7 +97,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     }, "firstPartIsDone-=0") 
 
 
-    .from(aboutLink,1.5, {
+    /*.from(aboutLink,1.5, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
@@ -111,7 +111,11 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=1.3")
+    }, "firstPartIsDone+=1.3")*/
+
+    .staggerFrom([aboutLink,workLink,contactLink], 2, {
+        x:50,y:10, opacity:0, ease: Elastic.easeOut.config(1.2, .9)
+    }, .2, "firstPartIsDone")
     
 }
 

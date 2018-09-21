@@ -17,99 +17,101 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
   	var intro = new TimelineMax();
 
     intro.addLabel("start")
-    .from(landingHome, 3, {
+    .from(landingHome, 2, {
         opacity: 1,
         ease: Power4.easeInOut,
         x:"-100%"
     }, "start")         
-    .from(rocket, 5, {
-        opacity: 0,
-        rotation:30, 
-        x:300, 
-        y:-200,
-        ease: Elastic.easeOut.config(1, 0.4), 
-        delay: .5
-    }, "start")
+    .from(rocket, 3.5, {
+        opacity: 0,                
+        x:-200,  
+        y: 10,       
+        ease: Elastic.easeOut.config(.9, .8),
+    }, "start+=1.2")
     .from(Fname, 4, {
         opacity: 0, 
         x:-100, 
+        y:5,
         ease: Back.easeInOut.config(2),
         delay: -.5
-    }, "start")
-    .from(Lname, 5, {
-        opacity: -1, 
+    }, "start+=.25")
+    .from(Lname, 3.8, {
+        opacity: 0, 
         x:-200, 
-        ease: Back.easeInOut.config(2),
+        y:5,
+        ease: Back.easeInOut.config(1),
         delay: -.5
-    }, "start")
+    }, "start+=.25")
+
     .addLabel("firstPartIsDone") //FIRST PART DONE
+
     .from(whiteBox, 3, {
     	opacity: 1,
     	//rotation:30, 
         ease: Power4.easeInOut,
         x:"-100%"
-    }, "firstPartIsDone-=2.8")  
+    }, "firstPartIsDone-=2.3")  
     .from(me, 2, {
     	opacity: 0,
     	rotation:0, 
     	ease: Power4.easeInOut,
     	x:"-100%"
-    }, "firstPartIsDone-=1.7")
-    .to(rocket, 2, {  
+    }, "firstPartIsDone-=1.2")
+
+    .to(rocket, 2.3, {  
     	opacity: 0,             
-        x:"200%",         
+        x:300,         
         ease: Back.easeInOut.config(2),
         delay: 0
     }, "firstPartIsDone-=1.9")
+
     .addLabel("rocketInPlace")
-    .to(Fname, 2, {      	
-        x:215, 
-        ease: Power2.easeInOut,
-        delay: 0
-    }, "firstPartIsDone-=2")
-    .to(Lname, 2.5, {            	
-        x:225, 
-        ease: Power2.easeOut,
-        delay: 0
-    }, "firstPartIsDone-=2") 
+    .to(Fname, 1, {      	
+        x:150, 
+        ease: Power4.easeInOut,        
+    }, "firstPartIsDone-=1")
+    .to(Lname, 1, {            	
+        x:155, 
+        ease: Power4.easeInOut,        
+    }, "firstPartIsDone-=1.08") 
     .to(Fname, 2, {      	
         y:-100, 
         ease: Power2.easeOut,
-        delay: 0
+        opacity: 1
     }, "firstPartIsDone-=.5")
     .to(Lname, 2, {            	
         y:-100, 
         ease: Power2.easeOut,
-        delay: .5
-    }, "firstPartIsDone-=1")  
+        delay: .5,
+        opacity: 1
+    }, "firstPartIsDone-=1") 
     .to(hr, 2, {
         opacity: 1,
         ease: Power2.easeOut,
         
     }, "firstPartIsDone-=0")
-    .to(summary,1, {
-        opacity: 0,     
-        x:5
-    }, "firstPartIsDone-=2")     
+
+    
     .from(summary,2, {
-    	opacity: 0,    	
-    	y:-20
-    }, "firstPartIsDone-=0")      
-    .from(aboutLink,2, {
+    	opacity: 0,    	    	
+    }, "firstPartIsDone-=0") 
+
+
+    .from(aboutLink,1.5, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=1")
-    .from(workLink,2, {
+    }, "firstPartIsDone+=.5")
+    .from(workLink,1.5, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=1.4")
-    .from(contactLink,2.5, {
+    }, "firstPartIsDone+=.9")
+    .from(contactLink,2, {
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=1.8")
+    }, "firstPartIsDone+=1.3")
     
 }
 

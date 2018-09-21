@@ -194,13 +194,15 @@ export default class Landing extends Component {
                             <Col lg={12} className="topSection">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
                                 
-                                <div className="landing-right-col-container">
+                                <div className="name-container">
                                     <h1 ref={Fname} className="name">Jabulani</h1>
                                     <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
-                                    <hr ref={hr} className="hr"/>
+                                </div>
 
+                                <div className="landing-right-col-container">    
                                     <div ref={summary} className="summary">
                                         <div className="summary-details">
+                                            <hr ref={hr} className="hr"/>
                                             <h6 style={{fontWeight: "bold"}}>Full Stack Developer</h6>                                        
                                             <h6 style={{fontWeight: "bold"}}>Web | Android | iOS</h6>
                                         </div>

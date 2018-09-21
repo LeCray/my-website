@@ -77,14 +77,12 @@ export default class Landing extends Component {
     }
 
     async aboutTransition() {
-
         await this.setState({transition: true, txContent: true,})
         Transition(
             this.transitionFirst, this.transitionMain, 
             this.transitionSecond,this.FnameTx,this.LnameTx, 
             this.state.width, this.learnTx
         )
-
         this.setState({
             about: true,
             work: false,
@@ -101,8 +99,6 @@ export default class Landing extends Component {
         setTimeout(() => {
             this.setState({transition: false})
         }, 3200)  
-
-
     }
     async workTransition() {
         await this.setState({transition: true, txContent: true,})
@@ -111,7 +107,6 @@ export default class Landing extends Component {
             this.transitionSecond,this.FnameTx,this.LnameTx, 
             this.state.width, this.learnTx
         )
-
         this.setState({
             about: false,
             work: true,
@@ -130,14 +125,12 @@ export default class Landing extends Component {
         }, 3300) 
     }
     async contactTransition() {
-
         await this.setState({transition: true, txContent: true,})
         Transition(
             this.transitionFirst, this.transitionMain, 
             this.transitionSecond,this.FnameTx,this.LnameTx, 
             this.state.width, this.learnTx
         )
-
         this.setState({
             about: false,
             work: false,
@@ -201,42 +194,46 @@ export default class Landing extends Component {
                             <Col lg={12} className="topSection">
                                 <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
                                 
-                                <h1 ref={Fname} className="name">Jabulani</h1>
-                                <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
-                                <hr ref={hr} className="hr"/>
+                                <div className="landing-right-col-container">
+                                    <h1 ref={Fname} className="name">Jabulani</h1>
+                                    <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
+                                    <hr ref={hr} className="hr"/>
 
-                                <div ref={summary} className="summary">
-                                    <div className="summary-details">
-                                        <h6 style={{fontWeight: "bold"}}>Full Stack Developer</h6>                                        
-                                        <h6 style={{fontWeight: "bold"}}>Web | Android | iOS</h6>
+                                    <div ref={summary} className="summary">
+                                        <div className="summary-details">
+                                            <h6 style={{fontWeight: "bold"}}>Full Stack Developer</h6>                                        
+                                            <h6 style={{fontWeight: "bold"}}>Web | Android | iOS</h6>
+                                        </div>
+                                    </div>
+
+                                    <div className={this.state.aboutHover||this.state.workHover||this.state.contactHover?"links-correction":"links"}>
+                                        <p 
+                                            ref={aboutLink} 
+                                            className={this.state.aboutHover?"link-hover":"link"}
+                                            onClick={this.aboutTransition}
+                                            onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
+                                            onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                            About
+                                        </p>
+                                        <p 
+                                            ref={workLink} 
+                                            className={this.state.workHover?"link-hover":"link"} 
+                                            onClick={this.workTransition}
+                                            onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
+                                            onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                            Work
+                                        </p>
+                                        <p 
+                                            ref={contactLink} 
+                                            className={this.state.contactHover?"link-hover":"link"}
+                                            onClick={this.contactTransition}
+                                            onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
+                                            onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                            Contact
+                                        </p>
                                     </div>
                                 </div>
 
-                                <div  className="links summary">
-                                    <p 
-                                        ref={aboutLink} 
-                                        className={this.state.aboutHover?"link-hover":"link"}
-                                        onClick={this.aboutTransition}
-                                        onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
-                                        onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
-                                        About</p>
-                                    <p 
-                                        ref={workLink} 
-                                        className={this.state.workHover?"link-hover":"link"} 
-                                        onClick={this.workTransition}
-                                        onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
-                                        onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
-                                        Work</p>
-                                    <p 
-                                        ref={contactLink} 
-                                        className={this.state.contactHover?"link-hover":"link"}
-                                        onClick={this.contactTransition}
-                                        onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
-                                        onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
-                                        Contact</p>
-                                </div>
-
-                                
                             </Col>                            
                             <div ref={whiteBox} className="whiteBox">                                
                                 <img ref={me} className="me" src={require("../../Assets/Images/me3.jpg")}/>

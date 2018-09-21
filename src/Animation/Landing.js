@@ -85,7 +85,7 @@ export const topSection = (landingHome,rocket,Fname,Lname, whiteBox, me, hr, sum
     .to(hr, 2, {
         opacity: 1,
         ease: Power2.easeOut,
-        x:190
+        
     }, "firstPartIsDone-=0")
     .to(summary,1, {
         opacity: 0,     

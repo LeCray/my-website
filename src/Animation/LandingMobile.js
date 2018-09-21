@@ -78,8 +78,9 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
     .from(summary,2, {
     	opacity: 0,    	
     	y:-20
-    }, "firstPartIsDone-=0")      
-    .from(aboutLink,2, {
+    }, "firstPartIsDone-=0")
+
+    /*.from(aboutLink,2, {
     	opacity: 0,
     	ease: Power2.easeOut,
     	x:100
@@ -93,7 +94,11 @@ export const topSectionMobile = (landingHome,rocket,Fname,Lname, whiteBox, me, h
         opacity: 0,
         ease: Power2.easeOut,
         x:100
-    }, "firstPartIsDone+=2.2")
+    }, "firstPartIsDone+=2.2")*/
+
+    .staggerFrom([aboutLink,workLink,contactLink], 2, {
+        x:50,y:10, opacity:0, ease: Elastic.easeOut.config(1.2, .9)
+    }, .2, "firstPartIsDone+=1.5")
     
 }
 

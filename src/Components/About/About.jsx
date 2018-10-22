@@ -258,13 +258,15 @@ export default class About extends Component {
                                         <li>HTML</li> 
                                         <li>CSS</li>  
                                         <li>JavaScript</li>  
-                                        <li>Ruby</li>  
+                                        <li>C#</li>
                                         <li>Java</li>
+                                        <li>Ruby</li>  
                                     </ul>
                                     And frameworks:
                                     <ul>
                                         <li>Android Studio</li>
-                                        <li>React JS</li>  
+                                        <li>React JS</li>
+                                        <li>.NET</li>  
                                         <li>Express JS</li>  
                                         <li>Ruby on Rails</li>  
                                     </ul>

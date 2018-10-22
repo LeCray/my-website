@@ -98,7 +98,7 @@ export default class ContactMobile extends Component {
                                 <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
                                 <br/>
                                 <h5 className="contact-details">Contact: </h5>                                                                    
-                                <h5 className="contact-details-2">081 741 2792<br/>073 890 4805</h5>
+                                <h5 className="contact-details-2">081 741 2792</h5>
                                 
                                 <div className="me-contact-mobile-container">
                                     <img className="me-contact-mobile" src={require("../../Assets/Images/me3.jpg")}/>

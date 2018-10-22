@@ -139,7 +139,8 @@ export default class AboutMobile extends Component {
                                     And frameworks:
                                     <ul>
                                         <li>Android Studio</li>
-                                        <li>React JS</li> 
+                                        <li>React JS</li>
+                                        <li>React Native</li> 
                                         <li>.NET</li> 
                                         <li>Express JS</li>  
                                         <li>Ruby on Rails</li>  

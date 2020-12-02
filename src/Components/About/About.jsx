@@ -3,7 +3,7 @@ import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
-import 'react-activity/dist/react-activity.css';    
+import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 import './Styles/About.css'
@@ -25,7 +25,7 @@ import scrollToComponent from 'react-scroll-to-component';
 
 
 export default class About extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -37,19 +37,19 @@ export default class About extends Component {
             transition: false,
             txContent: false,
             width: window.innerWidth
-            
+
         };
 
         this.homeTransition = this.homeTransition.bind(this);
         this.workTransition = this.workTransition.bind(this);
-        this.contactTransition = this.contactTransition.bind(this);       
+        this.contactTransition = this.contactTransition.bind(this);
     }
 
 
-    componentDidMount() {                
-        this.setState({columns: true, transition: false})            
+    componentDidMount() {
+        this.setState({columns: true, transition: false})
         aboutColumns(
-            this.aboutLeftCol, this.aboutRightColContent, 
+            this.aboutLeftCol, this.aboutRightColContent,
             this.state.width, this.aboutStill, this.aboutStill2, this.aboutLinkHome,
             this.aboutLink, this.aboutLinkWork, this.aboutLinkContact
         )
@@ -58,15 +58,15 @@ export default class About extends Component {
     async homeTransition() {
         await this.setState({
             transition: true,
-            txContent: true,                    
-            home: true, 
+            txContent: true,
+            home: true,
             work: false,
             contact: false
         })
         //homeEnter(this.home)
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
 
@@ -84,17 +84,17 @@ export default class About extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false,                     
+            home: false,
             work: true,
             contact: false
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
-        )        
+        )
         workEnter(this.workHome)
-        
+
         setTimeout(() => {
             this.setState({about: false})
         }, 2000)
@@ -109,13 +109,13 @@ export default class About extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false,                     
+            home: false,
             work: false,
             contact: true
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
         contactEnter(this.contactHome)
@@ -132,7 +132,7 @@ export default class About extends Component {
     }
 
 
-	render() {	
+	render() {
         const home = home => this.home = home
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
@@ -153,7 +153,7 @@ export default class About extends Component {
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
-    
+
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
@@ -167,35 +167,35 @@ export default class About extends Component {
                                     <h2 ref={aboutStill}>ABOUT</h2>
                                     <p ref={aboutStill2} className="learn"><b> - I LIVE TO LEARN - </b></p>
                                 </div>
-                                
+
                                 <div className="aboutLinks">
                                     <div className="about-link-content">
-                                        <p 
+                                        <p
                                             className={this.state.homeHover?"about-link-hover":"aboutLink"}
-                                            ref={aboutLinkHome} 
+                                            ref={aboutLinkHome}
                                             onClick={this.homeTransition}
                                             onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
                                             onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
                                             Home
                                         </p>
-                                        <p 
+                                        <p
                                             className={this.state.aboutHover||this.state.about?"about-link-hover":"aboutLink"}
                                             ref={aboutLink}
                                             onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
                                             onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
                                             About
                                         </p>
-                                        <p 
+                                        <p
                                             className={this.state.workHover||this.state.work?"about-link-hover":"aboutLink"}
-                                            ref={aboutLinkWork} 
+                                            ref={aboutLinkWork}
                                             onClick={this.workTransition}
                                             onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
                                             onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
                                             Work
                                         </p>
-                                        <p 
-                                            className={this.state.contactHover||this.state.contact?"about-link-hover":"aboutLink"} 
-                                            ref={aboutLinkContact} 
+                                        <p
+                                            className={this.state.contactHover||this.state.contact?"about-link-hover":"aboutLink"}
+                                            ref={aboutLinkContact}
                                             onClick={this.contactTransition}
                                             onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
                                             onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
@@ -207,90 +207,78 @@ export default class About extends Component {
                         </div>
 
                         <div className="aboutRightCol">
-                            <div 
-                                ref={aboutRightColContent} 
-                                className="aboutRightColContent" 
+                            <div
+                                ref={aboutRightColContent}
+                                className="aboutRightColContent"
                                 style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h2 className="heading">Jabulani Kunene</h2>
-                                <h4>I am a self taught fullstack developer</h4>
+                                <h4>I am a self taught software developer</h4>
 
                                 <br/><br/>
-                                
-                                <h5 className="heading">University of the Witwatersrand</h5>
+
+                                <h5 className="heading">Formal Education</h5>
                                 <p>
-                                    1) I am currently taking a break from my 3rd year of Mechanical Engineering studies
-                                    <br/><br/>
-                                    My subjects include:                                    
-                                    <ul>                                        
-                                        <li>Design 3</li> 
-                                        <li>Mechatronics 3</li>  
-                                        <li>Fluid Mechanics 3</li>  
-                                        <li>Mechanics of Vibrations 3</li>  
-                                        <li>Mechanics of Solids 3</li>  
-                                        <li>Numerical Analysis 3</li>  
-                                        <li>Statistics 3</li>
-                                        <li>Maths 3</li> 
-                                    </ul>
-                                    
-                                    2) Right now I am studying Computer Science part-time.
-                                    <br/><br/>
-                                    My subjects include:
-                                    <ul>                                        
-                                        <li>Computational & Applied Mathematics</li>                                         
-                                    </ul>
-                                                                        
+                                    I am expected to graduate with an Honors in Mechanical Engineering
+                                     from the University of the Witwatersrand in March or November 2021.
                                 </p>
 
                                 <hr className="hrLine"/>
-
+                                <br/>
                                 <h5 className="heading">My Passions & Skills</h5>
                                 <p>
-                                    I first taught myself how to trade the financial markets and am 
-                                    currently developing a cryptocurrency market algorithm with a Computer Science Phd student 
-                                    (my lecturer) to model the crypto market, predict intraday moves and place trades automatically.
+                                    In my first year of engineering studies (2014) I began learning how to trade the financial markets.<br/><br/>
+                                I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to become familiar with
+                                    web development technologies because I then made the decision to build GalxyBit - a cryptocurrency exchange offering
+                                    btc/zar, eth/zar and ltc/zar (liquidity provided by Ice3X).
                                     <br/><br/>
-                                    My early interest in cryptocurrency evolved into an interest in <b>Web Development</b> because I then made the decision
-                                    to build <b>GalxyBit</b> - a cryptocurrency exchange (BTC/ZAR, ETH/ZAR, LTC/ZAR)
-                                    <br/><br/>
-                                    I taught myself various coding languages including:
-                                    <ul>                                        
-                                        <li>HTML</li> 
-                                        <li>CSS</li>  
-                                        <li>JavaScript</li>  
-                                        <li>C#</li>
+                                    Since then, I have become a full stack web developer having taught myself various coding languages including:
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Ruby</li>
                                         <li>Java</li>
-                                        <li>Ruby</li>  
+                                        <li>MQL5</li>
+                                        <li>C#</li>
                                     </ul>
                                     And frameworks:
                                     <ul>
-                                        <li>Android Studio</li>
                                         <li>React JS</li>
                                         <li>React Native</li>
-                                        <li>.NET</li>  
-                                        <li>Express JS</li>  
-                                        <li>Ruby on Rails</li>  
+                                        <li>Express JS</li>
+                                        <li>Ruby on Rails</li>
+                                        <li>Android Studio</li>
+                                        <li>.NET</li>
                                     </ul>
                                     I am also very familar with:
                                     <ul>
-                                        <li>Python</li>
-                                        <li>MATLAB</li>
-                                        <li>Scilab</li>
+                                        <li>C++ Development</li>
+                                        <li>Python (Anaconda)</li>
+                                        <li>MATLAB (Multibody Dynamics using Simscape Multibody)</li>
                                     </ul>
+                                    <br/>
+                                    In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
+                                    part-time (at the Univeristy of the Witswatersrand). It was here that I started working on a cryptocurrency market algorithm
+                                    that could trade the markets autonomously. This was with the help of my at the time lecturer - a Computer Science PhD student whose
+                                    research was on applying artificial intelligence to finance.
+                                    <br/><br/>
+                                    Now, at the end of 2020, I am pleased to say that I've gone on to complete my final year in Mechanical Engineering
+                                    with my Honors research paper being based on using artificial intelligence to successfully trade the financial markets (autonomously).
                                 </p>
-                                
-                                <hr className="hrLine"/>                                
+
+                                <hr className="hrLine"/>
                                 <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
                             </div>
                         </div>
                     </div>
                 :null}
-                
+
                 {this.state.transition?
                     <div className="transition-container">
-                        <div 
-                            ref={transitionFirst} 
-                            className="transition-first" 
+                        <div
+                            ref={transitionFirst}
+                            className="transition-first"
                             >
                         </div>
                         <div ref={transitionMain} className="transition-main">
@@ -300,35 +288,34 @@ export default class About extends Component {
                                 <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                             </div>
                         </div>
-                        <div 
+                        <div
                             ref={transitionSecond}
-                            className="transition-second" 
+                            className="transition-second"
                             >
                         </div>
                     </div>
                 :null}
 
-                {this.state.home?   
-                    <div ref={home} className="home">                 
+                {this.state.home?
+                    <div ref={home} className="home">
                         <Landing />
                     </div>
                 :null}
 
-                {this.state.work?   
-                    <div ref={workHome} className="workHome">                 
+                {this.state.work?
+                    <div ref={workHome} className="workHome">
                         <Work />
                     </div>
                 :null}
 
-                {this.state.contact?   
-                    <div ref={contactHome} className="contactHome">                 
+                {this.state.contact?
+                    <div ref={contactHome} className="contactHome">
                         <Contact />
                     </div>
                 :null}
-                
+
             </div>
 		)
 	}
 
 }
-

@@ -29,39 +29,26 @@ export class Research extends Component {
     return (
         <div ref={(section)=>{this.research = section;}}>
             <h2 className="heading" style={{color: "#737373"}}>Honors Research Project</h2>
-            <h4>Stock Market Prediction Algorithm</h4>
+            <h4>Artificial Intelligence</h4>
 
-            <div className="mad-mobile-logo-container">
-              <img className="mad-mobile-logo" src={require("../../../Assets/Images/mad_logo.png")}/>
+            <div className="design-logo-container">
+                <img className="design-logo" src={require("../../../Assets/Images/research_pic.png")}/>
             </div>
 
+            <p className='exec-summary'>Executive Summary:</p>
             <p className="mad-content">
-                I single-handedly developed software for Mahele Auto Doctor (M.A.D) in Vereeneging, Gauteng.
-                M.A.D does vehicle repairs and maintenance, fleet management, construction, courier, towing and much more.
+                This  paper  describes  the  development  and  implementation  of  an  artificially  intelligent
+                system  that  automatically trades in the financial markets to profit from price fluctuations.
                 <br/><br/>
-                The App I built for the company allows their clients to manage their accounts in a new way.
+                The system proposed is a simple trend-following  system  that  uses  six  different  market
+                indicators:  three  different  moving  averages  and  the MACD (moving average convergence divergence)
+                which itself is made up of three different indicators.
                 <br/><br/>
-                The systems biggest feature allows for streaming live vehicle data analytics from any vehicle,
-                anywhere in real time via an On Board Diagnostics dongle (OBD2).
-                Clients vehicles can be anywhere and their vehicle parameters such as engine speed, fuel consumption,
-                air-fuel ratio, temperatures etc. can be directly accessed via an online dashboard.
-                <br/><br/>
-                Other features for their clients include:
-                <ul>
-                    <li>Self vehicle <strong>diagnosis</strong></li>
-                    <li>Make or cancel vehicle <strong>bookings</strong></li>
-                    <li>Approve or disapprove proposed <strong>quotations</strong> </li>
-                    <li>View <strong>Invoices</strong></li>
-                </ul>
+                The system uses a Genetic Algorithm for the optimisation of indicator settings and a Long Short Term Memory (LSTM) Recurrent
+                Neural Network for intelligent trade filtering.  Enveloping this whole development is
+                Metatrader 5 - a leading institutional multi-asset trading platform that enables the use of sophisticated automated
+                trading systems (trading robots)
             </p>
-            <p>
-                The app was published to the Play Store in January 2018. MAD Mobile
-                <br/><br/>
-                Click on the image below to go to the app.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.mad_mobile" target="_blank">
-              <img className="mad-mobile-img" src={require("../../../Assets/Images/mad-mobile.png")}/>
-            </a>
         </div>
     )}
 }

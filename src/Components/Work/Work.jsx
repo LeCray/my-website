@@ -42,8 +42,8 @@ export default class Work extends Component {
             work: true,
             contact: false,
             columns: false,
-            design:true,
-            research:false,
+            design:false,
+            research:true,
             madMobile:false,
             parkupp: false,
             moneyCalls: false,
@@ -307,7 +307,7 @@ export default class Work extends Component {
                                         </p>
                                         <p
                                             className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
-                                            ref={madMobileSlide}                                            
+                                            ref={madMobileSlide}
                                             onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
                                             onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})}
                                             onClick={this.madMobile}>

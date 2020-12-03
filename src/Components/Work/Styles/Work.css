@@ -131,6 +131,19 @@
 	padding-top: 40px;
 	text-align: center
 }
+.design-poster-container2 {
+	position: absolute;
+	z-index: 9999 !important;
+	left: -300px;
+	top: 0px;
+	height: 100vh;
+	border: 1px solid red
+}
 .design-poster {
 	width: 100%
+}
+.modal-baby {
+	border: 1px solid red !important;
+	position: relative;
+	z-index: 9999
 }

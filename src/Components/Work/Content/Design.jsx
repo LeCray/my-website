@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
+import {Modal} from 'react-bootstrap';
 
 import {
   Collapse,
@@ -21,12 +22,22 @@ import {
 
 
 export class Design extends Component {
-  componentDidMount() {
+
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            design_poster:false,
+        }
+    }
+
+    componentDidMount() {
       window.scrollTo(0, 0)
     }
 
     render() {
     return (
+        <div>
         <div ref={(section)=>{this.design = section;}}>
             <h2 className="heading" style={{color: "#737373"}}>Honors Design Project</h2>
             <h4>Space Engineering</h4>
@@ -54,10 +65,19 @@ export class Design extends Component {
                 pa-rameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
                 to its high strength-to-weight ratio and general wide spread use in aerospace applications.
             </p>
-
-            <div className="design-poster-container">
+            {/*
+            <div className="design-poster-container" onClick={()=> this.setState({design_poster: true})}>
               <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
             </div>
+            */}
         </div>
+        {/*}
+        {this.state.design_poster?
+            <div className='design-poster-container2'>
+                <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
+            </div>
+        :null}
+        */}
+    </div>
     )}
 }

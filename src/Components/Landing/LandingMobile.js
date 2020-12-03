@@ -36,10 +36,10 @@ export default class LandingMobile extends Component {
         this.state = {
             mobile: false,
             width: window.innerWidth,
-            loading: true,
+            loading: false,
             landingHome: false,
             about: false,
-            work: false,
+            work: true,
             contact: false,
             menuOpen: false
 

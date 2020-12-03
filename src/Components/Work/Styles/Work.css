@@ -5,7 +5,7 @@
 	left: 0px;
 	height: 100vh;
 	width: 50%;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
+	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
 }
 
 .workLeftColContent {
@@ -16,44 +16,62 @@
 	font-weight: bold;
 }
 .workHr {
-	border-color: #fff;	
+	border-color: #fff;
 	width: 50%;
 }
-.workLinks {		
+.work-link:hover {
+	border-bottom: 4px solid white
+}
+.workLinks {
 	position: absolute;
 	left: 50%;
 	bottom: 70px;
-	width: 100%;		
+	width: 100%;
 	text-align: center;
 }
 .work-link-content {
 	position: relative;
-	left: -50%;	
+	left: -50%;
 }
-.workLinksCorrection {		
+.workLinksCorrection {
 	position: absolute;
 	left: 50%;
 	bottom: 67px;
-	width: 100%;		
+	width: 100%;
 	text-align: center;
 }
 .workLink {
 	margin-left: 20px;
 	display: inline-block;
-	cursor: pointer;	
+	cursor: pointer;
 }
 .workLinkHover {
 	margin-left: 20px;
 	display: inline-block;
-	cursor: pointer;		
+	cursor: pointer;
 	border-bottom: 3px solid white;
 }
-
-
-.work-intra-links {	
-	display: inline-block;		
+.work-intra-links {
+	padding-top: 20px;
+	height: 150px;
+	width: 100%;
+	position: relative;
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;	
 }
-
+.design-link {
+	position: fixed;
+	top: 60px;
+}
+.research-link {
+	position: fixed;
+	top: 105px;
+}
+.bottom-links {
+	position: absolute;
+	top: 110px;
+}
 .workRightCol {
 	margin-left: 50%;
 	height: 100vh;
@@ -61,7 +79,7 @@
 	font-size: 20px;
 }
 .workRightColContent {
-	height: 100%;	
+	height: 100%;
 	color: black;
 }
 .scroller {

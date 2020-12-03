@@ -3,7 +3,7 @@ import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
-import 'react-activity/dist/react-activity.css';    
+import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 
@@ -23,6 +23,8 @@ import Landing from '../Landing/Landing'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 
+import {Design} from './Content/Design'
+import {Research} from './Content/Research'
 import {MadMobile} from './Content/MadMobile'
 import {Parkupp} from './Content/Parkupp'
 import {MoneyCalls} from './Content/MoneyCalls'
@@ -31,7 +33,7 @@ import {GalxyBit} from './Content/GalxyBit'
 
 
 export default class Work extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -40,97 +42,132 @@ export default class Work extends Component {
             work: true,
             contact: false,
             columns: false,
-            madMobile:true,
+            design:true,
+            research:false,
+            madMobile:false,
             parkupp: false,
             moneyCalls: false,
             galxyBit: false,
-            transition: false, 
-            txContent: false,                                 
-            width: window.innerWidth          
+            transition: false,
+            txContent: false,
+            width: window.innerWidth
         };
 
+        this.design = this.design.bind(this);
+        this.research = this.research.bind(this);
         this.madMobile = this.madMobile.bind(this);
         this.parkupp = this.parkupp.bind(this);
         this.moneyCalls = this.moneyCalls.bind(this);
         this.galxyBit = this.galxyBit.bind(this);
 
         this.homeTransition = this.homeTransition.bind(this);
-        this.aboutTransition = this.aboutTransition.bind(this);  
+        this.aboutTransition = this.aboutTransition.bind(this);
         this.contactTransition = this.contactTransition.bind(this);
 
-        
+
     }
 
-    componentDidMount() {                
-        this.setState({columns: true})            
+    componentDidMount() {
+        this.setState({columns: true})
         workColumns(
-            this.workLeftCol, this.workRightColContent, 
+            this.workLeftCol, this.workRightColContent,
             this.state.width, this.workStill, this.workLinkHome,
             this.workLinkAbout, this.workLink, this.workLinkContact,
-            this.madMobileSlide, this.parkuppSlide, this.moneyCallsSlide, this.galxyBitSlide
+            this.designSlide, this.researchSlide, this.madMobileSlide, this.parkuppSlide, this.moneyCallsSlide, this.galxyBitSlide
         )
     }
 
-    madMobile() {                    
+    design() {
         switchTo(this.workRightColContent)
-
         setTimeout(() => {
             this.setState({
+                design: true,
+                research: false,
+                madMobile:false,
+                parkupp: false,
+                moneyCalls: false,
+                galxyBit: false,
+            })
+        }, 500)
+    }
+    research() {
+        switchTo(this.workRightColContent)
+        setTimeout(() => {
+            this.setState({
+                design: false,
+                research: true,
+                madMobile:false,
+                parkupp: false,
+                moneyCalls: false,
+                galxyBit: false,
+            })
+        }, 500)
+    }
+    madMobile() {
+        switchTo(this.workRightColContent)
+        setTimeout(() => {
+            this.setState({
+                design: false,
+                research: false,
                 madMobile:true,
                 parkupp: false,
                 moneyCalls: false,
                 galxyBit: false,
             })
-        }, 500)        
-        
-        
+        }, 500)
     }
     parkupp() {
-        switchTo(this.workRightColContent)    
+        switchTo(this.workRightColContent)
         setTimeout(() => {
             this.setState({
+                design: false,
+                research: false,
                 parkupp: true,
                 madMobile:false,
                 moneyCalls: false,
                 galxyBit: false,
-            })                
-        }, 500)        
+            })
+        }, 500)
     }
     moneyCalls() {
         switchTo(this.workRightColContent)
         setTimeout(() => {
             this.setState({
+                design: false,
+                research: false,
                 moneyCalls: true,
                 parkupp: false,
                 madMobile:false,
                 galxyBit: false,
             })
-        }, 500)        
+        }, 500)
     }
     galxyBit() {
         switchTo(this.workRightColContent)
         setTimeout(() => {
             this.setState({
+                design: false,
+                research: false,
                 galxyBit: true,
                 moneyCalls: false,
                 parkupp: false,
                 madMobile:false,
             })
-        }, 500)        
+        }, 500)
     }
 
     async homeTransition() {
         await this.setState({
             transition: true,
             txContent: true,
-            home: true, 
-            about: false,                       
+            home: true,
+            about: false,
             contact: false
         })
         //homeEnter(this.home)
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
 
@@ -148,13 +185,13 @@ export default class Work extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false, 
-            about: true,                       
+            home: false,
+            about: true,
             contact: false
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
         aboutEnter(this.aboutHome)
@@ -173,13 +210,13 @@ export default class Work extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false, 
-            about: false,                       
+            home: false,
+            about: false,
             contact: true
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
         contactEnter(this.contactHome)
@@ -195,13 +232,13 @@ export default class Work extends Component {
         }, 3300)
     }
 
-	render() {		
+	render() {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
-        const contactHome = contactHome => this.contactHome = contactHome  
-        
+        const contactHome = contactHome => this.contactHome = contactHome
+
         const workLeftCol = workLeftCol => this.workLeftCol = workLeftCol
-        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent 
+        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent
         const workStill = workStill => this.workStill = workStill
 
         const workLinkHome = workLinkHome => this.workLinkHome = workLinkHome
@@ -215,12 +252,14 @@ export default class Work extends Component {
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
-        
+
+        const designSlide  = designSlide  => this.designSlide  = designSlide
+        const researchSlide  = researchSlide  => this.researchSlide  = researchSlide
         const madMobileSlide  = madMobileSlide  => this.madMobileSlide  = madMobileSlide
         const parkuppSlide = parkuppSlide => this.parkuppSlide = parkuppSlide
         const moneyCallsSlide = moneyCallsSlide => this.moneyCallsSlide = moneyCallsSlide
         const galxyBitSlide = galxyBitSlide => this.galxyBitSlide = galxyBitSlide
-    
+
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
@@ -230,58 +269,83 @@ export default class Work extends Component {
 
                     <div ref={workLeftCol} className="workLeftCol" style={{display: this.state.columns?null:"none"}}>
                         <div className="workLeftColContent">
-                            <div ref={workStill}> 
+                            <div ref={workStill}>
                                 <h2>WORK</h2>
-                                
+
                                 <div className="work-intra-links">
-                                    <p 
-                                        className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
-                                        ref={madMobileSlide} 
-                                        style={{marginLeft: 0}} 
-                                        onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
-                                        onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})} 
-                                        onClick={this.madMobile}>
-                                        MAD Mobile
-                                    </p>
-                                    <p 
-                                        className={this.state.parkuppHover||this.state.parkupp?"workLinkHover":"workLink"}
-                                        ref={parkuppSlide}
-                                        onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
-                                        onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})} 
-                                        onClick={this.parkupp}>
-                                        ParkUpp
-                                    </p>
-                                    <p 
-                                        className={this.state.moneyCallsHover||this.state.moneyCalls?"workLinkHover":"workLink"}
-                                        ref={moneyCallsSlide}
-                                        onMouseEnter={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
-                                        onMouseLeave={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})} 
-                                        onClick={this.moneyCalls}>
-                                        Money Calls
-                                    </p>
-                                    <p 
-                                        className={this.state.galxyBitHover||this.state.galxyBit?"workLinkHover":"workLink"}
-                                        ref={galxyBitSlide}
-                                        onMouseEnter={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
-                                        onMouseLeave={() => this.setState({galxyBitHover: !this.state.galxyBitHover})} 
-                                        onClick={this.galxyBit}>
-                                        GalxyBit
-                                    </p>
+                                    <div className="design-link">
+                                        <p
+                                            className={this.state.designHover||this.state.design?"workLinkHover":"workLink"}
+                                            ref={designSlide}
+                                            style={{marginLeft: 0}}
+                                            onMouseEnter={() => this.setState({designHover: !this.state.designHover})}
+                                            onMouseLeave={() => this.setState({designHover: !this.state.designHover})}
+                                            onClick={this.design}>
+                                            Honors Design Project
+                                        </p>
+                                    </div>
+                                    <div className="research-link">
+                                        <p
+                                            className={this.state.researchHover||this.state.research?"workLinkHover":"workLink"}
+                                            ref={researchSlide}
+                                            style={{marginLeft: 0}}
+                                            onMouseEnter={() => this.setState({researchHover: !this.state.researchHover})}
+                                            onMouseLeave={() => this.setState({researchHover: !this.state.researchHover})}
+                                            onClick={this.research}>
+                                            Honors Research Project
+                                        </p>
+                                    </div>
+
+                                    <div className="bottom-links">
+                                        <p
+                                            className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
+                                            ref={madMobileSlide}
+                                            style={{marginLeft: 0}}
+                                            onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
+                                            onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})}
+                                            onClick={this.madMobile}>
+                                            MAD Mobile
+                                        </p>
+                                        <p
+                                            className={this.state.parkuppHover||this.state.parkupp?"workLinkHover":"workLink"}
+                                            ref={parkuppSlide}
+                                            onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
+                                            onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})}
+                                            onClick={this.parkupp}>
+                                            ParkUpp
+                                        </p>
+                                        <p
+                                            className={this.state.moneyCallsHover||this.state.moneyCalls?"workLinkHover":"workLink"}
+                                            ref={moneyCallsSlide}
+                                            onMouseEnter={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
+                                            onMouseLeave={() => this.setState({moneyCallsHover: !this.state.moneyCallsHover})}
+                                            onClick={this.moneyCalls}>
+                                            Money Calls
+                                        </p>
+                                        <p
+                                            className={this.state.galxyBitHover||this.state.galxyBit?"workLinkHover":"workLink"}
+                                            ref={galxyBitSlide}
+                                            onMouseEnter={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
+                                            onMouseLeave={() => this.setState({galxyBitHover: !this.state.galxyBitHover})}
+                                            onClick={this.galxyBit}>
+                                            GalxyBit
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div 
+                            <div
                                 className="workLinks">
                                 <div className="work-link-content">
-                                    <p 
+                                    <p
                                         className={this.state.homeHover?"workLinkHover":"workLink"}
-                                        ref={workLinkHome} 
+                                        ref={workLinkHome}
                                         onClick={this.homeTransition}
                                         onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
                                         onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
                                         Home
                                     </p>
-                                    <p 
+                                    <p
                                         className={this.state.aboutHover||this.state.about?"workLinkHover":"workLink"}
                                         ref={workLinkAbout}
                                         onClick={this.aboutTransition}
@@ -289,16 +353,16 @@ export default class Work extends Component {
                                         onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
                                         About
                                     </p>
-                                    <p 
+                                    <p
                                         className={this.state.workHover||this.state.work?"workLinkHover":"workLink"}
-                                        ref={workLink}                                         
+                                        ref={workLink}
                                         onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
                                         onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
                                         Work
                                     </p>
-                                    <p 
-                                        className={this.state.contactHover||this.state.contact?"workLinkHover":"workLink"} 
-                                        ref={workLinkContact} 
+                                    <p
+                                        className={this.state.contactHover||this.state.contact?"workLinkHover":"workLink"}
+                                        ref={workLinkContact}
                                         onClick={this.contactTransition}
                                         onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
                                         onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
@@ -310,39 +374,37 @@ export default class Work extends Component {
                     </div>
 
                     <div className="workRightCol">
-                        <div 
-                            ref={workRightColContent} 
-                            className="workRightColContent" 
+                        <div
+                            ref={workRightColContent}
+                            className="workRightColContent"
                             style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
-                            
+
+                            <div className="scroller" style={{display: this.state.design?null:"none"}}>
+                                <Design />
+                            </div>
+                            <div className="scroller" style={{display: this.state.research?null:"none"}}>
+                                <Research />
+                            </div>
                             <div className="scroller" style={{display: this.state.madMobile?null:"none"}}>
-                                <div>
-                                    <MadMobile />
-                                </div>
+                                <MadMobile />
                             </div>
                             <div className="scroller" style={{display: this.state.parkupp?null:"none"}}>
-                                <div>
-                                    <Parkupp />
-                                </div>
+                                <Parkupp />
                             </div>
                             <div className="scroller" style={{display: this.state.moneyCalls?null:"none"}}>
-                                <div>
-                                    <MoneyCalls />
-                                </div>
+                                <MoneyCalls />
                             </div>
                             <div className="scroller" style={{display: this.state.galxyBit?null:"none"}}>
-                                <div>
-                                    <GalxyBit />
-                                </div>
-                            </div>                          
+                                <GalxyBit />                                
+                            </div>
                         </div>
                     </div>
                 </div>:null}
 
                 <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
-                    <div 
-                        ref={transitionFirst} 
-                        className="transition-first" 
+                    <div
+                        ref={transitionFirst}
+                        className="transition-first"
                         >
                     </div>
                     <div ref={transitionMain} className="transition-main" >
@@ -352,35 +414,34 @@ export default class Work extends Component {
                             <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                         </div>
                     </div>
-                    <div 
+                    <div
                         ref={transitionSecond}
-                        className="transition-second" 
+                        className="transition-second"
                         >
                     </div>
                 </div>
 
-                {this.state.home?   
-                    <div ref={home} className="home">                 
+                {this.state.home?
+                    <div ref={home} className="home">
                         <Landing />
                     </div>
                 :null}
 
 
-                {this.state.about?   
-                    <div ref={aboutHome} className="aboutHome">                 
+                {this.state.about?
+                    <div ref={aboutHome} className="aboutHome">
                         <About />
                     </div>
                 :null}
-                
-                {this.state.contact?   
-                    <div ref={contactHome} className="contactHome">                 
+
+                {this.state.contact?
+                    <div ref={contactHome} className="contactHome">
                         <Contact />
                     </div>
                 :null}
-                
+
             </div>
 		)
 	}
 
 }
-

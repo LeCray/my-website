@@ -213,22 +213,23 @@ export default class About extends Component {
                                 style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h2 className="heading">Jabulani Kunene</h2>
-                                <h4>I am a self taught software developer</h4>
+                                <h4>I am a self-taught, full-stack software developer</h4>
 
                                 <br/><br/>
 
                                 <h5 className="heading">Formal Education</h5>
-                                <p>
+                                <p style={{textAlign: "justify"}}>
                                     I am expected to graduate with an Honors in Mechanical Engineering
-                                     from the University of the Witwatersrand in March or November 2021.
+                                     from the University of the Witwatersrand, South Africa in March or November 2021.
                                 </p>
 
                                 <hr className="hrLine"/>
                                 <br/>
                                 <h5 className="heading">My Passions & Skills</h5>
-                                <p>
-                                    In my first year of engineering studies (2014) I began learning how to trade the financial markets.<br/><br/>
-                                I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to become familiar with
+                                <p style={{textAlign: "justify"}}>
+                                    In my first year of engineering studies (2014) I began learning how to trade the financial markets.
+                                    <br/><br/>
+                                    I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to become familiar with
                                     web development technologies because I then made the decision to build GalxyBit - a cryptocurrency exchange offering
                                     btc/zar, eth/zar and ltc/zar (liquidity provided by Ice3X).
                                     <br/><br/>
@@ -252,7 +253,7 @@ export default class About extends Component {
                                         <li>.NET</li>
                                     </ul>
                                     I am also very familar with:
-                                    <ul>
+                                    <ul style={{textAlign:"left"}}>
                                         <li>C++ Development</li>
                                         <li>Python (Anaconda)</li>
                                         <li>MATLAB (Multibody Dynamics using Simscape Multibody)</li>
@@ -268,6 +269,7 @@ export default class About extends Component {
                                 </p>
 
                                 <hr className="hrLine"/>
+                                <br/>
                                 <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
                             </div>
                         </div>

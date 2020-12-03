@@ -36,8 +36,8 @@ export default class Landing extends Component {
         this.state = {
             loading: false,
             landingHome: false,
-            about: true,
-            work: false,
+            about: false,
+            work: true,
             contact: false,
             mobile: false,
             transition: false,

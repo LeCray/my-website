@@ -58,7 +58,7 @@
 	position: relative;
 	display: flex !important;
 	flex-direction: column;
-	align-items: center;	
+	align-items: center;
 }
 .design-link {
 	position: fixed;
@@ -87,12 +87,20 @@
 	padding: 50px 100px 100px 100px;
 	overflow-y: scroll;
 }
-
+.design-logo-container {
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
 .mad-mobile-img {
 	width: 100%;
 }
+.design-logo {
+	width: 90%
+}
 .mad-content {
-	margin-top: 30px;
+	margin-top: 10px;
+	text-align: justify
 }
 .parkupp-img {
 	width: 100%;
@@ -114,4 +122,15 @@
 }
 .galxybit-content {
 	margin-top: 30px;
+}
+.exec-summary {
+	margin-top: 30px;
+	font-weight: 500;
+}
+.design-poster-container {
+	padding-top: 40px;
+	text-align: center
+}
+.design-poster {
+	width: 100%
 }

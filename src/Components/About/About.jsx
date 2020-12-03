@@ -240,8 +240,9 @@ export default class About extends Component {
                                         <li>JavaScript</li>
                                         <li>Ruby</li>
                                         <li>Java</li>
-                                        <li>MQL5</li>
                                         <li>C#</li>
+                                        <li>MQL5</li>
+                                        <li>C++</li>
                                     </ul>
                                     And frameworks:
                                     <ul>

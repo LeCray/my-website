@@ -298,21 +298,20 @@ export default class Work extends Component {
 
                                     <div className="bottom-links">
                                         <p
-                                            className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
-                                            ref={madMobileSlide}
-                                            style={{marginLeft: 0}}
-                                            onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
-                                            onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})}
-                                            onClick={this.madMobile}>
-                                            MAD Mobile
-                                        </p>
-                                        <p
                                             className={this.state.parkuppHover||this.state.parkupp?"workLinkHover":"workLink"}
                                             ref={parkuppSlide}
                                             onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                             onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                             onClick={this.parkupp}>
                                             ParkUpp
+                                        </p>
+                                        <p
+                                            className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}
+                                            ref={madMobileSlide}                                            
+                                            onMouseEnter={() => this.setState({madMobileHover: !this.state.madMobileHover})}
+                                            onMouseLeave={() => this.setState({madMobileHover: !this.state.madMobileHover})}
+                                            onClick={this.madMobile}>
+                                            MAD Mobile
                                         </p>
                                         <p
                                             className={this.state.moneyCallsHover||this.state.moneyCalls?"workLinkHover":"workLink"}
@@ -395,7 +394,7 @@ export default class Work extends Component {
                                 <MoneyCalls />
                             </div>
                             <div className="scroller" style={{display: this.state.galxyBit?null:"none"}}>
-                                <GalxyBit />                                
+                                <GalxyBit />
                             </div>
                         </div>
                     </div>

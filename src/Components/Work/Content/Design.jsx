@@ -29,39 +29,35 @@ export class Design extends Component {
     return (
         <div ref={(section)=>{this.design = section;}}>
             <h2 className="heading" style={{color: "#737373"}}>Honors Design Project</h2>
-            <h4>Space Robotics</h4>
+            <h4>Space Engineering</h4>
 
-            <div className="mad-mobile-logo-container">
-              <img className="mad-mobile-logo" src={require("../../../Assets/Images/mad_logo.png")}/>
+            <div className="design-logo-container">
+              <img className="design-logo" src={require("../../../Assets/Images/design_pic.png")}/>
             </div>
 
+            <p className='exec-summary'>Executive Summary:</p>
             <p className="mad-content">
-                I single-handedly developed software for Mahele Auto Doctor (M.A.D) in Vereeneging, Gauteng.
-                M.A.D does vehicle repairs and maintenance, fleet management, construction, courier, towing and much more.
+                This paper presents the methodology to design the energy absorption system of a robotic lander
+                for a soft landing on an extraterrestrial surface that is characterised by extremely low gravity
+                e.g.  an asteroid.  The landing gear preliminary design is based on the requirements of the stability
+                distance and ground clearance.
                 <br/><br/>
-                The App I built for the company allows their clients to manage their accounts in a new way.
+                A  three-dimensional  cantilever  design  lander  was  modelled  in  a  six  degree  of  freedom
+                environment  using MATLAB/Simscape  as  the  preferred  multibody  dynamics  software.   Analysis  of  the
+                landing  dynamics  of the lander with spring and damper absorber elements was performed to determine the
+                preliminary design parameters.
                 <br/><br/>
-                The systems biggest feature allows for streaming live vehicle data analytics from any vehicle,
-                anywhere in real time via an On Board Diagnostics dongle (OBD2).
-                Clients vehicles can be anywhere and their vehicle parameters such as engine speed, fuel consumption,
-                air-fuel ratio, temperatures etc. can be directly accessed via an online dashboard.
+                Results show that the spring and damper absorber elements provide an effective energy absorption mecha-nism
+                for landing on an arbitrarily sloped surface at nominal velocities.
                 <br/><br/>
-                Other features for their clients include:
-                <ul>
-                    <li>Self vehicle <strong>diagnosis</strong></li>
-                    <li>Make or cancel vehicle <strong>bookings</strong></li>
-                    <li>Approve or disapprove proposed <strong>quotations</strong> </li>
-                    <li>View <strong>Invoices</strong></li>
-                </ul>
+                The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design
+                pa-rameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
+                to its high strength-to-weight ratio and general wide spread use in aerospace applications.
             </p>
-            <p>
-                The app was published to the Play Store in January 2018. MAD Mobile
-                <br/><br/>
-                Click on the image below to go to the app.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.mad_mobile" target="_blank">
-              <img className="mad-mobile-img" src={require("../../../Assets/Images/mad-mobile.png")}/>
-            </a>
+
+            <div className="design-poster-container">
+              <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
+            </div>
         </div>
     )}
 }

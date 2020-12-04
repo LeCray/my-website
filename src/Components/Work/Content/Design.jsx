@@ -58,7 +58,7 @@ export class Design extends Component {
                 landing  dynamics  of the lander with spring and damper absorber elements was performed to determine the
                 preliminary design parameters.
                 <br/><br/>
-                Results show that the spring and damper absorber elements provide an effective energy absorption mecha-nism
+                Results show that the spring and damper absorber elements provide an effective energy absorption mechanism
                 for landing on an arbitrarily sloped surface at nominal velocities.
                 <br/><br/>
                 The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design

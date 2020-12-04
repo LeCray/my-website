@@ -27,7 +27,6 @@
 		margin-top: 250px;
 	}
 	.work-link {
-		margin-left: 20px;
 		display: inline-block;
 		cursor: pointer;
 	}
@@ -48,70 +47,7 @@
 	.work-content-mobile {
 		margin-top: 50px;
 	}
-
-	.mad-mobile-img {
-		width: 100%;
-	}
-	.mad-mobile-logo-container{
-		margin-top: 30px;
-		width: 100%;
-		text-align: center;
-	}
-	.mad-mobile-logo{
-		width: 50%;
-	}
-
-	.mad-content {
-		margin-top: 30px;
-	}
-	.parkupp-img {
-		width: 100%;
-		margin-top: 30px;
-	}
-	.parkupp-content {
-		margin-top: 30px;
-		margin-bottom: -10px;
-	}
-	.parkupp-logo-container{
-		margin-top: -20px;
-		width: 100%;
-		text-align: center;
-		margin-bottom: -20px;
-	}
-	.parkupp-logo{
-		width: 50%;
-	}
-	.money-calls-img {
-		width: 100%;
-		margin-top: 30px;
-	}
-	.money-calls-content {
-		margin-top: 30px;
-	}
-	.market-logo-container{
-		margin-top: 30px;
-		width: 100%;
-		text-align: center;
-	}
-	.market-logo{
-		width: 50%;
-	}
-	.galxybit-img {
-		width: 100%;
-		margin-top: 30px;
-	}
-	.galxybit-content {
-		margin-top: 30px;
-	}
-	.gxb-logo-container{
-		margin-top: 30px;
-		width: 100%;
-		text-align: center;
-		font-size: 30px;
-		margin-bottom: -20px;
-		font-weight: bold;
-	}
 	.heading-mobile {
 		color: #737373;
-	}
+	}	
 }

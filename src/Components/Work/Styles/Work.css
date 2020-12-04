@@ -127,6 +127,7 @@
 	margin-top: 30px;
 	font-weight: 500;
 }
+
 .design-poster-container {
 	padding-top: 40px;
 	text-align: center
@@ -146,4 +147,75 @@
 	border: 1px solid red !important;
 	position: relative;
 	z-index: 9999
+}
+.mad-mobile-img {
+	width: 100%;
+}
+.mad-mobile-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.mad-mobile-logo{
+	width: 50%;
+}
+
+.mad-content {
+	margin-top: 30px;
+}
+.parkupp-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.parkupp-content {
+	margin-top: 30px;
+	margin-bottom: -10px;
+}
+.parkupp-logo-container{
+	margin-top: -20px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: -20px;
+}
+.parkupp-logo{
+	width: 50%;
+}
+.parkupp-partnership-container {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.parkupp-partnership {
+	width: 80%;
+}
+.money-calls-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.money-calls-content {
+	margin-top: 30px;
+}
+.market-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.market-logo{
+	width: 50%;
+}
+.galxybit-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.galxybit-content {
+	margin-top: 30px;
+}
+.gxb-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: -20px;
+	font-weight: bold;
 }

@@ -47,7 +47,7 @@ export class Research extends Component {
                 The system uses a Genetic Algorithm for the optimisation of indicator settings and a Long Short Term Memory (LSTM) Recurrent
                 Neural Network for intelligent trade filtering.  Enveloping this whole development is
                 Metatrader 5 - a leading institutional multi-asset trading platform that enables the use of sophisticated automated
-                trading systems (trading robots)
+                trading systems (trading robots).
             </p>
         </div>
     )}

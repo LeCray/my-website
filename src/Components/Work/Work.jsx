@@ -42,10 +42,10 @@ export default class Work extends Component {
             work: true,
             contact: false,
             columns: false,
-            design:false,
-            research:true,
-            madMobile:false,
+            design:true,
+            research:false,
             parkupp: false,
+            madMobile:false,
             moneyCalls: false,
             galxyBit: false,
             transition: false,
@@ -303,7 +303,7 @@ export default class Work extends Component {
                                             onMouseEnter={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                             onMouseLeave={() => this.setState({parkuppHover: !this.state.parkuppHover})}
                                             onClick={this.parkupp}>
-                                            ParkUpp
+                                            Parkupp
                                         </p>
                                         <p
                                             className={this.state.madMobileHover||this.state.madMobile?"workLinkHover":"workLink"}

@@ -3,7 +3,7 @@ import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
-import 'react-activity/dist/react-activity.css';    
+import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 
@@ -26,7 +26,7 @@ import scrollToComponent from 'react-scroll-to-component';
 
 
 export default class Contact extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -38,16 +38,16 @@ export default class Contact extends Component {
             transition: false,
             width: window.innerWidth
         }
-            
+
         this.homeTransition = this.homeTransition.bind(this);
         this.workTransition = this.workTransition.bind(this);
-        this.aboutTransition = this.aboutTransition.bind(this);       
+        this.aboutTransition = this.aboutTransition.bind(this);
     }
 
-    componentDidMount() {                
-        this.setState({columns: true})            
+    componentDidMount() {
+        this.setState({columns: true})
         contactColumns(
-            this.contactLeftCol, this.contactRightColContent, 
+            this.contactLeftCol, this.contactRightColContent,
             this.state.width, this.contactStill, this.contactLinkHome,
             this.contactLinkAbout, this.contactLinkWork, this.contactLink
         )
@@ -57,14 +57,14 @@ export default class Contact extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: true, 
-            about: false,           
-            work: false,            
+            home: true,
+            about: false,
+            work: false,
         })
         //homeEnter(this.home)
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
 
@@ -82,13 +82,13 @@ export default class Contact extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false, 
-            about: true,           
-            work: false,            
+            home: false,
+            about: true,
+            work: false,
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
         aboutEnter(this.aboutHome)
@@ -107,13 +107,13 @@ export default class Contact extends Component {
         await this.setState({
             transition: true,
             txContent: true,
-            home: false, 
-            about: false,           
-            work: true,            
+            home: false,
+            about: false,
+            work: true,
         })
         Transition(
-            this.transitionFirst, this.transitionMain, 
-            this.transitionSecond,this.FnameTx,this.LnameTx, 
+            this.transitionFirst, this.transitionMain,
+            this.transitionSecond,this.FnameTx,this.LnameTx,
             this.state.width, this.learnTx
         )
         workEnter(this.workHome)
@@ -128,16 +128,16 @@ export default class Contact extends Component {
             this.setState({transition: false})
         }, 3300)
     }
-       
 
 
-	render() {	
+
+	render() {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
-        const workHome = workHome => this.workHome = workHome	
+        const workHome = workHome => this.workHome = workHome
 
         const contactLeftCol = contactLeftCol => this.contactLeftCol = contactLeftCol
-        const contactRightColContent = contactRightColContent => this.contactRightColContent = contactRightColContent 
+        const contactRightColContent = contactRightColContent => this.contactRightColContent = contactRightColContent
         const contactStill = contactStill => this.contactStill = contactStill
 
         const contactLinkHome = contactLinkHome => this.contactLinkHome = contactLinkHome
@@ -151,7 +151,7 @@ export default class Contact extends Component {
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
-    
+
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
@@ -161,19 +161,19 @@ export default class Contact extends Component {
 
                         <div ref={contactLeftCol} className="contactLeftCol">
                             <div className="contactWhite">
-                                <h2 ref={contactStill}>CONTACT</h2>                                
-                                
+                                <h2 ref={contactStill}>CONTACT</h2>
+
                                 <div className="contactLinks">
                                     <div className="contact-link-content">
-                                        <p 
+                                        <p
                                             className={this.state.homeHover?"contactLinkHover":"contactLink"}
-                                            ref={contactLinkHome} 
+                                            ref={contactLinkHome}
                                             onClick={this.homeTransition}
                                             onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
                                             onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
                                             Home
                                         </p>
-                                        <p 
+                                        <p
                                             className={this.state.aboutHover||this.state.about?"contactLinkHover":"contactLink"}
                                             ref={contactLinkAbout}
                                             onClick={this.aboutTransition}
@@ -181,17 +181,17 @@ export default class Contact extends Component {
                                             onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
                                             About
                                         </p>
-                                        <p 
+                                        <p
                                             className={this.state.workHover||this.state.work?"contactLinkHover":"contactLink"}
-                                            ref={contactLinkWork}             
-                                            onClick={this.workTransition}                            
+                                            ref={contactLinkWork}
+                                            onClick={this.workTransition}
                                             onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
                                             onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
                                             Work
                                         </p>
-                                        <p 
-                                            className={this.state.contactHover||this.state.contact?"contactLinkHover":"contactLink"} 
-                                            ref={contactLink}                                     
+                                        <p
+                                            className={this.state.contactHover||this.state.contact?"contactLinkHover":"contactLink"}
+                                            ref={contactLink}
                                             onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
                                             onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
                                             Contact
@@ -203,17 +203,17 @@ export default class Contact extends Component {
 
                         <div className="contactRightCol">
                             <div
-                                ref={contactRightColContent} 
-                                className="contactRightColContent" 
+                                ref={contactRightColContent}
+                                className="contactRightColContent"
                                 style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h4 className="contact-heading">Looking forward to hearing from you!</h4>
-                                <h5>I am available for Full-Time and Freelance work </h5>
+                                <h5>I am available for full=time, part-time freelance work </h5>
                                 <hr/>
                                 <br/>
-                                
+
                                 <h4 className="name-contact">Jabulani Kunene</h4>
-                                
+
 
                                 <Row>
                                     <Col className="contact-container" lg={6}>
@@ -233,9 +233,9 @@ export default class Contact extends Component {
                 :null}
 
                 <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
-                    <div 
-                        ref={transitionFirst} 
-                        className="transition-first" 
+                    <div
+                        ref={transitionFirst}
+                        className="transition-first"
                         >
                     </div>
                     <div ref={transitionMain} className="transition-main">
@@ -245,28 +245,28 @@ export default class Contact extends Component {
                             <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                         </div>
                     </div>
-                    <div 
+                    <div
                         ref={transitionSecond}
-                        className="transition-second" 
+                        className="transition-second"
                         >
                     </div>
                 </div>
 
-                {this.state.home?   
-                    <div ref={home} className="home">                 
+                {this.state.home?
+                    <div ref={home} className="home">
                         <Landing />
                     </div>
                 :null}
 
 
-                {this.state.about?   
-                    <div ref={aboutHome} className="aboutHome">                 
+                {this.state.about?
+                    <div ref={aboutHome} className="aboutHome">
                         <About />
                     </div>
                 :null}
-                
-                {this.state.work?   
-                    <div ref={workHome} className="workHome">                 
+
+                {this.state.work?
+                    <div ref={workHome} className="workHome">
                         <Work />
                     </div>
                 :null}
@@ -275,4 +275,3 @@ export default class Contact extends Component {
 	}
 
 }
-

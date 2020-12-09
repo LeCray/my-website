@@ -49,5 +49,21 @@
 	}
 	.heading-mobile {
 		color: #737373;
-	}	
+	}
+	.about-white {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%
+	}
+	.arrow-container {
+		text-align: center;
+		padding-bottom: 20px !important
+	}
+}
+@media(max-width: 320px) {
+	.arrow-container {
+		text-align: center;
+		padding-bottom: 10px !important
+	}
 }

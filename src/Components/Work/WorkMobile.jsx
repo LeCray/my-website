@@ -25,7 +25,7 @@ import {Parkupp} from './Content/Parkupp'
 import {MoneyCalls} from './Content/MoneyCalls'
 import {GalxyBit} from './Content/GalxyBit'
 
-
+import { ArrowDown } from 'react-feather';
 
 export default class WorkMobile extends Component {
 
@@ -126,16 +126,21 @@ export default class WorkMobile extends Component {
 
                     <div style={{fontFamily: "Josefin Sans"}}>
                     <div className="work-left-col">
-                        <div className="work-left-col-content">
-                            <h2>WORK</h2>
-                            {/*<hr className="workHr"/>*/}
-                            <div className="work-intra-links">
-                                <p className="work-link" onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Design Project</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.research,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Research Project</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.mad,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>MAD Mobile</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.parkupp,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>ParkUpp</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.moneycalls,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Money Calls</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.galxybit,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>GalxyBit</p>
+                        <div className="work-left-col-content about-white">
+                            <div>
+                                <h2>WORK</h2>
+                                {/*<hr className="workHr"/>*/}
+                                <div className="work-intra-links">
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Design Project</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.research,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Research Project</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.mad,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>MAD Mobile</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.parkupp,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>ParkUpp</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.moneycalls,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Money Calls</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.galxybit,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>GalxyBit</p>
+                                </div>
+                            </div>
+                            <div className="arrow-container">
+                                <ArrowDown color="white" size={30} onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:3000})}/>
                             </div>
                         </div>
                     </div>

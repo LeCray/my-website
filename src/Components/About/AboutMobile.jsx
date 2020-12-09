@@ -14,6 +14,10 @@ import Work from '../Work/Work'
 import Contact from '../Contact/Contact'
 
 
+import { ArrowDown } from 'react-feather';
+
+
+
 import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
@@ -77,14 +81,19 @@ export default class AboutMobile extends Component {
                 <div style={{fontFamily: "Josefin Sans"}}>
                     <div className="about-left-col">
                         <div className="about-white">
-                            <h2>ABOUT</h2>
-                            <p className="learn"><b> - I LIVE TO LEARN - </b></p>
+                            <div>
+                                <h2>ABOUT</h2>
+                                <p className="learn"><b> - I LIVE TO LEARN - </b></p>
+                            </div>
+                            <div className="arrow-container">
+                                <ArrowDown color="white" size={30} onClick={()=>scrollToComponent(this.about,{offset:10,align:'top',ease:'inOutCirc',duration:3000})}/>
+                            </div>
 
                         </div>
                     </div>
 
-                    <div className="about-right-col">
-                        <div className="about-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
+                    <div className="about-right-col" >
+                        <div className="about-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}} ref={(section)=>{this.about = section;}}>
 
                             <h2 className="heading" style={{color: "#737373"}}>Jabulani Kunene</h2>
                             <h4>I am a self-taught, full-stack software developer</h4>

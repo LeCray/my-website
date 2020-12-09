@@ -55,7 +55,7 @@ export class MadMobile extends Component {
                 </ul>
             </p>
             <p>
-                The app was published to the Play Store in January 2018. MAD Mobile
+                The app was published to Google Play Store in January 2018. MAD Mobile
                 <br/><br/>
                 Click on the image below to go to the app.
             </p>

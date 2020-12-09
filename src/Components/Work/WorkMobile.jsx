@@ -32,9 +32,9 @@ export default class WorkMobile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            home: false,
+            home: true,
             about: false,
-            work: true,
+            work: false,
             contact: false,
 
             madMobile:true,

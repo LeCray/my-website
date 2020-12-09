@@ -13,9 +13,9 @@ import {contactEnter} from '../../Animation/Contact'
 
 import {Transition} from '../../Animation/Transition'
 
-import './Styles/Landing.css'
-import './Styles/LandingMobile.css'
-import './Styles/LandingTransitions.css'
+import './styles/Landing.css'
+import './styles/LandingMobile.css'
+import './styles/LandingTransitions.css'
 
 import LandingMobile from './LandingMobile'
 import Work from '../Work/Work'
@@ -34,10 +34,10 @@ export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,
+            loading: true,
             landingHome: false,
             about: false,
-            work: true,
+            work: false,
             contact: false,
             mobile: false,
             transition: false,

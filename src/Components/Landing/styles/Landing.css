@@ -59,9 +59,9 @@
 	margin-left: 13px;
 }
 .summary-details {
-	margin-left: 10px;	
+	margin-left: 10px;
 	width: 400px;
-	font-weight: normal !important
+	font-weight: bold;
 }
 .summary-details-text-wits {
 	font-style: italic;

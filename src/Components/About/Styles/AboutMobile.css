@@ -1,6 +1,6 @@
-.about-left-col {	
-	height: 100vh;	
-	background: linear-gradient(to top right, #0000ff -5%, #66ccff 101%);	
+.about-left-col {
+	height: 100vh;
+	background: var(--color-fade-tr);	
 }
 
 .about-white {
@@ -8,17 +8,17 @@
 	text-align: center;
 	color: #fff;
 	padding-top: 70%;
-	font-weight: bold;	
+	font-weight: bold;
 }
 .about-hr {
-	border-color: #fff;	
+	border-color: #fff;
 	width: 50%;
 }
 
 .about-links {
 	margin-left: -20px;
 	padding: 10px;
-	margin-top: 268px;	
+	margin-top: 268px;
 }
 .about-link {
 	margin-left: 20px;
@@ -26,22 +26,22 @@
 	cursor: pointer;
 
 }
-.about-intra-links {	
-	display: inline-block;	
-	
+.about-intra-links {
+	display: inline-block;
+
 }
 .about-right-col {
-	
-	
-	
-	
+
+
+
+
 }
 .about-right-col-content {
 	height: 100%;
 	padding: 50px 50px 50px 50px;
-	
+
 	color: black;
-	overflow-y: scroll;	
+	overflow-y: scroll;
 
 }
 .hr-line {
@@ -56,4 +56,3 @@
 	font-weight: bold;
 	text-align: center
 }
-

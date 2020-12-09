@@ -3,7 +3,7 @@
 	top: 0px;
 	left: 0px;
 	height: 100vh;
-	width: 100%;	
+	width: 100%;
 	overflow: hidden;
 	z-index: 99;
 }
@@ -14,7 +14,7 @@
 	left: -10px;
 	height: 100vh;
 	width: 10px;
-	background-color: #034f84;
+	background-color: #800033;
 	z-index: 52;
 }
 .transition-second {
@@ -23,8 +23,8 @@
 	left: -10px;
 	height: 100vh;
 	width: 10px;
-	background-color: #034f84;
-	z-index: 52;	
+	background-color: #800033;
+	z-index: 52;
 }
 .transition-main {
 	position: absolute;
@@ -32,22 +32,22 @@
 	left: 0px;
 	height: 100vh;
 	width: 100%;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	background: var(--color-fade-tr);
 	z-index: 51;
 }
 .transition-content {
 	width: 100%;
 	text-align: center;
-	margin-top: 20%;	
+	margin-top: 20%;
 }
-.name-tx {	
+.name-tx {
 	display: inline-block;
 	color: #fff;
 	font-family: Josefin Sans;
 	font-weight: bold;
 	font-size: 27px;
 }
-.learn-tx {		
+.learn-tx {
 	color: #fff;
 	font-family: Josefin Sans;
 	font-weight: bold;

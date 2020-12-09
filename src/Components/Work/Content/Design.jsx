@@ -62,7 +62,7 @@ export class Design extends Component {
                 for landing on an arbitrarily sloped surface at nominal velocities.
                 <br/><br/>
                 The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design
-                pa-rameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
+                parameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
                 to its high strength-to-weight ratio and general wide spread use in aerospace applications.
             </p>
             {/*

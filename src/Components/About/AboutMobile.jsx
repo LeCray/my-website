@@ -86,7 +86,7 @@ export default class AboutMobile extends Component {
                                 <p className="learn"><b> - I LIVE TO LEARN - </b></p>
                             </div>
                             <div className="arrow-container">
-                                <ArrowDown color="white" size={30} onClick={()=>scrollToComponent(this.about,{offset:10,align:'top',ease:'inOutCirc',duration:3000})}/>
+                                <ArrowDown color="#800033" size={30} onClick={()=>scrollToComponent(this.about,{offset:10,align:'top',ease:'inOutCirc',duration:1500})}/>
                             </div>
 
                         </div>
@@ -101,6 +101,9 @@ export default class AboutMobile extends Component {
                             <br/><br/>
 
                             <h5 className="heading">Formal Education</h5>
+                            <div className="wits-mobile-logo-container">
+                                <img className="mad-mobile-logo" src={require("../../Assets/Images/wits_logo.png")}/>
+                            </div>
                             <p style={{textAlign: "justify"}}>
                                 I am expected to graduate with an Honors in Mechanical Engineering
                                  from the University of the Witwatersrand, South Africa in March or November 2021.
@@ -112,8 +115,8 @@ export default class AboutMobile extends Component {
                             <p style={{textAlign: "justify"}}>
                                 In my first year of engineering studies (2014) I began learning how to trade the financial markets.
                                 <br/><br/>
-                                I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to become familiar with
-                                web development technologies because I then made the decision to build GalxyBit - a cryptocurrency exchange offering
+                                I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to learn and
+                                become familiar with web development technologies because I then made the decision to build GalxyBit - a cryptocurrency exchange offering
                                 btc/zar, eth/zar and ltc/zar (liquidity provided by Ice3X).
                                 <br/><br/>
                                 Since then, I have become a full stack web developer having taught myself various coding languages including:
@@ -144,12 +147,12 @@ export default class AboutMobile extends Component {
                                 </ul>
                                 <br/>
                                 In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
-                                part-time (at the Univeristy of the Witswatersrand). It was here that I started working on a cryptocurrency market algorithm
-                                that could trade the markets autonomously. This was with the help of my at the time lecturer - a Computer Science PhD student whose
+                                part-time (at the University of the Witswatersrand). It was there that I started working on a cryptocurrency market algorithm
+                                that could trade the markets autonomously. This was with the help of my lecturer - a Computer Science PhD student whose own
                                 research was on applying artificial intelligence to finance.
                                 <br/><br/>
-                                Now, at the end of 2020, I am pleased to say that I've gone on to complete my final year in Mechanical Engineering
-                                with my Honors research paper being based on using artificial intelligence to successfully trade the financial markets (autonomously).
+                                Fast forward to now, end of 2020, I am pleased to say that I've gone on to complete my final year in Mechanical Engineering
+                                with my honors research paper being based on using artificial intelligence to successfully trade the financial markets (autonomously).
                             </p>
 
                             <hr className="hrLine"/>

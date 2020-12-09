@@ -27,7 +27,7 @@
 
 	.top-section {
 		height: 100vh;
-		background: linear-gradient(to bottom right, #0000ff -5%, #66ccff 101%);
+		background: var(--color-fade-br);
 		text-align: center;
 		z-index: 1;
 	}
@@ -125,7 +125,7 @@
 		position: relative;
 		right: 10px;
 		z-index: 69;
-		height: 45px;
+		height: 45px;		
 	}
 	.menu-screen {
 		position: fixed;
@@ -141,7 +141,7 @@
 	}
 	.link-mobile-menu {
 		margin: 30px;
-		color: #3265ff;
+		color: var(--color2);
 		font-size: 18px;
 		font-family: Josefin Sans;
 		font-weight: bold;

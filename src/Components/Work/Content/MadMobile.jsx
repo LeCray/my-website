@@ -57,7 +57,7 @@ export class MadMobile extends Component {
             <p>
                 The app was published to Google Play Store in January 2018. MAD Mobile
                 <br/><br/>
-                Click on the image below to go to the app.
+                Click or tap the image below to go to the app.
             </p>
             <a href="https://play.google.com/store/apps/details?id=com.mad_mobile" target="_blank">
               <img className="mad-mobile-img" src={require("../../../Assets/Images/mad-mobile.png")}/>

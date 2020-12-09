@@ -140,7 +140,7 @@ export default class WorkMobile extends Component {
                                 </div>
                             </div>
                             <div className="arrow-container">
-                                <ArrowDown color="white" size={30} onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:3000})}/>
+                                <ArrowDown color="#800033" size={30} onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}/>
                             </div>
                         </div>
                     </div>

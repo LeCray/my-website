@@ -208,7 +208,7 @@ export default class Contact extends Component {
                                 style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
 
                                 <h4 className="contact-heading">Looking forward to hearing from you!</h4>
-                                <h5>I am available for full=time, part-time freelance work </h5>
+                                <h5>I am available for full-time, part-time and freelance work </h5>
                                 <hr/>
                                 <br/>
 

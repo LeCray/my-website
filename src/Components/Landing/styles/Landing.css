@@ -20,7 +20,9 @@
 }
 .topSection {
 	height: 100vh;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	/*background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);*/
+	background: var(--color-fade-tr);
+	/*background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);*/
 	text-align: center;
 	z-index: 1;
 }

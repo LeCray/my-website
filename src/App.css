@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+/*Setting the main colors*/
+:root {
+    /*--troob-color: #68c2bf;*/
+    --color-fade-tr: linear-gradient(to top right, #000000 0%, #00284d 100%);
+    --color-fade-br: linear-gradient(to bottom right, #000000 0%, #00284d 100%);
+    --color2: #800033
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -32,7 +38,7 @@
     background-image: url("Resources/landing.png");
     background-repeat: no-repeat;
     background-size:100% auto;
-    
+
 }
 */
 
@@ -41,7 +47,7 @@
 }
 
 .img {
-    position: relative;    
+    position: relative;
     z-index: -1;
 }
 

@@ -80,7 +80,7 @@ export default class ContactMobile extends Component {
                             <div className="about-white">
                                 <h2>CONTACT</h2>
                                 <div className="arrow-container">
-                                    <ArrowDown color="white" size={30} onClick={()=>scrollToComponent(this.contact,{offset:10,align:'top',ease:'inOutCirc',duration:3000})}/>
+                                    <ArrowDown color="#800033" size={30} onClick={()=>scrollToComponent(this.contact,{offset:10,align:'top',ease:'inOutCirc',duration:1500})}/>
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,7 @@
 	left: 0px;
 	height: 100vh;
 	width: 50%;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);
+	background: var(--color-fade-tr);
 }
 
 .workLeftColContent {
@@ -20,7 +20,7 @@
 	width: 50%;
 }
 .work-link:hover {
-	border-bottom: 4px solid white
+	border-bottom: 4px solid var(--color2)
 }
 .workLinks {
 	position: absolute;
@@ -49,7 +49,7 @@
 	margin-left: 20px;
 	display: inline-block;
 	cursor: pointer;
-	border-bottom: 3px solid white;
+	border-bottom: 3px solid var(--color2);
 }
 .work-intra-links {
 	padding-top: 20px;
@@ -153,6 +153,16 @@
 }
 .mad-mobile-logo-container{
 	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.wits-mobile-logo-container {
+	margin: 30px 0px 30px 0px;
+	width: 100%;
+	text-align: center;
+}
+.wits-logo-container {
+	margin: 30px 0px 30px 0px;
 	width: 100%;
 	text-align: center;
 }

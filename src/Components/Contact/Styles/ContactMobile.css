@@ -1,6 +1,6 @@
-.contact-left-col {	
-	height: 100vh;	
-	background: linear-gradient(to top right, #0000ff -5%, #66ccff 101%);	
+.contact-left-col {
+	height: 100vh;
+	background: var(--color-fade-br);	
 }
 
 .contact-white {
@@ -10,14 +10,14 @@
 	padding-top: 70%;
 }
 .contact-hr {
-	border-color: #fff;	
+	border-color: #fff;
 	width: 50%;
 }
 
 .contact-links {
 	margin-left: -20px;
 	padding: 10px;
-	margin-top: 298px;	
+	margin-top: 298px;
 }
 .contact-link {
 	margin-left: 20px;
@@ -25,40 +25,40 @@
 	cursor: pointer;
 
 }
-.contact-intra-links {	
-	display: inline-block;	
-	
+.contact-intra-links {
+	display: inline-block;
+
 }
 .contact-right-col {
-		
-		
+
+
 }
 .contact-right-col-content {
 	height: 100%;
 	padding: 50px 50px 100px 50px;
 	font-weight: bold;
 	color: black;
-	overflow-y: scroll;	
+	overflow-y: scroll;
 
 }
 .contact-details-container {
 	width: 100%;
-	
+
 }
 .contact-details {
-	
-	
+
+
 }
 .contact-details-2 {
-	
-	
-	
+
+
+
 }
 .name-contact-mobile {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-.me-contact-mobile {	
+.me-contact-mobile {
 	height: 220px;
 	margin-top: 50px;
 }

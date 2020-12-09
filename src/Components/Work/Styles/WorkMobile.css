@@ -3,8 +3,7 @@
 
 	.work-left-col {
 		height: 100vh;
-
-		background: linear-gradient(to top right, #0000ff -5%, #66ccff 101%);
+		background: var(--color-fade-br);
 	}
 
 	.work-left-col-content {

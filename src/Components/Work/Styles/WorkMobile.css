@@ -1,112 +1,68 @@
-.work-left-col {
-	height: 100vh;
-	
-	background: linear-gradient(to top right, #0000ff -5%, #66ccff 101%);		
-}
 
-.work-left-col-content {
-	letter-spacing: 2px;
-	text-align: center;
-	color: #fff;
-	padding-top: 70%;
-	font-weight: bold;
+@media (max-width: 1024px) {
 
-}
-.work-hr {
-	border-color: #737373;	
-	width: 100%;
-	margin-top: 50px;
-}
+	.work-left-col {
+		height: 100vh;
+		background: var(--color-fade-br);
+	}
 
-.work-links {
-	margin-left: -20px;
-	padding: 10px;
-	margin-top: 250px;	
-}
-.work-link {
-	margin-left: 20px;
-	display: inline-block;
-	cursor: pointer;	
-}
-.work-intra-links {	
-	display: inline-block;		
-}
+	.work-left-col-content {
+		letter-spacing: 2px;
+		text-align: center;
+		color: #fff;
+		padding-top: 70%;
+		font-weight: bold;
 
-.work-right-col {
-	
-}
-.work-right-col-content {
-	height: 100%;
-	padding: 50px 50px 50px 50px;
-	
-	color: black;
-	overflow-y: scroll;	
-}
-.work-content-mobile {
-	margin-top: 50px;
-}
+	}
+	.work-hr {
+		border-color: #737373;
+		width: 100%;
+		margin-top: 50px;
+	}
 
-.mad-mobile-img {
-	width: 100%;
+	.work-links {
+		margin-left: -20px;
+		padding: 10px;
+		margin-top: 250px;
+	}
+	.work-link {
+		display: inline-block;
+		cursor: pointer;
+	}
+	.work-intra-links {
+		display: inline-block;
+	}
+
+	.work-right-col {
+
+	}
+	.work-right-col-content {
+		height: 100%;
+		padding: 50px 50px 50px 50px;
+
+		color: black;
+		overflow-y: scroll;
+	}
+	.work-content-mobile {
+		margin-top: 50px;
+	}
+	.heading-mobile {
+		color: #737373;
+	}
+	.about-white {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%
+	}
+	.arrow-container {
+		text-align: center;
+		padding-bottom: 20px !important
+	}
 }
-.mad-mobile-logo-container{
-	margin-top: 30px;
-	width: 100%;
-	text-align: center;	
-}
-.mad-mobile-logo{
-	width: 50%;	
-}
-.mad-content {
-	margin-top: 30px;
-}
-.parkupp-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.parkupp-content {
-	margin-top: 30px;
-	margin-bottom: -10px;
-}
-.parkupp-logo-container{
-	margin-top: -20px;
-	width: 100%;
-	text-align: center;	
-	margin-bottom: -20px;
-}
-.parkupp-logo{
-	width: 50%;	
-}
-.money-calls-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.money-calls-content {
-	margin-top: 30px;
-}
-.market-logo-container{
-	margin-top: 30px;
-	width: 100%;
-	text-align: center;	
-}
-.market-logo{
-	width: 50%;	
-}
-.galxybit-img {
-	width: 100%;
-	margin-top: 30px;
-}
-.galxybit-content {
-	margin-top: 30px;
-}
-.gxb-logo-container{
-	margin-top: 30px;
-	width: 100%;
-	text-align: center;	
-	font-size: 30px;
-	margin-bottom: -20px;
-	font-weight: bold;
-}
-.heading-mobile {
-	color: #737373;
+@media(max-width: 320px) {
+	.arrow-container {
+		text-align: center;
+		padding-bottom: 10px !important
+	}
 }

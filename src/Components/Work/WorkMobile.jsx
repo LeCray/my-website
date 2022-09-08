@@ -3,7 +3,7 @@ import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
-import 'react-activity/dist/react-activity.css';    
+import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 
@@ -18,27 +18,29 @@ import Landing from '../Landing/Landing'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 
+import {Design} from './Content/Design'
+import {Research} from './Content/Research'
 import {MadMobile} from './Content/MadMobile'
 import {Parkupp} from './Content/Parkupp'
 import {MoneyCalls} from './Content/MoneyCalls'
 import {GalxyBit} from './Content/GalxyBit'
 
-
+import { ArrowDown } from 'react-feather';
 
 export default class WorkMobile extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
-            home: false,
+            home: true,
             about: false,
-            work: true,
+            work: false,
             contact: false,
-            
+
             madMobile:true,
             parkupp: false,
             moneyCalls: false,
-            galxyBit: false,            
+            galxyBit: false,
         };
 
         this.madMobile = this.madMobile.bind(this);
@@ -47,7 +49,7 @@ export default class WorkMobile extends Component {
         this.galxyBit = this.galxyBit.bind(this);
 
         this.homeTransition = this.homeTransition.bind(this);
-        this.aboutTransition = this.aboutTransition.bind(this);  
+        this.aboutTransition = this.aboutTransition.bind(this);
         this.contactTransition = this.contactTransition.bind(this);
     }
 
@@ -86,8 +88,8 @@ export default class WorkMobile extends Component {
 
     async homeTransition() {
         await this.setState({
-            home: true, 
-            about: false,           
+            home: true,
+            about: false,
             work: false,
             contact: false
         })
@@ -95,8 +97,8 @@ export default class WorkMobile extends Component {
     }
     async aboutTransition() {
         await this.setState({
-            home: false, 
-            about: true,           
+            home: false,
+            about: true,
             work: false,
             contact: false
         })
@@ -104,47 +106,61 @@ export default class WorkMobile extends Component {
     }
     async contactTransition() {
         await this.setState({
-            home: false, 
-            about: false,           
+            home: false,
+            about: false,
             work: false,
             contact: true
         })
         //workEnter(this.workHome)
     }
-       
 
-	render() {		
+
+	render() {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
-        const contactHome = contactHome => this.contactHome = contactHome   
-    
+        const contactHome = contactHome => this.contactHome = contactHome
+
 		return(
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
-                
+
                     <div style={{fontFamily: "Josefin Sans"}}>
                     <div className="work-left-col">
-                        <div className="work-left-col-content">
-                            <h2>WORK</h2>
-                            {/*<hr className="workHr"/>*/}
-                            <div className="work-intra-links">
-                                <p className="work-link" style={{marginLeft: 0}} onClick={()=>scrollToComponent(this.mad,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>MAD Mobile</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.parkupp,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>ParkUpp</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.moneycalls,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Money Calls</p>
-                                <p className="work-link" onClick={()=>scrollToComponent(this.galxybit,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>GalxyBit</p>
-                            </div>                           
+                        <div className="work-left-col-content about-white">
+                            <div>
+                                <h2>WORK</h2>
+                                {/*<hr className="workHr"/>*/}
+                                <div className="work-intra-links">
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Design Project</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.research,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Honors Research Project</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.mad,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>MAD Mobile</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.parkupp,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>ParkUpp</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.moneycalls,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>Money Calls</p>
+                                    <p className="work-link" onClick={()=>scrollToComponent(this.galxybit,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}>GalxyBit</p>
+                                </div>
+                            </div>
+                            <div className="arrow-container">
+                                <ArrowDown color="#800033" size={30} onClick={()=>scrollToComponent(this.design,{offset:-45,align:'top',ease:'inOutCirc',duration:1500})}/>
+                            </div>
                         </div>
                     </div>
 
                     <div className="work-right-col">
                         <div className="work-right-col-content" style={{"-webkit-overflow-scrolling": "touch"}}>
-
-                            <div ref={(section)=>{this.mad = section;}} className="work-content-mobile">
-                                <MadMobile />
+                            <div ref={(section)=>{this.design = section;}} className="work-content-mobile">
+                                <Design />
+                            </div>
+                            <hr className="work-hr"/>
+                            <div ref={(section)=>{this.research = section;}} className="work-content-mobile">
+                                <Research />
                             </div>
                             <hr className="work-hr"/>
                             <div ref={(section)=>{this.parkupp = section;}} className="work-content-mobile">
                                 <Parkupp />
+                            </div>
+                            <hr className="work-hr"/>
+                            <div ref={(section)=>{this.mad = section;}} className="work-content-mobile">
+                                <MadMobile />
                             </div>
                             <hr className="work-hr"/>
                             <div ref={(section)=>{this.moneycalls = section;}} className="work-content-mobile">
@@ -154,14 +170,13 @@ export default class WorkMobile extends Component {
                             <div ref={(section)=>{this.galxybit = section;}} className="work-content-mobile">
                                 <GalxyBit />
                             </div>
-                          
+
                         </div>
                     </div>
                 </div>
-                
+
             </div>
 		)
 	}
 
 }
-

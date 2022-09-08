@@ -5,7 +5,7 @@
 	left: 0px;
 	height: 100vh;
 	width: 50%;
-	background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);	
+	background: var(--color-fade-tr);
 }
 
 .workLeftColContent {
@@ -16,44 +16,62 @@
 	font-weight: bold;
 }
 .workHr {
-	border-color: #fff;	
+	border-color: #fff;
 	width: 50%;
 }
-.workLinks {		
+.work-link:hover {
+	border-bottom: 4px solid var(--color2)
+}
+.workLinks {
 	position: absolute;
 	left: 50%;
 	bottom: 70px;
-	width: 100%;		
+	width: 100%;
 	text-align: center;
 }
 .work-link-content {
 	position: relative;
-	left: -50%;	
+	left: -50%;
 }
-.workLinksCorrection {		
+.workLinksCorrection {
 	position: absolute;
 	left: 50%;
 	bottom: 67px;
-	width: 100%;		
+	width: 100%;
 	text-align: center;
 }
 .workLink {
 	margin-left: 20px;
 	display: inline-block;
-	cursor: pointer;	
+	cursor: pointer;
 }
 .workLinkHover {
 	margin-left: 20px;
 	display: inline-block;
-	cursor: pointer;		
-	border-bottom: 3px solid white;
+	cursor: pointer;
+	border-bottom: 3px solid var(--color2);
 }
-
-
-.work-intra-links {	
-	display: inline-block;		
+.work-intra-links {
+	padding-top: 20px;
+	height: 150px;
+	width: 100%;
+	position: relative;
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
 }
-
+.design-link {
+	position: fixed;
+	top: 60px;
+}
+.research-link {
+	position: fixed;
+	top: 105px;
+}
+.bottom-links {
+	position: absolute;
+	top: 110px;
+}
 .workRightCol {
 	margin-left: 50%;
 	height: 100vh;
@@ -61,7 +79,7 @@
 	font-size: 20px;
 }
 .workRightColContent {
-	height: 100%;	
+	height: 100%;
 	color: black;
 }
 .scroller {
@@ -69,12 +87,20 @@
 	padding: 50px 100px 100px 100px;
 	overflow-y: scroll;
 }
-
+.design-logo-container {
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
 .mad-mobile-img {
 	width: 100%;
 }
+.design-logo {
+	width: 90%
+}
 .mad-content {
-	margin-top: 30px;
+	margin-top: 10px;
+	text-align: justify
 }
 .parkupp-img {
 	width: 100%;
@@ -96,4 +122,110 @@
 }
 .galxybit-content {
 	margin-top: 30px;
+}
+.exec-summary {
+	margin-top: 30px;
+	font-weight: 500;
+}
+
+.design-poster-container {
+	padding-top: 40px;
+	text-align: center
+}
+.design-poster-container2 {
+	position: absolute;
+	z-index: 9999 !important;
+	left: -300px;
+	top: 0px;
+	height: 100vh;
+	border: 1px solid red
+}
+.design-poster {
+	width: 100%
+}
+.modal-baby {
+	border: 1px solid red !important;
+	position: relative;
+	z-index: 9999
+}
+.mad-mobile-img {
+	width: 100%;
+}
+.mad-mobile-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.wits-mobile-logo-container {
+	margin: 30px 0px 30px 0px;
+	width: 100%;
+	text-align: center;
+}
+.wits-logo-container {
+	margin: 30px 0px 30px 0px;
+	width: 100%;
+	text-align: center;
+}
+.mad-mobile-logo{
+	width: 50%;
+}
+
+.mad-content {
+	margin-top: 30px;
+}
+.parkupp-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.parkupp-content {
+	margin-top: 30px;
+	margin-bottom: -10px;
+}
+.parkupp-logo-container{
+	margin-top: -20px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: -20px;
+}
+.parkupp-logo{
+	width: 50%;
+}
+.parkupp-partnership-container {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.parkupp-partnership {
+	width: 80%;
+}
+.money-calls-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.money-calls-content {
+	margin-top: 30px;
+}
+.market-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.market-logo{
+	width: 50%;
+}
+.galxybit-img {
+	width: 100%;
+	margin-top: 30px;
+}
+.galxybit-content {
+	margin-top: 30px;
+}
+.gxb-logo-container{
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: -20px;
+	font-weight: bold;
 }

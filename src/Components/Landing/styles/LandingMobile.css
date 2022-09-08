@@ -3,7 +3,7 @@
 
 @media only screen  and  (max-width: 1025px) {
 	.landing-container {
-		overflow-y: scroll;	
+		overflow-y: scroll;
 	}
 
 	.activity{
@@ -13,23 +13,23 @@
 	}
 	.landing-home {
 		overflow-x: hidden;
-		overflow-y: scroll;	
+		overflow-y: scroll;
 		top: 0px;
 		left: 0px;
-		width: 100%;	
+		width: 100%;
 		z-index: 10;
 	}
 
 	.headingContainer {
 		margin-top: 10%;
-		text-align: left;		
+		text-align: left;
 	}
 
-	.top-section {		
+	.top-section {
 		height: 100vh;
-		background: linear-gradient(to bottom right, #0000ff -5%, #66ccff 101%);
-		text-align: center;		
-		z-index: 1;		
+		background: var(--color-fade-br);
+		text-align: center;
+		z-index: 1;
 	}
 	.name {
 		margin-top: 20px;
@@ -39,49 +39,49 @@
 
 
 	}
-	.white-box {			
+	.white-box {
 		margin-top: 30px;
 		width: 100%;
 		height: 100px;
-		background-color: #fff;	
-		z-index: 60;		
+		background-color: #fff;
+		z-index: 60;
 	}
-	.me-mobile {	
-		height: 250%;		
-		opacity: 1;				
+	.me-mobile {
+		height: 250%;
+		opacity: 1;
 	}
 	.pic {
 		margin-top: 20px;
 	}
-	.hr-mobile {		
+	.hr-mobile {
 		border-color: #fff;
 		width: 70%;
 		margin-top: -90px;
 		margin-bottom: 20px;
 	}
 	.summary-mobile{
-		color: #fff;	
-		width: 100%;						
-		font-size: 20px;
-		font-weight: bold
+		color: #fff;
+		width: 100%;
+		font-size: 16px;
+		font-weight: normal
 	}
-	.summary-details {		
-		
+	.summary-details {
+
 	}
 
 	.links-mobile {
 		margin-top: 250px;
 		margin-left: -20px;
 		letter-spacing: 2px;
-		color: #fff;	
-		font-weight: bold;				
+		color: #fff;
+		font-weight: bold;
 	}
 	.link-mobile {
 		margin-left: 20px;
 		display: inline-block;
 		cursor: pointer;
 	}
-	.rocket {	
+	.rocket {
 		height: 50px;
 		margin-top: 25%;
 	}
@@ -89,19 +89,19 @@
 		border: 1px solid red;
 	}
 
-	.about-home {		
-		width: 100%;	
+	.about-home {
+		width: 100%;
 		z-index: 50;
 		background: #fff
 	}
-	.work-home {		
-		width: 100%;	
+	.work-home {
+		width: 100%;
 		z-index: 50;
 		background: #fff
 	}
-	.contact-home {		
-		width: 100%;	
-		
+	.contact-home {
+		width: 100%;
+
 		background: #fff
 	}
 
@@ -113,19 +113,19 @@
 		top: 10px;
 		width: 100%;
 		text-align: right;
-		z-index: 50;			
+		z-index: 50;
 	}
 	.hamburger {
 		position: relative;
 		right: -25px;
 		z-index: 70;
-		height: 25px;		
+		height: 25px;
 	}
 	.hamburger-hexagon {
-		position: relative;		
-		right: 10px;		
+		position: relative;
+		right: 10px;
 		z-index: 69;
-		height: 45px;			
+		height: 45px;		
 	}
 	.menu-screen {
 		position: fixed;
@@ -141,12 +141,12 @@
 	}
 	.link-mobile-menu {
 		margin: 30px;
-		color: #3265ff;
+		color: var(--color2);
 		font-size: 18px;
 		font-family: Josefin Sans;
-		font-weight: bold;		
+		font-weight: bold;
 	}
-	.menu-footer {		
+	.menu-footer {
 		position: absolute;
 		left: 50%;
 		bottom:  0px;
@@ -157,6 +157,6 @@
 	.menu-footer-content {
 		position: relative;
 		left: -50%;
-		
+
 	}
 }

@@ -22,7 +22,7 @@ import scrollToComponent from 'react-scroll-to-component';
 
 export class GalxyBit extends Component {
     componentDidMount() {
-      
+
     }
 
     render() {
@@ -32,21 +32,19 @@ export class GalxyBit extends Component {
             <h4>A cryptocurrency exchange</h4>
 
             <div className="gxb-logo-container">
-              <p style={{display: "inline-block", fontSize: 40}}>G</p>ALXY<p style={{color: "#cc7a00", display: "inline-block"}}>BIT</p>            
+              <p style={{display: "inline-block", fontSize: 40}}>G</p>ALXY<p style={{color: "#cc7a00", display: "inline-block"}}>BIT</p>
             </div>
 
-            <p  className="galxybit-content">
-                Being the first Web App I attempted to build I am currently rebuilding it
-                using a much more faster framework - ExpressJS. 
-                Having already conceptulized it, I am redesigning the user interface and, with the help of 3 other developers,
-                we will be building both the frontend and backend of this exchange from the ground up.
-                It's going to be awesome.
+            <p  className="mad-content">
+                Being the first web app I attempted to build in 2017, I've been meaning to rebuild it
+                using a much more expressive tech stack. ReactJS with ExpressJS.
+                This would be with the help of my development team.
                 <br/><br/>
-                People with South African Rands will be able to exchange their ZARS 
-                for one of three major cryptocurrencies namely Bitcoin, Litecoin and Ethereum. 
-                The web application and mobile application are still in beta testing mode.
-            </p>        
-            <img onClick={()=>scrollToComponent(this.gxb,{offset:0,align:'top',duration:1500})} className="galxybit-img" src={require("../../../Assets/Images/galxybit.png")}/>    
+                People with South African rands will be able to exchange their zars
+                for one of three major cryptocurrencies namely Bitcoin, Litecoin and Ethereum.
+                Liquidity would be provided by Ice3X - a leading South African cryptocurrency exchange platform.
+            </p>
+            <img onClick={()=>scrollToComponent(this.gxb,{offset:0,align:'top',duration:1500})} className="galxybit-img" src={require("../../../Assets/Images/galxybit.png")}/>
         </div>
     )}
 }

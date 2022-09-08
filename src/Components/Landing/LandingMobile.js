@@ -4,7 +4,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Co
 
 
 import { Dots, Digital, Bounce } from 'react-activity';
-import 'react-activity/dist/react-activity.css';    
+import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
 import {loading, topSection} from '../../Animation/Landing'
@@ -30,24 +30,24 @@ import scrollToComponent from 'react-scroll-to-component';
 
 
 export default class LandingMobile extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
             mobile: false,
             width: window.innerWidth,
-            loading: true,   
+            loading: false,
             landingHome: false,
             about: false,
-            work: false,
+            work: true,
             contact: false,
             menuOpen: false
-            
+
         };
 
         this.workTransition = this.workTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);
-        this.contactTransition = this.contactTransition.bind(this);        
+        this.contactTransition = this.contactTransition.bind(this);
         this.aboutMenuLink = this.aboutMenuLink.bind(this);
         this.workMenuLink = this.workMenuLink.bind(this);
         this.contactMenuLink = this.contactMenuLink.bind(this);
@@ -58,25 +58,25 @@ export default class LandingMobile extends Component {
         this.setState({height: window.innerHeight + 'px'});
         if (this.state.width < 576) {
             this.setState({mobile: true});
-        }       
+        }
     }
-       
+
     componentDidMount() {
-                
+
         setTimeout(() => {
-            this.setState({loading: false, landingHome: true})            
+            this.setState({loading: false, landingHome: true})
         }, 1000)
 
-        setTimeout(() => {   
-           
-            topSectionMobile(this.landingHome, this.rocket, this.Fname, 
-                this.Lname, this.whiteBox, this.me, this.hr, this.summary, 
+        setTimeout(() => {
+
+            topSectionMobile(this.landingHome, this.rocket, this.Fname,
+                this.Lname, this.whiteBox, this.me, this.hr, this.summary,
                 this.aboutLink, this.workLink, this.contactLink)
 
             menu(this.hamburger)
-           
-            
-        }, 1000)                
+
+
+        }, 1000)
     }
 
     async aboutTransition() {
@@ -104,7 +104,7 @@ export default class LandingMobile extends Component {
         contactEnter(this.contactHome)
     }
 
-    aboutMenuLink() {        
+    aboutMenuLink() {
         menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
@@ -115,7 +115,7 @@ export default class LandingMobile extends Component {
             scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
         }, 300)
     }
-    workMenuLink() {                
+    workMenuLink() {
         menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
@@ -126,7 +126,7 @@ export default class LandingMobile extends Component {
             scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
         }, 300)
     }
-    contactMenuLink() {                
+    contactMenuLink() {
         menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
 
         setTimeout(() => {
@@ -138,7 +138,7 @@ export default class LandingMobile extends Component {
         }, 300)
     }
 
-    openCloseMenu() {        
+    openCloseMenu() {
         if (this.state.menuOpen) {
 
             menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
@@ -149,11 +149,11 @@ export default class LandingMobile extends Component {
 
         } else {
             this.setState({menuOpen: true})
-            menuOpen(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)            
-        }        
+            menuOpen(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+        }
     }
 
-	render() {		
+	render() {
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
         const activity = activity => this.activity = activity
@@ -177,7 +177,7 @@ export default class LandingMobile extends Component {
         const hamburger = hamburger => this.hamburger = hamburger
         const hexagon = hexagon => this.hexagon = hexagon
         const menuScreen = menuScreen => this.menuScreen = menuScreen
-        
+
 
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
@@ -186,25 +186,25 @@ export default class LandingMobile extends Component {
 		return(
             <div className="landing-container">
                 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
-                                
 
-                {this.state.loading?    
+
+                {this.state.loading?
                     <div ref={activity} className="activity">
                         <Dots size={25} animating={this.state.loading} color="#808080"/>
-                    </div>                                                                                       
+                    </div>
                 :
                     <div>
                         {/*MENU SECTION*/}
                         <div className="hamburger-container" >
-                            <div ref={hamburger} onClick={this.openCloseMenu} style={{"z-index": 99}}> 
+                            <div ref={hamburger} onClick={this.openCloseMenu} style={{"z-index": 99}}>
                                 {this.state.menuOpen?
-                                    <img 
-                                        className="hamburger" 
-                                        src={require("../../Assets/Images/cross.svg")}                                
+                                    <img
+                                        className="hamburger"
+                                        src={require("../../Assets/Images/cross.svg")}
                                     />
-                                : 
-                                    <img 
-                                        className="hamburger" 
+                                :
+                                    <img
+                                        className="hamburger"
                                         src={require("../../Assets/Images/hamburger.svg")}
                                     />
                                 }
@@ -213,14 +213,14 @@ export default class LandingMobile extends Component {
                         </div>
 
                         <div ref={menuScreen} className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
-                            <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>                                    
-                                ABOUT 
+                            <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>
+                                ABOUT
                             </p>
                             <p ref={workLinkMenu} className="link-mobile-menu" onClick={this.workMenuLink}>
-                                WORK 
+                                WORK
                             </p>
                             <p ref={contactLinkMenu} className="link-mobile-menu" onClick={this.contactMenuLink}>
-                                CONTACT 
+                                CONTACT
                             </p>
 
                             <div className="menu-footer">
@@ -231,34 +231,35 @@ export default class LandingMobile extends Component {
                         </div>
                         {/*MENU SECTION*/}
 
-                        <div ref={landingHome} className="landing-home" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>                                      
+                        <div ref={landingHome} className="landing-home" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>
 
                             <Row>
-                                
+
                                 <Col lg={12} className="top-section">
                                     <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
-                                    
+
                                     <h1 ref={Fname} className="name">Jabulani</h1>
                                     <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
                                     <hr ref={hr} className={this.state.mobile?"hr-mobile":"hr"}/>
 
 
-                                    <div ref={summary} >                                    
-                                        <h6 className="summary-mobile">Full Stack Developer</h6>
+                                    <div ref={summary} >
+                                        <h6 className="summary-mobile">Software Developer (4+ years exp)</h6>
                                         {/*<h6 className="summary-mobile">ReactJS, ExpressJS, Ruby on Rails</h6>*/}
-                                        <h6 className="summary-mobile">Web | Android | iOS</h6>                                    
+                                        <h6 className="summary-mobile">Mechanical Engineer (BSc Hons)</h6>
+                                        <h6 className="summary-mobile">University of the Witwatersrand</h6>
                                     </div>
 
-                                    
+
                                     <div ref={whiteBox} className="white-box">
                                         <img ref={me} className="me-mobile" src={require("../../Assets/Images/me3.jpg")}/>
                                     </div>
-                                    
-                                    
-                                    
+
+
+
 
                                     <div className="links-mobile">
-                                        <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>                                    
+                                        <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
                                             About
                                         </p>
                                         <p ref={workLink} className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
@@ -269,34 +270,33 @@ export default class LandingMobile extends Component {
                                         </p>
                                     </div>
 
-                                    
-                                </Col>                                                                             
-                            </Row>     
-                            <div ref={(section) => { this.about = section; }} className="about-home">                 
+
+                                </Col>
+                            </Row>
+                            <div ref={(section) => { this.about = section; }} className="about-home">
                                 <AboutMobile />
-                            </div>                
+                            </div>
 
-                        
-                            <div ref={(section) => { this.work = section; }} className="work-home">                 
+
+                            <div ref={(section) => { this.work = section; }} className="work-home">
                                 <WorkMobile />
-                            </div>                
+                            </div>
 
-                        
-                            <div ref={(section) => { this.contact = section; }} className="contact-home">                 
+
+                            <div ref={(section) => { this.contact = section; }} className="contact-home">
                                 <ContactMobile />
-                            </div>                
-                            
-                        </div>  
+                            </div>
+
+                        </div>
                     </div>
-                    
+
                 }
 
-                
 
-                
+
+
             </div>
 		)
 	}
 
 }
-

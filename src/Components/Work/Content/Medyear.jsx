@@ -40,44 +40,37 @@ export class Medyear extends Component {
             <div>
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Medyear</h2>
-                    <h4>Computational Biology</h4>
+                    <h4>Computational Genomics (2021 - 2022)</h4>
 
-                    <div className="design-logo-container">
-                        <img className="design-logo" src={require("../../../Assets/Images/design_pic.png")} />
+                    <div className="medyear-logo-container">
+                        <img className="design-logo" src={require("../../../Assets/Images/medyear.png")} />
                     </div>
 
-                    <p className='exec-summary'>Executive Summary:</p>
                     <p className="mad-content">
-                        This paper presents the methodology to design the energy absorption system of a robotic lander
-                        for a soft landing on an extraterrestrial surface that is characterised by extremely low gravity
-                        e.g.  an asteroid.  The landing gear preliminary design is based on the requirements of the stability
-                        distance and ground clearance.
-                <br /><br />
-                A  three-dimensional  cantilever  design  lander  was  modelled  in  a  six  degree  of  freedom
-                environment  using MATLAB/Simscape  as  the  preferred  multibody  dynamics  software.   Analysis  of  the
-                landing  dynamics  of the lander with spring and damper absorber elements was performed to determine the
-                preliminary design parameters.
-                <br /><br />
-                Results show that the spring and damper absorber elements provide an effective energy absorption mechanism
-                for landing on an arbitrarily sloped surface at nominal velocities.
-                <br /><br />
-                The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design
-                parameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
-                to its high strength-to-weight ratio and general wide spread use in aerospace applications.
-            </p>
-                    {/*
-            <div className="design-poster-container" onClick={()=> this.setState({design_poster: true})}>
-              <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
-            </div>
-            */}
+                        <a href="https://www.medyear.com/" target="_blank">Medyear</a> is an American healthcare technology company based in New York, USA. They bring
+                        health records and people together in grounbreaking new ways, with records from over 10,000 hospitals and clinics.
+                    <br /><br />
+
+                    At the beginning of 2021, I had been brought on as an AI Engineer, whose task was to design and build a COVID-19 risk prediction tool.
+
+                    <br /><br />
+
+                    The solution I implemented consisted of sequencing people's DNA, and analysing their single-nucleotide polymorphisms (SNPs).
+                    Their variants were then run through several industry standard bioinformatics tools&#8212;such as
+                    <a href="https://sift.bii.a-star.edu.sg/" target="_blank"> SIFT</a>,
+                    <a href="https://www.ensembl.org/info/docs/tools/vep/index.html" target="_blank"> Ensembl Variant Effect Predictor (VEP)</a>,
+                    and <a href="https://els2.comotion.uw.edu/product/cadd-scores" target="_blank">CADD</a>&#8212;to generate one final risk prediction score.
+                    <br /><br />
+                    This score was then presented to users, with the intention of altering their behaviour to be more careful
+                    if they knew that they had a high risk of falling severly ill when diagnosed with COVID-19.
+                    E.g., potentially ending up in ICU (high risk), compared to being completely asymptomatic (low risk).
+
+                    <br /><br />
+                    Unfortunately, even though the company has been operating successfully for over 10 years,
+                    after a year and a couple of months of working with them, they filed for bankruptcy.
+
+                    </p>
                 </div>
-                {/*}
-        {this.state.design_poster?
-            <div className='design-poster-container2'>
-                <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
-            </div>
-        :null}
-        */}
             </div>
         )
     }

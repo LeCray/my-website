@@ -164,6 +164,12 @@
 	height: 100vh;
 	border: 1px solid red
 }
+.medyear-logo-container {
+margin-top: -10px;
+margin-bottom: -20px;
+display: flex;
+justify-content: center;
+}
 .design-poster {
 	width: 100%
 }
@@ -253,3 +259,9 @@
 	margin-bottom: -20px;
 	font-weight: bold;
 }
+
+a:link {
+    color: #00284d ;
+    background-color: transparent;
+    text-decoration: none;
+  }

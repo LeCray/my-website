@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
+import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
@@ -13,13 +13,13 @@ import Landing from '../Landing/Landing'
 import Work from '../Work/Work'
 import Contact from '../Contact/Contact'
 
-import {aboutColumns} from '../../Animation/About'
-import {workEnter} from '../../Animation/Work'
-import {contactEnter} from '../../Animation/Contact'
-import {Transition} from '../../Animation/Transition'
+import { aboutColumns } from '../../Animation/About'
+import { workEnter } from '../../Animation/Work'
+import { contactEnter } from '../../Animation/Contact'
+import { Transition } from '../../Animation/Transition'
 
 
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
 
@@ -47,7 +47,7 @@ export default class About extends Component {
 
 
     componentDidMount() {
-        this.setState({columns: true, transition: false})
+        this.setState({ columns: true, transition: false })
         aboutColumns(
             this.aboutLeftCol, this.aboutRightColContent,
             this.state.width, this.aboutStill, this.aboutStill2, this.aboutLinkHome,
@@ -66,18 +66,18 @@ export default class About extends Component {
         //homeEnter(this.home)
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
 
         setTimeout(() => {
-            this.setState({about: false})
+            this.setState({ about: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 2700)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
     async workTransition() {
@@ -90,19 +90,19 @@ export default class About extends Component {
         })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         workEnter(this.workHome)
 
         setTimeout(() => {
-            this.setState({about: false})
+            this.setState({ about: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
     async contactTransition() {
@@ -115,24 +115,24 @@ export default class About extends Component {
         })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         contactEnter(this.contactHome)
 
         setTimeout(() => {
-            this.setState({about: false})
+            this.setState({ about: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
 
 
-	render() {
+    render() {
         const home = home => this.home = home
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
@@ -147,20 +147,20 @@ export default class About extends Component {
         const aboutLinkWork = aboutLinkWork => this.aboutLinkWork = aboutLinkWork
         const aboutLinkContact = aboutLinkContact => this.aboutLinkContact = aboutLinkContact
 
-        const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
-        const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
-        const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const transitionFirst = transitionFirst => this.transitionFirst = transitionFirst
+        const transitionMain = transitionMain => this.transitionMain = transitionMain
+        const transitionSecond = transitionSecond => this.transitionSecond = transitionSecond
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
 
-		return(
+        return (
             <div>
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
-                {this.state.about?
-                    <div style={{fontFamily: "Josefin Sans"}}>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet" />
+                {this.state.about ?
+                    <div style={{ fontFamily: "Josefin Sans" }}>
 
-                        <div ref={aboutLeftCol} className="aboutLeftCol" style={{display: this.state.columns?null:"none"}}>
+                        <div ref={aboutLeftCol} className="aboutLeftCol" style={{ display: this.state.columns ? null : "none" }}>
                             <div className="aboutWhite">
 
                                 <div className="about-still">
@@ -171,34 +171,34 @@ export default class About extends Component {
                                 <div className="aboutLinks">
                                     <div className="about-link-content">
                                         <p
-                                            className={this.state.homeHover?"about-link-hover":"aboutLink"}
+                                            className={this.state.homeHover ? "about-link-hover" : "aboutLink"}
                                             ref={aboutLinkHome}
                                             onClick={this.homeTransition}
-                                            onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
-                                            onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
+                                            onMouseEnter={() => this.setState({ homeHover: !this.state.homeHover })}
+                                            onMouseLeave={() => this.setState({ homeHover: !this.state.homeHover })}>
                                             Home
                                         </p>
                                         <p
-                                            className={this.state.aboutHover||this.state.about?"about-link-hover":"aboutLink"}
+                                            className={this.state.aboutHover || this.state.about ? "about-link-hover" : "aboutLink"}
                                             ref={aboutLink}
-                                            onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
-                                            onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                            onMouseEnter={() => this.setState({ aboutHover: !this.state.aboutHover })}
+                                            onMouseLeave={() => this.setState({ aboutHover: !this.state.aboutHover })}>
                                             About
                                         </p>
                                         <p
-                                            className={this.state.workHover||this.state.work?"about-link-hover":"aboutLink"}
+                                            className={this.state.workHover || this.state.work ? "about-link-hover" : "aboutLink"}
                                             ref={aboutLinkWork}
                                             onClick={this.workTransition}
-                                            onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
-                                            onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                            onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
+                                            onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
                                             Work
                                         </p>
                                         <p
-                                            className={this.state.contactHover||this.state.contact?"about-link-hover":"aboutLink"}
+                                            className={this.state.contactHover || this.state.contact ? "about-link-hover" : "aboutLink"}
                                             ref={aboutLinkContact}
                                             onClick={this.contactTransition}
-                                            onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
-                                            onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                            onMouseEnter={() => this.setState({ contactHover: !this.state.contactHover })}
+                                            onMouseLeave={() => this.setState({ contactHover: !this.state.contactHover })}>
                                             Contact
                                         </p>
                                     </div>
@@ -210,33 +210,33 @@ export default class About extends Component {
                             <div
                                 ref={aboutRightColContent}
                                 className="aboutRightColContent"
-                                style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
+                                style={{ "-webkit-overflow-scrolling": "touch", display: this.state.columns ? null : "none" }}>
 
                                 <h2 className="heading">Jabulani Kunene</h2>
                                 <h4>I am a self-taught, full-stack software developer</h4>
 
-                                <br/><br/>
+                                <br /><br />
 
                                 <h5 className="heading">Formal Education</h5>
                                 <div className="wits-logo-container">
-                                    <img className="mad-mobile-logo" src={require("../../Assets/Images/wits_logo.png")}/>
+                                    <img className="mad-mobile-logo" src={require("../../Assets/Images/wits_logo.png")} />
                                 </div>
-                                <p style={{textAlign: "justify"}}>
-                                    I am expected to graduate with an Honors in Mechanical Engineering
-                                     from the University of the Witwatersrand, South Africa in March or November 2021.
+                                <p style={{ textAlign: "justify" }}>
+                                    With just two courses left to complete, I am expected to graduate with an Honors in Mechanical Engineering
+                                    from the University of the Witwatersrand, South Africa in November 2023.
                                 </p>
 
-                                <hr className="hrLine"/>
-                                <br/>
+                                <hr className="hrLine" />
+                                <br />
                                 <h5 className="heading">My Passions & Skills</h5>
-                                <p style={{textAlign: "justify"}}>
-                                    In my first year of engineering studies (2014) I began learning how to trade the financial markets.
-                                    <br/><br/>
+                                <p style={{ textAlign: "justify" }}>
+                                    In my first year of engineering studies, I began learning how to trade the financial markets.
+                                    <br /><br />
                                     I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to learn and
-                                    become familiar with web development technologies because I then made the decision to build GalxyBit - a cryptocurrency exchange offering
+                                    become familiar with web development technologies because I made the decision to build GalxyBit&#8212;a cryptocurrency exchange offering
                                     btc/zar, eth/zar and ltc/zar (liquidity provided by Ice3X).
-                                    <br/><br/>
-                                    Since then, I have become a full stack web developer having taught myself various coding languages including:
+                                    <br /><br />
+                                    Since then, I have become a full-stack software developer having taught myself various coding languages including:
                                     <ul>
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -245,7 +245,9 @@ export default class About extends Component {
                                         <li>Java</li>
                                         <li>C#</li>
                                         <li>MQL5</li>
-                                        <li>C++</li>
+                                        <li>C++ Development</li>
+                                        <li>Python (Anaconda)</li>
+                                        <li>MATLAB (Multibody Dynamics using Simscape Multibody)</li>
                                     </ul>
                                     And frameworks:
                                     <ul>
@@ -256,72 +258,78 @@ export default class About extends Component {
                                         <li>Android Studio</li>
                                         <li>.NET</li>
                                     </ul>
-                                    I am also very familar with:
-                                    <ul style={{textAlign:"left"}}>
-                                        <li>C++ Development</li>
-                                        <li>Python (Anaconda)</li>
-                                        <li>MATLAB (Multibody Dynamics using Simscape Multibody)</li>
-                                    </ul>
-                                    <br/>
+
+                                    <br />
                                     In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
-                                    part-time (at the Univeristy of the Witswatersrand). It was here that I started working on a cryptocurrency market algorithm
-                                    that could trade the markets autonomously. This was with the help of my at the time lecturer - a Computer Science PhD student whose
-                                    research was on applying artificial intelligence to finance.
-                                    <br/><br/>
-                                    Fast forward to now, end of 2020, I am pleased to say that I've gone on to complete my final year in Mechanical Engineering
-                                    with my honors research paper being based on using artificial intelligence to successfully trade the financial markets (autonomously).
+                                    part-time (at the Univeristy of the Witswatersrand). It was there that I started working on a cryptocurrency market algorithm
+                                    that could trade the markets autonomously using Artificial Intelligence (AI). This was with the help of my at the time lecturer&#8212;a Computer Science PhD student whose
+                                    own research was on applying AI to finance.
+                                    <br /><br />
+                                    In 2019 I recontinued studying Mechanical Engineering, and made it to my final year in 2020 where I passed 8/10 of my courses.
+                                    2021 was a challenging year, and I had difficulty redoing the remaining 2 courses as I was working as a
+                                    freelance software engineer, and living independantly.
+                                    <br /><br />
+                                    Towards the end of 2021, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
+                                    and founded Paradise Eats&#8212;a food delivery platform for the area (Uber Eats hasn't offered their services there yet).
+                                    <br /><br />
+                                    In the current year 2022, I continued working on Paradise Eats full-time,
+                                    and managed to publish the Android apps to Google Play Store (iOS coming soon). We're currently in the process of onboarding all
+                                    the restaurants in the area, with plans of expanding operations up along the coast to Knysna, Mosselbay, Oudtshoorn, and so on.
+                                    <br /><br />
+                                    Next year, 2023, I plan on finishing my engineering degree. This will be possible if I can find full-time work, with a consistent income.
+                                    As opposed to freelancing again, where my income is inconsistent, and without the risk of accepting too many projects at once.
                                 </p>
 
-                                <hr className="hrLine"/>
-                                <br/>
+                                <hr className="hrLine" />
+                                <br />
                                 <p className="heading">IT'S POSSIBLE TO LEARN ANYTHING</p>
                             </div>
                         </div>
                     </div>
-                :null}
+                    : null}
 
-                {this.state.transition?
+                {this.state.transition ?
                     <div className="transition-container">
                         <div
                             ref={transitionFirst}
                             className="transition-first"
-                            >
+                        >
                         </div>
                         <div ref={transitionMain} className="transition-main">
-                            <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
+                            <div className="transition-content" style={{ display: this.state.txContent ? null : "none" }}>
                                 <p ref={FnameTx} className="name-tx">J</p>
-                                <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                                <p ref={LnameTx} className="name-tx" style={{ marginLeft: 5 }}>K</p>
                                 <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                             </div>
                         </div>
                         <div
                             ref={transitionSecond}
                             className="transition-second"
-                            >
+                        >
                         </div>
                     </div>
-                :null}
+                    : null}
 
-                {this.state.home?
+                {this.state.home ?
                     <div ref={home} className="home">
                         <Landing />
                     </div>
-                :null}
+                    : null}
 
-                {this.state.work?
+                {this.state.work ?
                     <div ref={workHome} className="workHome">
                         <Work />
                     </div>
-                :null}
+                    : null}
 
-                {this.state.contact?
+                {this.state.contact ?
                     <div ref={contactHome} className="contactHome">
                         <Contact />
                     </div>
-                :null}
+                    : null}
 
             </div>
-		)
-	}
+        )
+    }
 
 }

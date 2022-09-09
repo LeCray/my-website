@@ -60,17 +60,29 @@
 	flex-direction: column;
 	align-items: center;
 }
+.paradise-link {
+	position: fixed;
+	top: 70px;
+}
+.medyear-link {
+	position: fixed;
+	top: 110px;
+}
+.cactus-link {
+	position: fixed;
+	top: 150px;
+}
 .design-link {
 	position: fixed;
-	top: 60px;
+	top: 195px;
 }
 .research-link {
 	position: fixed;
-	top: 105px;
+	top: 240px;
 }
 .bottom-links {
 	position: absolute;
-	top: 110px;
+	top: 245px;
 }
 .workRightCol {
 	margin-left: 50%;
@@ -97,6 +109,18 @@
 }
 .design-logo {
 	width: 90%
+}
+.paradise-logo {
+	width: 40%
+}
+.screenshot {
+	width: 30%
+}
+.screenshot-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px
 }
 .mad-content {
 	margin-top: 10px;

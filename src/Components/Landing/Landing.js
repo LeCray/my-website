@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
+import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
 import { Dots, Digital, Bounce } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
-import {loading, topSection} from '../../Animation/Landing'
-import {aboutEnter} from '../../Animation/About'
-import {workEnter} from '../../Animation/Work'
-import {contactEnter} from '../../Animation/Contact'
+import { loading, topSection } from '../../Animation/Landing'
+import { aboutEnter } from '../../Animation/About'
+import { workEnter } from '../../Animation/Work'
+import { contactEnter } from '../../Animation/Contact'
 
-import {Transition} from '../../Animation/Transition'
+import { Transition } from '../../Animation/Transition'
 
 import './Styles/Landing.css'
 import './Styles/LandingMobile.css'
@@ -23,7 +23,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 
 
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
 
@@ -49,22 +49,22 @@ export default class Landing extends Component {
         this.contactTransition = this.contactTransition.bind(this);
     }
 
-    componentWillMount(){
+    componentWillMount() {
 
-        this.setState({height: window.innerHeight + 'px'});
+        this.setState({ height: window.innerHeight + 'px' });
         if (this.state.width < 1025) {
-            this.setState({mobile: true});
+            this.setState({ mobile: true });
         }
     }
 
     async componentDidMount() {
 
         setTimeout(() => {
-            this.setState({loading: false, landingHome: true})
+            this.setState({ loading: false, landingHome: true })
         }, 1000)
 
         setTimeout(() => {
-            if (this.state.mobile){
+            if (this.state.mobile) {
                 null
             } else {
                 topSection(
@@ -77,10 +77,10 @@ export default class Landing extends Component {
     }
 
     async aboutTransition() {
-        await this.setState({transition: true, txContent: true,})
+        await this.setState({ transition: true, txContent: true, })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         this.setState({
@@ -91,20 +91,20 @@ export default class Landing extends Component {
         aboutEnter(this.aboutHome)
 
         setTimeout(() => {
-            this.setState({landingHome: false})
+            this.setState({ landingHome: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3200)
     }
     async workTransition() {
-        await this.setState({transition: true, txContent: true,})
+        await this.setState({ transition: true, txContent: true, })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         this.setState({
@@ -115,20 +115,20 @@ export default class Landing extends Component {
         workEnter(this.workHome)
 
         setTimeout(() => {
-            this.setState({landingHome: false})
+            this.setState({ landingHome: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
     async contactTransition() {
-        await this.setState({transition: true, txContent: true,})
+        await this.setState({ transition: true, txContent: true, })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         this.setState({
@@ -139,17 +139,17 @@ export default class Landing extends Component {
         contactEnter(this.contactHome)
 
         setTimeout(() => {
-            this.setState({landingHome: false})
+            this.setState({ landingHome: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
 
-	render() {
+    render() {
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
         const activity = activity => this.activity = activity
@@ -174,121 +174,121 @@ export default class Landing extends Component {
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
 
-       const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
-       const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
-       const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const transitionFirst = transitionFirst => this.transitionFirst = transitionFirst
+        const transitionMain = transitionMain => this.transitionMain = transitionMain
+        const transitionSecond = transitionSecond => this.transitionSecond = transitionSecond
 
-		return(
+        return (
             <div className="landingContainer">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet" />
 
 
-                {this.state.loading?
+                {this.state.loading ?
                     <div ref={activity} className="activity">
-                        <Dots size={25} animating={this.state.loading} color="#0066ff"/>
+                        <Dots size={25} animating={this.state.loading} color="#0066ff" />
                     </div>
-                :
-                    this.state.mobile? <LandingMobile />:
-                    <div ref={landingHome} className="landingHome" style={{fontFamily: "Josefin Sans", display: this.state.landingHome?null:"none"}}>
-                        <Row>
-                            <Col lg={12} className="topSection">
-                                <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
+                    :
+                    this.state.mobile ? <LandingMobile /> :
+                        <div ref={landingHome} className="landingHome" style={{ fontFamily: "Josefin Sans", display: this.state.landingHome ? null : "none" }}>
+                            <Row>
+                                <Col lg={12} className="topSection">
+                                    <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")} /><br />
 
-                                <div className="name-container">
-                                    <h1 ref={Fname} className="name">Jabulani</h1>
-                                    <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
-                                </div>
+                                    <div className="name-container">
+                                        <h1 ref={Fname} className="name">Jabulani</h1>
+                                        <h1 ref={Lname} className="name" style={{ marginLeft: 5 }}>Kunene</h1>
+                                    </div>
 
-                                <div className="landing-right-col-container">
-                                    <div ref={summary} className="summary">
-                                        <div className="summary-details">
-                                            <hr ref={hr} className="hr"/>
-                                            <p className="summary-details-text">Software Developer (4+ years of experience)</p>
-                                            <p className="summary-details-text">Mechanical Engineer (BSc Hons)</p>
-                                            <p className="summary-details-text-wits">University of the Witswatersrand</p>
+                                    <div className="landing-right-col-container">
+                                        <div ref={summary} className="summary">
+                                            <div className="summary-details">
+                                                <hr ref={hr} className="hr" />
+                                                <p className="summary-details-text">Software Developer (6+ years of experience)</p>
+                                                <p className="summary-details-text">Mechanical Engineer (BSc Hons)</p>
+                                                <p className="summary-details-text-wits">University of the Witswatersrand</p>
+                                            </div>
+                                        </div>
+
+                                        <div className={this.state.aboutHover || this.state.workHover || this.state.contactHover ? "links-correction" : "links"}>
+                                            <p
+                                                ref={aboutLink}
+                                                className={this.state.aboutHover ? "link-hover" : "link"}
+                                                onClick={this.aboutTransition}
+                                                onMouseEnter={() => this.setState({ aboutHover: !this.state.aboutHover })}
+                                                onMouseLeave={() => this.setState({ aboutHover: !this.state.aboutHover })}>
+                                                About
+                                        </p>
+                                            <p
+                                                ref={workLink}
+                                                className={this.state.workHover ? "link-hover" : "link"}
+                                                onClick={this.workTransition}
+                                                onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
+                                                onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
+                                                Work
+                                        </p>
+                                            <p
+                                                ref={contactLink}
+                                                className={this.state.contactHover ? "link-hover" : "link"}
+                                                onClick={this.contactTransition}
+                                                onMouseEnter={() => this.setState({ contactHover: !this.state.contactHover })}
+                                                onMouseLeave={() => this.setState({ contactHover: !this.state.contactHover })}>
+                                                Contact
+                                        </p>
                                         </div>
                                     </div>
 
-                                    <div className={this.state.aboutHover||this.state.workHover||this.state.contactHover?"links-correction":"links"}>
-                                        <p
-                                            ref={aboutLink}
-                                            className={this.state.aboutHover?"link-hover":"link"}
-                                            onClick={this.aboutTransition}
-                                            onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
-                                            onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
-                                            About
-                                        </p>
-                                        <p
-                                            ref={workLink}
-                                            className={this.state.workHover?"link-hover":"link"}
-                                            onClick={this.workTransition}
-                                            onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
-                                            onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
-                                            Work
-                                        </p>
-                                        <p
-                                            ref={contactLink}
-                                            className={this.state.contactHover?"link-hover":"link"}
-                                            onClick={this.contactTransition}
-                                            onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
-                                            onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
-                                            Contact
-                                        </p>
-                                    </div>
+                                </Col>
+                                <div ref={whiteBox} className="whiteBox">
+                                    <img ref={me} className="me" src={require("../../Assets/Images/me3.jpg")} />
                                 </div>
-
-                            </Col>
-                            <div ref={whiteBox} className="whiteBox">
-                                <img ref={me} className="me" src={require("../../Assets/Images/me3.jpg")}/>
-                            </div>
-                        </Row>
-                    </div>
+                            </Row>
+                        </div>
 
                 }
 
-                {this.state.transition?
+                {this.state.transition ?
                     <div className="transition-container">
                         <div
                             ref={transitionFirst}
                             className="transition-first"
-                            >
+                        >
                         </div>
                         <div ref={transitionMain} className="transition-main">
-                            <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
+                            <div className="transition-content" style={{ display: this.state.txContent ? null : "none" }}>
                                 <p ref={FnameTx} className="name-tx">J</p>
-                                <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                                <p ref={LnameTx} className="name-tx" style={{ marginLeft: 5 }}>K</p>
                                 <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                             </div>
                         </div>
                         <div
                             ref={transitionSecond}
                             className="transition-second"
-                            >
+                        >
                         </div>
                     </div>
-                :null}
+                    : null}
 
-                {this.state.about?
+                {this.state.about ?
                     <div ref={aboutHome} className="aboutHome">
                         <About />
                     </div>
-                :null}
+                    : null}
 
-                {this.state.work?
+                {this.state.work ?
                     <div ref={workHome} className="workHome">
                         <Work />
                     </div>
-                :null}
+                    : null}
 
-                {this.state.contact?
+                {this.state.contact ?
                     <div ref={contactHome} className="contactHome">
                         <Contact />
                     </div>
-                :null}
+                    : null}
 
 
             </div>
-		)
-	}
+        )
+    }
 
 }

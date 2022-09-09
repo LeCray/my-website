@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
+import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
 
 import { Dots, Digital, Bounce } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
 import { Link } from 'react-router-dom'
 
-import {loading, topSection} from '../../Animation/Landing'
+import { loading, topSection } from '../../Animation/Landing'
 
-import {topSectionMobile, menu, menuOpen, menuClose} from '../../Animation/LandingMobile'
+import { topSectionMobile, menu, menuOpen, menuClose } from '../../Animation/LandingMobile'
 
-import {aboutEnter} from '../../Animation/About'
-import {workEnter} from '../../Animation/Work'
-import {contactEnter} from '../../Animation/Contact'
+import { aboutEnter } from '../../Animation/About'
+import { workEnter } from '../../Animation/Work'
+import { contactEnter } from '../../Animation/Contact'
 
 
 
@@ -23,7 +23,7 @@ import AboutMobile from '../About/AboutMobile'
 import ContactMobile from '../Contact/ContactMobile'
 
 
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
 
@@ -54,17 +54,17 @@ export default class LandingMobile extends Component {
         this.openCloseMenu = this.openCloseMenu.bind(this);
     }
 
-    componentWillMount(){
-        this.setState({height: window.innerHeight + 'px'});
+    componentWillMount() {
+        this.setState({ height: window.innerHeight + 'px' });
         if (this.state.width < 576) {
-            this.setState({mobile: true});
+            this.setState({ mobile: true });
         }
     }
 
     componentDidMount() {
 
         setTimeout(() => {
-            this.setState({loading: false, landingHome: true})
+            this.setState({ loading: false, landingHome: true })
         }, 1000)
 
         setTimeout(() => {
@@ -105,55 +105,55 @@ export default class LandingMobile extends Component {
     }
 
     aboutMenuLink() {
-        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+        menuClose(this.hamburger, this.hexagon, this.menuScreen, this.aboutLinkMenu, this.workLinkMenu, this.contactLinkMenu)
 
         setTimeout(() => {
-            this.setState({menuOpen: false})
+            this.setState({ menuOpen: false })
         }, 1000)
 
         setTimeout(() => {
-            scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+            scrollToComponent(this.about, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })
         }, 300)
     }
     workMenuLink() {
-        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+        menuClose(this.hamburger, this.hexagon, this.menuScreen, this.aboutLinkMenu, this.workLinkMenu, this.contactLinkMenu)
 
         setTimeout(() => {
-            this.setState({menuOpen: false})
+            this.setState({ menuOpen: false })
         }, 1000)
 
         setTimeout(() => {
-            scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+            scrollToComponent(this.work, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })
         }, 300)
     }
     contactMenuLink() {
-        menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+        menuClose(this.hamburger, this.hexagon, this.menuScreen, this.aboutLinkMenu, this.workLinkMenu, this.contactLinkMenu)
 
         setTimeout(() => {
-            this.setState({menuOpen: false})
+            this.setState({ menuOpen: false })
         }, 1000)
 
         setTimeout(() => {
-            scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})
+            scrollToComponent(this.contact, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })
         }, 300)
     }
 
     openCloseMenu() {
         if (this.state.menuOpen) {
 
-            menuClose(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+            menuClose(this.hamburger, this.hexagon, this.menuScreen, this.aboutLinkMenu, this.workLinkMenu, this.contactLinkMenu)
 
             setTimeout(() => {
-                this.setState({menuOpen: false})
+                this.setState({ menuOpen: false })
             }, 1000)
 
         } else {
-            this.setState({menuOpen: true})
-            menuOpen(this.hamburger,this.hexagon,this.menuScreen,this.aboutLinkMenu,this.workLinkMenu,this.contactLinkMenu)
+            this.setState({ menuOpen: true })
+            menuOpen(this.hamburger, this.hexagon, this.menuScreen, this.aboutLinkMenu, this.workLinkMenu, this.contactLinkMenu)
         }
     }
 
-	render() {
+    render() {
         const Landing = landingContainer => this.landingContainer = landingContainer
         const flamingo = flamingo => this.flamingo = flamingo
         const activity = activity => this.activity = activity
@@ -183,36 +183,36 @@ export default class LandingMobile extends Component {
         const workHome = workHome => this.workHome = workHome
         const contactHome = contactHome => this.contactHome = contactHome
 
-		return(
+        return (
             <div className="landing-container">
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet" />
 
 
-                {this.state.loading?
+                {this.state.loading ?
                     <div ref={activity} className="activity">
-                        <Dots size={25} animating={this.state.loading} color="#808080"/>
+                        <Dots size={25} animating={this.state.loading} color="#808080" />
                     </div>
-                :
+                    :
                     <div>
                         {/*MENU SECTION*/}
                         <div className="hamburger-container" >
-                            <div ref={hamburger} onClick={this.openCloseMenu} style={{"z-index": 99}}>
-                                {this.state.menuOpen?
+                            <div ref={hamburger} onClick={this.openCloseMenu} style={{ "z-index": 99 }}>
+                                {this.state.menuOpen ?
                                     <img
                                         className="hamburger"
                                         src={require("../../Assets/Images/cross.svg")}
                                     />
-                                :
+                                    :
                                     <img
                                         className="hamburger"
                                         src={require("../../Assets/Images/hamburger.svg")}
                                     />
                                 }
-                                <img ref={hexagon} className="hamburger-hexagon" src={require("../../Assets/Images/hamburger-hexagon.svg")}/>
+                                <img ref={hexagon} className="hamburger-hexagon" src={require("../../Assets/Images/hamburger-hexagon.svg")} />
                             </div>
                         </div>
 
-                        <div ref={menuScreen} className="menu-screen" style={{display: this.state.menuOpen?null:"none"}}>
+                        <div ref={menuScreen} className="menu-screen" style={{ display: this.state.menuOpen ? null : "none" }}>
                             <p ref={aboutLinkMenu} className="link-mobile-menu" onClick={this.aboutMenuLink}>
                                 ABOUT
                             </p>
@@ -231,20 +231,20 @@ export default class LandingMobile extends Component {
                         </div>
                         {/*MENU SECTION*/}
 
-                        <div ref={landingHome} className="landing-home" style={{fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch"}}>
+                        <div ref={landingHome} className="landing-home" style={{ fontFamily: "Josefin Sans", "-webkit-overflow-scrolling": "touch" }}>
 
                             <Row>
 
                                 <Col lg={12} className="top-section">
-                                    <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")}/><br/>
+                                    <img ref={rocket} className="rocket" src={require("../../Assets/Images/thunder.svg")} /><br />
 
                                     <h1 ref={Fname} className="name">Jabulani</h1>
-                                    <h1 ref={Lname} className="name" style={{marginLeft: 5}}>Kunene</h1>
-                                    <hr ref={hr} className={this.state.mobile?"hr-mobile":"hr"}/>
+                                    <h1 ref={Lname} className="name" style={{ marginLeft: 5 }}>Kunene</h1>
+                                    <hr ref={hr} className={this.state.mobile ? "hr-mobile" : "hr"} />
 
 
                                     <div ref={summary} >
-                                        <h6 className="summary-mobile">Software Developer (4+ years exp)</h6>
+                                        <h6 className="summary-mobile">Software Developer (6+ years exp)</h6>
                                         {/*<h6 className="summary-mobile">ReactJS, ExpressJS, Ruby on Rails</h6>*/}
                                         <h6 className="summary-mobile">Mechanical Engineer (BSc Hons)</h6>
                                         <h6 className="summary-mobile">University of the Witwatersrand</h6>
@@ -252,20 +252,20 @@ export default class LandingMobile extends Component {
 
 
                                     <div ref={whiteBox} className="white-box">
-                                        <img ref={me} className="me-mobile" src={require("../../Assets/Images/me3.jpg")}/>
+                                        <img ref={me} className="me-mobile" src={require("../../Assets/Images/me3.jpg")} />
                                     </div>
 
 
 
 
                                     <div className="links-mobile">
-                                        <p ref={aboutLink} className="link-mobile" onClick={()=>scrollToComponent(this.about,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
+                                        <p ref={aboutLink} className="link-mobile" onClick={() => scrollToComponent(this.about, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })}>
                                             About
                                         </p>
-                                        <p ref={workLink} className="link-mobile" onClick={()=>scrollToComponent(this.work,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
+                                        <p ref={workLink} className="link-mobile" onClick={() => scrollToComponent(this.work, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })}>
                                             Work
                                         </p>
-                                        <p ref={contactLink} className="link-mobile" onClick={()=>scrollToComponent(this.contact,{offset:0,align:'top',ease:'inOutCirc',duration:1500})}>
+                                        <p ref={contactLink} className="link-mobile" onClick={() => scrollToComponent(this.contact, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })}>
                                             Contact
                                         </p>
                                     </div>
@@ -296,7 +296,7 @@ export default class LandingMobile extends Component {
 
 
             </div>
-		)
-	}
+        )
+    }
 
 }

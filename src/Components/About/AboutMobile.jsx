@@ -135,7 +135,7 @@ export default class AboutMobile extends Component {
                                 </ul>
 
                                 <br />
-                                    In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
+                                In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
                                     part-time (at the Univeristy of the Witswatersrand). It was there that I started working on a cryptocurrency market algorithm
                                     that could trade the markets autonomously using Artificial Intelligence (AI). This was with the help of my at the time lecturer&#8212;a Computer Science PhD student whose
                                     own research was on applying AI to finance.
@@ -145,14 +145,13 @@ export default class AboutMobile extends Component {
                                     freelance software engineer, and living independantly.
                                     <br /><br />
                                     Towards the end of 2021, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
-                                    and founded Paradise Eats&#8212;a food delivery platform for the area (Uber Eats hasn't offered their services there yet).
+                                    and founded Paradise Eats&#8212;a food delivery application for the area (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
                                     In the current year 2022, I continued developing Paradise Eats full-time,
-                                    and managed to publish the Android apps to Google Play Store (iOS coming soon). We're currently in the process of onboarding all
-                                    the restaurants in the area, with plans of expanding operations up along the coast to Knysna, Mosselbay, Oudtshoorn, and so on.
+                                    and managed to publish the Android apps to Google Play Store in July.
                                     <br /><br />
-                                    Next year, 2023, I plan on finishing my engineering degree. This will be possible if I can find full-time work, with a consistent income.
-                                    As opposed to freelancing again, where my income is inconsistent, and without the risk of accepting too many projects at once.
+                                    Next year, 2023, I plan on finishing my engineering degree. This will be possible by grounding myself in full-time work, with a consistent income.
+                                    As opposed to freelancing again, where my income is inconsistent, and without the added difficulty of managing too many projects at once.
                             </p>
 
                             <hr className="hrLine" />

@@ -48,7 +48,7 @@ export class Cactus extends Component {
                     </div>
                     <p className="mad-content" style={{ marginTop: 10 }}>
                         Every manuscript I work on always teaches me something new in the field (mostly centered around the use of
-                        Artificial Intelligence), and continuously deepens my curiosity to keep learning, expanding, and growing.
+                        AI), and continuously deepens my curiosity to keep learning, expanding, and growing.
                     </p>
 
                 </div>

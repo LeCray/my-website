@@ -19,17 +19,6 @@ import { Research } from './Content/Research';
 import './Styles/Work.css';
 import './Styles/WorkMobile.css';
 
-
-
-
-
-
-
-
-
-
-
-
 export default class Work extends Component {
 
     constructor(props) {

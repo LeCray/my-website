@@ -11,8 +11,11 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Work from '../Work/Work';
 import LandingMobile from './LandingMobile';
-import './styles/Landing.css';
-import './styles/LandingMobile.css';
+
+//import './Styles/Landing.css';
+//import './Styles/LandingMobile.css';
+import './styles/Landing.css';  //DEPLOY
+import './styles/LandingMobile.css';    //DEPLOY
 import './Styles/LandingTransitions.css';
 
 

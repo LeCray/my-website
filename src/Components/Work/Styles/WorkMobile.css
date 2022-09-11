@@ -10,7 +10,7 @@
 		letter-spacing: 2px;
 		text-align: center;
 		color: #fff;
-		padding-top: 50%;
+		padding-top: 10%;
 		font-weight: bold;
 
 	}
@@ -54,7 +54,18 @@
 		flex-direction: column;
 		justify-content: space-between;
 		height: 100%
-	}
+    }
+    .about-white2 {
+        display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #fff;
+        padding-top: 40%;
+        font-weight: bold;
+    }
 	.arrow-container {
 		text-align: center;
 		padding-bottom: 20px !important

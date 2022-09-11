@@ -122,7 +122,7 @@ export default class WorkMobile extends Component {
 
                 <div style={{ fontFamily: "Josefin Sans" }}>
                     <div className="work-left-col">
-                        <div className="work-left-col-content about-white">
+                        <div className="work-left-col-content about-white2">
                             <div>
                                 <h2>WORK</h2>
                                 {/*<hr className="workHr"/>*/}

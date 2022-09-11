@@ -26,7 +26,7 @@ export class Design extends Component {
                     <h4>Space Engineering (2021)</h4>
 
                     <div className="design-logo-container">
-                        <img className="design-logo" src={require("../../../Assets/Images/design_project.png")} />
+                        <img className="design-logo" alt="design paper" src={require("../../../Assets/Images/design_project.png")} />
                     </div>
 
                     <p className='exec-summary'>Executive Summary:</p>
@@ -39,7 +39,7 @@ export class Design extends Component {
                     </p>
 
                     <div className="design-logo-container">
-                        <img className="design-logo" src={require("../../../Assets/Images/asteroid_mining_design.png")} />
+                        <img className="design-logo" alt="mining design" src={require("../../../Assets/Images/asteroid_mining_design.png")} />
                     </div>
                     <p className="mad-content">
                         As is seen in the diagram above, inflatable, passively cooled cryopumps trap the released water vapor as ice. The design attempts to realise atleast

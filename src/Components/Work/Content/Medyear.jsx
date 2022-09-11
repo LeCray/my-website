@@ -26,7 +26,7 @@ export class Medyear extends Component {
                     <h4>Computational Genomics (2021 - 2022)</h4>
 
                     <div className="medyear-logo-container">
-                        <img className="design-logo" src={require("../../../Assets/Images/medyear.png")} />
+                        <img className="design-logo" alt="medyear logo" src={require("../../../Assets/Images/medyear.png")} />
                     </div>
 
                     <p className="mad-content">

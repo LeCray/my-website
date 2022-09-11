@@ -26,7 +26,7 @@ export class Cactus extends Component {
                     <h4>Scientific Research Papers (2021 - present)</h4>
 
                     <div className="design-logo-container">
-                        <img className="cactus-logo" src={require("../../../Assets/Images/cactus.png")} />
+                        <img className="cactus-logo" alt="cactus-logo" src={require("../../../Assets/Images/cactus.png")} />
                     </div>
 
                     <p className="mad-content">

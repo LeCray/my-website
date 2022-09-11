@@ -16,7 +16,7 @@ export class Research extends Component {
                 <h4>Artificial Intelligence (2020)</h4>
 
                 <div className="design-logo-container">
-                    <img className="design-logo" src={require("../../../Assets/Images/research_pic.png")} />
+                    <img className="design-logo" alt="research paper" src={require("../../../Assets/Images/research_pic.png")} alt="Research paper" />
                 </div>
 
                 <p className='exec-summary'>Executive Summary:</p>

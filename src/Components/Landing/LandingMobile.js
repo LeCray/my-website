@@ -12,19 +12,6 @@ import ContactMobile from '../Contact/ContactMobile';
 import WorkMobile from '../Work/WorkMobile';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default class LandingMobile extends Component {
 
     constructor(props) {

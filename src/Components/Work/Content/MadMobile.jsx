@@ -16,7 +16,7 @@ export class MadMobile extends Component {
                 <h4>Real time vehicle diagnostics (2017 - 2018)</h4>
 
                 <div className="mad-mobile-logo-container">
-                    <img className="mad-mobile-logo" src={require("../../../Assets/Images/mad_logo.png")} />
+                    <img className="mad-mobile-logo" alt="mad mobile" src={require("../../../Assets/Images/mad_logo.png")} />
                 </div>
 
                 <p className="mad-content">

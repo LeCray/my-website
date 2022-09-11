@@ -26,7 +26,7 @@ export class Paradise extends Component {
                     <h4>A food delivery platform  (2021 - present)</h4>
 
                     <div className="design-logo-container">
-                        <img className="paradise-logo" src={require("../../../Assets/Images/paradise_logo.png")} />
+                        <img className="paradise-logo" alt="paradise eats logo" src={require("../../../Assets/Images/paradise_logo.png")} />
                     </div>
 
                     <p className="mad-content">

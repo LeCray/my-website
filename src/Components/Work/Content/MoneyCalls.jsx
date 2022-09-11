@@ -16,7 +16,7 @@ export class MoneyCalls extends Component {
                 <h4>A foreign exchange web application (2017 - 2018)</h4>
 
                 <div className="market-logo-container">
-                    <img className="market-logo" src={require("../../../Assets/Images/market.png")} />
+                    <img className="market-logo" alt="market logo" src={require("../../../Assets/Images/market.png")} />
                 </div>
 
                 <p className="money-calls-content">

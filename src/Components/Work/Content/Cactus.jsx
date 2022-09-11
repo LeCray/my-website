@@ -30,7 +30,7 @@ export class Cactus extends Component {
                     </div>
 
                     <p className="mad-content">
-                        <a href="https://cactusglobal.com/" target="">Cactus</a> is a global technology company accelerating
+                        <a href="https://cactusglobal.com/" target=""><u>Cactus</u></a> is a global technology company accelerating
                         scientific advancement.
                         <br /><br />
                         Driven by its mission and strong culture, it aims to make research available

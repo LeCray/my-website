@@ -30,7 +30,7 @@ export class Medyear extends Component {
                     </div>
 
                     <p className="mad-content">
-                        <a href="https://www.medyear.com/" target="_blank">Medyear</a> is an American healthcare technology company based in New York, USA. They bring
+                        <a href="https://www.medyear.com/" target="_blank"><u>Medyear</u></a> is an American healthcare technology company based in New York, USA. They bring
                         health records and people together in grounbreaking new ways, with records from over 10,000 hospitals and clinics.
                     <br /><br />
 
@@ -40,9 +40,9 @@ export class Medyear extends Component {
 
                     The solution I implemented consisted of sequencing people's DNA, and analysing their single-nucleotide polymorphisms (SNPs).
                     Their variants were then run through several industry standard bioinformatics tools&#8212;such as
-                    <a href="https://sift.bii.a-star.edu.sg/" target="_blank"> SIFT</a>,
-                    <a href="https://www.ensembl.org/info/docs/tools/vep/index.html" target="_blank"> Ensembl Variant Effect Predictor (VEP)</a>,
-                    and <a href="https://els2.comotion.uw.edu/product/cadd-scores" target="_blank">CADD</a>&#8212;to generate one final risk prediction score.
+                    <a href="https://sift.bii.a-star.edu.sg/" target="_blank"> <u>SIFT</u></a>,
+                    <a href="https://www.ensembl.org/info/docs/tools/vep/index.html" target="_blank"> <u>Ensembl Variant Effect Predictor (VEP)</u></a>,
+                    and <a href="https://els2.comotion.uw.edu/product/cadd-scores" target="_blank"><u>CADD</u></a>&#8212;to generate one final risk prediction score.
                     <br /><br />
                     This score was then presented to users, with the intention of altering their behaviour to be more careful
                     if they knew they had a high risk of falling severly ill when diagnosed with COVID-19.

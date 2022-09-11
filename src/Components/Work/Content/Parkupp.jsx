@@ -21,7 +21,7 @@ export class Parkupp extends Component {
 
                 <p className="mad-content">
                     I was a co-founder and one of only two developers initially at
-                    <a href="https://parkupp.co.za/" target="_blank"> Parkupp</a>&#8212;a proptech startup that focuses on helping
+                    <a href="https://parkupp.co.za/" target="_blank"> <u>Parkupp</u></a>&#8212;a proptech startup that focuses on helping
                     property owners utilise unoccupied space.
                 <br /><br />
                 Owners of parking space can list their parking on the platform and drivers that
@@ -35,7 +35,7 @@ export class Parkupp extends Component {
                 </div>
                 <p className="mad-content">
                     Recently this year (2022), Parkupp got acquired by real estate investment company Docklands Ventures. Read more about the acquisition
-                <a href="https://disrupt-africa.com/2022/02/09/sa-on-demand-startup-parkupp-acquired-by-docklands-ventures/" target="_blank"> here</a>.
+                <a href="https://disrupt-africa.com/2022/02/09/sa-on-demand-startup-parkupp-acquired-by-docklands-ventures/" target="_blank"> <u>here</u></a>.
             </p>
                 <a href="https://parkupp.co.za" target="_blank">
                     <img className="parkupp-img" src={require("../../../Assets/Images/parkupp.png")} />

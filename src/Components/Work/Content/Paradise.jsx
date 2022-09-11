@@ -31,7 +31,7 @@ export class Paradise extends Component {
 
                     <p className="mad-content">
                         <a href="https://play.google.com/store/apps/details?id=io.instamobile.restaurant.rn.android" target="_blank">
-                            Paradise Eats
+                            <u>Paradise Eats</u>
                         </a> is my attempt at an Uber Eats clone for smaller towns that still don't have any
                         food delivery solutions, but still have several great restaurants.
                         <br /><br />

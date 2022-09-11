@@ -147,7 +147,7 @@ export default class AboutMobile extends Component {
                                     Towards the end of 2021, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
                                     and founded Paradise Eats&#8212;a food delivery platform for the area (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
-                                    In the current year 2022, I continued working on Paradise Eats full-time,
+                                    In the current year 2022, I continued developing Paradise Eats full-time,
                                     and managed to publish the Android apps to Google Play Store (iOS coming soon). We're currently in the process of onboarding all
                                     the restaurants in the area, with plans of expanding operations up along the coast to Knysna, Mosselbay, Oudtshoorn, and so on.
                                     <br /><br />

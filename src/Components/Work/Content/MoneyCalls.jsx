@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-import Ionicon from 'react-ionicons'
-import { Link } from 'react-router-dom'
 
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container,
-    Row,
-    Col,
-    Jumbotron,
-    Button
-} from 'react-bootstrap';
 
 
 

@@ -1,30 +1,26 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
-
-
-import { Dots, Digital, Bounce } from 'react-activity';
+import { Dots } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
-import { Link } from 'react-router-dom'
-
-import { loading, topSection } from '../../Animation/Landing'
-
-import { topSectionMobile, menu, menuOpen, menuClose } from '../../Animation/LandingMobile'
-
-import { aboutEnter } from '../../Animation/About'
-import { workEnter } from '../../Animation/Work'
-import { contactEnter } from '../../Animation/Contact'
-
-
-
-
-import WorkMobile from '../Work/WorkMobile'
-import AboutMobile from '../About/AboutMobile'
-import ContactMobile from '../Contact/ContactMobile'
-
-
-import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
+import { Col, Row } from 'react-bootstrap';
 import scrollToComponent from 'react-scroll-to-component';
+import { aboutEnter } from '../../Animation/About';
+import { contactEnter } from '../../Animation/Contact';
+import { menu, menuClose, menuOpen, topSectionMobile } from '../../Animation/LandingMobile';
+import { workEnter } from '../../Animation/Work';
+import AboutMobile from '../About/AboutMobile';
+import ContactMobile from '../Contact/ContactMobile';
+import WorkMobile from '../Work/WorkMobile';
+
+
+
+
+
+
+
+
+
+
+
 
 
 

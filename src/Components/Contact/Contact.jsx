@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
-
-import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
-import { Link } from 'react-router-dom'
+import { Col, Row } from 'react-bootstrap';
+import { aboutEnter } from '../../Animation/About';
+import { contactColumns } from '../../Animation/Contact';
+import { Transition } from '../../Animation/Transition';
+import { workEnter } from '../../Animation/Work';
+import About from '../About/About';
+import Landing from '../Landing/Landing';
+import Work from '../Work/Work';
+import './Styles/Contact.css';
+import './Styles/ContactMobile.css';
 
 
-import './Styles/Contact.css'
-import './Styles/ContactMobile.css'
 
-import { contactColumns } from '../../Animation/Contact'
-import { aboutEnter } from '../../Animation/About'
-import { workEnter } from '../../Animation/Work'
-import { Transition } from '../../Animation/Transition'
 
-import Landing from '../Landing/Landing'
-import About from '../About/About'
-import Work from '../Work/Work'
 
-import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
-import scrollToComponent from 'react-scroll-to-component';
+
 
 
 

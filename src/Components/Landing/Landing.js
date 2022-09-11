@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
-
-import { Dots, Digital, Bounce } from 'react-activity';
+import { Dots } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
-import { Link } from 'react-router-dom'
-
-import { loading, topSection } from '../../Animation/Landing'
-import { aboutEnter } from '../../Animation/About'
-import { workEnter } from '../../Animation/Work'
-import { contactEnter } from '../../Animation/Contact'
-
-import { Transition } from '../../Animation/Transition'
-
-import './styles/Landing.css'
-import './styles/LandingMobile.css'
-import './Styles/LandingTransitions.css'
-
-import LandingMobile from './LandingMobile'
-import Work from '../Work/Work'
-import About from '../About/About'
-import Contact from '../Contact/Contact'
-
-
-import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
-import scrollToComponent from 'react-scroll-to-component';
-
-
+import { Col, Row } from 'react-bootstrap';
+import { aboutEnter } from '../../Animation/About';
+import { contactEnter } from '../../Animation/Contact';
+import { topSection } from '../../Animation/Landing';
+import { Transition } from '../../Animation/Transition';
+import { workEnter } from '../../Animation/Work';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Work from '../Work/Work';
+import LandingMobile from './LandingMobile';
+import './styles/Landing.css';
+import './styles/LandingMobile.css';
+import './Styles/LandingTransitions.css';
 
 
 export default class Landing extends Component {

@@ -1,35 +1,27 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
-
-import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
-import { Link } from 'react-router-dom'
-
-
-import './Styles/Work.css'
-import './Styles/WorkMobile.css'
-
-
-import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
-import scrollToComponent from 'react-scroll-to-component';
-
-import Landing from '../Landing/Landing'
-import About from '../About/About'
-import Contact from '../Contact/Contact'
-
-import { Design } from './Content/Design'
-import { Research } from './Content/Research'
-import { MadMobile } from './Content/MadMobile'
-import { Parkupp } from './Content/Parkupp'
-import { MoneyCalls } from './Content/MoneyCalls'
-import { GalxyBit } from './Content/GalxyBit'
-
-import { Paradise } from './Content/Paradise'
-import { Medyear } from './Content/Medyear'
-import { Cactus } from './Content/Cactus'
-
 import { ArrowDown } from 'react-feather';
+import scrollToComponent from 'react-scroll-to-component';
+import { Cactus } from './Content/Cactus';
+import { Design } from './Content/Design';
+import { GalxyBit } from './Content/GalxyBit';
+import { MadMobile } from './Content/MadMobile';
+import { Medyear } from './Content/Medyear';
+import { MoneyCalls } from './Content/MoneyCalls';
+import { Paradise } from './Content/Paradise';
+import { Parkupp } from './Content/Parkupp';
+import { Research } from './Content/Research';
+import './Styles/Work.css';
+import './Styles/WorkMobile.css';
+
+
+
+
+
+
+
+
+
 
 export default class WorkMobile extends Component {
 

@@ -224,7 +224,7 @@ export default class About extends Component {
                                 <br />
                                 <h5 className="heading">My Passions & Skills</h5>
                                 <p style={{ textAlign: "justify" }}>
-                                    In my first year of engineering studies, I began learning how to trade the financial markets.
+                                    In my first year of engineering studies (2014), I began learning how to trade the financial markets.
                                     <br /><br />
                                     I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to learn and
                                     become familiar with web development technologies because I made the decision to build GalxyBit&#8212;a cryptocurrency exchange offering

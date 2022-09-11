@@ -62,7 +62,7 @@ export class Medyear extends Component {
                     and <a href="https://els2.comotion.uw.edu/product/cadd-scores" target="_blank">CADD</a>&#8212;to generate one final risk prediction score.
                     <br /><br />
                     This score was then presented to users, with the intention of altering their behaviour to be more careful
-                    if they knew that they had a high risk of falling severly ill when diagnosed with COVID-19.
+                    if they knew they had a high risk of falling severly ill when diagnosed with COVID-19.
                     E.g., potentially ending up in ICU (high risk), compared to being completely asymptomatic (low risk).
 
                     <br /><br />

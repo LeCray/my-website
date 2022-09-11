@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron} from 'react-bootstrap';
+import { Input, Button, Fa, Card, CardBody, ModalFooter, ModalBody, ModalHeader, Modal } from 'mdbreact';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'react-bootstrap';
 
 import { Dots, Digital } from 'react-activity';
 import 'react-activity/dist/react-activity.css';
@@ -10,16 +10,16 @@ import { Link } from 'react-router-dom'
 import './Styles/Contact.css'
 import './Styles/ContactMobile.css'
 
-import {contactColumns} from '../../Animation/Contact'
-import {aboutEnter} from '../../Animation/About'
-import {workEnter} from '../../Animation/Work'
-import {Transition} from '../../Animation/Transition'
+import { contactColumns } from '../../Animation/Contact'
+import { aboutEnter } from '../../Animation/About'
+import { workEnter } from '../../Animation/Work'
+import { Transition } from '../../Animation/Transition'
 
 import Landing from '../Landing/Landing'
 import About from '../About/About'
 import Work from '../Work/Work'
 
-import {TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineLite, Elastic, Circ, Back, Power4, TimelineMax } from "gsap/TweenMax";
 import scrollToComponent from 'react-scroll-to-component';
 
 
@@ -45,7 +45,7 @@ export default class Contact extends Component {
     }
 
     componentDidMount() {
-        this.setState({columns: true})
+        this.setState({ columns: true })
         contactColumns(
             this.contactLeftCol, this.contactRightColContent,
             this.state.width, this.contactStill, this.contactLinkHome,
@@ -64,18 +64,18 @@ export default class Contact extends Component {
         //homeEnter(this.home)
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
 
         setTimeout(() => {
-            this.setState({contact: false})
+            this.setState({ contact: false })
         }, 1000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 2700)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
     async aboutTransition() {
@@ -88,19 +88,19 @@ export default class Contact extends Component {
         })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         aboutEnter(this.aboutHome)
 
         setTimeout(() => {
-            this.setState({contact: false})
+            this.setState({ contact: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
     async workTransition() {
@@ -113,25 +113,25 @@ export default class Contact extends Component {
         })
         Transition(
             this.transitionFirst, this.transitionMain,
-            this.transitionSecond,this.FnameTx,this.LnameTx,
+            this.transitionSecond, this.FnameTx, this.LnameTx,
             this.state.width, this.learnTx
         )
         workEnter(this.workHome)
 
         setTimeout(() => {
-            this.setState({contact: false})
+            this.setState({ contact: false })
         }, 2000)
         setTimeout(() => {
-            this.setState({txContent: false})
+            this.setState({ txContent: false })
         }, 3000)
         setTimeout(() => {
-            this.setState({transition: false})
+            this.setState({ transition: false })
         }, 3300)
     }
 
 
 
-	render() {
+    render() {
         const home = home => this.home = home
         const aboutHome = aboutHome => this.aboutHome = aboutHome
         const workHome = workHome => this.workHome = workHome
@@ -145,19 +145,19 @@ export default class Contact extends Component {
         const contactLinkWork = contactLinkWork => this.contactLinkWork = contactLinkWork
         const contactLink = contactLink => this.contactLink = contactLink
 
-        const transitionFirst  = transitionFirst  => this.transitionFirst  = transitionFirst
-        const transitionMain  = transitionMain  => this.transitionMain  = transitionMain
-        const transitionSecond  = transitionSecond  => this.transitionSecond  = transitionSecond
+        const transitionFirst = transitionFirst => this.transitionFirst = transitionFirst
+        const transitionMain = transitionMain => this.transitionMain = transitionMain
+        const transitionSecond = transitionSecond => this.transitionSecond = transitionSecond
         const FnameTx = FnameTx => this.FnameTx = FnameTx
         const LnameTx = LnameTx => this.LnameTx = LnameTx
         const learnTx = learnTx => this.learnTx = learnTx
 
-		return(
+        return (
             <div>
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet"/>
-                {this.state.contact?
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet" />
+                {this.state.contact ?
 
-                    <div style={{fontFamily: "Josefin Sans"}}>
+                    <div style={{ fontFamily: "Josefin Sans" }}>
 
                         <div ref={contactLeftCol} className="contactLeftCol">
                             <div className="contactWhite">
@@ -166,34 +166,34 @@ export default class Contact extends Component {
                                 <div className="contactLinks">
                                     <div className="contact-link-content">
                                         <p
-                                            className={this.state.homeHover?"contactLinkHover":"contactLink"}
+                                            className={this.state.homeHover ? "contactLinkHover" : "contactLink"}
                                             ref={contactLinkHome}
                                             onClick={this.homeTransition}
-                                            onMouseEnter={() => this.setState({homeHover: !this.state.homeHover})}
-                                            onMouseLeave={() => this.setState({homeHover: !this.state.homeHover})}>
+                                            onMouseEnter={() => this.setState({ homeHover: !this.state.homeHover })}
+                                            onMouseLeave={() => this.setState({ homeHover: !this.state.homeHover })}>
                                             Home
                                         </p>
                                         <p
-                                            className={this.state.aboutHover||this.state.about?"contactLinkHover":"contactLink"}
+                                            className={this.state.aboutHover || this.state.about ? "contactLinkHover" : "contactLink"}
                                             ref={contactLinkAbout}
                                             onClick={this.aboutTransition}
-                                            onMouseEnter={() => this.setState({aboutHover: !this.state.aboutHover})}
-                                            onMouseLeave={() => this.setState({aboutHover: !this.state.aboutHover})}>
+                                            onMouseEnter={() => this.setState({ aboutHover: !this.state.aboutHover })}
+                                            onMouseLeave={() => this.setState({ aboutHover: !this.state.aboutHover })}>
                                             About
                                         </p>
                                         <p
-                                            className={this.state.workHover||this.state.work?"contactLinkHover":"contactLink"}
+                                            className={this.state.workHover || this.state.work ? "contactLinkHover" : "contactLink"}
                                             ref={contactLinkWork}
                                             onClick={this.workTransition}
-                                            onMouseEnter={() => this.setState({workHover: !this.state.workHover})}
-                                            onMouseLeave={() => this.setState({workHover: !this.state.workHover})}>
+                                            onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
+                                            onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
                                             Work
                                         </p>
                                         <p
-                                            className={this.state.contactHover||this.state.contact?"contactLinkHover":"contactLink"}
+                                            className={this.state.contactHover || this.state.contact ? "contactLinkHover" : "contactLink"}
                                             ref={contactLink}
-                                            onMouseEnter={() => this.setState({contactHover: !this.state.contactHover})}
-                                            onMouseLeave={() => this.setState({contactHover: !this.state.contactHover})}>
+                                            onMouseEnter={() => this.setState({ contactHover: !this.state.contactHover })}
+                                            onMouseLeave={() => this.setState({ contactHover: !this.state.contactHover })}>
                                             Contact
                                         </p>
                                     </div>
@@ -205,12 +205,12 @@ export default class Contact extends Component {
                             <div
                                 ref={contactRightColContent}
                                 className="contactRightColContent"
-                                style={{"-webkit-overflow-scrolling": "touch", display: this.state.columns?null:"none"}}>
+                                style={{ "-webkit-overflow-scrolling": "touch", display: this.state.columns ? null : "none" }}>
 
                                 <h4 className="contact-heading">Looking forward to hearing from you!</h4>
-                                <h5>I am available for full-time, part-time and freelance work </h5>
-                                <hr/>
-                                <br/>
+                                <h5>I am available for full-time, part-time, and freelance work </h5>
+                                <hr />
+                                <br />
 
                                 <h4 className="name-contact">Jabulani Kunene</h4>
 
@@ -218,60 +218,62 @@ export default class Contact extends Component {
                                 <Row>
                                     <Col className="contact-container" lg={6}>
                                         <h5 className="contact-details">Email:</h5>
-                                        <h5 className="contact-details">Contact: </h5>
+                                        <h5 className="contact-details">WhatsApp: </h5>
+                                        <h5 className="contact-details">Phone: </h5>
                                     </Col>
                                     <Col className="contact-container-2" lg={6}>
                                         <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
-                                        <h5 className="contact-details-2">081 741 2792</h5>
+                                        <h5 className="contact-details-2">+27 81 741 2792</h5>
+                                        <h5 className="contact-details-2">+27 64 020 4711</h5>
                                     </Col>
                                 </Row>
-                                <img className="me-contact" src={require("../../Assets/Images/me3.jpg")}/>
+                                <img className="me-contact" src={require("../../Assets/Images/me3.jpg")} />
 
                             </div>
                         </div>
                     </div>
-                :null}
+                    : null}
 
-                <div className="transition-container" style={{display: this.state.transition?null:"none"}}>
+                <div className="transition-container" style={{ display: this.state.transition ? null : "none" }}>
                     <div
                         ref={transitionFirst}
                         className="transition-first"
-                        >
+                    >
                     </div>
                     <div ref={transitionMain} className="transition-main">
-                        <div className="transition-content" style={{display: this.state.txContent?null:"none"}}>
+                        <div className="transition-content" style={{ display: this.state.txContent ? null : "none" }}>
                             <p ref={FnameTx} className="name-tx">J</p>
-                            <p ref={LnameTx} className="name-tx" style={{marginLeft: 5}}>K</p>
+                            <p ref={LnameTx} className="name-tx" style={{ marginLeft: 5 }}>K</p>
                             <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
                         </div>
                     </div>
                     <div
                         ref={transitionSecond}
                         className="transition-second"
-                        >
+                    >
                     </div>
                 </div>
 
-                {this.state.home?
+                {this.state.home ?
                     <div ref={home} className="home">
                         <Landing />
                     </div>
-                :null}
+                    : null}
 
 
-                {this.state.about?
+                {this.state.about ?
                     <div ref={aboutHome} className="aboutHome">
                         <About />
                     </div>
-                :null}
+                    : null}
 
-                {this.state.work?
+                {this.state.work ?
                     <div ref={workHome} className="workHome">
                         <Work />
                     </div>
-                :null}
+                    : null}
             </div>
-		)
-	}
+        )
+    }
 
 }

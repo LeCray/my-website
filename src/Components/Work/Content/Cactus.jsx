@@ -39,45 +39,36 @@ export class Cactus extends Component {
         return (
             <div>
                 <div ref={(section) => { this.design = section; }}>
-                    <h2 className="heading" style={{ color: "#737373" }}>Cactus Global</h2>
-                    <h4>Doctoral Research Papers</h4>
+                    <h2 className="heading" style={{ color: "#737373" }}>Cactus Communications</h2>
+                    <h4>Scientific Research Papers (2021 - present)</h4>
 
                     <div className="design-logo-container">
-                        <img className="design-logo" src={require("../../../Assets/Images/design_pic.png")} />
+                        <img className="cactus-logo" src={require("../../../Assets/Images/cactus.png")} />
                     </div>
 
-                    <p className='exec-summary'>Executive Summary:</p>
                     <p className="mad-content">
-                        This paper presents the methodology to design the energy absorption system of a robotic lander
-                        for a soft landing on an extraterrestrial surface that is characterised by extremely low gravity
-                        e.g.  an asteroid.  The landing gear preliminary design is based on the requirements of the stability
-                        distance and ground clearance.
-                <br /><br />
-                A  three-dimensional  cantilever  design  lander  was  modelled  in  a  six  degree  of  freedom
-                environment  using MATLAB/Simscape  as  the  preferred  multibody  dynamics  software.   Analysis  of  the
-                landing  dynamics  of the lander with spring and damper absorber elements was performed to determine the
-                preliminary design parameters.
-                <br /><br />
-                Results show that the spring and damper absorber elements provide an effective energy absorption mechanism
-                for landing on an arbitrarily sloped surface at nominal velocities.
-                <br /><br />
-                The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design
-                parameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
-                to its high strength-to-weight ratio and general wide spread use in aerospace applications.
-            </p>
-                    {/*
-            <div className="design-poster-container" onClick={()=> this.setState({design_poster: true})}>
-              <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
-            </div>
-            */}
+                        <a href="https://cactusglobal.com/" target="">Cactus</a> is a global technology company accelerating
+                        scientific advancement.
+                        <br /><br />
+                        Driven by its mission and strong culture, it aims to make research available
+                        to the community around the world and accelerate research impact.
+                        <br /><br />
+                        As one of their senior editors, I review and edit the latest doctoral/postdoctoral research papers in the fields of
+                        Computer Science, Mathematics, Engineering, and Physics. This is to help get the manuscripts ready for publishing to
+                        major scientific journals&#8212;e.g., Springer, IEEE, ACM etc.
+                        <br /><br />
+                        Constantly engaging with ground-breaking new research on a daily basis has expanded my mind and knowledge base
+                        in ways I could never imagine.
+                    </p>
+                    <div className="design-logo-container">
+                        <img className="cactus-logo" src={require("../../../Assets/Images/ai.png")} />
+                    </div>
+                    <p className="mad-content" style={{ marginTop: 10 }}>
+                        Every manuscript I work on always teaches me something new in the field (mostly centered around the use of
+                        Artificial Intelligence), and continuously deepens my curiosity to keep learning, expanding, and growing.
+                    </p>
+
                 </div>
-                {/*}
-        {this.state.design_poster?
-            <div className='design-poster-container2'>
-                <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
-            </div>
-        :null}
-        */}
             </div>
         )
     }

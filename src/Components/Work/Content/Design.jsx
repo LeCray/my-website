@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
-import {Modal} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  Button
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Container,
+    Row,
+    Col,
+    Jumbotron,
+    Button
 } from 'react-bootstrap';
 
 
@@ -27,57 +27,52 @@ export class Design extends Component {
         super(props, context);
 
         this.state = {
-            design_poster:false,
+            design_poster: false,
         }
     }
 
     componentDidMount() {
-      window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
     }
 
     render() {
-    return (
-        <div>
-        <div ref={(section)=>{this.design = section;}}>
-            <h2 className="heading" style={{color: "#737373"}}>Honors Design Project</h2>
-            <h4>Space Engineering</h4>
+        return (
+            <div>
+                <div ref={(section) => { this.design = section; }}>
+                    <h2 className="heading" style={{ color: "#737373" }}>Honors Design Project</h2>
+                    <h4>Space Engineering (2021)</h4>
 
-            <div className="design-logo-container">
-              <img className="design-logo" src={require("../../../Assets/Images/design_pic.png")}/>
-            </div>
+                    <div className="design-logo-container">
+                        <img className="design-logo" src={require("../../../Assets/Images/design_project.png")} />
+                    </div>
 
-            <p className='exec-summary'>Executive Summary:</p>
-            <p className="mad-content">
-                This paper presents the methodology to design the energy absorption system of a robotic lander
-                for a soft landing on an extraterrestrial surface that is characterised by extremely low gravity
-                e.g.  an asteroid.  The landing gear preliminary design is based on the requirements of the stability
-                distance and ground clearance.
-                <br/><br/>
-                A  three-dimensional  cantilever  design  lander  was  modelled  in  a  six  degree  of  freedom
-                environment  using MATLAB/Simscape  as  the  preferred  multibody  dynamics  software.   Analysis  of  the
-                landing  dynamics  of the lander with spring and damper absorber elements was performed to determine the
-                preliminary design parameters.
-                <br/><br/>
-                Results show that the spring and damper absorber elements provide an effective energy absorption mechanism
-                for landing on an arbitrarily sloped surface at nominal velocities.
-                <br/><br/>
-                The  structural  mass  of  the  landing  system  components  were  estimated  based  on  the  required  design
-                parameters and design requirements.  Carbon fiber reinforced plastic was used as the material of choice due
-                to its high strength-to-weight ratio and general wide spread use in aerospace applications.
-            </p>
-            {/*
-            <div className="design-poster-container" onClick={()=> this.setState({design_poster: true})}>
-              <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
+                    <p className='exec-summary'>Executive Summary:</p>
+                    <p className="mad-content">
+                        An asteroid mining system employing an inflatable Cassegrain style solar concentrator was conceptualized
+                        and designed. The design captures and encloses an asteroid with an inflatable bag, and concentrated solar
+                        energy is used to heat, and mine the asteroid. This kind of heating process is known as thermal spalling;
+                        and is used to drill into the asteroid, breaking it apart, thereby releasing volatiles (including water vapor)
+                        that are trapped in the asteroid.
+                    </p>
+
+                    <div className="design-logo-container">
+                        <img className="design-logo" src={require("../../../Assets/Images/asteroid_mining_design.png")} />
+                    </div>
+                    <p className="mad-content">
+                        As is seen in the diagram above, inflatable, passively cooled cryopumps trap the released water vapor as ice. The design attempts to realise atleast
+                        100 kgs of water as ice from a single asteroid, and will deliver the water to fueling stations
+                        in low-Earth orbit (LEO). Water has been identified as the first commodity most likely to be of value for
+                        extraction and sale to customers in space&#8212;particularly for sale as propellant for spacecraft or satellite
+                        propulsion, solar radiation shielding, and human consumption.
+                        <br /><br />
+                        The design targets Arjuna type near-Earth asteroids (NEAs) that are rich in water as determined by spectroscopic analysis.
+                        After being launched into LEO from Earth (using SpaceX’s Falcon 9 rocket for example),
+                        the spacecraft follows an efficient Hohmann transfer orbit to get to the asteroid; once mining is complete, a
+                        spiral transfer orbit is used to get back to LEO&#8212;where the water will be sold.
+                    </p>
+                </div>
+
             </div>
-            */}
-        </div>
-        {/*}
-        {this.state.design_poster?
-            <div className='design-poster-container2'>
-                <img className="design-poster" src={require("../../../Assets/Images/design_poster.png")}/>
-            </div>
-        :null}
-        */}
-    </div>
-    )}
+        )
+    }
 }

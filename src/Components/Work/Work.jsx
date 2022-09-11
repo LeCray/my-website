@@ -387,7 +387,7 @@ export default class Work extends Component {
                                                 onMouseEnter={() => this.setState({ cactusHover: !this.state.cactusHover })}
                                                 onMouseLeave={() => this.setState({ cactusHover: !this.state.cactusHover })}
                                                 onClick={this.cactus}>
-                                                Cactus Global
+                                                Cactus
                                         </p>
                                         </div>
                                         <div className="design-link">

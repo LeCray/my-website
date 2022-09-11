@@ -13,7 +13,7 @@ import { contactEnter } from '../../Animation/Contact'
 
 import { Transition } from '../../Animation/Transition'
 
-import './Styles/Landing.css'
+import './styles/Landing.css'
 import './Styles/LandingMobile.css'
 import './Styles/LandingTransitions.css'
 

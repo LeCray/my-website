@@ -225,7 +225,11 @@ export default class LandingMobile extends Component {
 
                             <div className="menu-footer">
                                 <div className="menu-footer-content">
-                                    <p>© Jabulani Kunene. All rights reserved</p>
+                                    <p>
+                                        © Jabulani Kunene. All rights reserved.
+                                        <br />
+                                        2022
+                                    </p>
                                 </div>
                             </div>
                         </div>

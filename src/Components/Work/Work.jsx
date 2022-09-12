@@ -338,7 +338,7 @@ export default class Work extends Component {
                         <div ref={workLeftCol} className="workLeftCol" style={{ display: this.state.columns ? null : "none" }}>
                             <div className="workLeftColContent">
                                 <div ref={workStill}>
-                                    <h2>WORK</h2>
+                                    <h2>EXPERIENCE</h2>
 
                                     <div className="work-intra-links">
                                         <div className="research-link">

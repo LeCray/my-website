@@ -124,7 +124,7 @@ export default class WorkMobile extends Component {
                     <div className="work-left-col">
                         <div className="work-left-col-content about-white2">
                             <div>
-                                <h2>WORK</h2>
+                                <h2>EXPERIENCE</h2>
                                 {/*<hr className="workHr"/>*/}
                                 <div className="work-intra-links">
                                     <p className="work-link" onClick={() => scrollToComponent(this.research, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Honors Research Project</p>

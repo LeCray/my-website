@@ -13,7 +13,8 @@ export class GalxyBit extends Component {
         return (
             <div >
                 <h2 ref={(section) => { this.gxb = section; }} className="heading" style={{ color: "#737373" }}>GalxyBit</h2>
-                <h4>A cryptocurrency exchange (2017 - 2018)</h4>
+                <h4>Founder, Developer (2017 - 2018)</h4>
+                <h4>A cryptocurrency exchange</h4>
 
                 <div className="gxb-logo-container">
                     <p style={{ display: "inline-block", fontSize: 40 }}>G</p>ALXY<p style={{ color: "#cc7a00", display: "inline-block" }}>BIT</p>

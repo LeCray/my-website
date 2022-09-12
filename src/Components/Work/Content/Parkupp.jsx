@@ -13,7 +13,8 @@ export class Parkupp extends Component {
         return (
             <div>
                 <h2 className="heading" style={{ color: "#737373" }}>Parkupp</h2>
-                <h4>Decentralised parking (2018 - 2020)</h4>
+                <h4>Co-founder, Developer (2017 - 2018)</h4>
+                <h4>Decentralised parking</h4>
 
                 <div className="parkupp-logo-container">
                     <img className="parkupp-logo" alt="parkupp logo" src={require("../../../Assets/Images/parkupp_logo.png")} />

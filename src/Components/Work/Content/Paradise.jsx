@@ -23,8 +23,8 @@ export class Paradise extends Component {
             <div>
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Paradise Eats</h2>
-                    <h4>Founder & Owner</h4>
-                    <h4>Food delivery platform (2021 - present)</h4>
+                    <h4>Founder & Owner (2021 - present)</h4>
+                    <h4>Food delivery platform</h4>
 
                     <div className="design-logo-container">
                         <img className="paradise-logo" alt="paradise eats logo" src={require("../../../Assets/Images/paradise_logo.png")} />
@@ -51,7 +51,7 @@ export class Paradise extends Component {
                         I worked on all 3 apps by myself initially, and published the first versions of the apps
                         to Google Play Store on the 13th of July, 2022. This took me close to 7 months to complete.
                         From start to finish. Only after I published the apps to the store
-                        was I then joined by my current developer colleague who will continue working on this on a full-time basis.
+                        was I then joined by my current developer colleague who continues working on this on a full-time basis.
                     </p>
                 </div>
             </div>

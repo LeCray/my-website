@@ -13,7 +13,8 @@ export class MadMobile extends Component {
         return (
             <div ref={(section) => { this.mad = section; }}>
                 <h2 className="heading" style={{ color: "#737373" }}>Mahele Auto Doctor</h2>
-                <h4>Real time vehicle diagnostics (2017 - 2018)</h4>
+                <h4>Lead Developer (2017 - 2018)</h4>
+                <h4>Real time vehicle diagnostics</h4>
 
                 <div className="mad-mobile-logo-container">
                     <img className="mad-mobile-logo" alt="mad mobile" src={require("../../../Assets/Images/mad_logo.png")} />

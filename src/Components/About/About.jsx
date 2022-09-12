@@ -259,6 +259,9 @@ export default class About extends Component {
                                     that could trade the markets autonomously using Artificial Intelligence (AI). This was with the help of my at the time lecturer&#8212;a Computer Science PhD student whose
                                     own research was on applying AI to finance.
                                     <br /><br />
+                                    Also in 2018, I co-founded and developed Parkupp. It is a decentralised parking application that has
+                                    recently been acquired by real-estate investment company Docklands Ventures.
+                                    <br /><br />
                                     In 2019 I recontinued studying Mechanical Engineering, and made it to my final year in 2020 where I passed 8/10 of my courses.
                                     2021 was a challenging year, and I had difficulty redoing the remaining 2 courses as I was working as a
                                     freelance software engineer, and living independantly.

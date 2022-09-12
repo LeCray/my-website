@@ -23,7 +23,8 @@ export class Paradise extends Component {
             <div>
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Paradise Eats</h2>
-                    <h4>A food delivery platform  (2021 - present)</h4>
+                    <h4>Founder & Owner</h4>
+                    <h4>Food delivery platform (2021 - present)</h4>
 
                     <div className="design-logo-container">
                         <img className="paradise-logo" alt="paradise eats logo" src={require("../../../Assets/Images/paradise_logo.png")} />
@@ -33,7 +34,7 @@ export class Paradise extends Component {
                         <a href="https://play.google.com/store/apps/details?id=io.instamobile.restaurant.rn.android" target="_blank">
                             <u>Paradise Eats</u>
                         </a> is my attempt at an Uber Eats clone for smaller towns that still don't have any
-                        food delivery solutions, but still have several great restaurants.
+                        food delivery solutions, despite having several great restaurants.
                         <br /><br />
                         The entire solution consists of 3 completely seperate, standalone mobile applications that all
                         communicate with each other in real-time.
@@ -45,12 +46,12 @@ export class Paradise extends Component {
                     </div>
                     <p className="mad-content">
                         The screenshots above show the 3 different mobile apps: the consumer app, vendor app, and driver app,
-                        from left to right respectively. [You should see dark mode]
+                        from left to right respectively.
                         <br /><br />
                         I worked on all 3 apps by myself initially, and published the first versions of the apps
                         to Google Play Store on the 13th of July, 2022. This took me close to 7 months to complete.
                         From start to finish. Only after I published the apps to the store
-                        was I then joined by my current developer colleague.
+                        was I then joined by my current developer colleague who will continue working on this on a full-time basis.
                     </p>
                 </div>
             </div>

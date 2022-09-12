@@ -23,7 +23,8 @@ export class Cactus extends Component {
             <div>
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Cactus Communications</h2>
-                    <h4>Scientific Research Papers (2021 - present)</h4>
+                    <h4>Senior Editor (2021 - present)</h4>
+                    <h4>Scientific Research Papers</h4>
 
                     <div className="design-logo-container">
                         <img className="cactus-logo" alt="cactus-logo" src={require("../../../Assets/Images/cactus.png")} />
@@ -49,6 +50,8 @@ export class Cactus extends Component {
                     <p className="mad-content" style={{ marginTop: 10 }}>
                         Every manuscript I work on always teaches me something new in the field (mostly centered around the use of
                         AI), and continuously deepens my curiosity to keep learning, expanding, and growing.
+                        <br /><br />
+                        However much I enjoy this work, I cannot earn a living doing this alone.
                     </p>
 
                 </div>

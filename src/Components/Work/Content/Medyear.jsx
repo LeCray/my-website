@@ -23,7 +23,8 @@ export class Medyear extends Component {
             <div>
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Medyear</h2>
-                    <h4>Computational Genomics (2021 - 2022)</h4>
+                    <h4>AI Engineer (2021 - 2022)</h4>
+                    <h4>Computational Genomics </h4>
 
                     <div className="medyear-logo-container">
                         <img className="design-logo" alt="medyear logo" src={require("../../../Assets/Images/medyear.png")} />
@@ -34,7 +35,7 @@ export class Medyear extends Component {
                         health records and people together in grounbreaking new ways, with records from over 10,000 hospitals and clinics.
                     <br /><br />
 
-                    At the beginning of 2021, I had been brought on as an AI Engineer, whose task was to design and build a COVID-19 risk prediction tool.
+                    At the beginning of 2021, I was contracted as an AI Engineer, whose task was to design and build a COVID-19 risk prediction tool.
 
                     <br /><br />
 

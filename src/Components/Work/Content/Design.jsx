@@ -24,6 +24,7 @@ export class Design extends Component {
                 <div ref={(section) => { this.design = section; }}>
                     <h2 className="heading" style={{ color: "#737373" }}>Honors Design Project</h2>
                     <h4>Space Engineering (2021)</h4>
+                    <h4>(To be repeated in 2023)</h4>
 
                     <div className="design-logo-container">
                         <img className="design-logo" alt="design paper" src={require("../../../Assets/Images/design_project.png")} />

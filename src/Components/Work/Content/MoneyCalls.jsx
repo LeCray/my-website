@@ -13,7 +13,8 @@ export class MoneyCalls extends Component {
         return (
             <div>
                 <h2 className="heading" style={{ color: "#737373" }}>Money Calls</h2>
-                <h4>A foreign exchange web application (2017 - 2018)</h4>
+                <h4>Lead Developer</h4>
+                <h4>Foreign exchange web application (2017 - 2018)</h4>
 
                 <div className="market-logo-container">
                     <img className="market-logo" alt="market logo" src={require("../../../Assets/Images/market.png")} />

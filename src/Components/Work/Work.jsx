@@ -459,7 +459,7 @@ export default class Work extends Component {
                                             ref={workLink}
                                             onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
                                             onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
-                                            Work
+                                            Experience
                                     </p>
                                         <p
                                             className={this.state.contactHover || this.state.contact ? "workLinkHover" : "workLink"}

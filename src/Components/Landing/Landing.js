@@ -12,8 +12,8 @@ import Contact from '../Contact/Contact';
 import Work from '../Work/Work';
 import LandingMobile from './LandingMobile';
 
-//import './Styles/Landing.css';
-//import './Styles/LandingMobile.css';
+// import './Styles/Landing.css';
+// import './Styles/LandingMobile.css';
 import './styles/Landing.css';  //DEPLOY
 import './styles/LandingMobile.css';    //DEPLOY
 import './Styles/LandingTransitions.css';
@@ -193,8 +193,9 @@ export default class Landing extends Component {
                                         <div ref={summary} className="summary">
                                             <div className="summary-details">
                                                 <hr ref={hr} className="hr" />
-                                                <p className="summary-details-text">Software Developer (6+ years of experience)</p>
-                                                <p className="summary-details-text">Mechanical Engineer (BSc Hons)</p>
+                                                <p className="summary-details-text">Self-Taught Software Developer</p>
+                                                <p className="summary-details-text">6+ years of experience</p>
+                                                <p className="summary-details-text">Mechanical Engineer (BSc Hons) (2023)</p>
                                                 <p className="summary-details-text-wits">University of the Witswatersrand</p>
                                             </div>
                                         </div>
@@ -214,7 +215,7 @@ export default class Landing extends Component {
                                                 onClick={this.workTransition}
                                                 onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
                                                 onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
-                                                Work
+                                                Experience
                                         </p>
                                             <p
                                                 ref={contactLink}

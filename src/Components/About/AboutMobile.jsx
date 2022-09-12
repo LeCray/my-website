@@ -105,11 +105,14 @@ export default class AboutMobile extends Component {
                             <br />
                             <h5 className="heading">My Passions & Skills</h5>
                             <p style={{ textAlign: "justify" }}>
-                                In my first year of engineering studies (2014), I began learning how to trade the financial markets.
+                                In my first year of engineering studies (2014), I began learning how to trade the financial markets in my spare time.
                                     <br /><br />
-                                    I quickly took an interest in the cryptocurrency markets and thought to become a part of it. This lead me to learn and
-                                    become familiar with web development technologies because I made the decision to build GalxyBit&#8212;a cryptocurrency exchange offering
-                                    btc/zar, eth/zar and ltc/zar (liquidity provided by Ice3X).
+                                    I quickly took an interest in the cryptocurrency markets and wanted to become a part of it. This led me to learn and master
+                                    different web development technologies resulting in me building GalxyBit&#8212;a cryptocurrency exchange offering
+                                    btc/zar, eth/zar, and ltc/zar (liquidity provided by Ice3X).
+                                    <br /><br />
+                                    Moreover, as part of my other first projects, I developed Mad-Mobile, a real-time vehicle diagnostics
+                                    app, and Money Calls, a foreign exchange web app.
                                     <br /><br />
                                     Since then, I have become a full-stack software developer having taught myself various coding languages including:
                                     <ul>
@@ -134,20 +137,19 @@ export default class AboutMobile extends Component {
                                     <li>.NET</li>
                                 </ul>
 
-
                                 <br />
                                     In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
                                     part-time (at the Univeristy of the Witswatersrand). It was there that I started working on a cryptocurrency market algorithm
                                     that could trade the markets autonomously using Artificial Intelligence (AI). This was done with assistance from a Computer Science PhD student,
                                     who was my lecturer at the time whose own research was on applying AI to Finance and Investments.
                                     <br /><br />
-                                    In addition, in 2018, I co-founded and developed Parkupp, a decentralised parking application (app) that has
+                                    In addition, in 2018, I co-founded and developed Parkupp, a decentralised parking app that has
                                     recently been acquired by real-estate investment company Docklands Ventures.
                                     <br /><br />
                                     In 2019 I continued with my Mechanical Engineering studies, and made it to my final year in 2020 where I passed 8/10 of my courses.
                                     I have applied to complete the remaining two courses, so that I can graduate by November 2023.
                                     <br /><br />
-                                    Towards the end of 2021, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
+                                    Since 2021 to present, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
                                     and founded Paradise Eats&#8212;a food delivery application for the area (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
                                     In the current year 2022, I continued developing Paradise Eats full-time,

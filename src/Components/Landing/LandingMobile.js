@@ -200,7 +200,7 @@ export default class LandingMobile extends Component {
                                 ABOUT
                             </p>
                             <p ref={workLinkMenu} className="link-mobile-menu" onClick={this.workMenuLink}>
-                                WORK
+                                EXPERIENCE
                             </p>
                             <p ref={contactLinkMenu} className="link-mobile-menu" onClick={this.contactMenuLink}>
                                 CONTACT
@@ -231,9 +231,9 @@ export default class LandingMobile extends Component {
 
 
                                     <div ref={summary} >
-                                        <h6 className="summary-mobile">Software Developer (6+ years exp)</h6>
+                                        <h6 className="summary-mobile">Self-Taught Software Developer (6+ years exp)</h6>
                                         {/*<h6 className="summary-mobile">ReactJS, ExpressJS, Ruby on Rails</h6>*/}
-                                        <h6 className="summary-mobile">Mechanical Engineer (BSc Hons)</h6>
+                                        <h6 className="summary-mobile">Mechanical Engineer (BSc Hons) (2023)</h6>
                                         <h6 className="summary-mobile">University of the Witwatersrand</h6>
                                     </div>
 
@@ -250,7 +250,7 @@ export default class LandingMobile extends Component {
                                             About
                                         </p>
                                         <p ref={workLink} className="link-mobile" onClick={() => scrollToComponent(this.work, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })}>
-                                            Work
+                                            Experience
                                         </p>
                                         <p ref={contactLink} className="link-mobile" onClick={() => scrollToComponent(this.contact, { offset: 0, align: 'top', ease: 'inOutCirc', duration: 1500 })}>
                                             Contact

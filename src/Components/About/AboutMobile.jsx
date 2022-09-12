@@ -114,7 +114,7 @@ export default class AboutMobile extends Component {
                                     Moreover, as part of my other first projects, I developed Mad-Mobile, a real-time vehicle diagnostics
                                     app, and Money Calls, a foreign exchange web app.
                                     <br /><br />
-                                    Since then, I have become a full-stack software developer having taught myself various coding languages including:
+                                    Since then, I have become an experienced full-stack software developer having taught myself various coding languages including:
                                     <ul>
                                     <li>HTML</li>
                                     <li>CSS</li>

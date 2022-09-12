@@ -134,27 +134,24 @@ export default class AboutMobile extends Component {
                                     <li>.NET</li>
                                 </ul>
 
+
                                 <br />
-                                In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
+                                    In 2018 I took a break from Mechanical Engineering to study Computational and Applied Maths for a year
                                     part-time (at the Univeristy of the Witswatersrand). It was there that I started working on a cryptocurrency market algorithm
-                                    that could trade the markets autonomously using Artificial Intelligence (AI). This was with the help of my at the time lecturer&#8212;a Computer Science PhD student whose
-                                    own research was on applying AI to finance.
+                                    that could trade the markets autonomously using Artificial Intelligence (AI). This was done with assistance from a Computer Science PhD student,
+                                    who was my lecturer at the time whose own research was on applying AI to Finance and Investments.
                                     <br /><br />
-                                    Also in 2018, I co-founded and developed Parkupp&#8212;a decentralised parking application that has
+                                    In addition, in 2018, I co-founded and developed Parkupp, a decentralised parking application (app) that has
                                     recently been acquired by real-estate investment company Docklands Ventures.
                                     <br /><br />
-                                    In 2019 I recontinued studying Mechanical Engineering, and made it to my final year in 2020 where I passed 8/10 of my courses.
-                                    2021 was a challenging year, and I had difficulty redoing the remaining 2 courses as I was working as a
-                                    freelance software engineer, and living independantly.
+                                    In 2019 I continued with my Mechanical Engineering studies, and made it to my final year in 2020 where I passed 8/10 of my courses.
+                                    I have applied to complete the remaining two courses, so that I can graduate by November 2023.
                                     <br /><br />
                                     Towards the end of 2021, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
                                     and founded Paradise Eats&#8212;a food delivery application for the area (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
                                     In the current year 2022, I continued developing Paradise Eats full-time,
                                     and managed to publish the Android apps to Google Play Store in July.
-                                    <br /><br />
-                                    Next year, 2023, I plan on finishing my engineering degree. This will be possible by grounding myself in full-time work, with a consistent income.
-                                    As opposed to freelancing again, where my income is inconsistent, and without the added difficulty of managing too many projects at once.
                             </p>
 
                             <hr className="hrLine" />

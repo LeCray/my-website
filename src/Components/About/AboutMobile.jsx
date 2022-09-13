@@ -153,7 +153,7 @@ export default class AboutMobile extends Component {
                                     and founded Paradise Eats&#8212;a food delivery application for the area (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
                                     In the current year 2022, I continued developing Paradise Eats full-time,
-                                    and managed to publish the Android apps to Google Play Store in July.
+                                    and managed to publish the Android apps to the Google Play Store in July.
                             </p>
 
                             <hr className="hrLine" />

@@ -226,7 +226,7 @@ export default class About extends Component {
                                 <p style={{ textAlign: "justify" }}>
                                     In my first year of engineering studies (2014), I began learning how to trade the financial markets in my spare time.
                                     <br /><br />
-                                    I quickly took an interest in the cryptocurrency markets and wanted to become a part of it. This led me to learn and master
+                                    I quickly took an interest in the cryptocurrency markets and wanted to become a part of it. This led me to learn
                                     different web development technologies resulting in me building GalxyBit&#8212;a cryptocurrency exchange offering
                                     btc/zar, eth/zar, and ltc/zar (liquidity provided by Ice3X).
                                     <br /><br />

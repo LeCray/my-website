@@ -5,6 +5,8 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
+import "@fontsource/montserrat"; // Defaults to weight 400.
+
 
 render((	
   <BrowserRouter>

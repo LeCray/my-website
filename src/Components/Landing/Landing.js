@@ -230,7 +230,7 @@ export default class Landing extends Component {
 
                                 </Col>
                                 <div ref={whiteBox} className="whiteBox">
-                                    <img ref={me} className="me" src={require("../../Assets/Images/me3.jpg")} />
+                                    <img ref={me} className="me" src={require("../../Assets/Images/me_updated.png")} />
                                 </div>
                             </Row>
                         </div>

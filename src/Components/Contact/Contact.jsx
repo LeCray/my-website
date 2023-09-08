@@ -203,17 +203,15 @@ export default class Contact extends Component {
 
                                 <Row>
                                     <Col className="contact-container" lg={6}>
-                                        <h5 className="contact-details">Email:</h5>
-                                        <h5 className="contact-details">WhatsApp: </h5>
+                                        <h5 className="contact-details">Email:</h5>                                        
                                         <h5 className="contact-details">Phone: </h5>
                                     </Col>
                                     <Col className="contact-container-2" lg={6}>
                                         <h5 className="contact-details-2">j.kunene123@gmail.com</h5>
-                                        <h5 className="contact-details-2">+27 81 741 2792</h5>
-                                        <h5 className="contact-details-2">+27 64 020 4711</h5>
+                                        <h5 className="contact-details-2">+27 81 741 2792</h5>                                        
                                     </Col>
                                 </Row>
-                                <img className="me-contact" src={require("../../Assets/Images/me3.jpg")} />
+                                <img className="me-contact" src={require("../../Assets/Images/me_updated.png")} />
 
                             </div>
                         </div>

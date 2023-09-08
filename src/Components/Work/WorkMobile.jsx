@@ -13,15 +13,7 @@ import { Parkupp } from './Content/Parkupp';
 import { Research } from './Content/Research';
 import './Styles/Work.css';
 import './Styles/WorkMobile.css';
-
-
-
-
-
-
-
-
-
+import { XCapital } from './Content/XCapital';
 
 export default class WorkMobile extends Component {
 
@@ -131,6 +123,7 @@ export default class WorkMobile extends Component {
                                     <p className="work-link" onClick={() => scrollToComponent(this.medyear, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Medyear</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.cactus, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Cactus</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.paradise, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Paradise Eats</p>
+                                    <p className="work-link" onClick={() => scrollToComponent(this.xcapital, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>X Capital</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.parkupp, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>ParkUpp</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.design, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Honors Design Project</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.mad, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>MAD Mobile</p>
@@ -161,6 +154,10 @@ export default class WorkMobile extends Component {
                             <hr className="work-hr" />
                             <div ref={(section) => { this.paradise = section; }} className="work-content-mobile">
                                 <Paradise />
+                            </div>
+                            <hr className="work-hr" />
+                            <div ref={(section) => { this.xcapital = section; }} className="work-content-mobile">
+                                <XCapital />
                             </div>
                             <hr className="work-hr" />
                             <div ref={(section) => { this.parkupp = section; }} className="work-content-mobile">

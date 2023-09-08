@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/montserrat": "^5.0.8",
+    "@mui/material": "^5.14.8",
     "gsap": "^2.0.2",
     "mdbreact": "^4.6.0",
     "react": "^16.4.1",

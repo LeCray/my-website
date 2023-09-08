@@ -11,13 +11,6 @@ import './Styles/About.css';
 import './Styles/AboutMobile.css';
 
 
-
-
-
-
-
-
-
 export default class About extends Component {
 
     constructor(props) {
@@ -207,7 +200,7 @@ export default class About extends Component {
                                 style={{ "-webkit-overflow-scrolling": "touch", display: this.state.columns ? null : "none" }}>
 
                                 <h2 className="heading">Jabulani Kunene</h2>
-                                <h4>I am a self-taught, full-stack software developer</h4>
+                                <h4>I am a Mechanical Engineer, and a self-taught full-stack Software Developer</h4>
 
                                 <br /><br />
 
@@ -216,7 +209,7 @@ export default class About extends Component {
                                     <img className="mad-mobile-logo" src={require("../../Assets/Images/wits_logo.png")} />
                                 </div>
                                 <p style={{ textAlign: "justify" }}>
-                                    With just two courses left to complete, I am expected to graduate with an Honors in Mechanical Engineering
+                                    Having just sumbitted my final year design project on space engineering, I am expected to graduate with an Honors in Mechanical Engineering
                                     from the University of the Witwatersrand, South Africa in November 2023.
                                 </p>
 
@@ -262,17 +255,21 @@ export default class About extends Component {
                                     that could trade the markets autonomously using Artificial Intelligence (AI). This was done with assistance from a Computer Science PhD student,
                                     who was my lecturer at the time whose own research was on applying AI to Finance and Investments.
                                     <br /><br />
-                                    In addition, in 2018, I co-founded and developed Parkupp, a decentralised parking app that has
+                                    In addition, also in 2018, I co-founded and developed Parkupp, a decentralised parking app that has
                                     recently been acquired by real-estate investment company Docklands Ventures.
                                     <br /><br />
-                                    In 2019 I continued with my Mechanical Engineering studies, and made it to my final year in 2020 where I passed 8/10 of my courses.
-                                    I have applied to complete the remaining two courses, so that I can graduate by November 2023.
+                                    In 2019 I continued with my engineering studies.
                                     <br /><br />
-                                    Since 2021 to present, I moved to Wilderness (a small coastal town close to Knysna in the Western Cape, SA),
-                                    and founded Paradise Eats&#8212;a food delivery application for the area (Uber Eats hasn't offered their services there yet).
+                                    In 2021 I moved to Wilderness (a small coastal town along the Garden Route in the Western Cape, SA),
+                                    and founded Paradise Eats – a food delivery application targetting the towns in the surrounding areas (Uber Eats hasn't offered their services there yet).
                                     <br /><br />
-                                    In the current year 2022, I continued developing Paradise Eats full-time,
-                                    and managed to publish the Android apps to the Google Play Store in July.
+                                    In 2022, I continued developing Paradise Eats full-time, and managed to publish the Android apps to Google Play Store in July.
+                                    <br /><br />
+                                    Beginning of this year, 2023, I returned to Wits to complete the two engineering courses I had due – Solid Mechanics, and the Design Project.
+                                    I passed Solid Mechanics in the first semester, and I've recently just submitted my design project – an orbital launch system
+                                    for establishing a constellation of LEO cubesats for high-speed, low-cost internet connectivity for the SADC region of Africa .
+                                    <br /><br />
+                                    I am now looking for full-time employment opportunities.
                                 </p>
 
                                 <hr className="hrLine" />

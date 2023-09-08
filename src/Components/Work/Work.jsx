@@ -12,6 +12,7 @@ import { Design } from './Content/Design';
 import { GalxyBit } from './Content/GalxyBit';
 import { MadMobile } from './Content/MadMobile';
 import { Medyear } from './Content/Medyear';
+import { XCapital } from './Content/XCapital';
 import { MoneyCalls } from './Content/MoneyCalls';
 import { Paradise } from './Content/Paradise';
 import { Parkupp } from './Content/Parkupp';
@@ -35,6 +36,7 @@ export default class Work extends Component {
             cactus: false,
 
             design: false,
+            xcapital: false,
             research: true,
             parkupp: false,
             madMobile: false,
@@ -47,6 +49,7 @@ export default class Work extends Component {
 
         this.paradise = this.paradise.bind(this);
         this.medyear = this.medyear.bind(this);
+        this.xcapital = this.xcapital.bind(this);
         this.cactus = this.cactus.bind(this);
 
         this.design = this.design.bind(this);
@@ -59,8 +62,6 @@ export default class Work extends Component {
         this.homeTransition = this.homeTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);
         this.contactTransition = this.contactTransition.bind(this);
-
-
     }
 
     componentDidMount() {
@@ -79,6 +80,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 madMobile: false,
                 parkupp: false,
                 moneyCalls: false,
@@ -89,11 +91,29 @@ export default class Work extends Component {
             })
         }, 500)
     }
+    xcapital() {
+        switchTo(this.workRightColContent)
+        setTimeout(() => {
+            this.setState({
+                design: false,
+                xcapital: true,
+                research: false,
+                madMobile: false,
+                parkupp: false,
+                moneyCalls: false,
+                galxyBit: false,
+                paradise: false,
+                medyear: false,
+                cactus: false,
+            })
+        }, 500)
+    }
     medyear() {
         switchTo(this.workRightColContent)
         setTimeout(() => {
             this.setState({
                 design: false,
+                xcapital: false,
                 research: false,
                 madMobile: false,
                 parkupp: false,
@@ -111,6 +131,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 madMobile: false,
                 parkupp: false,
                 moneyCalls: false,
@@ -121,13 +142,13 @@ export default class Work extends Component {
             })
         }, 500)
     }
-
     design() {
         switchTo(this.workRightColContent)
         setTimeout(() => {
             this.setState({
                 design: true,
                 research: false,
+                xcapital: false,
                 madMobile: false,
                 parkupp: false,
                 moneyCalls: false,
@@ -144,6 +165,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: true,
+                xcapital: false,
                 madMobile: false,
                 parkupp: false,
                 moneyCalls: false,
@@ -160,6 +182,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 madMobile: true,
                 parkupp: false,
                 moneyCalls: false,
@@ -176,6 +199,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 parkupp: true,
                 madMobile: false,
                 moneyCalls: false,
@@ -192,6 +216,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 moneyCalls: true,
                 parkupp: false,
                 madMobile: false,
@@ -208,6 +233,7 @@ export default class Work extends Component {
             this.setState({
                 design: false,
                 research: false,
+                xcapital: false,
                 galxyBit: true,
                 moneyCalls: false,
                 parkupp: false,
@@ -317,6 +343,7 @@ export default class Work extends Component {
         const learnTx = learnTx => this.learnTx = learnTx
 
         const researchSlide = researchSlide => this.researchSlide = researchSlide
+        const xcapitalSlide = xcapitalSlide => this.xcapitalSlide = xcapitalSlide
         const medyearSlide = medyearSlide => this.medyearSlide = medyearSlide
         const cactusSlide = cactusSlide => this.cactusSlide = cactusSlide
         const paradiseSlide = paradiseSlide => this.paradiseSlide = paradiseSlide
@@ -385,6 +412,17 @@ export default class Work extends Component {
                                                 Paradise Eats
                                             </p>
                                         </div>
+                                        <div className="xcapital-link">
+                                            <p
+                                                className={this.state.xcapitalHover || this.state.xcapital ? "workLinkHover" : "workLink"}
+                                                ref={xcapitalSlide}
+                                                style={{ marginLeft: 0 }}
+                                                onMouseEnter={() => this.setState({ xcapitalHover: !this.state.xcapitalHover })}
+                                                onMouseLeave={() => this.setState({ xcapitalHover: !this.state.xcapitalHover })}
+                                                onClick={this.xcapital}>
+                                                X Capital
+                                            </p>
+                                        </div>
                                         <div className="design-link">
                                             <p
                                                 className={this.state.designHover || this.state.design ? "workLinkHover" : "workLink"}
@@ -396,7 +434,6 @@ export default class Work extends Component {
                                                 Honors Design Project
                                             </p>
                                         </div>
-
 
                                         <div className="bottom-links">
                                             <p
@@ -485,6 +522,9 @@ export default class Work extends Component {
                                 </div>
                                 <div className="scroller" style={{ display: this.state.medyear ? null : "none" }}>
                                     <Medyear />
+                                </div>
+                                <div className="scroller" style={{ display: this.state.xcapital ? null : "none" }}>
+                                    <XCapital />
                                 </div>
                                 <div className="scroller" style={{ display: this.state.cactus ? null : "none" }}>
                                     <Cactus />

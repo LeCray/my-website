@@ -12,10 +12,10 @@ import Contact from '../Contact/Contact';
 import Work from '../Work/Work';
 import LandingMobile from './LandingMobile';
 
-import './Styles/Landing.css';
-import './Styles/LandingMobile.css';
-// import './styles/Landing.css';  //DEPLOY
-// import './styles/LandingMobile.css';    //DEPLOY
+// import './Styles/Landing.css';
+// import './Styles/LandingMobile.css';
+import './styles/Landing.css';  //DEPLOY
+import './styles/LandingMobile.css';    //DEPLOY
 import './Styles/LandingTransitions.css';
 
 

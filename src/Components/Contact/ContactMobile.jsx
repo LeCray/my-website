@@ -101,7 +101,7 @@ export default class ContactMobile extends Component {
                         <p>
                             © Jabulani Kunene. All rights reserved.
                             <br />
-                            2022
+                            2023
                         </p>
                     </div>
                 </div>

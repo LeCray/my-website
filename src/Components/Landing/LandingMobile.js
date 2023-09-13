@@ -211,7 +211,7 @@ export default class LandingMobile extends Component {
                                     <p>
                                         © Jabulani Kunene. All rights reserved.
                                         <br />
-                                        2022
+                                        2023
                                     </p>
                                 </div>
                             </div>

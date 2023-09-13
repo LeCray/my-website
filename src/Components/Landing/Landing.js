@@ -193,10 +193,9 @@ export default class Landing extends Component {
                                         <div ref={summary} className="summary">
                                             <div className="summary-details">
                                                 <hr ref={hr} className="hr" />
-                                                <p className="summary-details-text">Self-Taught Software Developer</p>
-                                                <p className="summary-details-text">6+ years of experience</p>
                                                 <p className="summary-details-text">Mechanical Engineer (BSc Hons) (2023)</p>
                                                 <p className="summary-details-text-wits">University of the Witswatersrand</p>
+                                                <p className="summary-details-text">Self-Taught Software Developer <br/>6+ years of experience</p>                                                
                                             </div>
                                         </div>
 

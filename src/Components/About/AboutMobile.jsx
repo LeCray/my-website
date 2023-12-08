@@ -5,16 +5,6 @@ import scrollToComponent from 'react-scroll-to-component';
 import './Styles/About.css';
 import './Styles/AboutMobile.css';
 
-
-
-
-
-
-
-
-
-
-
 export default class AboutMobile extends Component {
 
     constructor(props) {
@@ -98,7 +88,7 @@ export default class AboutMobile extends Component {
                             </div>
                             <p style={{ textAlign: "justify" }}>
                                 Having just submitted my final year design project on space engineering, I am expected to graduate with an Honors in Mechanical Engineering
-                                from the University of the Witwatersrand, South Africa in November 2023.
+                                from the University of the Witwatersrand, South Africa in March 2024.
                             </p>
 
                             <hr className="hrLine" />

@@ -231,7 +231,7 @@ export default class LandingMobile extends Component {
 
 
                                     <div ref={summary} >
-                                        <h6 className="summary-mobile">Mechanical Engineer (BSc Hons) (2023)</h6>
+                                        <h6 className="summary-mobile">Mechanical Engineer (BSc Hons) (2024)</h6>
                                         <h6 className="summary-mobile">University of the Witwatersrand</h6>
                                         <h6 className="summary-mobile">Self-Taught Software Developer (6+ years exp)</h6>
                                         {/*<h6 className="summary-mobile">ReactJS, ExpressJS, Ruby on Rails</h6>*/}

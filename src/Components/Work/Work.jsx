@@ -35,9 +35,9 @@ export default class Work extends Component {
             medyear: false,
             cactus: false,
 
-            design: false,
+            design: true,
             xcapital: false,
-            research: true,
+            research: false,
             parkupp: false,
             madMobile: false,
             moneyCalls: false,
@@ -368,15 +368,15 @@ export default class Work extends Component {
                                     <h2>EXPERIENCE</h2>
 
                                     <div className="work-intra-links">
-                                        <div className="research-link">
+                                        <div className="design-link">
                                             <p
-                                                className={this.state.researchHover || this.state.research ? "workLinkHover" : "workLink"}
-                                                ref={researchSlide}
+                                                className={this.state.designHover || this.state.design ? "workLinkHover" : "workLink"}
+                                                ref={designSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ researchHover: !this.state.researchHover })}
-                                                onMouseLeave={() => this.setState({ researchHover: !this.state.researchHover })}
-                                                onClick={this.research}>
-                                                Honors Research Project
+                                                onMouseEnter={() => this.setState({ designHover: !this.state.designHover })}
+                                                onMouseLeave={() => this.setState({ designHover: !this.state.designHover })}
+                                                onClick={this.design}>
+                                                Athstat
                                             </p>
                                         </div>
                                         <div className="medyear-link">
@@ -401,6 +401,17 @@ export default class Work extends Component {
                                                 Cactus
                                             </p>
                                         </div>
+                                        <div className="research-link">
+                                            <p
+                                                className={this.state.researchHover || this.state.research ? "workLinkHover" : "workLink"}
+                                                ref={researchSlide}
+                                                style={{ marginLeft: 0 }}
+                                                onMouseEnter={() => this.setState({ researchHover: !this.state.researchHover })}
+                                                onMouseLeave={() => this.setState({ researchHover: !this.state.researchHover })}
+                                                onClick={this.research}>
+                                                Honors Research Project
+                                            </p>
+                                        </div>
                                         <div className="paradise-link">
                                             <p
                                                 className={this.state.paradiseHover || this.state.paradise ? "workLinkHover" : "workLink"}
@@ -421,17 +432,6 @@ export default class Work extends Component {
                                                 onMouseLeave={() => this.setState({ xcapitalHover: !this.state.xcapitalHover })}
                                                 onClick={this.xcapital}>
                                                 X Capital
-                                            </p>
-                                        </div>
-                                        <div className="design-link">
-                                            <p
-                                                className={this.state.designHover || this.state.design ? "workLinkHover" : "workLink"}
-                                                ref={designSlide}
-                                                style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ designHover: !this.state.designHover })}
-                                                onMouseLeave={() => this.setState({ designHover: !this.state.designHover })}
-                                                onClick={this.design}>
-                                                Honors Design Project
                                             </p>
                                         </div>
 

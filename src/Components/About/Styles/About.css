@@ -8,6 +8,13 @@
 	/*background: linear-gradient(to top right, #0000ff 0%, #66ccff 100%);*/
 	background: var(--color-fade-tr);
 }
+.squiggly-underline {
+    text-decoration: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M0 10 Q 5 0 10 10" stroke="%23ff0000" stroke-width="1"/></svg>');
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 10px 10px;
+}
 .aboutWhite {
 	letter-spacing: 2px;
 	text-align: center;

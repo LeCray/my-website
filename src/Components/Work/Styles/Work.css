@@ -61,7 +61,7 @@
   align-items: center;
 }
 /*110;150;195;240;285;290*/
-.research-link {
+.design-link {
   position: fixed;
   top: 70px;
 }
@@ -81,7 +81,7 @@
   position: fixed;
   top: 240px;
 }
-.design-link {
+.research-link {
   position: fixed;
   top: 285px;
 }
@@ -114,6 +114,9 @@
 }
 .design-logo {
   width: 90%;
+}
+.athstat-logo {
+  width: 50%;
 }
 .paradise-logo {
   width: 40%;

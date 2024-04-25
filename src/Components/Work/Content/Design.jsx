@@ -1,62 +1,67 @@
-import React, { Component } from 'react';
-
-
-
-
+import React, { Component } from "react";
 
 export class Design extends Component {
+  constructor(props, context) {
+    super(props, context);
 
-    constructor(props, context) {
-        super(props, context);
+    this.state = {
+      design_poster: false,
+    };
+  }
 
-        this.state = {
-            design_poster: false,
-        }
-    }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
+  render() {
+    return (
+      <div>
+        <div
+          ref={(section) => {
+            this.design = section;
+          }}
+        >
+          <h2 className="heading" style={{ color: "#737373" }}>
+            Athstat
+          </h2>
+          <h4>Team Lead (2023 - present)</h4>
+          <h4>Data Science</h4>
 
-    render() {
-        return (
-            <div>
-                <div ref={(section) => { this.design = section; }}>
-                    <h2 className="heading" style={{ color: "#737373" }}>Honors Design Project</h2>
-                    <h4>Space Engineering (2021)</h4>
-                    <h4>(To be repeated in 2023)</h4>
+          <div className="medyear-logo-container">
+            <img
+              className="athstat-logo"
+              alt="medyear logo"
+              src={require("../../../Assets/Images/athstat.jpeg")}
+            />
+          </div>
 
-                    <div className="design-logo-container">
-                        <img className="design-logo" alt="design paper" src={require("../../../Assets/Images/design_project.png")} />
-                    </div>
-
-                    <p className='exec-summary'>Executive Summary:</p>
-                    <p className="mad-content">
-                        An asteroid mining system employing an inflatable Cassegrain style solar concentrator was conceptualized
-                        and designed. The design captures and encloses an asteroid with an inflatable bag, and concentrated solar
-                        energy is used to heat, and mine the asteroid. This kind of heating process is known as thermal spalling;
-                        and is used to drill into the asteroid, breaking it apart, thereby releasing volatiles (including water vapor)
-                        that are trapped in the asteroid.
-                    </p>
-
-                    <div className="design-logo-container">
-                        <img className="design-logo" alt="mining design" src={require("../../../Assets/Images/asteroid_mining_design.png")} />
-                    </div>
-                    <p className="mad-content">
-                        As is seen in the diagram above, inflatable, passively cooled cryopumps trap the released water vapor as ice. The design attempts to realise atleast
-                        100 kgs of water as ice from a single asteroid, and will deliver the water to fueling stations
-                        in low-Earth orbit (LEO). Water has been identified as the first commodity most likely to be of value for
-                        extraction and sale to customers in space&#8212;particularly for sale as propellant for spacecraft or satellite
-                        propulsion, solar radiation shielding, and human consumption.
-                        <br /><br />
-                        The design targets Arjuna type near-Earth asteroids (NEAs) that are rich in water as determined by spectroscopic analysis.
-                        After being launched into LEO from Earth (using SpaceX’s Falcon 9 rocket for example),
-                        the spacecraft follows an efficient Hohmann transfer orbit to get to the asteroid; once mining is complete, a
-                        spiral transfer orbit is used to get back to LEO&#8212;where the water will be sold.
-                    </p>
-                </div>
-
-            </div>
-        )
-    }
+          <p className="mad-content" style={{ marginTop: -30 }}>
+            <a href="https://www.athstat.io" target="_blank">
+              <u>Athstat</u>
+            </a>{" "}
+            is an American sports analytics technology company based in Boston,
+            MA, USA. Athstat gamifies your sports experience. It brings data, AI,
+            and gaming together allowing fans to get the most out of their
+            sports experience. Moreover, it provides innovative solutions for
+            athletes, coaches, and fans by analyzing sports data. 
+            <br />
+            <br />
+            As a team lead overseeing the development of the company's fantasy
+            sports game, I currently manage a team of four software developers,
+            delegating tasks, set project milestones, and ensure alignment with
+            the company's overall goals and objectives. Additionally, I
+            coordinate sprint planning sessions, facilitate communication within
+            the team, and act as a bridge between the development team and upper
+            management.
+            <br />
+            <br />I drive data-driven decision-making by employing a versatile
+            toolkit. I work with the latest big data technologies such as
+            OpenSearch/ElasticSearch, PostgreSQL, MongoDB, Docker, AWS, and
+            Node.js. Engaging in Agile development, I contribute to flexible
+            project evolution.
+          </p>
+        </div>
+      </div>
+    );
+  }
 }

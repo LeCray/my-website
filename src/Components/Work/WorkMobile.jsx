@@ -119,13 +119,13 @@ export default class WorkMobile extends Component {
                                 <h2>EXPERIENCE</h2>
                                 {/*<hr className="workHr"/>*/}
                                 <div className="work-intra-links">
-                                    <p className="work-link" onClick={() => scrollToComponent(this.research, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Honors Research Project</p>
+                                    <p className="work-link" onClick={() => scrollToComponent(this.design, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Athstat</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.medyear, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Medyear</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.cactus, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Cactus</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.paradise, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Paradise Eats</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.xcapital, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>X Capital</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.parkupp, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>ParkUpp</p>
-                                    <p className="work-link" onClick={() => scrollToComponent(this.design, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Honors Design Project</p>
+                                    <p className="work-link" onClick={() => scrollToComponent(this.research, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Honors Research Project</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.mad, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>MAD Mobile</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.moneycalls, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>Money Calls</p>
                                     <p className="work-link" onClick={() => scrollToComponent(this.galxybit, { offset: -45, align: 'top', ease: 'inOutCirc', duration: 1500 })}>GalxyBit</p>
@@ -140,8 +140,8 @@ export default class WorkMobile extends Component {
                     <div className="work-right-col">
                         <div className="work-right-col-content" style={{ "-webkit-overflow-scrolling": "touch" }}>
 
-                            <div ref={(section) => { this.research = section; }} className="work-content-mobile">
-                                <Research />
+                            <div ref={(section) => { this.design = section; }} className="work-content-mobile">
+                                <Design />
                             </div>
                             <hr className="work-hr" />
                             <div ref={(section) => { this.medyear = section; }} className="work-content-mobile">
@@ -164,8 +164,8 @@ export default class WorkMobile extends Component {
                                 <Parkupp />
                             </div>
                             <hr className="work-hr" />
-                            <div ref={(section) => { this.design = section; }} className="work-content-mobile">
-                                <Design />
+                            <div ref={(section) => { this.research = section; }} className="work-content-mobile">
+                                <Research />
                             </div>
                             <hr className="work-hr" />
                             <div ref={(section) => { this.mad = section; }} className="work-content-mobile">

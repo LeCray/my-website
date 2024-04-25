@@ -131,8 +131,8 @@ export default class AboutMobile extends Component {
                 <br />
                 I quickly took an interest in the cryptocurrency markets and
                 wanted to become a part of it. This led me to learn different
-                web development technologies resulting in me building GalxyBit –
-                a cryptocurrency exchange offering btc/zar, eth/zar, and ltc/zar
+                web development technologies resulting in me building GalxyBit -
+                a cryptocurrency exchange offering BTC/ZAR, ETH/ZAR, and LTC/ZAR
                 (liquidity provided by Ice3X).
                 <br />
                 <br />
@@ -148,22 +148,22 @@ export default class AboutMobile extends Component {
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
-                  <li>Ruby</li>
-                  <li>Java</li>
-                  <li>C#</li>
+                  <li>SQL</li>
                   <li>MQL5</li>
-                  <li>C++ Development</li>
                   <li>Python (Anaconda)</li>
                   <li>MATLAB (Multibody Dynamics using Simscape Multibody)</li>
                 </ul>
                 And frameworks:
                 <ul>
-                  <li>React JS</li>
+                  <li>React.js</li>
                   <li>React Native</li>
-                  <li>Express JS</li>
-                  <li>Ruby on Rails</li>
+                  <li>Node.js</li>
                   <li>Android Studio</li>
-                  <li>.NET</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>OpenSearch/ElasticSearch</li>
+                  <li>Docker</li>
+                  <li>AWS</li>
                 </ul>
                 <br />
                 In 2018 I took a break from Mechanical Engineering to study
@@ -176,21 +176,19 @@ export default class AboutMobile extends Component {
                 Finance and Investments.
                 <br />
                 <br />
-                In addition, in 2018, I co-founded and developed Parkupp, a
+                In addition, also in 2018, I co-founded and developed Parkupp, a
                 decentralised parking app that has recently been acquired by
                 real-estate investment company Docklands Ventures.
                 <br />
                 <br />
-                In 2019 I continued with my engineering studies, and made it to
-                my final year in 2020 where I passed 8/10 of my courses. I have
-                applied to complete the remaining two courses, so that I can
-                graduate by November 2023.
+                In 2019 I continued with my engineering studies.
                 <br />
                 <br />
-                Since 2021 to present, I moved to Wilderness (a small coastal
-                town close to Knysna in the Western Cape, SA), and founded
-                Paradise Eats – a food delivery application for the area (Uber
-                Eats hasn't offered their services there yet).
+                In 2021 I moved to Wilderness (a small coastal town along the
+                Garden Route in the Western Cape, SA), and founded Paradise Eats
+                – a food delivery application targetting the towns in the
+                surrounding areas (Uber Eats hasn't offered their services there
+                yet).
                 <br />
                 <br />
                 In 2022, I continued developing Paradise Eats full-time, and
@@ -204,10 +202,10 @@ export default class AboutMobile extends Component {
                 repeating).
                 <br />
                 <br />
-                Last year's design was an orbital launch system for establishing
-                a constellation of LEO cubesats for high-speed, low-cost
-                internet connectivity for the SADC region of Africa. As a
-                mechanical engineer, it was a challenging project due to its
+                Last year's design project was an orbital launch system for
+                establishing a constellation of LEO cubesats for high-speed,
+                low-cost internet connectivity for the SADC region of Africa. As
+                a mechanical engineer, it was a challenging project due to its
                 aerospace and rocket science nature - a project more suited for
                 the aeronautical engineers. However, I thoroughy enjoyed it. I
                 learnt a tremendous amount, especially given the recent exciting

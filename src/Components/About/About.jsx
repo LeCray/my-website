@@ -302,9 +302,9 @@ export default class About extends Component {
                   <br />
                   I quickly took an interest in the cryptocurrency markets and
                   wanted to become a part of it. This led me to learn different
-                  web development technologies resulting in me building
-                  GalxyBit&#8212;a cryptocurrency exchange offering btc/zar,
-                  eth/zar, and ltc/zar (liquidity provided by Ice3X).
+                  web development technologies resulting in me building GalxyBit
+                  - a cryptocurrency exchange offering BTC/ZAR, ETH/ZAR, and
+                  LTC/ZAR (liquidity provided by Ice3X).
                   <br />
                   <br />
                   Moreover, as part of my other first projects, I developed
@@ -319,11 +319,8 @@ export default class About extends Component {
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
-                    <li>Ruby</li>
-                    <li>Java</li>
-                    <li>C#</li>
-                    <li>MQL5</li>
-                    <li>C++ Development</li>
+                    <li>SQL</li>
+                    <li>MQL5</li>                    
                     <li>Python (Anaconda)</li>
                     <li>
                       MATLAB (Multibody Dynamics using Simscape Multibody)
@@ -331,12 +328,15 @@ export default class About extends Component {
                   </ul>
                   And frameworks:
                   <ul>
-                    <li>React JS</li>
+                    <li>React.js</li>
                     <li>React Native</li>
-                    <li>Express JS</li>
-                    <li>Ruby on Rails</li>
+                    <li>Node.js</li>
                     <li>Android Studio</li>
-                    <li>.NET</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>OpenSearch/ElasticSearch</li>
+                    <li>Docker</li>
+                    <li>AWS</li>                    
                   </ul>
                   <br />
                   In 2018 I took a break from Mechanical Engineering to study
@@ -375,7 +375,7 @@ export default class About extends Component {
                   repeating).
                   <br />
                   <br />
-                  Last year's design was an orbital launch system for
+                  Last year's design project was an orbital launch system for
                   establishing a constellation of LEO cubesats for high-speed,
                   low-cost internet connectivity for the SADC region of Africa.
                   As a mechanical engineer, it was a challenging project due to
@@ -388,7 +388,7 @@ export default class About extends Component {
                   design course but with a different project focus - a low-cost
                   solar powered refrigeration system for rural areas in Africa.
                   <br />
-                  <br />                  
+                  <br />
                 </p>
 
                 <hr className="hrLine" />

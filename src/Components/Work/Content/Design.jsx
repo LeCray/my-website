@@ -35,15 +35,15 @@ export class Design extends Component {
             />
           </div>
 
-          <p className="mad-content" style={{ marginTop: -30 }}>
+          <p className="mad-content" style={{ marginTop: -10 }}>
             <a href="https://www.athstat.io" target="_blank">
               <u>Athstat</u>
             </a>{" "}
             is an American sports analytics technology company based in Boston,
-            MA, USA. Athstat gamifies your sports experience. It brings data, AI,
-            and gaming together allowing fans to get the most out of their
+            MA, USA. Athstat gamifies your sports experience. It brings data,
+            AI, and gaming together allowing fans to get the most out of their
             sports experience. Moreover, it provides innovative solutions for
-            athletes, coaches, and fans by analyzing sports data. 
+            athletes, coaches, and fans by analyzing sports data.
             <br />
             <br />
             As a team lead overseeing the development of the company's fantasy
@@ -56,9 +56,9 @@ export class Design extends Component {
             <br />
             <br />I drive data-driven decision-making by employing a versatile
             toolkit. I work with the latest big data technologies such as
-            OpenSearch/ElasticSearch, PostgreSQL, MongoDB, Docker, AWS, and
-            Node.js. Engaging in Agile development, I contribute to flexible
-            project evolution.
+            OpenSearch/ElasticSearch, PostgreSQL, MongoDB, Docker, AWS,
+            React.js, React-Native, and Node.js. Engaging in Agile development,
+            I contribute to flexible project evolution.
           </p>
         </div>
       </div>

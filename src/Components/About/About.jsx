@@ -369,10 +369,10 @@ export default class About extends Component {
                   July.
                   <br />
                   <br />
-                  Beginning of this year, 2023, I returned to Wits to complete
-                  the two engineering courses I had due – Solid Mechanics (which
-                  I passed), and the Design Project (which I am currently
-                  repeating).
+                  At the beginning of 2023, I returned to Wits University to
+                  complete the two engineering courses I had due – Solid
+                  Mechanics (which I passed), and the Design Project (which I am
+                  currently repeating).
                   <br />
                   <br />
                   Last year's design project was an orbital launch system for

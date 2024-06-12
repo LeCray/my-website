@@ -320,7 +320,7 @@ export default class About extends Component {
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>SQL</li>
-                    <li>MQL5</li>                    
+                    <li>MQL5</li>
                     <li>Python (Anaconda)</li>
                     <li>
                       MATLAB (Multibody Dynamics using Simscape Multibody)
@@ -336,7 +336,7 @@ export default class About extends Component {
                     <li>MongoDB</li>
                     <li>OpenSearch/ElasticSearch</li>
                     <li>Docker</li>
-                    <li>AWS</li>                    
+                    <li>AWS</li>
                   </ul>
                   <br />
                   In 2018 I took a break from Mechanical Engineering to study
@@ -380,8 +380,8 @@ export default class About extends Component {
                   low-cost internet connectivity for the SADC region of Africa.
                   As a mechanical engineer, it was a challenging project due to
                   its aerospace and rocket science nature - a project more
-                  suited for the aeronautical engineers. However, I thoroughy
-                  enjoyed it. I learnt a tremendous amount, especially given the
+                  suited for the aeronautical engineers. I did thoroughy enjoy
+                  it though. I learnt a tremendous amount, especially given the
                   recent exciting developments in the space industry. It
                   provided me with valuable insights and experience. However,
                   due to its high level of difficulty, I am now repeating the

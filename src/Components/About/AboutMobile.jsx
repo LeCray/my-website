@@ -207,7 +207,7 @@ export default class AboutMobile extends Component {
                 low-cost internet connectivity for the SADC region of Africa. As
                 a mechanical engineer, it was a challenging project due to its
                 aerospace and rocket science nature - a project more suited for
-                the aeronautical engineers. However, I thoroughy enjoyed it. I
+                the aeronautical engineers. I did thoroughy enjoy it though. I
                 learnt a tremendous amount, especially given the recent exciting
                 developments in the space industry. It provided me with valuable
                 insights and experience. However, due to its high level of

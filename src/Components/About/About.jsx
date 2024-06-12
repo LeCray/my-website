@@ -270,7 +270,7 @@ export default class About extends Component {
                 <h2 className="heading">Jabulani Kunene</h2>
                 <h4>
                   I am a Mechanical Engineer, and a self-taught full-stack
-                  Software Developer
+                  JavaScript Developer
                 </h4>
 
                 <br />
@@ -329,6 +329,7 @@ export default class About extends Component {
                   And frameworks:
                   <ul>
                     <li>React.js</li>
+                    <li>Next.js</li>
                     <li>React Native</li>
                     <li>Node.js</li>
                     <li>Android Studio</li>

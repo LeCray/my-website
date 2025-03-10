@@ -239,8 +239,8 @@ export default class Landing extends Component {
                         University of the Witswatersrand
                       </p>
                       <p className="summary-details-text">
-                        Self-Taught JavaScript Developer <br />
-                        6+ years of experience
+                        Self-taught AI-first JavaScript Developer <br />
+                        7+ years of experience
                       </p>
                     </div>
                   </div>

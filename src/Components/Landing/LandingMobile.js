@@ -295,7 +295,7 @@ export default class LandingMobile extends Component {
                   <p>
                     © Jabulani Kunene. All rights reserved.
                     <br />
-                    2024
+                    2025
                   </p>
                 </div>
               </div>
@@ -330,7 +330,10 @@ export default class LandingMobile extends Component {
                     className={this.state.mobile ? "hr-mobile" : "hr"}
                   />
 
-                  <div ref={summary}>
+                  <div
+                    ref={summary}
+                    style={{ paddingLeft: 10, paddingRight: 10 }}
+                  >
                     <h6 className="summary-mobile">
                       Mechanical Engineer (BSc Hons) (2024)
                     </h6>
@@ -338,7 +341,9 @@ export default class LandingMobile extends Component {
                       University of the Witwatersrand
                     </h6>
                     <h6 className="summary-mobile">
-                      Self-Taught JavaScript Developer (6+ years exp)
+                      Self-taught AI-first JavaScript Developer
+                      <br />
+                      (7+ years exp)
                     </h6>
                   </div>
 

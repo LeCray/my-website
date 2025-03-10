@@ -24,8 +24,8 @@ export class Design extends Component {
           <h2 className="heading" style={{ color: "#737373" }}>
             Athstat
           </h2>
-          <h4>Team Lead (2023 - present)</h4>
-          <h4>Data Science</h4>
+          <h4>Vice President, Product (2023 - present)</h4>
+          <h4>Full Stack Developer</h4>
 
           <div className="medyear-logo-container">
             <img

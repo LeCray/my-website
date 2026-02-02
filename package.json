@@ -9,16 +9,16 @@
     "@mui/material": "^5.14.8",
     "gsap": "^2.0.2",
     "mdbreact": "^4.6.0",
-    "react": "^16.4.1",
+    "react": "^18.2.0",
     "react-activity": "^1.2.2",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^18.2.0",
     "react-feather": "^2.0.9",
     "react-ionicons": "^2.1.6",
     "react-loading-overlay": "^0.3.0",
     "react-loading-screen": "0.0.17",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.4",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "4.0.3",
     "react-scroll-to-component": "^1.0.2"
   },
   "scripts": {
@@ -26,5 +26,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

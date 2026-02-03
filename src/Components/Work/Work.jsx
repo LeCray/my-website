@@ -21,7 +21,6 @@ import './Styles/Work.css';
 import './Styles/WorkMobile.css';
 
 export default class Work extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -44,7 +43,7 @@ export default class Work extends Component {
             galxyBit: false,
             transition: false,
             txContent: false,
-            width: window.innerWidth
+            width: window.innerWidth,
         };
 
         this.paradise = this.paradise.bind(this);
@@ -54,7 +53,7 @@ export default class Work extends Component {
 
         this.design = this.design.bind(this);
         this.research = this.research.bind(this);
-        //this.madMobile = this.madMobile.bind(this);
+        this.madMobile = this.madMobile.bind(this);
         this.parkupp = this.parkupp.bind(this);
         //this.moneyCalls = this.moneyCalls.bind(this);
         //this.galxyBit = this.galxyBit.bind(this);
@@ -65,17 +64,26 @@ export default class Work extends Component {
     }
 
     componentDidMount() {
-        this.setState({ columns: true })
+        this.setState({ columns: true });
         workColumns(
-            this.workLeftCol, this.workRightColContent,
-            this.state.width, this.workStill, this.workLinkHome,
-            this.workLinkAbout, this.workLink, this.workLinkContact,
-            this.paradiseSlide, this.medyearSlide, this.cactusSlide,
-            this.designSlide, this.researchSlide, this.parkuppSlide
-        )
+            this.workLeftCol,
+            this.workRightColContent,
+            this.state.width,
+            this.workStill,
+            this.workLinkHome,
+            this.workLinkAbout,
+            this.workLink,
+            this.workLinkContact,
+            this.paradiseSlide,
+            this.medyearSlide,
+            this.cactusSlide,
+            this.designSlide,
+            this.researchSlide,
+            this.parkuppSlide
+        );
     }
     paradise() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -88,11 +96,11 @@ export default class Work extends Component {
                 paradise: true,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     xcapital() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -105,11 +113,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     medyear() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -122,11 +130,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: true,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     cactus() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -139,11 +147,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: true,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     design() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: true,
@@ -156,11 +164,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     research() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -173,11 +181,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     madMobile() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -190,11 +198,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     parkupp() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -207,11 +215,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     moneyCalls() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -224,11 +232,11 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
     galxyBit() {
-        switchTo(this.workRightColContent)
+        switchTo(this.workRightColContent);
         setTimeout(() => {
             this.setState({
                 design: false,
@@ -241,8 +249,8 @@ export default class Work extends Component {
                 paradise: false,
                 medyear: false,
                 cactus: false,
-            })
-        }, 500)
+            });
+        }, 500);
     }
 
     async homeTransition() {
@@ -251,24 +259,28 @@ export default class Work extends Component {
             txContent: true,
             home: true,
             about: false,
-            contact: false
-        })
+            contact: false,
+        });
         //homeEnter(this.home)
         Transition(
-            this.transitionFirst, this.transitionMain,
-            this.transitionSecond, this.FnameTx, this.LnameTx,
-            this.state.width, this.learnTx
-        )
+            this.transitionFirst,
+            this.transitionMain,
+            this.transitionSecond,
+            this.FnameTx,
+            this.LnameTx,
+            this.state.width,
+            this.learnTx
+        );
 
         setTimeout(() => {
-            this.setState({ work: false })
-        }, 1000)
+            this.setState({ work: false });
+        }, 1000);
         setTimeout(() => {
-            this.setState({ txContent: false })
-        }, 2000)
+            this.setState({ txContent: false });
+        }, 2000);
         setTimeout(() => {
-            this.setState({ transition: false })
-        }, 3300)
+            this.setState({ transition: false });
+        }, 3300);
     }
     async aboutTransition() {
         await this.setState({
@@ -276,24 +288,28 @@ export default class Work extends Component {
             txContent: true,
             home: false,
             about: true,
-            contact: false
-        })
+            contact: false,
+        });
         Transition(
-            this.transitionFirst, this.transitionMain,
-            this.transitionSecond, this.FnameTx, this.LnameTx,
-            this.state.width, this.learnTx
-        )
-        aboutEnter(this.aboutHome)
+            this.transitionFirst,
+            this.transitionMain,
+            this.transitionSecond,
+            this.FnameTx,
+            this.LnameTx,
+            this.state.width,
+            this.learnTx
+        );
+        aboutEnter(this.aboutHome);
 
         setTimeout(() => {
-            this.setState({ work: false })
-        }, 2000)
+            this.setState({ work: false });
+        }, 2000);
         setTimeout(() => {
-            this.setState({ txContent: false })
-        }, 3000)
+            this.setState({ txContent: false });
+        }, 3000);
         setTimeout(() => {
-            this.setState({ transition: false })
-        }, 3300)
+            this.setState({ transition: false });
+        }, 3300);
     }
     async contactTransition() {
         await this.setState({
@@ -301,137 +317,297 @@ export default class Work extends Component {
             txContent: true,
             home: false,
             about: false,
-            contact: true
-        })
+            contact: true,
+        });
         Transition(
-            this.transitionFirst, this.transitionMain,
-            this.transitionSecond, this.FnameTx, this.LnameTx,
-            this.state.width, this.learnTx
-        )
-        contactEnter(this.contactHome)
+            this.transitionFirst,
+            this.transitionMain,
+            this.transitionSecond,
+            this.FnameTx,
+            this.LnameTx,
+            this.state.width,
+            this.learnTx
+        );
+        contactEnter(this.contactHome);
 
         setTimeout(() => {
-            this.setState({ work: false })
-        }, 2000)
+            this.setState({ work: false });
+        }, 2000);
         setTimeout(() => {
-            this.setState({ txContent: false })
-        }, 3000)
+            this.setState({ txContent: false });
+        }, 3000);
         setTimeout(() => {
-            this.setState({ transition: false })
-        }, 3300)
+            this.setState({ transition: false });
+        }, 3300);
     }
 
     render() {
-        const home = home => this.home = home
-        const aboutHome = aboutHome => this.aboutHome = aboutHome
-        const contactHome = contactHome => this.contactHome = contactHome
+        const home = (home) => (this.home = home);
+        const aboutHome = (aboutHome) => (this.aboutHome = aboutHome);
+        const contactHome = (contactHome) => (this.contactHome = contactHome);
 
-        const workLeftCol = workLeftCol => this.workLeftCol = workLeftCol
-        const workRightColContent = workRightColContent => this.workRightColContent = workRightColContent
-        const workStill = workStill => this.workStill = workStill
+        const workLeftCol = (workLeftCol) => (this.workLeftCol = workLeftCol);
+        const workRightColContent = (workRightColContent) =>
+            (this.workRightColContent = workRightColContent);
+        const workStill = (workStill) => (this.workStill = workStill);
 
-        const workLinkHome = workLinkHome => this.workLinkHome = workLinkHome
-        const workLink = workLink => this.workLink = workLink
-        const workLinkAbout = workLinkAbout => this.workLinkAbout = workLinkAbout
-        const workLinkContact = workLinkContact => this.workLinkContact = workLinkContact
+        const workLinkHome = (workLinkHome) =>
+            (this.workLinkHome = workLinkHome);
+        const workLink = (workLink) => (this.workLink = workLink);
+        const workLinkAbout = (workLinkAbout) =>
+            (this.workLinkAbout = workLinkAbout);
+        const workLinkContact = (workLinkContact) =>
+            (this.workLinkContact = workLinkContact);
 
-        const transitionFirst = transitionFirst => this.transitionFirst = transitionFirst
-        const transitionMain = transitionMain => this.transitionMain = transitionMain
-        const transitionSecond = transitionSecond => this.transitionSecond = transitionSecond
-        const FnameTx = FnameTx => this.FnameTx = FnameTx
-        const LnameTx = LnameTx => this.LnameTx = LnameTx
-        const learnTx = learnTx => this.learnTx = learnTx
+        const transitionFirst = (transitionFirst) =>
+            (this.transitionFirst = transitionFirst);
+        const transitionMain = (transitionMain) =>
+            (this.transitionMain = transitionMain);
+        const transitionSecond = (transitionSecond) =>
+            (this.transitionSecond = transitionSecond);
+        const FnameTx = (FnameTx) => (this.FnameTx = FnameTx);
+        const LnameTx = (LnameTx) => (this.LnameTx = LnameTx);
+        const learnTx = (learnTx) => (this.learnTx = learnTx);
 
-        const researchSlide = researchSlide => this.researchSlide = researchSlide
+        const researchSlide = (researchSlide) =>
+            (this.researchSlide = researchSlide);
         //const xcapitalSlide = xcapitalSlide => this.xcapitalSlide = xcapitalSlide
-        const medyearSlide = medyearSlide => this.medyearSlide = medyearSlide
-        const cactusSlide = cactusSlide => this.cactusSlide = cactusSlide
-        const paradiseSlide = paradiseSlide => this.paradiseSlide = paradiseSlide
+        const medyearSlide = (medyearSlide) =>
+            (this.medyearSlide = medyearSlide);
+        const cactusSlide = (cactusSlide) => (this.cactusSlide = cactusSlide);
+        const paradiseSlide = (paradiseSlide) =>
+            (this.paradiseSlide = paradiseSlide);
 
-        const designSlide = designSlide => this.designSlide = designSlide
+        const designSlide = (designSlide) => (this.designSlide = designSlide);
 
-        //const madMobileSlide = madMobileSlide => this.madMobileSlide = madMobileSlide
-        const parkuppSlide = parkuppSlide => this.parkuppSlide = parkuppSlide
+        const madMobileSlide = (madMobileSlide) =>
+            (this.madMobileSlide = madMobileSlide);
+        const parkuppSlide = (parkuppSlide) =>
+            (this.parkuppSlide = parkuppSlide);
         //const moneyCallsSlide = moneyCallsSlide => this.moneyCallsSlide = moneyCallsSlide
         //const galxyBitSlide = galxyBitSlide => this.galxyBitSlide = galxyBitSlide
 
         return (
             <div>
-                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet" />
-                {this.state.work ?
-
-                    <div style={{ fontFamily: "Josefin Sans" }}>
-
-                        <div ref={workLeftCol} className="workLeftCol" style={{ display: this.state.columns ? null : "none" }}>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Josefin+Sans:300"
+                    rel="stylesheet"
+                />
+                {this.state.work ? (
+                    <div style={{ fontFamily: 'Josefin Sans' }}>
+                        <div
+                            ref={workLeftCol}
+                            className="workLeftCol"
+                            style={{
+                                display: this.state.columns ? null : 'none',
+                            }}
+                        >
                             <div className="workLeftColContent">
                                 <div ref={workStill}>
                                     <h2>EXPERIENCE</h2>
 
                                     <div className="work-intra-links">
-                                            <div className="cactus-link">
-                                                <p
-                                                    className={this.state.cactusHover || this.state.cactus ? "workLinkHover" : "workLink"}
-                                                    ref={cactusSlide}
-                                                    style={{ marginLeft: 0 }}
-                                                    onMouseEnter={() => this.setState({ cactusHover: !this.state.cactusHover })}
-                                                    onMouseLeave={() => this.setState({ cactusHover: !this.state.cactusHover })}
-                                                    onClick={this.cactus}>
-                                                    TRPST
-                                                </p>
-                                            </div>
+                                        <div className="cactus-link">
+                                            <p
+                                                className={
+                                                    this.state.cactusHover ||
+                                                    this.state.cactus
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
+                                                ref={cactusSlide}
+                                                style={{ marginLeft: 0 }}
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        cactusHover:
+                                                            !this.state
+                                                                .cactusHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        cactusHover:
+                                                            !this.state
+                                                                .cactusHover,
+                                                    })
+                                                }
+                                                onClick={this.cactus}
+                                            >
+                                                TRPST
+                                            </p>
+                                        </div>
                                         <div className="design-link">
                                             <p
-                                                className={this.state.designHover || this.state.design ? "workLinkHover" : "workLink"}
+                                                className={
+                                                    this.state.designHover ||
+                                                    this.state.design
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
                                                 ref={designSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ designHover: !this.state.designHover })}
-                                                onMouseLeave={() => this.setState({ designHover: !this.state.designHover })}
-                                                onClick={this.design}>
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        designHover:
+                                                            !this.state
+                                                                .designHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        designHover:
+                                                            !this.state
+                                                                .designHover,
+                                                    })
+                                                }
+                                                onClick={this.design}
+                                            >
                                                 Athstat
                                             </p>
                                         </div>
                                         <div className="medyear-link">
                                             <p
-                                                className={this.state.medyearHover || this.state.medyear ? "workLinkHover" : "workLink"}
+                                                className={
+                                                    this.state.medyearHover ||
+                                                    this.state.medyear
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
                                                 ref={medyearSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ medyearHover: !this.state.medyearHover })}
-                                                onMouseLeave={() => this.setState({ medyearHover: !this.state.medyearHover })}
-                                                onClick={this.medyear}>
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        medyearHover:
+                                                            !this.state
+                                                                .medyearHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        medyearHover:
+                                                            !this.state
+                                                                .medyearHover,
+                                                    })
+                                                }
+                                                onClick={this.medyear}
+                                            >
                                                 Medyear
                                             </p>
                                         </div>
                                         <div className="research-link">
                                             <p
-                                                className={this.state.researchHover || this.state.research ? "workLinkHover" : "workLink"}
+                                                className={
+                                                    this.state.researchHover ||
+                                                    this.state.research
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
                                                 ref={researchSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ researchHover: !this.state.researchHover })}
-                                                onMouseLeave={() => this.setState({ researchHover: !this.state.researchHover })}
-                                                onClick={this.research}>
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        researchHover:
+                                                            !this.state
+                                                                .researchHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        researchHover:
+                                                            !this.state
+                                                                .researchHover,
+                                                    })
+                                                }
+                                                onClick={this.research}
+                                            >
                                                 Honors Research Project
                                             </p>
                                         </div>
                                         <div className="paradise-link">
                                             <p
-                                                className={this.state.paradiseHover || this.state.paradise ? "workLinkHover" : "workLink"}
+                                                className={
+                                                    this.state.paradiseHover ||
+                                                    this.state.paradise
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
                                                 ref={paradiseSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ paradiseHover: !this.state.paradiseHover })}
-                                                onMouseLeave={() => this.setState({ paradiseHover: !this.state.paradiseHover })}
-                                                onClick={this.paradise}>
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        paradiseHover:
+                                                            !this.state
+                                                                .paradiseHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        paradiseHover:
+                                                            !this.state
+                                                                .paradiseHover,
+                                                    })
+                                                }
+                                                onClick={this.paradise}
+                                            >
                                                 Paradise Eats
                                             </p>
                                         </div>
                                         <div className="parkupp-link">
                                             <p
-                                                className={this.state.parkuppHover || this.state.parkupp ? "workLinkHover" : "workLink"}
+                                                className={
+                                                    this.state.parkuppHover ||
+                                                    this.state.parkupp
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
                                                 ref={parkuppSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ parkuppHover: !this.state.parkuppHover })}
-                                                onMouseLeave={() => this.setState({ parkuppHover: !this.state.parkuppHover })}
-                                                onClick={this.parkupp}>
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        parkuppHover:
+                                                            !this.state
+                                                                .parkuppHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        parkuppHover:
+                                                            !this.state
+                                                                .parkuppHover,
+                                                    })
+                                                }
+                                                onClick={this.parkupp}
+                                            >
                                                 Parkupp
+                                            </p>
+                                        </div>
+                                        <div className="madMobile-link">
+                                            <p
+                                                className={
+                                                    this.state.madMobileHover ||
+                                                    this.state.madMobile
+                                                        ? 'workLinkHover'
+                                                        : 'workLink'
+                                                }
+                                                ref={madMobileSlide}
+                                                style={{ marginLeft: 0 }}
+                                                onMouseEnter={() =>
+                                                    this.setState({
+                                                        madMobileHover:
+                                                            !this.state
+                                                                .madMobileHover,
+                                                    })
+                                                }
+                                                onMouseLeave={() =>
+                                                    this.setState({
+                                                        madMobileHover:
+                                                            !this.state
+                                                                .madMobileHover,
+                                                    })
+                                                }
+                                                onClick={this.madMobile}
+                                            >
+                                                MAD Mobile
                                             </p>
                                         </div>
 
@@ -472,40 +648,104 @@ export default class Work extends Component {
                                     </div>
                                 </div>
 
-                                <div
-                                    className="workLinks">
+                                <div className="workLinks">
                                     <div className="work-link-content">
                                         <p
-                                            className={this.state.homeHover ? "workLinkHover" : "workLink"}
+                                            className={
+                                                this.state.homeHover
+                                                    ? 'workLinkHover'
+                                                    : 'workLink'
+                                            }
                                             ref={workLinkHome}
                                             onClick={this.homeTransition}
-                                            onMouseEnter={() => this.setState({ homeHover: !this.state.homeHover })}
-                                            onMouseLeave={() => this.setState({ homeHover: !this.state.homeHover })}>
+                                            onMouseEnter={() =>
+                                                this.setState({
+                                                    homeHover:
+                                                        !this.state.homeHover,
+                                                })
+                                            }
+                                            onMouseLeave={() =>
+                                                this.setState({
+                                                    homeHover:
+                                                        !this.state.homeHover,
+                                                })
+                                            }
+                                        >
                                             Home
-                                    </p>
+                                        </p>
                                         <p
-                                            className={this.state.aboutHover || this.state.about ? "workLinkHover" : "workLink"}
+                                            className={
+                                                this.state.aboutHover ||
+                                                this.state.about
+                                                    ? 'workLinkHover'
+                                                    : 'workLink'
+                                            }
                                             ref={workLinkAbout}
                                             onClick={this.aboutTransition}
-                                            onMouseEnter={() => this.setState({ aboutHover: !this.state.aboutHover })}
-                                            onMouseLeave={() => this.setState({ aboutHover: !this.state.aboutHover })}>
+                                            onMouseEnter={() =>
+                                                this.setState({
+                                                    aboutHover:
+                                                        !this.state.aboutHover,
+                                                })
+                                            }
+                                            onMouseLeave={() =>
+                                                this.setState({
+                                                    aboutHover:
+                                                        !this.state.aboutHover,
+                                                })
+                                            }
+                                        >
                                             About
-                                    </p>
+                                        </p>
                                         <p
-                                            className={this.state.workHover || this.state.work ? "workLinkHover" : "workLink"}
+                                            className={
+                                                this.state.workHover ||
+                                                this.state.work
+                                                    ? 'workLinkHover'
+                                                    : 'workLink'
+                                            }
                                             ref={workLink}
-                                            onMouseEnter={() => this.setState({ workHover: !this.state.workHover })}
-                                            onMouseLeave={() => this.setState({ workHover: !this.state.workHover })}>
+                                            onMouseEnter={() =>
+                                                this.setState({
+                                                    workHover:
+                                                        !this.state.workHover,
+                                                })
+                                            }
+                                            onMouseLeave={() =>
+                                                this.setState({
+                                                    workHover:
+                                                        !this.state.workHover,
+                                                })
+                                            }
+                                        >
                                             Experience
-                                    </p>
+                                        </p>
                                         <p
-                                            className={this.state.contactHover || this.state.contact ? "workLinkHover" : "workLink"}
+                                            className={
+                                                this.state.contactHover ||
+                                                this.state.contact
+                                                    ? 'workLinkHover'
+                                                    : 'workLink'
+                                            }
                                             ref={workLinkContact}
                                             onClick={this.contactTransition}
-                                            onMouseEnter={() => this.setState({ contactHover: !this.state.contactHover })}
-                                            onMouseLeave={() => this.setState({ contactHover: !this.state.contactHover })}>
+                                            onMouseEnter={() =>
+                                                this.setState({
+                                                    contactHover:
+                                                        !this.state
+                                                            .contactHover,
+                                                })
+                                            }
+                                            onMouseLeave={() =>
+                                                this.setState({
+                                                    contactHover:
+                                                        !this.state
+                                                            .contactHover,
+                                                })
+                                            }
+                                        >
                                             Contact
-                                    </p>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -515,83 +755,170 @@ export default class Work extends Component {
                             <div
                                 ref={workRightColContent}
                                 className="workRightColContent"
-                                style={{ "-webkit-overflow-scrolling": "touch", display: this.state.columns ? null : "none" }}>
-
-                                <div className="scroller" style={{ display: this.state.paradise ? null : "none" }}>
+                                style={{
+                                    '-webkit-overflow-scrolling': 'touch',
+                                    display: this.state.columns ? null : 'none',
+                                }}
+                            >
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.paradise
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Paradise />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.medyear ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.medyear
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Medyear />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.xcapital ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.xcapital
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <XCapital />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.cactus ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.cactus
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Cactus />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.design ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.design
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Design />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.research ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.research
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Research />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.madMobile ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.madMobile
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <MadMobile />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.parkupp ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.parkupp
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <Parkupp />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.moneyCalls ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.moneyCalls
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <MoneyCalls />
                                 </div>
-                                <div className="scroller" style={{ display: this.state.galxyBit ? null : "none" }}>
+                                <div
+                                    className="scroller"
+                                    style={{
+                                        display: this.state.galxyBit
+                                            ? null
+                                            : 'none',
+                                    }}
+                                >
                                     <GalxyBit />
                                 </div>
                             </div>
                         </div>
-                    </div> : null}
+                    </div>
+                ) : null}
 
-                <div className="transition-container" style={{ display: this.state.transition ? null : "none" }}>
+                <div
+                    className="transition-container"
+                    style={{ display: this.state.transition ? null : 'none' }}
+                >
                     <div
                         ref={transitionFirst}
                         className="transition-first"
-                    >
-                    </div>
-                    <div ref={transitionMain} className="transition-main" >
-                        <div className="transition-content" style={{ display: this.state.txContent ? null : "none" }}>
-                            <p ref={FnameTx} className="name-tx">J</p>
-                            <p ref={LnameTx} className="name-tx" style={{ marginLeft: 5 }}>K</p>
-                            <p ref={learnTx} className="learn-tx">- LIVING TO LEARN -</p>
+                    ></div>
+                    <div ref={transitionMain} className="transition-main">
+                        <div
+                            className="transition-content"
+                            style={{
+                                display: this.state.txContent ? null : 'none',
+                            }}
+                        >
+                            <p ref={FnameTx} className="name-tx">
+                                J
+                            </p>
+                            <p
+                                ref={LnameTx}
+                                className="name-tx"
+                                style={{ marginLeft: 5 }}
+                            >
+                                K
+                            </p>
+                            <p ref={learnTx} className="learn-tx">
+                                - LIVING TO LEARN -
+                            </p>
                         </div>
                     </div>
                     <div
                         ref={transitionSecond}
                         className="transition-second"
-                    >
-                    </div>
+                    ></div>
                 </div>
 
-                {this.state.home ?
+                {this.state.home ? (
                     <div ref={home} className="home">
                         <Landing />
                     </div>
-                    : null}
+                ) : null}
 
-
-                {this.state.about ?
+                {this.state.about ? (
                     <div ref={aboutHome} className="aboutHome">
                         <About />
                     </div>
-                    : null}
+                ) : null}
 
-                {this.state.contact ?
+                {this.state.contact ? (
                     <div ref={contactHome} className="contactHome">
                         <Contact />
                     </div>
-                    : null}
-
+                ) : null}
             </div>
-        )
+        );
     }
-
 }

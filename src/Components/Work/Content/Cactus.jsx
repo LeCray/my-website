@@ -57,21 +57,20 @@ export class Cactus extends Component {
                         moment are:
                         <br />
                         <br />
-                        <strong>Auto Visa App</strong> — a fully automated,
-                        human-in-the-loop browser AI agent that completes visa
-                        application forms online. It notifies the user when
-                        manual intervention is required (e.g., solving a
-                        CAPTCHA) or when missing details are needed to continue
-                        the application.
+                        <u>Auto Visa</u> — a fully automated, human-in-the-loop
+                        browser AI agent that completes visa application forms
+                        online. It notifies the user when manual intervention is
+                        required (e.g., solving a CAPTCHA) or when missing
+                        details are needed to continue the application.
                         <br />
                         <br />
-                        <strong>Airvoucher</strong> — a complex voucher
-                        management system that enables admins to manage
-                        retailers who sell a wide range of digital vouchers.
-                        Retailers can sell anything from mobile airtime and data
-                        bundles, prepaid electricity top-ups, and DStv payments,
-                        to Ringa, Hollywoodbets, Easyload, and other major South
-                        African voucher products.
+                        <u>Airvoucher</u> — a complex voucher management system
+                        that enables admins to manage retailers who sell a wide
+                        range of digital vouchers. Retailers can sell anything
+                        from mobile airtime and data bundles, prepaid
+                        electricity top-ups, and DStv payments, to Ringa,
+                        Hollywoodbets, Easyload, and other major South African
+                        voucher products.
                         <br />
                         <br />
                         Leading these projects has sharpened my ability to

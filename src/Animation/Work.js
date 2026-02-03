@@ -15,7 +15,7 @@ export const workEnter = (workHome) => {
         }, "start")
 }
 
-export const workColumns = (workLeftCol, workRightColContent, width, workStill, workLinkhome, workLinkAbout, workLink, workLinkContact, paradise, medyear, cactus, design, research, madMobile, parkupp, moneyCalls, galxyBit) => {
+export const workColumns = (workLeftCol, workRightColContent, width, workStill, workLinkhome, workLinkAbout, workLink, workLinkContact, paradise, medyear, cactus, design, research, parkupp) => {
 
     var tl = new TimelineMax();
 
@@ -42,7 +42,7 @@ export const workColumns = (workLeftCol, workRightColContent, width, workStill, 
             y: 50, opacity: 0, ease: Elastic.easeOut.config(1.2, 1)
         }, 0.3, "start+=.7")
 
-        .staggerFrom([paradise, medyear, cactus, design, research, madMobile, parkupp, moneyCalls, galxyBit], 2.5, {
+        .staggerFrom([paradise, medyear, cactus, design, research, parkupp], 2.5, {
             x: -50, y: 10, opacity: 0, ease: Elastic.easeOut.config(1.2, 1)
         }, .2, "start+=1")
 

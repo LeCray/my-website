@@ -33,9 +33,9 @@ export default class Work extends Component {
 
             paradise: false,
             medyear: false,
-            cactus: false,
+            cactus: true,
 
-            design: true,
+            design: false,
             xcapital: false,
             research: false,
             parkupp: false,
@@ -49,15 +49,15 @@ export default class Work extends Component {
 
         this.paradise = this.paradise.bind(this);
         this.medyear = this.medyear.bind(this);
-        this.xcapital = this.xcapital.bind(this);
+        //this.xcapital = this.xcapital.bind(this);
         this.cactus = this.cactus.bind(this);
 
         this.design = this.design.bind(this);
         this.research = this.research.bind(this);
-        this.madMobile = this.madMobile.bind(this);
+        //this.madMobile = this.madMobile.bind(this);
         this.parkupp = this.parkupp.bind(this);
-        this.moneyCalls = this.moneyCalls.bind(this);
-        this.galxyBit = this.galxyBit.bind(this);
+        //this.moneyCalls = this.moneyCalls.bind(this);
+        //this.galxyBit = this.galxyBit.bind(this);
 
         this.homeTransition = this.homeTransition.bind(this);
         this.aboutTransition = this.aboutTransition.bind(this);
@@ -71,7 +71,7 @@ export default class Work extends Component {
             this.state.width, this.workStill, this.workLinkHome,
             this.workLinkAbout, this.workLink, this.workLinkContact,
             this.paradiseSlide, this.medyearSlide, this.cactusSlide,
-            this.designSlide, this.researchSlide, this.madMobileSlide, this.parkuppSlide, this.moneyCallsSlide, this.galxyBitSlide
+            this.designSlide, this.researchSlide, this.parkuppSlide
         )
     }
     paradise() {
@@ -343,17 +343,17 @@ export default class Work extends Component {
         const learnTx = learnTx => this.learnTx = learnTx
 
         const researchSlide = researchSlide => this.researchSlide = researchSlide
-        const xcapitalSlide = xcapitalSlide => this.xcapitalSlide = xcapitalSlide
+        //const xcapitalSlide = xcapitalSlide => this.xcapitalSlide = xcapitalSlide
         const medyearSlide = medyearSlide => this.medyearSlide = medyearSlide
         const cactusSlide = cactusSlide => this.cactusSlide = cactusSlide
         const paradiseSlide = paradiseSlide => this.paradiseSlide = paradiseSlide
 
         const designSlide = designSlide => this.designSlide = designSlide
 
-        const madMobileSlide = madMobileSlide => this.madMobileSlide = madMobileSlide
+        //const madMobileSlide = madMobileSlide => this.madMobileSlide = madMobileSlide
         const parkuppSlide = parkuppSlide => this.parkuppSlide = parkuppSlide
-        const moneyCallsSlide = moneyCallsSlide => this.moneyCallsSlide = moneyCallsSlide
-        const galxyBitSlide = galxyBitSlide => this.galxyBitSlide = galxyBitSlide
+        //const moneyCallsSlide = moneyCallsSlide => this.moneyCallsSlide = moneyCallsSlide
+        //const galxyBitSlide = galxyBitSlide => this.galxyBitSlide = galxyBitSlide
 
         return (
             <div>
@@ -368,6 +368,17 @@ export default class Work extends Component {
                                     <h2>EXPERIENCE</h2>
 
                                     <div className="work-intra-links">
+                                            <div className="cactus-link">
+                                                <p
+                                                    className={this.state.cactusHover || this.state.cactus ? "workLinkHover" : "workLink"}
+                                                    ref={cactusSlide}
+                                                    style={{ marginLeft: 0 }}
+                                                    onMouseEnter={() => this.setState({ cactusHover: !this.state.cactusHover })}
+                                                    onMouseLeave={() => this.setState({ cactusHover: !this.state.cactusHover })}
+                                                    onClick={this.cactus}>
+                                                    TRPST
+                                                </p>
+                                            </div>
                                         <div className="design-link">
                                             <p
                                                 className={this.state.designHover || this.state.design ? "workLinkHover" : "workLink"}
@@ -388,17 +399,6 @@ export default class Work extends Component {
                                                 onMouseLeave={() => this.setState({ medyearHover: !this.state.medyearHover })}
                                                 onClick={this.medyear}>
                                                 Medyear
-                                            </p>
-                                        </div>
-                                        <div className="cactus-link">
-                                            <p
-                                                className={this.state.cactusHover || this.state.cactus ? "workLinkHover" : "workLink"}
-                                                ref={cactusSlide}
-                                                style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ cactusHover: !this.state.cactusHover })}
-                                                onMouseLeave={() => this.setState({ cactusHover: !this.state.cactusHover })}
-                                                onClick={this.cactus}>
-                                                Cactus
                                             </p>
                                         </div>
                                         <div className="research-link">
@@ -423,19 +423,19 @@ export default class Work extends Component {
                                                 Paradise Eats
                                             </p>
                                         </div>
-                                        <div className="xcapital-link">
+                                        <div className="parkupp-link">
                                             <p
-                                                className={this.state.xcapitalHover || this.state.xcapital ? "workLinkHover" : "workLink"}
-                                                ref={xcapitalSlide}
+                                                className={this.state.parkuppHover || this.state.parkupp ? "workLinkHover" : "workLink"}
+                                                ref={parkuppSlide}
                                                 style={{ marginLeft: 0 }}
-                                                onMouseEnter={() => this.setState({ xcapitalHover: !this.state.xcapitalHover })}
-                                                onMouseLeave={() => this.setState({ xcapitalHover: !this.state.xcapitalHover })}
-                                                onClick={this.xcapital}>
-                                                X Capital
+                                                onMouseEnter={() => this.setState({ parkuppHover: !this.state.parkuppHover })}
+                                                onMouseLeave={() => this.setState({ parkuppHover: !this.state.parkuppHover })}
+                                                onClick={this.parkupp}>
+                                                Parkupp
                                             </p>
                                         </div>
 
-                                        <div className="bottom-links">
+                                        {/* <div className="bottom-links">
                                             <p
                                                 className={this.state.parkuppHover || this.state.parkupp ? "workLinkHover" : "workLink"}
                                                 ref={parkuppSlide}
@@ -468,7 +468,7 @@ export default class Work extends Component {
                                                 onClick={this.galxyBit}>
                                                 GalxyBit
                                         </p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
 

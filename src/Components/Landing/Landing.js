@@ -242,7 +242,6 @@ export default class Landing extends Component {
                                             <hr ref={hr} className="hr" />
                                             <p className="summary-details-text">
                                                 Mechanical Engineer (BSc Hons)
-                                                (2024)
                                             </p>
                                             <p className="summary-details-text-wits">
                                                 University of the Witswatersrand
